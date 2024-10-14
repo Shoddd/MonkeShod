@@ -15,3 +15,14 @@
 /obj/item/food/badrecipe/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_TRASH_ITEM, INNATE_TRAIT)
+
+/obj/item/food/cake/turron
+	name = "turron"
+	desc = "A classic October dessert covered in candies and drenched in caramel."
+	icon = 'monkestation/icons/obj/food/misc.dmi'
+	icon_state = "turron"
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 30,
+		/datum/reagent/consumable/nutriment/vitamin = 7,
+	)
+	tastes = list("sugar and fall" = 1)
