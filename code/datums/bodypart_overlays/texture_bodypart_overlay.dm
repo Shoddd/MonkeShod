@@ -20,4 +20,4 @@
 
 /datum/bodypart_overlay/texture/spacey
 	texture_icon_state = "spacey"
-	texture_icon = 'icons/mob/human/textures.dmi'
+	texture_icon = 'icons/mob/species/human/textures.dmi'

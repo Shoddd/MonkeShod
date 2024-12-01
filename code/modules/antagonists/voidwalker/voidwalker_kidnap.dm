@@ -32,7 +32,7 @@ GLOBAL_LIST_EMPTY(voidwalker_void)
 
 	light_system = OVERLAY_LIGHT
 	light_color = COLOR_WHITE
-	light_range = 4
+	light_outer_range = 4
 	light_power = 1
 	light_on = TRUE
 
@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(voidwalker_void)
 
 	light_system = OVERLAY_LIGHT
 	light_color = COLOR_WHITE
-	light_range = 4
+	light_outer_range = 4
 	light_power = 1
 	light_on = TRUE
 

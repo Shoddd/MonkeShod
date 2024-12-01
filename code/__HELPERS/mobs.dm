@@ -565,6 +565,12 @@ GLOBAL_LIST_EMPTY(species_list)
 	ADD_TRAIT(target_mob, TRAIT_PASSWINDOW, source)
 	target_mob.pass_flags |= PASSWINDOW
 
+/proc/passwindow_off(target, source)
+	var/mob/living/target_mob = target
+	REMOVE_TRAIT(target_mob, TRAIT_PASSWINDOW, source)
+	if(!HAS_TRAIT(target_mob, TRAIT_PASSWINDOW))
+		target_mob.pass_flags &= ~PASSWINDOW
+
 /proc/dance_rotate(atom/movable/AM, datum/callback/callperrotate, set_original_dir=FALSE)
 	set waitfor = FALSE
 	var/originaldir = AM.dir

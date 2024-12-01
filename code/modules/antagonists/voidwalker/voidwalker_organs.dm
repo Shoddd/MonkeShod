@@ -27,7 +27,7 @@
 	/// The void eater weapon
 	var/obj/item/glass_breaker = /obj/item/void_eater
 
-/obj/item/organ/internal/brain/voidwalker/on_mob_insert(mob/living/carbon/organ_owner, special, movement_flags)
+/obj/item/organ/internal/brain/voidwalker/on_insert(mob/living/carbon/organ_owner, special, movement_flags)
 	. = ..()
 
 	RegisterSignal(organ_owner, COMSIG_ATOM_ENTERING, PROC_REF(on_atom_entering))
@@ -41,7 +41,7 @@
 	glass_breaker = new/obj/item/void_eater
 	organ_owner.put_in_hands(glass_breaker)
 
-/obj/item/organ/internal/brain/voidwalker/on_mob_remove(mob/living/carbon/organ_owner, special)
+/obj/item/organ/internal/brain/voidwalker/on_remove(mob/living/carbon/organ_owner, special)
 	. = ..()
 
 	UnregisterSignal(organ_owner, COMSIG_ENTER_AREA)

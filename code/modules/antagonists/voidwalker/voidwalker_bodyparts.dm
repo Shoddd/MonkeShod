@@ -8,7 +8,7 @@
 
 /obj/item/bodypart/head/voidwalker
 	texture_bodypart_overlay = /datum/bodypart_overlay/texture/spacey
-	icon_greyscale = 'icons/mob/human/species/voidwalker.dmi'
+	icon_greyscale = 'icons/mob/species/human/voidwalker.dmi'
 	limb_id = SPECIES_VOIDWALKER
 	is_dimorphic = FALSE
 	bodypart_traits = list(TRAIT_MUTE)
@@ -35,7 +35,7 @@
 
 /obj/item/bodypart/chest/voidwalker
 	texture_bodypart_overlay = /datum/bodypart_overlay/texture/spacey
-	icon_greyscale = 'icons/mob/human/species/voidwalker.dmi'
+	icon_greyscale = 'icons/mob/species/human/voidwalker.dmi'
 	limb_id = SPECIES_VOIDWALKER
 	is_dimorphic = FALSE
 	blocks_emissive = EMISSIVE_BLOCK_NONE
@@ -60,7 +60,7 @@
 
 /obj/item/bodypart/arm/left/voidwalker
 	texture_bodypart_overlay = /datum/bodypart_overlay/texture/spacey
-	icon_greyscale = 'icons/mob/human/species/voidwalker.dmi'
+	icon_greyscale = 'icons/mob/species/human/voidwalker.dmi'
 	limb_id = SPECIES_VOIDWALKER
 	is_dimorphic = FALSE
 	blocks_emissive = EMISSIVE_BLOCK_NONE
@@ -85,7 +85,7 @@
 
 /obj/item/bodypart/arm/right/voidwalker
 	texture_bodypart_overlay = /datum/bodypart_overlay/texture/spacey
-	icon_greyscale = 'icons/mob/human/species/voidwalker.dmi'
+	icon_greyscale = 'icons/mob/species/human/voidwalker.dmi'
 	limb_id = SPECIES_VOIDWALKER
 	is_dimorphic = FALSE
 	blocks_emissive = EMISSIVE_BLOCK_NONE
@@ -110,7 +110,7 @@
 
 /obj/item/bodypart/leg/left/voidwalker
 	texture_bodypart_overlay = /datum/bodypart_overlay/texture/spacey
-	icon_greyscale = 'icons/mob/human/species/voidwalker.dmi'
+	icon_greyscale = 'icons/mob/species/human/voidwalker.dmi'
 	limb_id = SPECIES_VOIDWALKER
 	is_dimorphic = FALSE
 	blocks_emissive = EMISSIVE_BLOCK_NONE
@@ -135,7 +135,7 @@
 
 /obj/item/bodypart/leg/right/voidwalker
 	texture_bodypart_overlay = /datum/bodypart_overlay/texture/spacey
-	icon_greyscale = 'icons/mob/human/species/voidwalker.dmi'
+	icon_greyscale = 'icons/mob/species/human/voidwalker.dmi'
 	limb_id = SPECIES_VOIDWALKER
 	is_dimorphic = FALSE
 	blocks_emissive = EMISSIVE_BLOCK_NONE

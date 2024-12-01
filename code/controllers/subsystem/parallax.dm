@@ -61,10 +61,11 @@ SUBSYSTEM_DEF(parallax)
 			return
 	currentrun = null
 
-/// Return the most dominant color, if we have a colored background (mostly nebula gas)
+/* Return the most dominant color, if we have a colored background (mostly nebula gas)
 /datum/controller/subsystem/parallax/proc/get_parallax_color()
 	var/atom/movable/screen/parallax_layer/random/space_gas/gas = random_layer
 	if(!istype(gas))
 		return
 
 	return gas.parallax_color
+*/

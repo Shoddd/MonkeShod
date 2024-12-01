@@ -5,7 +5,7 @@
 	if(!isitem(parent))
 		return COMPONENT_INCOMPATIBLE
 
-	RegisterSignal(parent, COMSIG_ATOM_ITEM_INTERACTION, PROC_REF(on_tap))
+	RegisterSignal(parent, COMSIG_ITEM_AFTERATTACK, PROC_REF(on_tap))
 
 /datum/component/temporary_glass_shatterer/proc/on_tap(obj/item/parent, mob/tapper, atom/target)
 	SIGNAL_HANDLER

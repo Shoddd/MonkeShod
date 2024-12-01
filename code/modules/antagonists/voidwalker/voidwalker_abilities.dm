@@ -34,7 +34,7 @@
 /datum/action/cooldown/spell/pointed/unsettle/cast(mob/living/carbon/human/cast_on)
 	. = ..()
 
-	if(do_after(owner, stare_time, cast_on, IGNORE_TARGET_LOC_CHANGE | IGNORE_USER_LOC_CHANGE, extra_checks = CALLBACK(src, PROC_REF(check_if_in_view), cast_on), hidden = TRUE))
+	if(do_after(owner, stare_time, cast_on, IGNORE_TARGET_LOC_CHANGE | IGNORE_USER_LOC_CHANGE, extra_checks = CALLBACK(src, PROC_REF(check_if_in_view), cast_on)))
 		spookify(cast_on)
 		return
 	owner.balloon_alert(owner, "line of sight broken!")
@@ -49,7 +49,7 @@
 
 /datum/action/cooldown/spell/pointed/unsettle/proc/spookify(mob/living/carbon/human/target)
 	target.Paralyze(stun_time)
-	target.adjustStaminaLoss(stamina_damage)
+	target.stamina.adjust(stamina_damage)
 	target.apply_status_effect(/datum/status_effect/speech/slurring/generic)
 	target.emote("scream")
 
