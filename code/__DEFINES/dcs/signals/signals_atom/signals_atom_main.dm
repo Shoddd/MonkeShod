@@ -65,7 +65,7 @@
 #define COMSIG_ATOM_EXITED "atom_exited"
 ///from base of atom/movable/Moved(): (atom/movable/gone, direction)
 #define COMSIG_ATOM_ABSTRACT_EXITED "atom_abstract_exited"
-///from base of atom/Bumped(): (/atom/movable)
+///from base of atom/Bumped(): (/atom/movable) (the one that gets bumped)
 #define COMSIG_ATOM_BUMPED "atom_bumped"
 ///from base of atom/handle_atom_del(): (atom/deleted)
 #define COMSIG_ATOM_CONTENTS_DEL "atom_contents_del"
@@ -117,3 +117,6 @@
 #define COMSIG_ATOM_TIMESTOP_FREEZE "atom_timestop_freeze"
 /// when the timestop ability effect ends on the atom: (datum/proximity_monitor/advanced/timestop)
 #define COMSIG_ATOM_TIMESTOP_UNFREEZE "atom_timestop_unfreeze"
+
+/// From whoever has been revealed (atom/revealed)
+#define COMSIG_ATOM_REVEAL "atom_reveal"

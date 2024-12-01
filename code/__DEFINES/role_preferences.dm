@@ -41,6 +41,7 @@
 #define ROLE_SPACE_DRAGON "Space Dragon"
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
+#define ROLE_VOIDWALKER "Voidwalker"
 // monke midrounds
 #define ROLE_PLAGUERAT "Plague Rat"
 #define ROLE_CORTICAL_BORER "Cortical Borer"
@@ -157,6 +158,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPACE_DRAGON = 0,
 	ROLE_SPIDER = 0,
 	ROLE_WIZARD_MIDROUND = 14,
+	ROLE_VOIDWALKER = 0,
 //monkestation edit start
 	ROLE_PLAGUERAT = 0,
 	ROLE_CORTICAL_BORER = 0,  // Module ID: CORTICAL_BORERS

@@ -130,8 +130,9 @@
 #define SPECIES_ZOMBIE_INFECTIOUS_SPITTER "spitterzombie" //monkestation edit
 #define SPECIES_ZOMBIE_INFECTIOUS_BLOATER "bloaterzombie" //monkestation edit
 #define SPECIES_ZOMBIE_KROKODIL "krokodil_zombie"
-#define SPECIES_OOZELING "oozeling"
-#define SPECIES_IPC "ipc"
+#define SPECIES_VOIDWALKER "voidwalker"
+#define SPECIES_OOZELING "oozeling" //Monkestation Addition
+#define SPECIES_IPC "ipc" //Monkestation Addition
 #define SPECIES_SIMIAN "simian" //Monkestation Addition
 #define SPECIES_GOBLIN "goblin" //Monkestation Addition
 #define SPECIES_FLORAN "floran" //Monkestation Addition
@@ -499,6 +500,10 @@
 
 #define ROBOTIC_BRUTE_EXAMINE_TEXT "denting"
 #define ROBOTIC_BURN_EXAMINE_TEXT "charring"
+
+
+#define GLASSY_BRUTE_EXAMINE_TEXT "cracking"
+#define GLASSY_BURN_EXAMINE_TEXT "deformation"
 
 #define GRAB_PIXEL_SHIFT_PASSIVE 6
 #define GRAB_PIXEL_SHIFT_AGGRESSIVE 12
