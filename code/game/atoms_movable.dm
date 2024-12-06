@@ -926,10 +926,10 @@ GLOBAL_LIST_EMPTY(gliding_atoms)
 // Make sure you know what you're doing if you call this
 // You probably want CanPass()
 /atom/movable/Cross(atom/movable/crossed_atom)
-	if(SEND_SIGNAL(src, COMSIG_MOVABLE_CROSS, crossed_atom) & COMPONENT_BLOCK_CROSS)
-		return FALSE
-	if(SEND_SIGNAL(crossed_atom, COMSIG_MOVABLE_CROSS_OVER, src) & COMPONENT_BLOCK_CROSS)
-		return FALSE
+	. = TRUE
+	SEND_SIGNAL(src, COMSIG_MOVABLE_CROSS, crossed_atom)
+	SEND_SIGNAL(crossed_atom, COMSIG_MOVABLE_CROSS_OVER, src)
+	return CanPass(crossed_atom, get_dir(src, crossed_atom))
 
 ///default byond proc that is deprecated for us in lieu of signals. do not call
 /atom/movable/Crossed(atom/movable/crossed_atom, oldloc)
@@ -973,8 +973,7 @@ GLOBAL_LIST_EMPTY(gliding_atoms)
 /atom/movable/Bump(atom/bumped_atom)
 	if(!bumped_atom)
 		CRASH("Bump was called with no argument.")
-	if(SEND_SIGNAL(src, COMSIG_MOVABLE_BUMP, bumped_atom) & COMPONENT_INTERCEPT_BUMPED)
-		return
+	SEND_SIGNAL(src, COMSIG_MOVABLE_BUMP, bumped_atom)
 	. = ..()
 	if(!QDELETED(throwing))
 		throwing.finalize(hit = TRUE, target = bumped_atom)
@@ -1474,15 +1473,7 @@ GLOBAL_LIST_EMPTY(gliding_atoms)
 /atom/movable/proc/CanPassThrough(atom/blocker, movement_dir, blocker_opinion)
 	SHOULD_CALL_PARENT(TRUE)
 	SHOULD_BE_PURE(TRUE)
-
-	var/blocking_signal = SEND_SIGNAL(src, COMSIG_MOVABLE_CAN_PASS_THROUGH, blocker, movement_dir)
-	if(!blocking_signal)
-		return blocker_opinion
-
-	if(blocking_signal & COMSIG_COMPONENT_PERMIT_PASSAGE)
-		return TRUE
-	else //we have a COMSIG_COMPONENT_REFUSE_PASSAGE but like its either this or that, unlike someone wanna adds half-passing through but fuck you
-		return FALSE
+	return blocker_opinion
 
 /// called when this atom is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.
 /atom/movable/proc/on_exit_storage(datum/storage/master_storage)
