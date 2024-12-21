@@ -16,7 +16,7 @@
 	progression_minimum = 10 MINUTES
 	progression_maximum = 35 MINUTES
 	progression_reward = list(5 MINUTES, 10 MINUTES)
-	telecrystal_reward = 1
+	telecrystal_reward = 5 //MONKESTATION EDIT ORG: 1
 
 	possible_items = list(
 		/datum/objective_item/steal/traitor/bartender_shotgun,
