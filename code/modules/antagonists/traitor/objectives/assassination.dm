@@ -62,7 +62,7 @@
 	name = "Behead %TARGET%, the %JOB TITLE%"
 	description = "Behead and hold %TARGET%'s head to succeed this objective. If the head gets destroyed before you can do this, you will fail this objective."
 	progression_reward = 2 MINUTES
-	telecrystal_reward = list(8, 9) //MONKESTATION EDIT ORG: 2, 4
+	telecrystal_reward = list(9, 10) //MONKESTATION EDIT ORG: 2, 4
 
 	///the body who needs to hold the head
 	var/mob/living/needs_to_hold_head

@@ -13,7 +13,7 @@
 	description = "The %DEPARTMENT HEAD% has particularly annoyed us by sending us spam emails and we want their %PET% dead to show them what happens when they cross us. "
 
 	progression_minimum = 0 MINUTES
-	telecrystal_reward = list(0, 1)
+	telecrystal_reward = list(0, 1) //MONKESTATION EDIT ORG: 1, 2
 	progression_reward = list(3 MINUTES, 6 MINUTES)
 
 	/// Possible heads mapped to their pet type. Can be a list of possible pets
@@ -48,7 +48,7 @@
 /datum/traitor_objective/kill_pet/high_risk
 	progression_minimum = 25 MINUTES
 	progression_reward = list(14 MINUTES, 18 MINUTES)
-	telecrystal_reward = list(1, 2)
+	telecrystal_reward = list(2, 3)
 
 	limited_to_department_head = FALSE
 	possible_heads = list(
