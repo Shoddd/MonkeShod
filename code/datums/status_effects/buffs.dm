@@ -12,6 +12,7 @@
 		TRAIT_ANALGESIA,
 		TRAIT_NO_PAIN_EFFECTS,
 		TRAIT_NO_SHOCK_BUILDUP,
+		HIS_GRACE_TRAIT, // MONKESTATION ADDITION
 	)
 
 /atom/movable/screen/alert/status_effect/his_grace
