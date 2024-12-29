@@ -76,3 +76,8 @@ endmap
 
 map graveyard
 endmap
+
+map heliostation
+	minplayers 25
+	votable
+endmap
