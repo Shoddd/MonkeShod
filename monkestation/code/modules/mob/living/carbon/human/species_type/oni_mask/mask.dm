@@ -7,3 +7,4 @@
 	w_class = WEIGHT_CLASS_BULKY
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH | HIDESNOUT
 	layer = MOB_LAYER
+	resistance_flags = FIRE_PROOF | ACID_PROOF
