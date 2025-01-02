@@ -7654,6 +7654,7 @@
 #include "monkestation\code\modules\mob\living\carbon\human\species_type\skeletons.dm"
 #include "monkestation\code\modules\mob\living\carbon\human\species_type\teratoma.dm"
 #include "monkestation\code\modules\mob\living\carbon\human\species_type\oni_mask\mask.dm"
+#include "monkestation\code\modules\mob\living\carbon\human\species_type\oni_mask\possession.dm"
 #include "monkestation\code\modules\mob\living\carbon\human\species_type\tundra_moths\mothaccessories.dm"
 #include "monkestation\code\modules\mob\living\carbon\human\species_type\tundra_moths\tundramoths.dm"
 #include "monkestation\code\modules\mob\living\silicon\death.dm"
