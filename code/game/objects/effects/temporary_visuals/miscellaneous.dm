@@ -641,3 +641,9 @@
 	. = ..()
 	pixel_x = rand(-12, 12)
 	pixel_y = rand(-9, 0)
+
+/obj/effect/temp_visual/arrow_repulse
+	name = "repulse arrow"
+	icon = 'monkestation/icons/effects/effects.dmi'
+	icon_state = "arrow_repulse"
+	duration = 2 SECONDS
