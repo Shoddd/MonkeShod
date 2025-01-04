@@ -1,10 +1,33 @@
 /obj/item/clothing/mask/onimask
 	name = "oni mask"
 	desc = "placerholder stuff"
-	icon = 'monkestation/code/modules/blueshift/icons/mob/clothing/mask.dmi'
-	icon_state = "mask_mark"
-	worn_icon_state = "mask_mark"
+	icon = 'monkestation/code/modules/donator/icons/obj/clothing.dmi'
+	worn_icon = 'monkestation/code/modules/donator/icons/mob/clothing.dmi'
+	icon_state = "dark_skeletal_visage"
 	w_class = WEIGHT_CLASS_BULKY
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH | HIDESNOUT
 	layer = MOB_LAYER
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+
+/mob/living/basic/possession_holder/mask
+	name = "Cursed Mask"
+	desc = "My brain is fried fill out later"
+	hud_type = /datum/hud/possessed
+	dexterous = FALSE
+	maxHealth = 100
+	health = 100
+	held_items = list(null, null)
+	pass_flags = PASSTABLE | PASSMOB
+	status_flags = (CANPUSH | CANSTUN | CANKNOCKDOWN)
+	set_dir_on_move = FALSE
+	gender = NEUTER
+	advanced_simple = TRUE
+	can_be_held = TRUE
+	uses_directional_offsets = FALSE
+	melee_damage_lower = 0
+	melee_damage_upper = 0
+	health_regeneration = 0
+	stored_item = /obj/item/clothing/mask/onimask
+
+/mob/living/basic/possession_holder/mask/New(loc, obj/item/_stored_item)
+	. = ..()
