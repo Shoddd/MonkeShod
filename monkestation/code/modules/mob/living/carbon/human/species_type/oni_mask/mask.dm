@@ -30,22 +30,8 @@
 	stored_item = /obj/item/clothing/mask/onimask
 
 /mob/living/basic/possession_holder/mask/New(loc, obj/item/_stored_item)
-	. = ..()
 	if(!_stored_item)
 		_stored_item = new /obj/item/clothing/mask/onimask(src)
 
 	stored_item = _stored_item
-
-	_stored_item.forceMove(src)
-
-	AddComponent(/datum/component/carbon_sprint)
-	AddComponent(/datum/component/personal_crafting)
-	AddComponent(/datum/component/basic_inhands, y_offset = -6)
-	AddElement(/datum/element/dextrous)
-	add_traits(list(TRAIT_ADVANCEDTOOLUSER, TRAIT_CAN_STRIP, TRAIT_LITERATE), ROUNDSTART_TRAIT)
-
-	appearance = stored_item.appearance
-	desc = stored_item.desc
-	name = stored_item.name
-	real_name = stored_item.name
-	update_name_tag()
+	return ..()

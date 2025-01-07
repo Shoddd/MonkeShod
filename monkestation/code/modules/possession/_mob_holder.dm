@@ -40,7 +40,6 @@
 		head.forceMove(get_turf(src))
 
 /mob/living/basic/possession_holder/New(loc, obj/item/_stored_item)
-	. = ..()
 	if(!_stored_item)
 		_stored_item = new /obj/item/toy/plush/cirno_plush/ballin(src)
 		message_admins("ERROR: Possession Holder was generated without a stored item defaulting to Ballin Cirno.")
@@ -60,6 +59,7 @@
 	name = stored_item.name
 	real_name = stored_item.name
 	update_name_tag()
+	return ..()
 
 /mob/living/basic/possession_holder/create_overlay_index()
 	var/list/new_overlays[2]
