@@ -35,7 +35,7 @@
 /datum/traitor_objective/destroy_heirloom/common
 	/// 30 minutes in, syndicate won't care about common heirlooms anymore
 	progression_minimum = 0 MINUTES
-	progression_maximum = 20 MINUTES //MONKESTATION EDIT ORG: 30
+	progression_maximum = 30 MINUTES
 	progression_reward = list(8 MINUTES, 12 MINUTES)
 	telecrystal_reward = list(3, 4) //MONKESTATION EDIT ORG: 1, 2
 	target_jobs = list(
