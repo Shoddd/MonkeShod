@@ -13,7 +13,7 @@
 	abstract_type = /datum/traitor_objective/destroy_item
 
 /datum/traitor_objective/destroy_item/low_risk
-	progression_minimum = 20 MINUTES //MONKESTATION EDIT ORG: 10
+	progression_minimum = 10 MINUTES
 	progression_maximum = 35 MINUTES
 	progression_reward = list(5 MINUTES, 10 MINUTES)
 	telecrystal_reward = 3 //MONKESTATION EDIT ORG: 1
