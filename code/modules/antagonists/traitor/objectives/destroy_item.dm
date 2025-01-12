@@ -19,7 +19,7 @@
 	telecrystal_reward = 3 //MONKESTATION EDIT ORG: 1
 
 	possible_items = list(
-		/datum/objective_item/steal/traitor/bartender_shotgun,
+	//	/datum/objective_item/steal/traitor/bartender_shotgun, MONKESTATION REMOVAL
 		/datum/objective_item/steal/traitor/fireaxe,
 		/datum/objective_item/steal/traitor/nullrod,
 		/datum/objective_item/steal/traitor/big_crowbar,
@@ -32,6 +32,7 @@
 
 	possible_items = list(
 		/datum/objective_item/steal/blackbox,
+		/datum/objective_item/steal/traitor/bartender_shotgun, //MONKESTATION ADDITION
 	)
 
 /// Super early-game destroy objective intended to be items easily tided that the crew tends to value.
