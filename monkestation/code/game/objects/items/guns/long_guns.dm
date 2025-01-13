@@ -45,7 +45,7 @@
 
 /obj/projectile/bullet/g45l
 	name = ".45 Long bullet"
-	damage = 25
+	damage = 30
 	weak_against_armour = TRUE // High fire rate
 	wound_bonus = -5
 	sharpness = SHARP_EDGED
