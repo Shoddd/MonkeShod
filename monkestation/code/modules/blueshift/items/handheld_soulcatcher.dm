@@ -47,6 +47,10 @@
 		linked_soulcatcher.scan_body(target_mob, user)
 		return TRUE
 
+	if(isanimal_or_basicmob(target_mob))
+		to_chat(user, span_warning("The Evoker can't scan a brain of this type!"))
+		return FALSE
+
 	if(!target_mob.mind)
 		to_chat(user, span_warning("You are unable to remove a mind from an empty body."))
 		return FALSE
