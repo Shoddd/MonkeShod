@@ -2736,6 +2736,7 @@
 		drinker.adjustOxyLoss(-2 * REM * seconds_per_tick, FALSE)
 		drinker.adjustBruteLoss(-2 * REM * seconds_per_tick, FALSE)
 		drinker.adjustFireLoss(-2 * REM * seconds_per_tick, FALSE)
+		drinker.cause_pain(BODY_ZONES_ALL, -5 * REM * seconds_per_tick)
 		if(drinker.blood_volume < BLOOD_VOLUME_NORMAL)
 			drinker.blood_volume += 3 * REM * seconds_per_tick
 	else
