@@ -16,7 +16,7 @@
 	cost = PAYCHECK_CREW * 5
 
 /datum/armament_entry/company_import/microstar/lethal_sidearm/energy_holster
-	item_type = /obj/item/storage/belt/holster/energy/thermal/import
+	item_type = /obj/item/storage/belt/holster/energy/thermal
 	cost = PAYCHECK_COMMAND * 6
 
 /datum/armament_entry/company_import/microstar/basic_energy_long_weapons
