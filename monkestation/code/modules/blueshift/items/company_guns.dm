@@ -1350,3 +1350,17 @@
 
 	recoil = initial(recoil)
 	spread = initial(spread)
+
+/obj/item/gun/energy/laser/thermal/inferno/import
+	pin = /obj/item/firing_pin/permit_pin
+
+/obj/item/gun/energy/laser/thermal/cryo/import
+	pin = /obj/item/firing_pin/permit_pin
+
+/obj/item/storage/belt/holster/energy/thermal/import
+
+/obj/item/storage/belt/holster/energy/thermal/import/PopulateContents()
+	generate_items_inside(list(
+		/obj/item/gun/energy/laser/thermal/inferno/import = 1,
+		/obj/item/gun/energy/laser/thermal/cryo/import = 1,
+	),src)
