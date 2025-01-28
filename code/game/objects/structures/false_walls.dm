@@ -1,7 +1,7 @@
 /*
  * False Walls
  */
-	/obj/structure/falsewall
+/obj/structure/falsewall
 	name = "wall"
 	desc = "A huge chunk of metal used to separate rooms."
 	anchored = TRUE
