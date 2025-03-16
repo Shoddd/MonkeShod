@@ -242,7 +242,7 @@
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "prisonerenvirobag"
 	foldedbag_path = /obj/item/bodybag/environmental/prisoner
-	breakout_time = 4 MINUTES // because it's probably about as hard to get out of this as it is to get out of a straightjacket.
+	breakout_time = 2 MINUTES // because it's probably about as hard to get out of this as it is to get out of a straightjacket. // MONKESTATION EDIT down from 4 minutes
 	/// How long it takes to sinch the bag.
 	var/sinch_time = 10 SECONDS
 	/// Whether or not the bag is sinched. Starts unsinched.
@@ -353,7 +353,7 @@
 	contents_thermal_insulation = 1
 	foldedbag_path = /obj/item/bodybag/environmental/prisoner/syndicate
 	weather_protection = list(TRAIT_WEATHER_IMMUNE)
-	breakout_time = 8 MINUTES
+	breakout_time = 3 MINUTES // MONKESTATION EDIT down from 8 minutes, this thing knocked you out, people could lock you in, and it took 8 minutes to get out of?
 	sinch_time = 20 SECONDS
 
 /obj/structure/closet/body_bag/environmental/prisoner/pressurized/syndicate/refresh_air()

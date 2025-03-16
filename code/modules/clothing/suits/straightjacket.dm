@@ -1,13 +1,13 @@
 /obj/item/clothing/suit/jacket/straight_jacket
 	name = "straight jacket"
-	desc = "A suit that completely restrains the wearer. Manufactured by Antyphun Corp." //Straight jacket is antifun
+	desc = "A suit that completely restrains the wearer. Manufactured by Antyphun Corp." //Straight jacket is antifun <- it sure is
 	icon_state = "straight_jacket"
 	inhand_icon_state = "straight_jacket"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	equip_delay_self = 50
 	strip_delay = 60
-	breakouttime = 5 MINUTES
+	breakouttime = 2 MINUTES // MONKESTATION EDIT, down from 5 damn minutes
 
 /obj/item/clothing/suit/jacket/straight_jacket/Initialize(mapload)
 	. = ..()
