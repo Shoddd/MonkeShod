@@ -11401,10 +11401,6 @@
 	},
 /turf/open/floor/grass,
 /area/station/hallway/secondary/exit/departure_lounge)
-"aSA" = (
-/obj/machinery/hydroponics/constructable,
-/turf/open/floor/iron,
-/area/station/service/hydroponics)
 "aSC" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/cable,
@@ -12115,10 +12111,6 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
-"aVI" = (
-/obj/structure/window/reinforced/spawner/directional/west,
-/turf/closed/wall,
-/area/station/cargo/storage)
 "aVO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -17077,7 +17069,6 @@
 /obj/effect/turf_decal/tile/purple/anticorner/contrasted{
 	dir = 1
 	},
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/science/explab)
@@ -29164,7 +29155,6 @@
 /turf/open/floor/iron/white,
 /area/station/medical/psychology)
 "cSD" = (
-/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/sign/warning/vacuum,
 /turf/closed/wall,
 /area/station/cargo/storage)
@@ -42035,7 +42025,6 @@
 /area/station/engineering/main)
 "ost" = (
 /obj/effect/turf_decal/stripes/corner,
-/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall,
 /area/station/science/xenobiology)
@@ -45255,13 +45244,6 @@
 /obj/structure/table,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
-"rax" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/station/cargo/storage)
 "raz" = (
 /obj/machinery/door/airlock/corporate{
 	id_tag = "BSdoor";
@@ -80522,7 +80504,7 @@ aKT
 aNm
 mUt
 aKT
-aSA
+aZW
 aTQ
 aZW
 aRL
@@ -99546,7 +99528,7 @@ mhw
 cCB
 bbG
 bbG
-rax
+oCX
 bbG
 aTy
 bbG
@@ -101339,7 +101321,7 @@ aaa
 aYF
 sZh
 cxg
-aVI
+bbG
 rAK
 cCB
 dUZ
