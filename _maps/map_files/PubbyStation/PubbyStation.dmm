@@ -16806,13 +16806,11 @@
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "bqI" = (
-/obj/machinery/corral_corner{
-	mapping_id = "6"
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
-/obj/machinery/slime_pen_controller{
-	mapping_id = "6"
-	},
-/turf/open/floor/engine,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/iron,
 /area/station/science/xenobiology)
 "bqJ" = (
 /obj/machinery/corral_corner{
@@ -17114,14 +17112,11 @@
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "bsa" = (
-/obj/machinery/corral_corner{
-	mapping_id = "7"
+/obj/machinery/computer/quantum_console{
+	dir = 8
 	},
-/obj/machinery/slime_pen_controller{
-	mapping_id = "7"
-	},
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
+/turf/open/floor/iron,
+/area/station/security/prison)
 "bse" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 1
@@ -18430,11 +18425,12 @@
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "bxM" = (
-/obj/machinery/corral_corner{
-	mapping_id = "7"
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 8
 	},
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
+/obj/machinery/byteforge,
+/turf/open/floor/iron,
+/area/station/security/prison)
 "bxN" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -18819,8 +18815,8 @@
 /obj/machinery/corral_corner{
 	mapping_id = "6"
 	},
-/obj/machinery/corral_corner{
-	mapping_id = "7"
+/obj/machinery/slime_pen_controller{
+	mapping_id = "6"
 	},
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
@@ -29449,15 +29445,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
-"djp" = (
-/obj/machinery/corral_corner{
-	mapping_id = "4"
-	},
-/obj/machinery/slime_pen_controller{
-	mapping_id = "4"
-	},
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
 "djD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -29657,6 +29644,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 6
 	},
+/obj/machinery/quantum_server,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "drR" = (
@@ -33274,6 +33262,13 @@
 "gvM" = (
 /turf/closed/wall,
 /area/station/maintenance/department/science/central)
+"gvP" = (
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 9
+	},
+/obj/machinery/netpod,
+/turf/open/floor/iron,
+/area/station/security/prison)
 "gwn" = (
 /obj/structure/sign/warning/directional/north,
 /obj/structure/sign/warning/directional/south,
@@ -34295,6 +34290,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
 	},
+/obj/machinery/netpod,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "htK" = (
@@ -34415,6 +34411,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
 	},
+/obj/machinery/netpod,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "hAF" = (
@@ -34911,6 +34908,15 @@
 "hXW" = (
 /turf/closed/wall,
 /area/station/hallway/secondary/entry)
+"hYO" = (
+/obj/machinery/corral_corner{
+	mapping_id = "6"
+	},
+/obj/machinery/corral_corner{
+	mapping_id = "7"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "hZL" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
@@ -36034,13 +36040,6 @@
 /obj/effect/mapping_helpers/requests_console/assistance,
 /turf/closed/wall/r_wall,
 /area/station/security/lockers)
-"jdd" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/effect/landmark/event_spawn,
-/turf/open/floor/iron,
-/area/station/science/xenobiology)
 "jdj" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
@@ -37559,13 +37558,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
-"ktH" = (
-/mob/living/basic/slime,
-/obj/machinery/plumbing/ooze_sucker{
-	mapping_id = "5"
-	},
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
 "ktQ" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -37837,10 +37829,12 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain)
 "kHP" = (
-/obj/machinery/plumbing/ooze_sucker{
+/obj/machinery/corral_corner{
 	mapping_id = "4"
 	},
-/mob/living/basic/slime,
+/obj/machinery/slime_pen_controller{
+	mapping_id = "4"
+	},
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "kHY" = (
@@ -40065,6 +40059,12 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal/incinerator)
+"mHq" = (
+/obj/machinery/corral_corner{
+	mapping_id = "6"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "mHy" = (
 /obj/item/storage/fancy/cigarettes/cigpack_shadyjims,
 /obj/structure/cable,
@@ -43136,6 +43136,12 @@
 /obj/structure/musician/piano,
 /turf/open/floor/iron/dark,
 /area/station/service/abandoned_gambling_den)
+"pmg" = (
+/obj/machinery/corral_corner{
+	mapping_id = "7"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "pmq" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line,
@@ -44063,6 +44069,15 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"qdW" = (
+/obj/machinery/corral_corner{
+	mapping_id = "7"
+	},
+/obj/machinery/slime_pen_controller{
+	mapping_id = "7"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "qfa" = (
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table,
@@ -46407,6 +46422,13 @@
 	},
 /turf/open/floor/carpet,
 /area/station/service/library/artgallery)
+"rVd" = (
+/mob/living/basic/slime,
+/obj/machinery/plumbing/ooze_sucker{
+	mapping_id = "5"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "rVt" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -46780,11 +46802,14 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "smW" = (
-/obj/machinery/corral_corner{
-	mapping_id = "6"
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 8
 	},
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
+/obj/machinery/computer/order_console/bitrunning{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/prison)
 "snD" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "barshutters";
@@ -47859,6 +47884,13 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
+/area/station/science/xenobiology)
+"ted" = (
+/obj/machinery/plumbing/ooze_sucker{
+	mapping_id = "4"
+	},
+/mob/living/basic/slime,
+/turf/open/floor/engine,
 /area/station/science/xenobiology)
 "teh" = (
 /obj/structure/table/optable,
@@ -75263,10 +75295,10 @@ aaa
 aaa
 aht
 acM
-sfh
+gvP
 clK
-clK
-clK
+bxM
+smW
 wPr
 kmV
 kdk
@@ -75779,7 +75811,7 @@ aht
 acM
 hsN
 dra
-aem
+bsa
 aem
 oSI
 agy
@@ -100541,10 +100573,10 @@ gIG
 bzp
 xoo
 jwA
-bqI
+bzs
 blX
 blX
-smW
+mHq
 rKi
 kgR
 bFB
@@ -101825,11 +101857,11 @@ eoP
 gIG
 bzp
 sXV
-jdd
-bzs
+bqI
+hYO
 blX
 blX
-bzs
+hYO
 rKi
 dmP
 bFD
@@ -102075,7 +102107,7 @@ uSW
 ybX
 iSi
 blX
-ktH
+rVd
 bzl
 bzl
 mfu
@@ -103103,7 +103135,7 @@ rAE
 fNv
 iSi
 bnh
-kHP
+ted
 bzl
 bzl
 mfu
@@ -103362,16 +103394,16 @@ iSi
 twQ
 blX
 blX
-djp
+kHP
 xdc
 gIG
 uel
 sXV
 jwA
-bsa
+qdW
 blX
 blX
-bxM
+pmg
 rKi
 efU
 efU
