@@ -9037,10 +9037,6 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
-"aGN" = (
-/obj/machinery/hydroponics/constructable,
-/turf/open/floor/plating,
-/area/station/maintenance/department/cargo)
 "aGP" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
@@ -97968,8 +97964,8 @@ aur
 qJP
 aEj
 aFQ
-aGN
-aGN
+aFi
+aFi
 aEj
 lru
 aEj
