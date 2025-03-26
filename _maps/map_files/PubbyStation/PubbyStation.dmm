@@ -4131,6 +4131,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/effect/landmark/start/gary/rare,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "apl" = (
@@ -8765,6 +8766,7 @@
 /obj/structure/sink/kitchen{
 	pixel_y = 28
 	},
+/obj/effect/landmark/start/gary/rare,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "aFO" = (
@@ -28394,7 +28396,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cyR" = (
-/obj/item/kirbyplants/organic/plant22,
+/obj/machinery/cassette/mailbox,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cyS" = (
@@ -29317,6 +29319,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
+"dbW" = (
+/obj/structure/table_frame/wood,
+/obj/effect/landmark/start/gary,
+/turf/open/floor/wood,
+/area/station/maintenance/department/engine)
 "dch" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -39396,6 +39403,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
+"mbQ" = (
+/obj/effect/landmark/start/gary,
+/turf/open/floor/plating,
+/area/station/maintenance/department/science/xenobiology)
 "mce" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -42906,6 +42917,10 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/nt_rep)
+"pbe" = (
+/obj/effect/landmark/start/gary,
+/turf/open/floor/plating,
+/area/station/maintenance/department/security/brig)
 "pbm" = (
 /obj/machinery/door/airlock/external{
 	name = "Pod Docking Bay"
@@ -72318,7 +72333,7 @@ aof
 aiu
 aqh
 lqc
-ajD
+pbe
 atq
 aut
 aiu
@@ -79097,7 +79112,7 @@ shU
 fef
 rle
 bNU
-nYb
+dbW
 dSr
 rle
 dJm
@@ -102190,7 +102205,7 @@ blX
 blX
 rKi
 kdf
-lWy
+mbQ
 fKj
 lWy
 lWy
