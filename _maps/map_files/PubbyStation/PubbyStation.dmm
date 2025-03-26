@@ -13361,7 +13361,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
 	},
@@ -35129,10 +35128,6 @@
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/hfr_room)
-"ije" = (
-/obj/effect/mapping_helpers/airlock/access/any/supply/general,
-/turf/closed/wall,
-/area/station/cargo/warehouse)
 "ijt" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
@@ -97031,7 +97026,7 @@ cDa
 bcV
 bcV
 bcV
-ije
+cDa
 aUA
 wkM
 sAD
