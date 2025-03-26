@@ -11299,6 +11299,7 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/broken_floor,
+/mob/living/carbon/human/species/monkey/punpun,
 /turf/open/floor/wood,
 /area/station/service/bar)
 "aRU" = (
@@ -12204,7 +12205,6 @@
 /obj/structure/sink/kitchen{
 	pixel_y = 28
 	},
-/mob/living/carbon/human/species/monkey/punpun,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
