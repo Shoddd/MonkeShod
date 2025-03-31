@@ -16795,7 +16795,6 @@
 /area/station/science/xenobiology)
 "bqE" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted,
-/obj/machinery/slime_market_pad,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "bqF" = (
@@ -30536,12 +30535,12 @@
 /turf/open/floor/iron/white,
 /area/station/science/lab)
 "edJ" = (
-/obj/machinery/computer/slime_market,
 /obj/machinery/button/door/directional/east{
 	id = "xenobiomain";
 	name = "Containment Blast Doors";
 	req_access = list("xenobiology")
 	},
+/obj/machinery/smartfridge/petri/preloaded,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "edZ" = (
@@ -31187,6 +31186,14 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"eIx" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/displaycase/labcage,
+/turf/open/floor/iron/dark,
+/area/station/command/heads_quarters/rd)
 "eIJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -35230,14 +35237,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/blueshield)
-"inT" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/structure/displaycase/labcage,
-/turf/open/floor/iron/dark,
-/area/station/command/heads_quarters/rd)
 "ioj" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -35581,11 +35580,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/security/execution)
-"iDq" = (
-/obj/structure/cable,
-/obj/structure/closet/secure_closet/tac,
-/turf/open/floor/wood,
-/area/station/command/heads_quarters/blueshield)
 "iDT" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/item/radio/intercom/directional/east,
@@ -37064,7 +37058,7 @@
 /area/station/maintenance/department/science/central)
 "jYJ" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
-/obj/machinery/smartfridge/petri/preloaded,
+/obj/machinery/computer/slime_market,
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "jZL" = (
@@ -39802,6 +39796,22 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
+"mrt" = (
+/obj/structure/table,
+/obj/item/storage/box/disks_nanite{
+	pixel_y = 3;
+	pixel_x = -6
+	},
+/obj/item/storage/box/nanitecontrol{
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/item/storage/box/disks_nanite{
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/turf/open/floor/iron/dark,
+/area/station/science/lab)
 "mrv" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/engine/co2,
@@ -41298,7 +41308,7 @@
 /area/station/science/lab)
 "nKa" = (
 /obj/machinery/airalarm/directional/west,
-/obj/structure/closet/firecloset,
+/obj/structure/closet/secure_closet/cytology,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "nKU" = (
@@ -43844,22 +43854,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/security/prison/garden)
-"pOf" = (
-/obj/structure/table,
-/obj/item/storage/box/disks_nanite{
-	pixel_y = 3;
-	pixel_x = -6
-	},
-/obj/item/storage/box/nanitecontrol{
-	pixel_x = 7;
-	pixel_y = 6
-	},
-/obj/item/storage/box/disks_nanite{
-	pixel_x = -6;
-	pixel_y = 9
-	},
-/turf/open/floor/iron/dark,
-/area/station/science/lab)
 "pOs" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 9
@@ -51634,10 +51628,6 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/monastery)
 "vVv" = (
-/obj/machinery/door/airlock/corporate{
-	id_tag = "BSdoor";
-	name = "Blueshield's Office"
-	},
 /obj/effect/mapping_helpers/airlock/access/any/command/blueshield,
 /obj/effect/mapping_helpers/airlock/access/any/command/nt_rep,
 /obj/effect/landmark/navigate_destination,
@@ -51647,6 +51637,10 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/obj/machinery/door/airlock/corporate{
+	id_tag = "Repdoor";
+	name = "Representative's Office"
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/nt_rep)
@@ -52613,7 +52607,7 @@
 /area/station/security/brig)
 "wFN" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
-/obj/structure/closet/secure_closet/cytology,
+/obj/machinery/slime_market_pad,
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "wFO" = (
@@ -53391,6 +53385,11 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"xfZ" = (
+/obj/structure/cable,
+/obj/structure/closet/secure_closet/tac,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/blueshield)
 "xga" = (
 /obj/structure/sign/warning/electric_shock{
 	pixel_x = -31
@@ -88310,7 +88309,7 @@ aht
 aht
 aDa
 sHc
-iDq
+xfZ
 gLF
 nPn
 aAH
@@ -88620,7 +88619,7 @@ bxd
 byG
 bAp
 bBr
-inT
+eIx
 qmR
 bES
 bBp
@@ -96325,7 +96324,7 @@ uDS
 cCt
 vfp
 cKA
-pOf
+mrt
 bEV
 bzd
 wnJ
