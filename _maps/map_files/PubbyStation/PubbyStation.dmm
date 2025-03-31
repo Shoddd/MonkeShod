@@ -2770,6 +2770,8 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 1
 	},
+/obj/item/reagent_containers/blood/o_minus,
+/obj/item/reagent_containers/blood/o_minus,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "akC" = (
@@ -2796,12 +2798,12 @@
 /area/station/security/medical)
 "akE" = (
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/machinery/iv_drip,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 4
 	},
+/obj/structure/closet/secure_closet/brig_physician,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "akI" = (
@@ -3056,10 +3058,12 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/effect/landmark/start/brig_physician,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "als" = (
 /obj/machinery/holopad,
+/obj/machinery/iv_drip,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "alt" = (
@@ -3472,20 +3476,21 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
 /obj/machinery/airalarm/directional/south,
 /obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/structure/table/optable,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "amO" = (
-/obj/structure/closet/crate/freezer,
 /obj/structure/window/reinforced/spawner/directional/east{
 	layer = 2.9
 	},
-/obj/item/reagent_containers/blood/o_minus,
-/obj/item/reagent_containers/blood/o_minus,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/obj/machinery/computer/operating{
+	dir = 1
+	},
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "amS" = (
@@ -19027,6 +19032,11 @@
 	id = "rdgene";
 	name = "Genetics Lab Shutters"
 	},
+/obj/machinery/door/window/left/directional/west{
+	dir = 1;
+	name = "Genetics Desk";
+	req_access = list("genetics")
+	},
 /turf/open/floor/plating,
 /area/station/science/genetics)
 "bAu" = (
@@ -19478,7 +19488,6 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit/departure_lounge)
 "bCG" = (
-/obj/structure/displaycase/labcage,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
@@ -19936,9 +19945,6 @@
 "bER" = (
 /obj/item/radio/intercom/directional/south,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
-/obj/structure/table/glass,
-/obj/item/circuitboard/aicore,
-/obj/item/aicard,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "bES" = (
@@ -19976,11 +19982,19 @@
 	pixel_x = -8;
 	pixel_y = 14
 	},
+/obj/item/aicard,
+/obj/item/circuitboard/aicore,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "bEV" = (
-/obj/machinery/computer/nanite_chamber_control{
-	dir = 4
+/obj/structure/table,
+/obj/item/multitool/circuit,
+/obj/item/multitool/circuit,
+/obj/item/multitool/circuit{
+	pixel_x = 7
+	},
+/obj/item/multitool/circuit{
+	pixel_x = -8
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
@@ -26510,7 +26524,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
@@ -31832,7 +31845,7 @@
 /turf/open/floor/iron/white,
 /area/station/security/prison/mess)
 "fgl" = (
-/obj/machinery/drone_dispenser,
+/obj/machinery/drone_dispenser/preloaded,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/central)
 "fgs" = (
@@ -31942,15 +31955,10 @@
 	c_tag = "Experimentation Lab Testing Zone";
 	network = list("ss13","rd")
 	},
-/obj/structure/table,
-/obj/item/multitool/circuit{
-	pixel_x = -8
-	},
-/obj/item/multitool/circuit,
-/obj/item/multitool/circuit{
-	pixel_x = 7
-	},
 /obj/machinery/newscaster/directional/south,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "flq" = (
@@ -34799,8 +34807,9 @@
 /obj/item/device/antibody_scanner,
 /obj/item/device/antibody_scanner,
 /obj/item/device/antibody_scanner,
-/obj/item/clothing/glasses/science,
-/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/pathology,
+/obj/item/clothing/glasses/pathology,
+/obj/item/clothing/glasses/pathology,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "hSM" = (
@@ -35221,6 +35230,14 @@
 	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/blueshield)
+"inT" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/displaycase/labcage,
+/turf/open/floor/iron/dark,
+/area/station/command/heads_quarters/rd)
 "ioj" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -35564,6 +35581,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/security/execution)
+"iDq" = (
+/obj/structure/cable,
+/obj/structure/closet/secure_closet/tac,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/blueshield)
 "iDT" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/item/radio/intercom/directional/east,
@@ -36320,7 +36342,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "jpf" = (
-/obj/machinery/light/directional/south,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/central)
 "jqQ" = (
@@ -37989,7 +38011,7 @@
 /area/station/command/heads_quarters/hos)
 "kPE" = (
 /obj/machinery/button/curtain{
-	id = "curtain"
+	id = "blueshield"
 	},
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/blueshield)
@@ -43822,6 +43844,22 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/security/prison/garden)
+"pOf" = (
+/obj/structure/table,
+/obj/item/storage/box/disks_nanite{
+	pixel_y = 3;
+	pixel_x = -6
+	},
+/obj/item/storage/box/nanitecontrol{
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/item/storage/box/disks_nanite{
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/turf/open/floor/iron/dark,
+/area/station/science/lab)
 "pOs" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 9
@@ -47334,7 +47372,7 @@
 "sHc" = (
 /obj/machinery/airalarm/directional/west,
 /obj/structure/extinguisher_cabinet/directional/north,
-/obj/machinery/suit_storage_unit/security,
+/obj/machinery/suit_storage_unit/blueshield,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/blueshield)
 "sHy" = (
@@ -49575,7 +49613,7 @@
 "und" = (
 /obj/machinery/door/window/left/directional/east{
 	name = "Monkey Pen";
-	req_access = list("virology")
+	req_access = list("pathology")
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
@@ -49634,7 +49672,9 @@
 /turf/open/floor/iron/white,
 /area/station/science/lab)
 "urU" = (
-/obj/machinery/button/door/directional/west,
+/obj/machinery/button/door/directional/west{
+	id = "NTREP"
+	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
@@ -88270,7 +88310,7 @@ aht
 aht
 aDa
 sHc
-gLF
+iDq
 gLF
 nPn
 aAH
@@ -88580,7 +88620,7 @@ bxd
 byG
 bAp
 bBr
-qmR
+inT
 qmR
 bES
 bBp
@@ -96285,7 +96325,7 @@ uDS
 cCt
 vfp
 cKA
-bwa
+pOf
 bEV
 bzd
 wnJ
