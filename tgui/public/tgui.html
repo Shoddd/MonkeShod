@@ -123,17 +123,19 @@
             location.href = 'byond://' + url;
             return;
           }
-          // Send an HTTP request to DreamSeeker's HTTP server.
-          // Allows sending much bigger payloads.
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', url);
-          xhr.send();
+          if (Byond.TRIDENT !== null) {
+            // Send an HTTP request to DreamSeeker's HTTP server.
+            // Allows sending much bigger payloads.
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.send();
+          }
         };
 
         Byond.callAsync = function (path, params) {
           if (!window.Promise) {
             throw new Error(
-              'Async calls require API level of ES2015 or later.',
+              'Async calls require API level of ES2015 or later.'
             );
           }
           var index = Byond.__callbacks__.length;
@@ -146,14 +148,14 @@
               path,
               assign({}, params, {
                 callback: 'Byond.__callbacks__[' + index + ']',
-              }),
+              })
             );
           } else {
             Byond.call(
               path,
               Object.assign({}, params, {
                 callback: 'Byond.__callbacks__[' + index + ']',
-              }),
+              })
             );
           }
           return promise;
@@ -319,7 +321,7 @@
                 options.attempt += 1;
                 loadAsset(options);
               },
-              RETRY_WAIT_INITIAL + attempt * RETRY_WAIT_INCREMENT,
+              RETRY_WAIT_INITIAL + attempt * RETRY_WAIT_INCREMENT
             );
           };
           // JS specific code
@@ -569,7 +571,7 @@
           'afterbegin',
           '<!-- tgui:inline-html-start -->' +
             inline_html +
-            '<!-- tgui:inline-html-end -->',
+            '<!-- tgui:inline-html-end -->'
         );
       };
     </script>
