@@ -255,6 +255,7 @@
 /obj/structure/cage/gay // Admin only
 	name = "Gay baby jail"
 	desc = "WAAAH"
+	max_integrity = INFINITY
 	open_bar_time = 600 SECONDS
 	close_bar_time = 10 SECONDS
 	open_cover_time = 600 SECONDS
