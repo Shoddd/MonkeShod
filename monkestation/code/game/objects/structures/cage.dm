@@ -181,7 +181,7 @@
 				toggle_cover() //Close the cover, too
 
 			for(var/mob/living/L in get_turf(src))
-				if(L.mob_size >= MOB_SIZE_HUGE)
+				if(L.mob_size >= max_mob_size)
 					continue
 				add_mob(L)
 		//		log_admin("[key_name(usr)] has trapped \the [L] in a cage at [formatJumpTo(src)]")
@@ -250,6 +250,7 @@
 	open_cover_time = 1 SECONDS
 	close_cover_time = 1 SECONDS
 	breakout_time = 1 SECONDS
+	max_mob_size = MOB_SIZE_HUGE
 
 /obj/structure/cage/gay // Admin only
 	name = "Gay baby jail"
@@ -259,6 +260,7 @@
 	open_cover_time = 600 SECONDS
 	close_cover_time = 10 SECONDS
 	breakout_time = 600 SECONDS
+	max_mob_size = MOB_SIZE_HUGE // Nothing is safe
 
 #undef C_OPENED
 #undef C_CLOSED
