@@ -85,7 +85,7 @@
 /obj/item/collar_bomb_button
 	name = "big yellow button"
 	desc = "It looks like a big red button, except it's yellow. It comes with a heavy trigger, to avoid accidents."
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "bigyellow"
 	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
