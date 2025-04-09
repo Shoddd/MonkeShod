@@ -214,3 +214,11 @@
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie/divine_archer(src)
 	new /obj/item/clothing/gloves/divine_archer(src)
 	new /obj/item/clothing/shoes/divine_archer(src)
+
+/obj/item/storage/box/collar_bomb
+	name = "collar bomb box"
+	desc = "A small print on the back reads 'For research purposes only. Handle with care. In case of emergency, call the following number:'... the rest is scratched out with a marker..."
+
+/obj/item/storage/box/collar_bomb/PopulateContents()
+	var/obj/item/collar_bomb_button/button = new(src)
+	new /obj/item/clothing/neck/collar_bomb(src, button)
