@@ -101,8 +101,8 @@
 		return
 
 	if(cover_state == C_CLOSED)
-		to_chat(user, "<span class='info'>You attempt to open \the [src]'s cover from inside. This will take around [(breakout_time / 10)] seconds.</span>")
-		if(do_after(user, breakout_time, src))
+		to_chat(user, "<span class='info'>You attempt to open \the [src]'s cover from inside. This will take around [(open_cover_time / 10)] seconds.</span>")
+		if(do_after(user, open_cover_time, src))
 			if(cover_state == C_CLOSED)
 				toggle_cover(user)
 		return
