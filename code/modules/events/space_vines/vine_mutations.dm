@@ -356,13 +356,13 @@
 
 // MONKESTATION ADDITIONS
 
-/datum/spacevine_mutation/screaming
-	name = "Screaming"
+/datum/spacevine_mutation/weeping
+	name = "Weeping"
 	hue = "#6b6b6b"
 	quality = NEGATIVE
 	severity = SEVERITY_AVERAGE // not that bad (on its own)
 
-/datum/spacevine_mutation/screaming/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/item, expected_damage)
+/datum/spacevine_mutation/weeping/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/item, expected_damage)
 	var/scream = pick(
 		'sound/voice/human/malescream_1.ogg',
 		'sound/voice/human/femalescream_1.ogg',
