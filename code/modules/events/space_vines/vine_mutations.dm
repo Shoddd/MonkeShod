@@ -379,6 +379,6 @@
 		var/effect_amount = intensity - ear_safety
 		if(effect_amount > 0)
 			victim.soundbang_act(1, 0, 4, 15)
-			victim.adjust_confusion(7 SECONDS)
+			victim.adjust_confusion(5 SECONDS)
 			to_chat(victim, span_danger("The vines let out a terrible screech, disorienting you."))
 		return expected_damage
