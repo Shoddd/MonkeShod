@@ -36,7 +36,9 @@
 	var/open_sound = null
 	var/close_sound = null
 
-
+/obj/structure/cage/Initialize()
+	. = ..()
+	update_icon()
 
 /obj/structure/cage/Destroy()
 	switch(cover_state)
@@ -142,6 +144,29 @@
 /obj/structure/cage/attack_robot(mob/living/user)
 	if(Adjacent(user))
 		attack_hand(user)
+
+/obj/structure/cage/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
+	if(cover_state == C_CLOSED)
+		return
+	if(buckled_mob != user)
+		buckled_mob.visible_message(span_notice("[user] tries to pull [buckled_mob] free of [src]!"),\
+			span_notice("[user] is trying to pull you off [src], opening up fresh wounds!"),\
+			span_hear("You hear a squishy wet noise."))
+		if(!do_after(user, 30 SECONDS, target = src))
+			if(buckled_mob?.buckled)
+				buckled_mob.visible_message(span_notice("[user] fails to free [buckled_mob]!"),\
+					span_notice("[user] fails to pull you off of [src]."))
+			return
+
+	else
+		buckled_mob.visible_message(span_warning("[buckled_mob] struggles to break free from [src]!"),\
+		span_notice("You struggle to break free from [src], exacerbating your wounds! (Stay still for two minutes.)"),\
+		span_hear("You hear a wet squishing noise.."))
+		if(!do_after(buckled_mob, 2 MINUTES, target = src))
+			if(buckled_mob?.buckled)
+				to_chat(buckled_mob, span_warning("You fail to free yourself!"))
+			return
+	return ..()
 
 //How the cage cover is implemented
 //When it's closed, mobs are stored in the cage's contents. This causes them to be unable to interact with the outside world or move
