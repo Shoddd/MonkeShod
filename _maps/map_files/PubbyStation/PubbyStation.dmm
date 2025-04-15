@@ -262,7 +262,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "abf" = (
-/obj/structure/bed,
+/obj/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "abg" = (
@@ -16842,7 +16842,6 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "sci-maint-passthrough"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -16850,6 +16849,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/central)
 "bqV" = (
@@ -18028,8 +18028,8 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "sci-maint-passthrough"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
 /obj/effect/mapping_helpers/airlock/unres,
+/obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "bwq" = (
@@ -19483,6 +19483,22 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
+"bCA" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 1
+	},
+/obj/structure/table/wood/fancy/red,
+/obj/item/flashlight/lantern{
+	pixel_y = 8
+	},
+/obj/item/clothing/head/costume/pharaoh,
+/obj/item/flashlight/lantern{
+	pixel_y = 8
+	},
+/obj/item/camera,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/service/library)
 "bCE" = (
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -28581,9 +28597,8 @@
 /turf/closed/wall,
 /area/station/service/library)
 "cAs" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/dark,
-/area/station/service/library)
+/turf/open/space/basic,
+/area/station/cargo/mining/asteroid_magnet)
 "cAt" = (
 /obj/machinery/button/polarizer{
 	id = "curator"
@@ -28591,30 +28606,14 @@
 /turf/closed/wall,
 /area/station/service/library)
 "cAu" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/structure/table/wood/fancy/red,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/station/service/library)
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/space)
 "cAv" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 1
+/obj/effect/spawner/structure/window{
+	polarizer_id = "curator"
 	},
-/obj/structure/table/wood/fancy/red,
-/obj/item/flashlight/lantern{
-	pixel_y = 8
-	},
-/obj/item/clothing/head/costume/pharaoh,
-/obj/item/flashlight/lantern{
-	pixel_y = 8
-	},
-/obj/item/camera,
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/iron/dark,
+/turf/open/floor/plating,
 /area/station/service/library)
 "cAy" = (
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -28651,14 +28650,11 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAD" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
+/obj/machinery/door/airlock/external{
+	name = "External Airlock"
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/station/service/library)
+/turf/open/floor/plating,
+/area/station/maintenance/department/science/xenobiology)
 "cAH" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/newscaster/directional/south,
@@ -29679,7 +29675,7 @@
 /area/station/maintenance/department/cargo)
 "dqw" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Genetics"
+	name = "Artifact Science"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -29905,6 +29901,13 @@
 	dir = 1
 	},
 /area/station/service/chapel)
+"dzO" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/service/library)
 "dAa" = (
 /turf/closed/wall/r_wall,
 /area/station/security/lockers)
@@ -40140,12 +40143,11 @@
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "mES" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Surgical Room"
-	},
-/obj/effect/mapping_helpers/airlock/abandoned,
-/obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
 /obj/effect/mapping_helpers/airlock/unres,
+/obj/machinery/door/airlock/research/glass{
+	name = "Artifact Science"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "mEW" = (
@@ -40710,6 +40712,16 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
+"nhm" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/structure/table/wood/fancy/red,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/service/library)
 "nih" = (
 /obj/structure/closet,
 /obj/effect/spawner/random/clothing/costume,
@@ -43698,10 +43710,8 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
 "pGZ" = (
-/obj/effect/spawner/structure/window{
-	polarizer_id = "curator"
-	},
-/turf/open/floor/plating,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/dark,
 /area/station/service/library)
 "pHb" = (
 /obj/machinery/atmospherics/components/binary/pump{
@@ -43857,7 +43867,7 @@
 /area/station/science/explab)
 "pNy" = (
 /obj/machinery/atmospherics/components/binary/tank_compressor{
-	dir = 4
+	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -46144,6 +46154,10 @@
 /obj/structure/table/glass,
 /obj/item/restraints/handcuffs/cable/zipties,
 /obj/item/reagent_containers/blood/random,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/storage/bag/ore,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "rEZ" = (
@@ -47194,7 +47208,6 @@
 /area/station/cargo/sorting)
 "syQ" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/north,
-/obj/machinery/artifact_xray,
 /turf/open/floor/engine,
 /area/station/science/explab)
 "syW" = (
@@ -47613,6 +47626,15 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/central)
+"sRO" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/service/library)
 "sSd" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/plating,
@@ -48608,9 +48630,12 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
 "typ" = (
-/obj/structure/table/glass,
-/obj/item/hemostat,
 /obj/effect/mapping_helpers/burnt_floor,
+/obj/machinery/asteroid_magnet{
+	center_y = 61;
+	center_x = 105;
+	area_size = 3
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "tyt" = (
@@ -48823,13 +48848,6 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/blueshield)
-"tEo" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/dark,
-/area/station/service/library)
 "tEB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -49913,10 +49931,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "uzx" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Genetics Maintenance"
-	},
 /obj/effect/mapping_helpers/airlock/access/all/science/research,
+/obj/machinery/door/airlock/research/glass{
+	name = "Artifact Science"
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "uzL" = (
@@ -69454,7 +69472,7 @@ mcy
 cAK
 xBB
 cAr
-cAv
+bCA
 cyU
 cjp
 aaa
@@ -69709,7 +69727,7 @@ czt
 czC
 czI
 cAK
-tEo
+dzO
 cjp
 cAK
 cAH
@@ -69967,7 +69985,7 @@ cAK
 cAK
 cAK
 xBB
-pGZ
+cAv
 xBB
 syW
 cAS
@@ -70224,7 +70242,7 @@ jMS
 vNF
 vNF
 xBB
-pGZ
+cAv
 cAC
 cAK
 cAT
@@ -70481,7 +70499,7 @@ weS
 xBB
 iBp
 xBB
-pGZ
+cAv
 xBB
 cAK
 cAU
@@ -70994,9 +71012,9 @@ czu
 czD
 czN
 rHJ
-cAu
+nhm
 cjp
-cAD
+sRO
 uUf
 cjp
 cyU
@@ -71508,7 +71526,7 @@ cAK
 cAK
 czP
 cAK
-cAs
+pGZ
 cjp
 cjp
 cyU
@@ -99977,15 +99995,15 @@ aby
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
 aaa
 aaa
 aaa
@@ -100220,7 +100238,7 @@ dfm
 uuN
 uuN
 uzx
-uug
+lWy
 bwm
 aht
 bwm
@@ -100228,21 +100246,21 @@ ikB
 iVJ
 orc
 typ
-bwm
+rNB
 aht
 aby
 aht
 aby
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -100491,15 +100509,15 @@ aby
 aaa
 aed
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -100743,20 +100761,20 @@ lJr
 lWy
 maW
 bwm
-aht
-aed
-aht
+bwm
+bwm
+bwm
 aby
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -100999,21 +101017,21 @@ lWy
 lWy
 lWy
 lWy
-bwm
-aaa
-aby
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAD
+lWy
+lWy
+cAD
+cdm
+cdm
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -101257,20 +101275,20 @@ lWy
 lWy
 jDA
 bwm
-aht
+bwm
+bwm
+bwm
 aby
-aht
-aby
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -101519,15 +101537,15 @@ aby
 aaa
 aby
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -101770,21 +101788,21 @@ hFp
 abf
 abf
 ijU
-bwm
+rNB
 aht
 aed
 aht
 aed
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAs
+cAu
 aaa
 aaa
 aaa
@@ -102033,15 +102051,15 @@ aby
 aaa
 aby
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
+cAu
 aaa
 aaa
 aaa
