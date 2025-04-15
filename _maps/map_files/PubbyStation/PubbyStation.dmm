@@ -22032,7 +22032,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "bPh" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/atmospherics/miner/n2o,
 /turf/open/floor/engine/n2o,
 /area/station/engineering/atmos)
 "bPo" = (
@@ -22707,7 +22707,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "bSk" = (
-/obj/machinery/portable_atmospherics/canister/plasma,
+/obj/machinery/atmospherics/miner/plasma,
 /turf/open/floor/engine/plasma,
 /area/station/engineering/atmos)
 "bSm" = (
@@ -23548,7 +23548,7 @@
 /turf/open/floor/engine/plasma,
 /area/station/engineering/atmos)
 "bVo" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/miner/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/station/engineering/atmos)
 "bVp" = (
@@ -24980,11 +24980,11 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "ccm" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
 "ccn" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/station/engineering/atmos)
 "cco" = (
@@ -28577,65 +28577,94 @@
 /turf/open/floor/plating,
 /area/station/science/robotics/mechbay)
 "cAr" = (
-/obj/machinery/light/small/directional/west,
-/obj/machinery/door/window/right/directional/south{
-	name = "Curator Desk Door";
-	req_access = list("library")
-	},
 /obj/effect/turf_decal/tile/red/half/contrasted,
-/turf/open/floor/iron/dark,
+/turf/closed/wall,
 /area/station/service/library)
 "cAs" = (
-/obj/item/kirbyplants/organic/plant5{
-	pixel_y = 10
-	},
-/obj/structure/table/wood/fancy/red,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAt" = (
-/obj/item/flashlight/lantern{
-	pixel_y = 8
+/obj/machinery/button/polarizer{
+	id = "curator"
 	},
-/obj/structure/table/wood/fancy/red,
-/turf/open/floor/iron/dark,
+/turf/closed/wall,
 /area/station/service/library)
 "cAu" = (
-/obj/item/clothing/head/costume/pharaoh,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
 /obj/structure/table/wood/fancy/red,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAv" = (
-/obj/item/camera,
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 1
+	},
 /obj/structure/table/wood/fancy/red,
+/obj/item/flashlight/lantern{
+	pixel_y = 8
+	},
+/obj/item/clothing/head/costume/pharaoh,
+/obj/item/flashlight/lantern{
+	pixel_y = 8
+	},
+/obj/item/camera,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAy" = (
-/obj/machinery/light/small/directional/east,
 /obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/door/morgue{
+	name = "Curator's Study";
+	req_access = list("library")
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAB" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAC" = (
-/obj/structure/chair/wood/wings{
-	dir = 1
+/obj/effect/landmark/start/librarian,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAD" = (
-/obj/structure/chair/wood/wings{
-	dir = 1
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
 	},
-/obj/effect/landmark/start/librarian,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAH" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/newscaster/directional/south,
+/obj/item/kirbyplants/organic/plant5{
+	pixel_y = 10
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAI" = (
@@ -28668,10 +28697,6 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "cAU" = (
-/obj/machinery/camera/directional/south{
-	c_tag = "Monastery Archives Aft";
-	network = list("ss13","monastery")
-	},
 /obj/machinery/cassette/dj_station{
 	pixel_y = 12
 	},
@@ -30194,6 +30219,9 @@
 /obj/structure/table/wood/fancy/red,
 /obj/item/kirbyplants/organic/plant5{
 	pixel_y = 10
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
@@ -43670,14 +43698,10 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
 "pGZ" = (
-/obj/item/flashlight/lantern{
-	pixel_y = 8
+/obj/effect/spawner/structure/window{
+	polarizer_id = "curator"
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/structure/table/wood/fancy/red,
-/turf/open/floor/iron/dark,
+/turf/open/floor/plating,
 /area/station/service/library)
 "pHb" = (
 /obj/machinery/atmospherics/components/binary/pump{
@@ -48799,6 +48823,13 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/blueshield)
+"tEo" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/service/library)
 "tEB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -69423,7 +69454,7 @@ mcy
 cAK
 xBB
 cAr
-cAB
+cAv
 cyU
 cjp
 aaa
@@ -69678,8 +69709,8 @@ czt
 czC
 czI
 cAK
-xBB
-cAs
+tEo
+cjp
 cAK
 cAH
 cjp
@@ -70193,7 +70224,7 @@ jMS
 vNF
 vNF
 xBB
-cAu
+pGZ
 cAC
 cAK
 cAT
@@ -70450,8 +70481,8 @@ weS
 xBB
 iBp
 xBB
-cAv
-cAD
+pGZ
+xBB
 cAK
 cAU
 cyU
@@ -70708,7 +70739,7 @@ cAK
 vNF
 dPc
 cAt
-cAK
+xBB
 cAK
 uKL
 cyU
@@ -70963,9 +70994,9 @@ czu
 czD
 czN
 rHJ
-rHJ
-vNF
-vNF
+cAu
+cjp
+cAD
 uUf
 cjp
 cyU
@@ -71220,7 +71251,7 @@ czv
 czv
 czO
 ctZ
-cAK
+iBp
 cAy
 cAB
 cyU
@@ -71477,7 +71508,7 @@ cAK
 cAK
 czP
 cAK
-cAK
+cAs
 cjp
 cjp
 cyU
