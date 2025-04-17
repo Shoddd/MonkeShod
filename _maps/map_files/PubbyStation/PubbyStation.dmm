@@ -39093,8 +39093,8 @@
 /turf/open/floor/iron/dark,
 /area/station/command/gateway)
 "lCd" = (
-/obj/structure/fake_stairs,
 /turf/open/space/basic,
+/turf/closed/wall/r_wall,
 /area/station/engineering/supermatter/room)
 "lCR" = (
 /obj/machinery/door/airlock/maintenance{
@@ -48538,6 +48538,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
+"tnh" = (
+/obj/structure/grille,
+/turf/open/space/basic,
+/area/space,
+/area/space/nearstation)
 "tnY" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -51119,6 +51124,10 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"vjY" = (
+/obj/structure/grille,
+/turf/open/space/basic,
+/area/space)
 "vlF" = (
 /obj/item/coin/silver,
 /obj/effect/decal/cleanable/oil{
@@ -52833,6 +52842,11 @@
 /obj/structure/sign/poster/official/fruit_bowl/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
+"wCo" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space,
+/area/space/nearstation)
 "wCz" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -85481,10 +85495,10 @@ soA
 lWv
 hCE
 nZX
-aaa
-bBW
-aaa
-aaa
+oZC
+wCo
+oZC
+vjY
 aaa
 aaa
 aaa
@@ -85995,10 +86009,10 @@ kya
 mfI
 sWj
 nZX
-nZX
-nZX
-nZX
-nZX
+oZC
+aaa
+aaa
+tnh
 aaa
 cRL
 kWf
@@ -86252,10 +86266,10 @@ uRk
 slC
 sWj
 lCd
-wza
-wza
-wza
-evB
+oZC
+aaa
+aaa
+tnh
 aaa
 qNb
 dVv
@@ -86509,10 +86523,10 @@ jOe
 dWO
 sWj
 lCd
-wza
-wza
-wza
-evB
+oZC
+aaa
+aaa
+tnh
 aaa
 qNb
 qvZ
@@ -86766,10 +86780,10 @@ uRk
 lvD
 sWj
 lCd
-wza
-wza
-wza
-evB
+oZC
+aaa
+aaa
+tnh
 aaa
 qNb
 qAN
@@ -87022,11 +87036,11 @@ sIq
 vRw
 jZV
 sWj
-nZX
-nZX
-nZX
-nZX
-nZX
+lCd
+oZC
+aaa
+aaa
+tnh
 aaa
 qNb
 rvz
