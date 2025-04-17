@@ -28598,12 +28598,6 @@
 /obj/structure/marker_beacon/yellow,
 /turf/open/space/basic,
 /area/space/nearstation)
-"cAt" = (
-/obj/machinery/button/polarizer{
-	id = "curator"
-	},
-/turf/closed/wall,
-/area/station/service/library)
 "cAu" = (
 /obj/effect/spawner/structure/window{
 	polarizer_id = "curator"
@@ -28658,7 +28652,12 @@
 /obj/machinery/light/small/directional/south,
 /obj/machinery/newscaster/directional/south,
 /obj/item/kirbyplants/organic/plant5{
-	pixel_y = 10
+	pixel_y = 6;
+	pixel_x = -9
+	},
+/obj/structure/table/wood/fancy/red,
+/obj/machinery/button/polarizer{
+	id = "curator"
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
@@ -30212,7 +30211,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "dPc" = (
-/obj/structure/table/wood/fancy/red,
 /obj/item/kirbyplants/organic/plant5{
 	pixel_y = 10
 	},
@@ -71122,7 +71120,7 @@ cAK
 cAK
 vNF
 dPc
-cAt
+cjp
 xBB
 cAK
 uKL
