@@ -25738,8 +25738,8 @@
 /turf/open/floor/grass,
 /area/station/service/hydroponics/garden/monastery)
 "chl" = (
-/obj/structure/flora/bush/sunny/style_random,
 /obj/effect/landmark/atmospheric_sanity/ignore_area,
+/obj/machinery/holopad,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/garden/monastery)
 "chp" = (
@@ -36370,6 +36370,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
 /turf/closed/wall/r_wall,
 /area/station/tcommsat/computer)
+"jlX" = (
+/obj/machinery/holopad,
+/turf/closed/wall,
+/area/station/maintenance/department/medical)
 "jmr" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -86736,7 +86740,7 @@ lRN
 lRN
 lRN
 eMp
-oJj
+jlX
 bQz
 bRl
 rpu
