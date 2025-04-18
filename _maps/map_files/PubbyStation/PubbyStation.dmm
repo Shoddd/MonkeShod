@@ -39092,10 +39092,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/command/gateway)
-"lCd" = (
-/turf/open/space/basic,
-/turf/closed/wall/r_wall,
-/area/station/engineering/supermatter/room)
 "lCR" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Medbay Aux Storage"
@@ -86265,7 +86261,7 @@ uRk
 uRk
 slC
 sWj
-lCd
+nZX
 oZC
 aaa
 aaa
@@ -86522,7 +86518,7 @@ ipH
 jOe
 dWO
 sWj
-lCd
+nZX
 oZC
 aaa
 aaa
@@ -86779,7 +86775,7 @@ uRk
 uRk
 lvD
 sWj
-lCd
+nZX
 oZC
 aaa
 aaa
@@ -87036,7 +87032,7 @@ sIq
 vRw
 jZV
 sWj
-lCd
+nZX
 oZC
 aaa
 aaa
