@@ -5746,13 +5746,13 @@
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/gloves/latex,
-/obj/item/clothing/glasses/science,
-/obj/item/clothing/glasses/science,
 /obj/item/reagent_containers/cup/tube,
 /obj/item/reagent_containers/cup/tube,
 /obj/item/reagent_containers/cup/tube,
-/obj/item/clothing/glasses/science,
 /obj/item/reagent_containers/cup/tube,
+/obj/item/clothing/glasses/pathology,
+/obj/item/clothing/glasses/pathology,
+/obj/item/clothing/glasses/pathology,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "aHK" = (
@@ -7131,6 +7131,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "aNq" = (
@@ -21443,7 +21444,7 @@
 /obj/item/clothing/mask/breath,
 /obj/item/tank/internals/oxygen,
 /turf/open/floor/plating,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "cnu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -22321,7 +22322,7 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /turf/open/floor/plating,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "cwM" = (
 /obj/machinery/computer/security/qm{
 	dir = 4
@@ -22747,7 +22748,7 @@
 "cAv" = (
 /obj/machinery/atmospherics/components/tank/air,
 /turf/open/floor/plating,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "cAw" = (
 /obj/structure/table,
 /obj/item/storage/box{
@@ -28617,6 +28618,11 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
+"dNt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/electroplater,
+/turf/open/floor/carpet/grimey,
+/area/station/commons/vacant_room/office)
 "dNH" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/iron/dark/textured_half,
@@ -31511,8 +31517,9 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/virology,
+/obj/structure/cable,
 /turf/open/floor/iron/white,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "eXb" = (
 /obj/structure/chair/office,
 /turf/open/floor/carpet/green,
@@ -36072,6 +36079,9 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
+"gTE" = (
+/turf/closed/wall,
+/area/station/maintenance/department/medical/pathology)
 "gTG" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -47188,6 +47198,12 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage_shared)
+"ldx" = (
+/obj/docking_port/stationary/laborcamp_home{
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
 "ldB" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/dark,
@@ -52136,6 +52152,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /obj/machinery/door/firedoor,
+/obj/machinery/computer/cryopod/directional/south{
+	dir = 1;
+	pixel_y = -22;
+	max_integrity = 10000
+	},
 /turf/open/floor/iron,
 /area/station/security/prison)
 "nbZ" = (
@@ -58329,8 +58350,10 @@
 /obj/machinery/space_heater,
 /obj/machinery/light/small/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible,
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "pqf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/graffiti,
@@ -67155,6 +67178,12 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"sPh" = (
+/obj/machinery/cryopod{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/station/security/prison)
 "sPi" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -67822,8 +67851,9 @@
 /area/station/cargo/sorting)
 "tbK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible,
+/obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "tbN" = (
 /turf/open/floor/iron,
 /area/station/security/checkpoint/escape)
@@ -78206,8 +78236,9 @@
 	dir = 4;
 	name = "Virology air supply valve"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/medical/virology)
+/area/station/maintenance/department/medical/pathology)
 "xgO" = (
 /obj/effect/mapping_helpers/burnt_floor,
 /obj/effect/turf_decal/box,
@@ -101345,7 +101376,7 @@ nbZ
 ohO
 lMJ
 hyj
-nRe
+dNt
 uGE
 nAS
 kuB
@@ -102815,7 +102846,7 @@ fCF
 fyd
 fyd
 jQo
-agM
+sPh
 aqB
 bkM
 dOP
@@ -106403,7 +106434,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+ldx
 aaP
 aaa
 aak
@@ -130090,7 +130121,7 @@ aKS
 aJO
 nSd
 aEe
-aFd
+gTE
 eWM
 aEe
 aOG
@@ -131118,8 +131149,8 @@ aLy
 lZF
 hzF
 aEe
-aFd
-aFd
+gTE
+gTE
 aEe
 aOG
 cXH
