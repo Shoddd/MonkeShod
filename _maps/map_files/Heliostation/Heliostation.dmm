@@ -47200,7 +47200,7 @@
 /area/station/engineering/storage_shared)
 "ldx" = (
 /obj/docking_port/stationary/laborcamp_home{
-	dir = 8
+	dir = 4
 	},
 /turf/open/space/basic,
 /area/space)
