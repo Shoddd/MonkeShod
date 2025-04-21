@@ -58,7 +58,7 @@
 		//We are ASSUMING husk. // user.status_flags |= DISFIGURED // Restore "Unknown" disfigurement
 		ADD_TRAIT(user, TRAIT_DISFIGURED, TRAIT_HUSK)
 	cast_effect() // POOF
-	owner.balloon_alert(owner, "veil turned off.")
+	user.balloon_alert(owner, "veil turned off.")
 
 
 // CAST EFFECT // General effect (poof, splat, etc) when you cast. Doesn't happen automatically!
