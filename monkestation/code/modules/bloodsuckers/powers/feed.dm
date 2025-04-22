@@ -1,4 +1,4 @@
-#define FEED_NOTICE_RANGE 2
+#define FEED_NOTICE_RANGE 5
 #define FEED_DEFAULT_TIMER (10 SECONDS)
 
 /datum/action/cooldown/bloodsucker/feed
