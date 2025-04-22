@@ -1,3 +1,4 @@
+#define GOHOME_CANCELED -1
 #define GOHOME_START 0
 #define GOHOME_FLICKER_ONE 2
 #define GOHOME_FLICKER_TWO 4
@@ -10,13 +11,14 @@
  */
 /datum/action/cooldown/bloodsucker/gohome
 	name = "Vanishing Act"
-	desc = "As dawn aproaches, disperse into mist and return directly to your Lair.<br><b>WARNING:</b> You will drop <b>ALL</b> of your possessions if observed by mortals."
+	desc = "As dawn aproaches, disperse into mist and return directly to your Lair.<br><b>WARNING:</b> You will drop <b>ALL</b> of your possessions if observed by mortals.\
+	If you are harmed during this unstable time, you will be knocked out of this mist form!"
 	button_icon_state = "power_gohome"
 	active_background_icon_state = "vamp_power_off_oneshot"
 	base_background_icon_state = "vamp_power_off_oneshot"
 	power_explanation = "Vanishing Act: \n\
 		Activating Vanishing Act will, after a short delay, teleport the user to their Claimed Coffin. \n\
-		The power will cancel out if the Claimed Coffin is somehow destroyed. \n\
+		The power will cancel out if the Claimed Coffin is somehow destroyed or the user is harmed in this time. \n\
 		Immediately after activating, lights around the user will begin to flicker. \n\
 		Once the user teleports to their coffin, in their place will be a Rat or Bat."
 	power_flags = BP_AM_TOGGLE | BP_AM_SINGLEUSE | BP_AM_STATIC_COOLDOWN
@@ -27,6 +29,8 @@
 	cooldown_time = 100 SECONDS
 	///What stage of the teleportation are we in
 	var/teleporting_stage = GOHOME_START
+	//How much damage we've taken, more than 15 will cancel this power
+	var/damage_sustained = 0
 	///The types of mobs that will drop post-teleportation.
 	var/static/list/spawning_mobs = list(
 		/mob/living/basic/mouse = 3,
@@ -46,6 +50,8 @@
 /datum/action/cooldown/bloodsucker/gohome/ActivatePower(trigger_flags)
 	. = ..()
 	owner.balloon_alert(owner, "preparing to teleport...")
+	owner.visible_message(span_notice("[owner] begins turning to mist!."))
+	RegisterSignal (owner, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(on_damaged))
 
 /datum/action/cooldown/bloodsucker/gohome/process(seconds_per_tick)
 	. = ..()
@@ -79,6 +85,17 @@
 	for(var/obj/machinery/light/nearby_lights in view(flicker_range, get_turf(owner)))
 		nearby_lights.flicker(5)
 	playsound(get_turf(owner), 'sound/effects/singlebeat.ogg', beat_volume, 1)
+
+/datum/action/cooldown/bloodsucker/gohome/proc/on_damaged(datum/source, damage, damagetype)
+	SIGNAL_HANDLER
+
+	damage_sustained += damage
+
+	if(damage_sustained < 15)
+		return FALSE
+
+	owner.balloon_alert(owner, "you've taken to much damage, your teleport has been canceled.")
+	return TRUE
 
 /datum/action/cooldown/bloodsucker/gohome/proc/teleport_to_coffin(mob/living/carbon/user)
 	var/drop_item = FALSE
@@ -121,6 +138,7 @@
 /datum/effect_system/steam_spread/bloodsucker
 	effect_type = /obj/effect/particle_effect/fluid/smoke/vampsmoke
 
+#undef GOHOME_CANCELED
 #undef GOHOME_START
 #undef GOHOME_FLICKER_ONE
 #undef GOHOME_FLICKER_TWO
