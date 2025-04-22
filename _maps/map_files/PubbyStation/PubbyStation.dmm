@@ -48542,11 +48542,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
-"tnh" = (
-/obj/structure/grille,
-/turf/open/space/basic,
-/area/space,
-/area/space/nearstation)
 "tnY" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -51129,10 +51124,6 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
 /area/station/engineering/main)
-"vjY" = (
-/obj/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "vlF" = (
 /obj/item/coin/silver,
 /obj/effect/decal/cleanable/oil{
@@ -85502,7 +85493,7 @@ nZX
 oZC
 wCo
 oZC
-vjY
+gYo
 aaa
 aaa
 aaa
@@ -86016,7 +86007,7 @@ nZX
 oZC
 aaa
 aaa
-tnh
+gYo
 aaa
 cRL
 kWf
@@ -86273,7 +86264,7 @@ nZX
 oZC
 aaa
 aaa
-tnh
+gYo
 aaa
 qNb
 dVv
@@ -86530,7 +86521,7 @@ nZX
 oZC
 aaa
 aaa
-tnh
+gYo
 aaa
 qNb
 qvZ
@@ -86787,7 +86778,7 @@ nZX
 oZC
 aaa
 aaa
-tnh
+gYo
 aaa
 qNb
 qAN
@@ -87044,7 +87035,7 @@ nZX
 oZC
 aaa
 aaa
-tnh
+gYo
 aaa
 qNb
 rvz
