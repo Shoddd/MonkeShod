@@ -39272,6 +39272,13 @@
 	},
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/structure/cable,
+/obj/item/storage/box/monkeycubes{
+	pixel_x = 4
+	},
+/obj/item/clothing/gloves/latex{
+	pixel_x = 4;
+	pixel_y = 9
+	},
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "cmS" = (
@@ -39281,17 +39288,10 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
-/obj/structure/table,
-/obj/item/clothing/gloves/latex{
-	pixel_x = 4;
-	pixel_y = 9
-	},
-/obj/item/storage/box/monkeycubes{
-	pixel_x = 4
-	},
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 23
 	},
+/obj/machinery/clonepod,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "cmW" = (
@@ -39647,7 +39647,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
-/obj/structure/sink/directional/south,
+/obj/machinery/computer/cloning,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "cnS" = (
@@ -40155,7 +40155,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/purple,
-/obj/item/kirbyplants/random,
+/obj/machinery/dna_scannernew,
 /turf/open/floor/iron/white/side{
 	dir = 8
 	},
