@@ -203,7 +203,7 @@
 /area/station/commons/lounge)
 "DC" = (
 /obj/machinery/camera/autoname/directional/north,
-/obj/machinery/jukebox,
+/obj/machinery/dance_machine,
 /turf/open/floor/cult,
 /area/station/commons/lounge)
 "DJ" = (

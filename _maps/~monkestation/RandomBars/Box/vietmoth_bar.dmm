@@ -172,7 +172,7 @@
 /area/station/commons/lounge)
 "py" = (
 /obj/machinery/camera/autoname/directional/north,
-/obj/machinery/jukebox,
+/obj/machinery/dance_machine,
 /turf/open/floor/grass,
 /area/station/commons/lounge)
 "pP" = (

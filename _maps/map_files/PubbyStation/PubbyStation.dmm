@@ -19276,6 +19276,7 @@
 	dir = 1
 	},
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance)
 "bBM" = (
@@ -19308,6 +19309,7 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/portable_atmospherics/canister,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
 "bBU" = (
@@ -20948,6 +20950,7 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/testlab)
 "bJZ" = (
@@ -24370,6 +24373,21 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/monastery)
+"bYC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/duct,
+/obj/effect/landmark/start/xenobiologist,
+/turf/open/floor/iron/dark,
+/area/station/science/xenobiology)
 "bYI" = (
 /obj/item/kirbyplants/organic/plant21{
 	pixel_y = 3
@@ -34666,6 +34684,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "hFp" = (
@@ -40942,6 +40961,10 @@
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/cryopod{
+	dir = 4;
+	max_integrity = 10000
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -42066,6 +42089,7 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/mixingchamber_access,
+/obj/machinery/light/directional/west,
 /turf/open/floor/engine,
 /area/station/science/ordnance/freezerchamber)
 "okX" = (
@@ -44057,6 +44081,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "pOc" = (
@@ -49501,6 +49526,7 @@
 /obj/item/food/energybar,
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/item/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /turf/open/floor/iron/white,
 /area/station/security/prison/mess)
 "ucd" = (
@@ -49996,6 +50022,7 @@
 /area/station/security/warden)
 "utR" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
+/obj/machinery/computer/cryopod/directional/east,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -53165,6 +53192,8 @@
 /obj/item/plant_analyzer,
 /obj/item/cultivator,
 /obj/item/cultivator,
+/obj/item/shovel/spade,
+/obj/item/secateurs,
 /turf/open/floor/iron,
 /area/station/security/prison/garden)
 "wOf" = (
@@ -102398,7 +102427,7 @@ blX
 blX
 eoP
 gIG
-bzp
+bYC
 sXV
 bzs
 smW

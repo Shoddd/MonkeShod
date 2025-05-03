@@ -911,7 +911,7 @@
 /obj/effect/turf_decal/sand,
 /obj/item/coin/gold,
 /obj/structure/railing,
-/obj/machinery/jukebox,
+/obj/machinery/dance_machine,
 /turf/open/floor/sepia,
 /area/virtual_domain/powered)
 "Qu" = (
