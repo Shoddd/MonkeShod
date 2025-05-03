@@ -120,7 +120,7 @@
 			break
 
 	to_chat(feed_target, span_reallybig(span_hypnophrase("Huh? What just happened? You don't remember the last few moments")))
-	feed_target.Immobilize(20)
+	feed_target.Immobilize(2 SECONDS)
 	owner.add_traits(list(TRAIT_MUTE, TRAIT_IMMOBILIZED), FEED_TRAIT)
 	return ..()
 
