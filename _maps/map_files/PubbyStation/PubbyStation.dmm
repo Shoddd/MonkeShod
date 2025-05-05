@@ -52865,11 +52865,6 @@
 /obj/structure/sign/poster/official/fruit_bowl/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
-"wCo" = (
-/obj/structure/lattice,
-/turf/open/space,
-/area/space,
-/area/space/nearstation)
 "wCz" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -85519,9 +85514,9 @@ soA
 lWv
 hCE
 nZX
-oZC
-wCo
-oZC
+aht
+abI
+aht
 gYo
 aaa
 aaa
@@ -86033,7 +86028,7 @@ kya
 mfI
 sWj
 nZX
-oZC
+aht
 aaa
 aaa
 gYo
@@ -86290,7 +86285,7 @@ uRk
 slC
 sWj
 nZX
-oZC
+aht
 aaa
 aaa
 gYo
@@ -86547,7 +86542,7 @@ jOe
 dWO
 sWj
 nZX
-oZC
+aht
 aaa
 aaa
 gYo
@@ -86804,7 +86799,7 @@ uRk
 lvD
 sWj
 nZX
-oZC
+aht
 aaa
 aaa
 gYo
@@ -87061,7 +87056,7 @@ vRw
 jZV
 sWj
 nZX
-oZC
+aht
 aaa
 aaa
 gYo
