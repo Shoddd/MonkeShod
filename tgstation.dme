@@ -1691,6 +1691,7 @@
 #include "code\datums\quirks\neutral_quirks\bald.dm"
 #include "code\datums\quirks\neutral_quirks\colorist.dm"
 #include "code\datums\quirks\neutral_quirks\deviant_tastes.dm"
+#include "code\datums\quirks\neutral_quirks\dnc.dm"
 #include "code\datums\quirks\neutral_quirks\evil.dm"
 #include "code\datums\quirks\neutral_quirks\extrovert.dm"
 #include "code\datums\quirks\neutral_quirks\foreigner.dm"
