@@ -26,6 +26,13 @@
 	contains = list(/obj/item/vending_refill/dinnerware)
 	crate_name = "dinnerware supply crate"
 
+/datum/supply_pack/vending/dinnerware
+	name = "Fab-o-Vend Supply Crate"
+	desc = "Restock that Fab-o-Vend."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/vending_refill/barbervend)
+	crate_name = "Fab-o-Vend supply crate"
+
 /datum/supply_pack/vending/science/modularpc
 	name = "Deluxe Silicate Selections Restock"
 	desc = "What's a computer? Contains a Deluxe Silicate Selections restocking unit."
@@ -215,4 +222,11 @@
 					/obj/item/vending_refill/wardrobe/det_wardrobe,
 					/obj/item/vending_refill/wardrobe/law_wardrobe,
 				)
+	crate_name = "security department supply crate"
+
+/datum/supply_pack/vending/wardrobes/security
+	name = "Command Wardrobe Supply Crate"
+	desc = "This crate contains refills for the Command Outfitting Station"
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/vending_refill/wardrobe/comm_wardrobe)
 	crate_name = "security department supply crate"
