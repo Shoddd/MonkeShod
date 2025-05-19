@@ -26,7 +26,7 @@
 	contains = list(/obj/item/vending_refill/dinnerware)
 	crate_name = "dinnerware supply crate"
 
-/datum/supply_pack/vending/dinnerware
+/datum/supply_pack/vending/fab_o_vend
 	name = "Fab-o-Vend Supply Crate"
 	desc = "Restock that Fab-o-Vend."
 	cost = CARGO_CRATE_VALUE * 2
@@ -224,9 +224,9 @@
 				)
 	crate_name = "security department supply crate"
 
-/datum/supply_pack/vending/wardrobes/security
+/datum/supply_pack/vending/wardrobes/comm_wardrobe
 	name = "Command Wardrobe Supply Crate"
 	desc = "This crate contains refills for the Command Outfitting Station"
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/vending_refill/wardrobe/comm_wardrobe)
-	crate_name = "security department supply crate"
+	crate_name = "command outfitting station supply crate"
