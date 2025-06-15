@@ -469,7 +469,6 @@
 		"limbgrower",
 		"meta_beaker",
 		"ph_meter",
-		"piercesyringe",
 		"plasmarefiller",
 		"smoke_machine",
 		"sleeper",
@@ -1710,15 +1709,16 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/datum/techweb_node/explosive_weapons
-	id = "explosive_weapons"
-	display_name = "Explosive & Pyrotechnical Weaponry"
+/datum/techweb_node/chemical_weapons
+	id = "chemical_weapons"
+	display_name = "Chemical Weaponry"
 	description = "If the light stuff just won't do it."
 	prereq_ids = list("adv_weaponry")
 	design_ids = list(
 		"adv_grenade",
 		"large_grenade",
 		"pyro_grenade",
+		"piercesyringe",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
