@@ -79,7 +79,7 @@
 	damage = 15
 
 /obj/projectile/beam/weak/penetrator
-	armour_penetration = 50
+	armour_penetration = 80
 
 /obj/projectile/beam/practice
 	name = "practice laser"
@@ -199,6 +199,7 @@
 	impact_light_intensity = 7
 	impact_light_outer_range = 2.5
 	impact_light_color_override = COLOR_LIME
+	range = 255 //come on, have some fun now! monkestation edit
 
 /obj/projectile/beam/lasertag
 	name = "laser tag beam"

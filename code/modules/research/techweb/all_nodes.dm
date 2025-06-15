@@ -47,6 +47,7 @@
 		"destructive_analyzer",
 		"destructive_scanner",
 		"desttagger",
+		"diskplantgene", // monkestation edit: move to roundstart tech
 		"doppler_array",
 		"drinking_glass",
 		"dyespray", //monkestation edit
@@ -145,93 +146,7 @@
 		"universal_scanner",
 		"voice_analyzer",
 		"watering_can",
-		"diskplantgene", // monkestation edit: move to roundstart tech
-	)
-
-/datum/techweb_node/mmi
-	id = "mmi"
-	starting_node = TRUE
-	display_name = "Man Machine Interface"
-	description = "A slightly Frankensteinian device that allows human brains to interface natively with software APIs."
-	design_ids = list(
-		"mmi",
-	)
-
-/datum/techweb_node/cyborg
-	id = "cyborg"
-	starting_node = TRUE
-	display_name = "Cyborg Construction"
-	description = "Sapient robots with preloaded tool modules and programmable laws."
-	design_ids = list(
-		"borg_chest",
-		"borg_head",
-		"borg_l_arm",
-		"borg_l_leg",
-		"borg_r_arm",
-		"borg_r_leg",
-		"borg_suit",
-		"borg_upgrade_rename",
-		"borg_upgrade_restart",
-		"borgupload",
-		"cyborgrecharger",
-		"robocontrol",
-		"sflash",
-	)
-
-/datum/techweb_node/mech
-	id = "mecha"
-	starting_node = TRUE
-	display_name = "Mechanical Exosuits"
-	description = "Mechanized exosuits that are several magnitudes stronger and more powerful than the average human."
-	design_ids = list(
-		"mech_hydraulic_clamp",
-		"mech_recharger",
-		"mecha_tracking",
-		"mechacontrol",
-		"mechapower",
-		"ripley_chassis",
-		"ripley_left_arm",
-		"ripley_left_leg",
-		"ripley_main",
-		"ripley_peri",
-		"ripley_right_arm",
-		"ripley_right_leg",
-		"ripley_torso",
-		"ripleyupgrade",
-	)
-
-/datum/techweb_node/mod_basic
-	id = "mod"
-	starting_node = TRUE
-	display_name = "Basic Modular Suits"
-	description = "Specialized back mounted power suits with various different modules."
-	design_ids = list(
-		"mod_boots",
-		"mod_chestplate",
-		"mod_gauntlets",
-		"mod_helmet",
-		"mod_paint_kit",
-		"mod_shell",
-		"mod_plating_standard",
-		"mod_storage",
-		"mod_welding",
-		"mod_mouthhole",
-		"mod_flashlight",
-		"mod_longfall",
-		"mod_thermal_regulator",
-		"mod_plasma",
-		"mod_sign_radio",
-	)
-
-/datum/techweb_node/mech_tools
-	id = "mech_tools"
-	starting_node = TRUE
-	display_name = "Basic Exosuit Equipment"
-	description = "Various tools fit for basic mech units"
-	design_ids = list(
-		"mech_drill",
-		"mech_extinguisher",
-		"mech_mscanner",
+		"modlink_scryer", // monkestation addition
 	)
 
 /datum/techweb_node/basic_tools
@@ -288,6 +203,7 @@
 		"bonesetter",
 		"cautery",
 		"circular_saw",
+		"cybernetic_ears",
 		"cybernetic_eyes",
 		"cybernetic_heart",
 		"cybernetic_liver",
@@ -469,6 +385,7 @@
 		"limbgrower",
 		"meta_beaker",
 		"ph_meter",
+		"piercesyringe",
 		"plasmarefiller",
 		"smoke_machine",
 		"sleeper",
@@ -1709,16 +1626,15 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/datum/techweb_node/chemical_weapons
-	id = "chemical_weapons"
-	display_name = "Chemical Weaponry"
+/datum/techweb_node/explosive_weapons
+	id = "explosive_weapons"
+	display_name = "Explosive & Pyrotechnical Weaponry"
 	description = "If the light stuff just won't do it."
 	prereq_ids = list("adv_weaponry")
 	design_ids = list(
 		"adv_grenade",
 		"large_grenade",
 		"pyro_grenade",
-		"piercesyringe",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
