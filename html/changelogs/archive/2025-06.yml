@@ -290,3 +290,6 @@
   - balance: cardboard golems have tongues now
   - balance: weak punching golems no longer get 1 hit knockdowns
   - bugfix: fixes golem numbers that might have made sense at one point maybe
+2025-06-17:
+  ThePooba:
+  - bugfix: fixed gravity for top level shipbreaker not powerslamming you anymore
