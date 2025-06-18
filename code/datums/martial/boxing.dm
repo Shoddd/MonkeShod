@@ -8,8 +8,11 @@
 	return TRUE
 
 /datum/martial_art/boxing/grab_act(mob/living/attacker, mob/living/defender)
-	to_chat(attacker, span_warning("Can't grab while boxing!"))
-	return TRUE
+	if(defender.body_position == LYING_DOWN)
+		return
+	else
+		to_chat(attacker, span_warning("They need to be down first!"))
+		return TRUE
 
 /datum/martial_art/boxing/harm_act(mob/living/attacker, mob/living/defender)
 
@@ -41,7 +44,7 @@
 
 	defender.apply_damage(damage, STAMINA, affecting, armor_block)
 	log_combat(attacker_human, defender, "punched (boxing) ")
-	if(defender.stamina.loss > 230 && istype(defender.mind?.martial_art, /datum/martial_art/boxing))
+	if(defender.stamina.loss > 235 && istype(defender.mind?.martial_art, /datum/martial_art/boxing))
 		var/knockout_prob = 10 // 10% chance to win by knockout when they are around one hit from stam crit anyways
 		if((defender.stat != DEAD) && prob(knockout_prob))
 			defender.visible_message(span_danger("[attacker_human] knocks [defender] out with a haymaker!"), \
