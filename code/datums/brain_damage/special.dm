@@ -584,7 +584,6 @@ monkestation end */
 /datum/brain_trauma/special/axedoration/on_gain()
 	RegisterSignal(owner, COMSIG_MOB_EQUIPPED_ITEM, PROC_REF(on_equip))
 	RegisterSignal(owner, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(on_unequip))
-	RegisterSignal(owner, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
 	if(!GLOB.bridge_axe)
 		axe_gone()
 		return ..()
@@ -654,15 +653,6 @@ monkestation end */
 		return
 	to_chat(owner, span_warning("Should I really leave it here?"))
 	owner.add_mood_event("fireaxe", /datum/mood_event/axe_neutral)
-
-/datum/brain_trauma/special/axedoration/proc/on_examine(mob/source, atom/target, list/examine_strings)
-	SIGNAL_HANDLER
-	if(!istype(target, /obj/item/fireaxe))
-		return
-	if(target == GLOB.bridge_axe)
-		examine_strings += span_notice("It's the axe I've sworn to protect.")
-	else
-		examine_strings += span_warning("It's a simulacra, a fake axe made to fool the masses.")
 
 /datum/brain_trauma/special/axedoration/proc/on_axe_attack(obj/item/axe, atom/target, mob/user, click_parameters)
 	SIGNAL_HANDLER
