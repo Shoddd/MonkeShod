@@ -1,7 +1,7 @@
 
 /datum/mood_event/axe_gone
 	description = "What happened to the axe... Where is it? It can't be..."
-	mood_change = -15
+	mood_change = -10
 
 /datum/mood_event/axe_neutral
 	description = "I'm sure the axe is okay."
@@ -9,7 +9,7 @@
 
 /datum/mood_event/axe_cabinet
 	description = "The axe is where it belongs."
-	mood_change = 5
+	mood_change = 3
 
 /datum/mood_event/axe_missing
 	description = "The axe, there's something wrong..."
@@ -17,4 +17,4 @@
 
 /datum/mood_event/axe_held
 	description = "I'm not worthy of you, axe. I need to put you back."
-	mood_change = -10
+	mood_change = -5
