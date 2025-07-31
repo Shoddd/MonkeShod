@@ -11,18 +11,6 @@
 /obj/effect/landmark/deathmatch_player_spawn
 	name = "Deathmatch Player Spawner"
 
-/obj/effect/landmark/deathmatch_player_spawn/Initialize(mapload)
-	. = ..()
-	if (isnull(GLOB.deathmatch_game))
-		return INITIALIZE_HINT_QDEL
-	GLOB.deathmatch_game.spawnpoint_processing += src
-
-/obj/effect/landmark/deathmatch_player_spawn/Destroy()
-	. = ..()
-	if(isnull(GLOB.deathmatch_game))
-		return
-	GLOB.deathmatch_game.spawnpoint_processing -= src
-
 /obj/lightning_thrower
 	name = "overcharged SMES"
 	desc = "An overclocked SMES, bursting with power."
@@ -54,7 +42,7 @@
 /obj/lightning_thrower/process(seconds_per_tick)
 	var/list/dirs = throw_diagonals ? GLOB.diagonals : GLOB.cardinals
 	throw_diagonals = !throw_diagonals
-	playsound(src, 'sound/effects/magic/lightningbolt.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(src, 'sound/magic/lightningbolt.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 	if(length(signal_turfs))
 		clear_signals()
 	for(var/direction in dirs)
