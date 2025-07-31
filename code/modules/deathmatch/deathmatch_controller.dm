@@ -83,6 +83,9 @@
 		return
 	switch (action)
 		if ("host")
+			if(!(GLOB.ghost_role_flags & GHOSTROLE_MINIGAME))
+				tgui_alert(usr, "Deathmatch has been temporarily disabled by admins.")
+				return
 			if (lobbies[usr.ckey])
 				return
 			if(!SSticker.HasRoundStarted())
@@ -91,13 +94,16 @@
 			ui.close()
 			create_new_lobby(usr)
 		if ("join")
+			if(!(GLOB.ghost_role_flags & GHOSTROLE_MINIGAME))
+				tgui_alert(usr, "Deathmatch has been temporarily disabled by admins.")
+				return
 			if (!lobbies[params["id"]])
 				return
 			var/datum/deathmatch_lobby/playing_lobby = find_lobby_by_user(usr.ckey)
 			var/datum/deathmatch_lobby/chosen_lobby = lobbies[params["id"]]
 			if (!isnull(playing_lobby) && playing_lobby != chosen_lobby)
 				playing_lobby.leave(usr.ckey)
-			
+
 			if(isnull(playing_lobby))
 				log_game("[usr.ckey] joined deathmatch lobby [params["id"]] as a player.")
 				chosen_lobby.join(usr)
