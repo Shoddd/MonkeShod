@@ -1,0 +1,21 @@
+2025-08-01:
+  Bomberman66Dev, TheColorCyan:
+  - bugfix: Clarke ore box now has a less confusing dump contents button.
+  Melbert, TheColorCyan:
+  - refactor: Refactored the decal painter, report any missing decals or ones that
+      come out weird.
+  - rscdel: Tile sprayer is dead. Its functionality has been merged with the decal
+      painter.
+  - qol: A bunch of decals have been added to the decal painter. Style to your heart's
+      content.
+  MrBagHead:
+  - rscadd: Added toy variants of three different heretic blades Flesh-Like, Metallic,
+      and Rustic which all can steal hats. They are all available in the Donksoft
+      Toy Vendor and have their own crafting recipes under melee weapons.
+  Shoddd:
+  - rscdel: Removed brotherly connections pop up on inspecting
+  Wisemonster:
+  - rscadd: Automated announcement systems now announce researched nodes to their
+      respective departments. You can stop this by either disabling the announcement
+      systems or by using a multitool on the circuitboard of the console you're researching
+      nodes from.

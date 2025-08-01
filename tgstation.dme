@@ -2724,6 +2724,7 @@
 #include "code\game\turfs\open\cliff.dm"
 #include "code\game\turfs\open\dirtystation.dm"
 #include "code\game\turfs\open\floor.dm"
+#include "code\game\turfs\open\gas.dm"
 #include "code\game\turfs\open\grass.dm"
 #include "code\game\turfs\open\ice.dm"
 #include "code\game\turfs\open\lava.dm"
