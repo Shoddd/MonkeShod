@@ -87,7 +87,7 @@
 /datum/deathmatch_modifier/xray
 	name = "X-Ray Vision"
 	description = "See through the cordons of the deathmatch arena!"
-	blacklisted_modifiers = list(/datum/deathmatch_modifier/thermal, /datum/deathmatch_modifier/echolocation)
+	blacklisted_modifiers = list(/datum/deathmatch_modifier/thermal)
 
 /datum/deathmatch_modifier/xray/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	ADD_TRAIT(player, TRAIT_XRAY_VISION, DEATHMATCH_TRAIT)
@@ -96,7 +96,7 @@
 /datum/deathmatch_modifier/thermal
 	name = "Thermal Vision"
 	description = "See mobs through walls"
-	blacklisted_modifiers = list(/datum/deathmatch_modifier/xray, /datum/deathmatch_modifier/echolocation)
+	blacklisted_modifiers = list(/datum/deathmatch_modifier/xray)
 
 /datum/deathmatch_modifier/thermal/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	ADD_TRAIT(player, TRAIT_THERMAL_VISION, DEATHMATCH_TRAIT)
@@ -112,18 +112,10 @@
 /datum/deathmatch_modifier/nearsightness
 	name = "Nearsightness"
 	description = "Oops, I forgot my glasses at home"
-	blacklisted_modifiers = list(/datum/deathmatch_modifier/echolocation)
 
 /datum/deathmatch_modifier/nearsightness/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.become_nearsighted(DEATHMATCH_TRAIT)
 
-/datum/deathmatch_modifier/echolocation
-	name = "Echolocation"
-	description = "On one hand, you're blind, but on the other..."
-	blacklisted_modifiers = list(/datum/deathmatch_modifier/nearsightness, /datum/deathmatch_modifier/xray, /datum/deathmatch_modifier/thermal)
-
-/datum/deathmatch_modifier/echolocation/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
-	player.AddComponent(/datum/component/echolocation)
 /*
 /datum/deathmatch_modifier/ocelot
 	name = "Ocelot"
@@ -289,6 +281,8 @@
 
 /datum/deathmatch_modifier/drop_pod/proc/populate_contents()
 	contents = typesof(/mob/living/basic/trooper/syndicate)
+	for(var/typepath in contents) //Make sure to set even weights for the keys or `pick_weight` won't work.
+		contents[typepath] = 1
 
 /datum/deathmatch_modifier/drop_pod/monsters
 	name = "Drop Pod: Monsters"
@@ -398,13 +392,6 @@
 			continue
 		var/mine_path = pick(mines)
 		new mine_path (target_turf)
-
-/datum/deathmatch_modifier/flipping
-	name = "Perma-Flipping"
-	description = "You're constantly flipping, however it's purely cosmetic"
-
-/datum/deathmatch_modifier/flipping/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
-	player.SpinAnimation(speed = 0.9 SECONDS, loops = -1)
 
 /datum/deathmatch_modifier/random
 	name = "Random Modifiers"
