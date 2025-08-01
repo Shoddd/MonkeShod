@@ -1,7 +1,0 @@
-author: "Absolucy"
-delete-after: True
-changes:
-  - qol: "Spiders will now see their directive (if they have one) in their Status panel."
-  - qol: "Setting a directive as a broodmother spider also sets the directive for yourself."
-  - qol: "Spiders will now get a balloon alert notifying them of any commands from the broodmother."
-  - bugfix: "(Comxy) Spider types get properly checked again."

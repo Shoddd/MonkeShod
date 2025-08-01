@@ -1,4 +1,0 @@
-author: "Tractor Maam"
-delete-after: True
-changes:
-  - bugfix: "Egg Fried Rice no longer creates a bowl out of nowhere, the recipe requires a bowl to create."

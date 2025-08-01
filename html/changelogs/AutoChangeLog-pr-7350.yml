@@ -1,5 +1,0 @@
-author: "Absolucy"
-delete-after: True
-changes:
-  - balance: "Oozelings are now protected from water by thick clothing, such as modsuits."
-  - qol: "Added a balloon alert for oozelings when water melts them."

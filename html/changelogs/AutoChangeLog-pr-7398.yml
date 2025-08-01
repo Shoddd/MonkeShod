@@ -1,4 +1,4 @@
 author: "ThePooba"
 delete-after: True
 changes:
-  - rscadd: "gyas (turf for gasgiant)"
+  - bugfix: "i forgor a braket"
