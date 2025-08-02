@@ -116,28 +116,20 @@
 /datum/deathmatch_modifier/nearsightness/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.become_nearsighted(DEATHMATCH_TRAIT)
 
-/*
 /datum/deathmatch_modifier/ocelot
 	name = "Ocelot"
-	description = "Shoot faster, with extra ricochet and less spread. You're pretty good!"
+	description = "Shoot faster, with extra ricochet. You're pretty good!"
 	blacklisted_modifiers = list(/datum/deathmatch_modifier/stormtrooper)
 
 /datum/deathmatch_modifier/ocelot/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.add_traits(list(TRAIT_NICE_SHOT, TRAIT_DOUBLE_TAP), DEATHMATCH_TRAIT)
-	RegisterSignal(player, COMSIG_MOB_FIRED_GUN, PROC_REF(reduce_spread))
 	RegisterSignal(player, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE, PROC_REF(apply_ricochet))
-
-/datum/deathmatch_modifier/ocelot/proc/reduce_spread(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
-	SIGNAL_HANDLER
-	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] -= 50
-	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] -= 50
 
 /datum/deathmatch_modifier/ocelot/proc/apply_ricochet(mob/user, obj/projectile/projectile, datum/fired_from, atom/clicked_atom)
 	SIGNAL_HANDLER
 	projectile.ricochets_max += 2
-	projectile.min_ricochets += 2
+	projectile.ricochet_chance += 100
 	projectile.ricochet_incidence_leeway = 0
-	ADD_TRAIT(projectile, TRAIT_ALWAYS_HIT_ZONE, DEATHMATCH_TRAIT)
 
 /datum/deathmatch_modifier/stormtrooper
 	name = "Stormtrooper Aim"
@@ -145,20 +137,15 @@
 	blacklisted_modifiers = list(/datum/deathmatch_modifier/ocelot)
 
 /datum/deathmatch_modifier/stormtrooper/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
-	RegisterSignal(player, COMSIG_MOB_FIRED_GUN, PROC_REF(increase_spread))
+	ADD_TRAIT(player, TRAIT_POOR_AIM, DEATHMATCH_TRAIT)
 
-/datum/deathmatch_modifier/stormtrooper/proc/increase_spread(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
-	SIGNAL_HANDLER
-	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] += 10
-	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] += 35
-*/
 /datum/deathmatch_modifier/four_hands
 	name = "Four Hands"
 	description = "When one pair isn't enough..."
 
 /datum/deathmatch_modifier/four_hands/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.change_number_of_hands(4)
-/*
+
 /datum/deathmatch_modifier/paraplegic
 	name = "Paraplegic"
 	description = "Wheelchairs. For. Everyone."
@@ -166,10 +153,10 @@
 
 /datum/deathmatch_modifier/paraplegic/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.gain_trauma(/datum/brain_trauma/severe/paralysis/paraplegic, TRAUMA_RESILIENCE_ABSOLUTE)
-	var/obj/vehicle/ridden/wheelchair/motorized/improved/wheels = new (player.loc)
+	var/obj/vehicle/ridden/wheelchair/motorized/wheels = new (player.loc)
 	wheels.setDir(player.dir)
 	wheels.buckle_mob(player)
-*/
+
 /datum/deathmatch_modifier/mounts
 	name = "Mounts"
 	description = "A horse! A horse! My kingdom for a horse!"
