@@ -118,18 +118,10 @@
 
 /datum/deathmatch_modifier/ocelot
 	name = "Ocelot"
-	description = "Shoot faster, with extra ricochet. You're pretty good!"
-	blacklisted_modifiers = list(/datum/deathmatch_modifier/stormtrooper)
+	description = "Shoot faster. You're pretty good!"
 
 /datum/deathmatch_modifier/ocelot/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
 	player.add_traits(list(TRAIT_NICE_SHOT, TRAIT_DOUBLE_TAP), DEATHMATCH_TRAIT)
-	RegisterSignal(player, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE, PROC_REF(apply_ricochet))
-
-/datum/deathmatch_modifier/ocelot/proc/apply_ricochet(mob/user, obj/projectile/projectile, datum/fired_from, atom/clicked_atom)
-	SIGNAL_HANDLER
-	projectile.ricochets_max += 2
-	projectile.ricochet_chance += 100
-	projectile.ricochet_incidence_leeway = 0
 
 /datum/deathmatch_modifier/stormtrooper
 	name = "Stormtrooper Aim"
