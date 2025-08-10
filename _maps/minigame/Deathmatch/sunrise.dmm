@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aO" = (
+/obj/structure/mineral_door/paperframe,
+/turf/open/water/beach/biodome,
+/area/deathmatch)
 "bd" = (
 /turf/open/floor/wood/parquet,
 /area/deathmatch)
@@ -63,7 +67,7 @@
 	pixel_x = 16;
 	pixel_y = -17
 	},
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "el" = (
 /obj/structure/flora/bush/flowers_yw,
@@ -200,7 +204,7 @@
 /area/deathmatch)
 "of" = (
 /obj/structure/flora/rock/pile/jungle,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "oo" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -355,7 +359,7 @@
 /area/deathmatch)
 "xm" = (
 /obj/machinery/light,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "xz" = (
 /turf/open/lava/smooth,
@@ -404,7 +408,7 @@
 "yA" = (
 /obj/structure/flora/rock/pile/jungle/large,
 /obj/machinery/light/floor,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "yE" = (
 /obj/effect/landmark/deathmatch_player_spawn,
@@ -470,7 +474,7 @@
 /area/deathmatch)
 "Az" = (
 /obj/structure/flora/bush/reed,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "Bn" = (
 /obj/structure/mineral_door/paperframe,
@@ -483,7 +487,7 @@
 /obj/structure/window/spawner/directional/east,
 /obj/structure/window/spawner/directional/north,
 /obj/structure/window/spawner/directional/west,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "DD" = (
 /obj/structure/closet/cabinet,
@@ -507,7 +511,7 @@
 /obj/structure/window/spawner/directional/east,
 /obj/structure/window/spawner/directional/south,
 /obj/structure/window/spawner/directional/west,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "Fu" = (
 /obj/machinery/light{
@@ -598,7 +602,7 @@
 /turf/open/misc/grass,
 /area/deathmatch)
 "No" = (
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "NJ" = (
 /obj/structure/table/bronze,
@@ -632,7 +636,7 @@
 	pixel_x = -12;
 	pixel_y = 15
 	},
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "PE" = (
 /obj/structure/water_source/puddle,
@@ -694,7 +698,7 @@
 "Su" = (
 /obj/structure/flora/rock/pile/jungle/style_3,
 /obj/machinery/light/floor,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "SJ" = (
 /obj/item/kirbyplants{
@@ -792,7 +796,7 @@
 /obj/item/toy/plush/carpplushie/dehy_carp,
 /obj/structure/window/spawner/directional/east,
 /obj/structure/window/spawner/directional/west,
-/turf/open/water,
+/turf/open/water/jungle,
 /area/deathmatch)
 "Zu" = (
 /obj/structure/statue/bone/rib,
@@ -862,7 +866,7 @@ QC
 QC
 QC
 QC
-vC
+aO
 pG
 pG
 bd
