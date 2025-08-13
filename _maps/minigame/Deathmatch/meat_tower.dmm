@@ -6,11 +6,11 @@
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "db" = (
 /obj/machinery/griddle,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "et" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -20,26 +20,26 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "eB" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /mob/living/basic/goat/pete,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "eH" = (
 /obj/structure/reagent_dispensers/cooking_oil,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "fq" = (
 /obj/structure/table,
 /obj/machinery/microwave,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "fU" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -48,11 +48,11 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "gh" = (
 /obj/machinery/deepfryer,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "gk" = (
 /obj/machinery/conveyor/auto{
 	dir = 1
@@ -63,7 +63,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "gD" = (
 /obj/structure/table,
 /obj/item/reagent_containers/condiment/saltshaker{
@@ -73,10 +73,10 @@
 	pixel_x = 3
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "gS" = (
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "hz" = (
 /obj/machinery/conveyor/auto{
 	dir = 1
@@ -86,16 +86,16 @@
 	dir = 8
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ip" = (
 /obj/structure/table,
 /obj/item/food/pizza/donkpocket,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "iZ" = (
 /obj/item/food/pizza/pineapple,
 /turf/open/lava/smooth,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "jq" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -105,26 +105,26 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "jT" = (
 /obj/machinery/gibber,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "jZ" = (
 /obj/structure/sign/poster/contraband/moffuchis_pizza,
 /turf/closed/indestructible/necropolis,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "kn" = (
 /obj/item/food/pizzaslice/sassysage,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "kL" = (
 /obj/machinery/light,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "lu" = (
 /obj/machinery/conveyor/auto{
 	dir = 8
@@ -132,7 +132,7 @@
 /obj/effect/landmark/deathmatch_player_spawn,
 /obj/effect/turf_decal/siding/dark,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "me" = (
 /obj/machinery/conveyor/auto,
 /obj/item/pizzabox/bomb,
@@ -140,11 +140,11 @@
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "mu" = (
 /obj/item/stack/sheet/pizza/five,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "nl" = (
 /obj/machinery/conveyor/auto{
 	dir = 1
@@ -154,13 +154,13 @@
 	dir = 8
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "nr" = (
 /obj/structure/table,
 /obj/item/pizzabox/bomb/armed,
 /obj/item/knife/butcher,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "nt" = (
 /obj/machinery/conveyor/auto{
 	dir = 8
@@ -168,7 +168,7 @@
 /obj/item/pizzabox/bomb/armed,
 /obj/effect/turf_decal/siding/dark,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "oB" = (
 /obj/machinery/conveyor/auto,
 /obj/item/food/meat/slab/human,
@@ -176,24 +176,24 @@
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "oH" = (
 /obj/machinery/conveyor/auto{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/dark,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "pg" = (
 /obj/machinery/vending/dinnerware,
 /obj/machinery/light,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "pE" = (
 /obj/structure/table,
 /obj/item/knife/butcher,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "pL" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -203,15 +203,15 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "qa" = (
 /obj/structure/table,
 /obj/item/stack/sheet/animalhide/corgi,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "qg" = (
 /turf/closed/indestructible/reinforced,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "qL" = (
 /obj/machinery/conveyor/auto{
 	dir = 6
@@ -220,7 +220,7 @@
 	dir = 5
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "rb" = (
 /obj/structure/table,
 /obj/machinery/microwave,
@@ -228,7 +228,7 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sf" = (
 /obj/machinery/conveyor/auto{
 	dir = 1
@@ -237,24 +237,24 @@
 	dir = 8
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sQ" = (
 /obj/structure/closet/crate/coffin,
 /obj/item/gun/magic/hook,
 /obj/item/book/manual/wiki/cooking_to_serve_man,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "tB" = (
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "uJ" = (
 /obj/item/food/meat/slab/corgi,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "uM" = (
 /obj/item/food/meat/slab/corgi,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "uV" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -264,11 +264,11 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "uW" = (
 /obj/structure/reagent_dispensers/cooking_oil,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "wF" = (
 /obj/structure/kitchenspike,
 /obj/item/food/pizza/arnold,
@@ -276,21 +276,21 @@
 	dir = 4
 	},
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "zB" = (
 /obj/item/food/pizzaslice/meat,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "zH" = (
 /obj/structure/table,
 /obj/item/pizzabox/margherita,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "zR" = (
 /obj/structure/table,
 /obj/item/pizzabox/bomb/armed,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ce" = (
 /obj/machinery/conveyor/auto{
 	dir = 9
@@ -300,12 +300,12 @@
 	dir = 10
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ch" = (
 /obj/structure/table,
 /obj/item/pizzabox,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "DJ" = (
 /obj/machinery/conveyor/auto{
 	dir = 8
@@ -313,7 +313,7 @@
 /obj/item/food/meat/slab/human/mutant/slime,
 /obj/effect/turf_decal/siding/dark,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "DU" = (
 /obj/machinery/conveyor/auto,
 /obj/item/food/meat/slab/corgi,
@@ -321,7 +321,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "EC" = (
 /obj/machinery/conveyor/auto,
 /obj/item/food/pizzaslice/arnold,
@@ -329,19 +329,19 @@
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "EU" = (
 /obj/item/food/pizzaslice/moldy/bacteria,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Fs" = (
 /obj/structure/barricade/wooden/crude,
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "FA" = (
 /turf/open/lava/smooth,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ge" = (
 /obj/machinery/conveyor/auto{
 	dir = 10
@@ -351,27 +351,27 @@
 	dir = 6
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "GS" = (
 /obj/item/food/pizzaslice/ants,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Hg" = (
 /obj/machinery/oven,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Hj" = (
 /obj/machinery/conveyor/auto,
 /obj/effect/turf_decal/siding/dark{
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Hx" = (
 /obj/structure/table,
 /obj/item/food/pizzaslice/mothic_garlic,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "HR" = (
 /obj/machinery/conveyor/auto{
 	dir = 8
@@ -379,7 +379,7 @@
 /obj/item/food/meat/slab/gorilla,
 /obj/effect/turf_decal/siding/dark,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Io" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -389,35 +389,35 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Jo" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "KO" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "KP" = (
 /obj/structure/table,
 /obj/structure/desk_bell{
 	pixel_x = 7
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "KW" = (
 /obj/structure/sign/poster/contraband/pizza_imperator,
 /turf/closed/indestructible/necropolis,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "KZ" = (
 /obj/machinery/griddle,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "La" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -427,12 +427,12 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Lg" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Lo" = (
 /obj/machinery/conveyor/auto,
 /obj/item/pizzabox/vegetable,
@@ -441,7 +441,7 @@
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Mn" = (
 /obj/machinery/conveyor/auto{
 	dir = 5
@@ -450,14 +450,14 @@
 	dir = 9
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Mr" = (
 /obj/machinery/deepfryer,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "NF" = (
 /obj/machinery/conveyor/auto{
 	dir = 1
@@ -467,7 +467,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "NG" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -477,18 +477,18 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Oq" = (
 /turf/closed/indestructible/necropolis,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Tn" = (
 /obj/item/pizzabox/infinite,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ue" = (
 /obj/item/food/pizzaslice/sassysage,
 /turf/open/indestructible/necropolis/air,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Up" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -496,7 +496,7 @@
 	pixel_y = 6
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "XA" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -510,7 +510,7 @@
 	pixel_x = -9
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "XQ" = (
 /obj/machinery/conveyor/auto{
 	dir = 4
@@ -521,12 +521,12 @@
 	dir = 1
 	},
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "XU" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /obj/machinery/light/floor,
 /turf/open/indestructible/kitchen,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 
 (1,1,1) = {"
 qg

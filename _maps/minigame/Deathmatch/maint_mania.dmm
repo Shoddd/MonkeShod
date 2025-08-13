@@ -1,36 +1,36 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aD" = (
 /turf/closed/indestructible/reinforced,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aP" = (
 /obj/machinery/door/airlock/centcom,
 /turf/open/space/basic,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bI" = (
 /obj/machinery/light/no_nightlight/directional/north,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cn" = (
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cx" = (
 /obj/machinery/vending/wallmed/directional/north,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cy" = (
 /obj/structure/table/reinforced/ctf,
 /obj/item/gun/ballistic/shotgun/riot,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "eX" = (
 /obj/item/ammo_casing/shotgun/frag12,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "fh" = (
 /obj/structure/table/reinforced/ctf,
 /obj/item/storage/backpack/duffelbag/syndie/ammo,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ga" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
@@ -38,14 +38,14 @@
 "gJ" = (
 /obj/item/ammo_casing/shotgun/stunslug,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ho" = (
 /obj/effect/spawner/structure/window/reinforced/indestructible,
 /turf/open/floor/plating,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "hB" = (
 /turf/closed/indestructible/fakedoor,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "hN" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -54,36 +54,36 @@
 "ih" = (
 /obj/item/reagent_containers/pill/maintenance,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "iC" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "jc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "jX" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "jY" = (
 /obj/item/stack/medical/gauze{
 	amount = 1
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ka" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "kp" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "kx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -91,87 +91,87 @@
 	},
 /obj/effect/landmark/deathmatch_player_spawn,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "lA" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "lJ" = (
 /obj/item/crowbar,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "lN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/caution/stand_clear,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "mS" = (
 /obj/effect/turf_decal/caution/stand_clear,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "mZ" = (
 /obj/structure/grille,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "nQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "nS" = (
 /obj/machinery/light/small/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "pT" = (
 /obj/structure/rack,
 /obj/item/grenade/chem_grenade/cleaner,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "pZ" = (
 /obj/structure/sign/poster/random/directional/west,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "qK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/pill/maintenance,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sk" = (
 /obj/structure/sign/poster/random/directional/east,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sl" = (
 /obj/machinery/door/airlock/public/glass,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sF" = (
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/structure/closet/firecloset,
 /obj/effect/turf_decal/delivery,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sV" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/delivery,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sX" = (
 /obj/structure/rack,
 /obj/machinery/light/small/directional/north,
 /obj/item/reagent_containers/cup/soda_cans/lemon_lime,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "tT" = (
 /obj/structure/rack,
 /obj/item/stack/cable_coil,
 /obj/item/assembly/igniter,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ur" = (
 /obj/structure/lattice,
 /turf/template_noop,
@@ -179,28 +179,28 @@
 "vB" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "wi" = (
 /obj/item/screwdriver,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "wC" = (
 /obj/item/weldingtool,
 /obj/structure/rack,
 /obj/item/flashlight/flare,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "zd" = (
 /obj/machinery/vending/medical{
 	desc = "Go on, smash this vending machine. You want free healing right? Do it."
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "zF" = (
 /obj/item/ammo_casing/shotgun/improvised,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "AG" = (
 /obj/structure/lattice/catwalk,
 /obj/item/storage/toolbox/mechanical/old/clean{
@@ -212,15 +212,15 @@
 /obj/machinery/light/small/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "BU" = (
 /obj/item/chainsaw,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "BV" = (
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Dh" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/mob_spawn/corpse/human/engineer/mod,
@@ -232,48 +232,48 @@
 	dir = 4
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Er" = (
 /obj/item/clothing/head/utility/welding,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ew" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/reagent_containers/pill/maintenance,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "EK" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "EN" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/turf_decal/bot,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "EW" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/landmark/deathmatch_player_spawn,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Fp" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/pill/maintenance,
 /obj/item/spear,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "FH" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "FL" = (
 /turf/template_noop,
 /area/template_noop)
 "Gi" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "GA" = (
 /obj/item/stack/medical/mesh{
 	amount = 4
@@ -282,23 +282,23 @@
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/delivery,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "GF" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Hd" = (
 /obj/machinery/light/small/directional/north,
 /obj/item/soap/nanotrasen,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Hp" = (
 /obj/item/reagent_containers/pill/maintenance,
 /obj/structure/sign/poster/random/directional/north,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "HE" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/statue/sandstone/assistant,
@@ -311,32 +311,32 @@
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/prime,
 /obj/effect/turf_decal/box,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Kt" = (
 /obj/structure/table/reinforced/ctf,
 /obj/item/weldingtool,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "KW" = (
 /obj/machinery/space_heater,
 /obj/effect/turf_decal/bot,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "La" = (
 /obj/structure/sign/poster/random/directional/south,
 /obj/item/flashlight/flare,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "LJ" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/bot,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Mt" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "MC" = (
 /obj/effect/mob_spawn/corpse/human/assistant,
 /turf/template_noop,
@@ -345,59 +345,59 @@
 /obj/structure/rack,
 /obj/item/reagent_containers/cup/soda_cans/starkist,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ns" = (
 /obj/item/stack/cable_coil,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "NO" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "NU" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "NY" = (
 /obj/item/screwdriver,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ok" = (
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/light/small/directional/south,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Om" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/random/directional/south,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "OA" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "OO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/structure/sign/poster/random/directional/east,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "OR" = (
 /obj/item/stack/medical/suture{
 	amount = 6
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Pp" = (
 /obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "PW" = (
 /obj/effect/decal/cleanable/blood/gibs/torso,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Qr" = (
 /obj/structure/closet/wardrobe,
 /turf/open/floor/plating/airless,
@@ -406,43 +406,43 @@
 /obj/item/razor,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "QQ" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/turf_decal/box,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Rm" = (
 /obj/item/weldingtool,
 /obj/structure/rack,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Su" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/box,
 /obj/effect/landmark/deathmatch_player_spawn,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "SN" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/turf_decal/caution/stand_clear,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Tu" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/table/reinforced,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "TB" = (
 /obj/structure/closet/firecloset,
 /obj/effect/turf_decal/delivery,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "TP" = (
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/door/airlock/public/glass,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Un" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/tracks{
@@ -450,29 +450,29 @@
 	},
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Vb" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 5
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Xb" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "XC" = (
 /obj/item/assembly/igniter,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "XD" = (
 /obj/item/holosign_creator/security,
 /obj/machinery/light/small/directional/south,
 /turf/open/indestructible,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 
 (1,1,1) = {"
 FL

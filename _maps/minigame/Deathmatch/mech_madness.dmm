@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ac" = (
 /turf/closed/indestructible/alien,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ad" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_ammo/lmg,
@@ -15,26 +15,26 @@
 	pixel_y = 24
 	},
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ae" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "dm4"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "af" = (
 /obj/machinery/button/door{
 	id = "dm3";
 	pixel_y = 24
 	},
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aj" = (
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "am" = (
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "an" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/head/utility/welding,
@@ -42,7 +42,7 @@
 /obj/item/inducer,
 /obj/item/weldingtool/largetank,
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ao" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg{
@@ -52,7 +52,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "as" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /obj/effect/turf_decal/box,
@@ -61,7 +61,7 @@
 	pixel_x = 24
 	},
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "at" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /obj/effect/turf_decal/box,
@@ -71,176 +71,176 @@
 	pixel_x = -24
 	},
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aw" = (
 /turf/open/floor/carpet/neon/simple/purple,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ax" = (
 /turf/closed/wall/mineral/plastitanium,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "az" = (
 /obj/structure/tank_holder/extinguisher,
 /turf/open/floor/carpet/neon/simple/red,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aA" = (
 /obj/vehicle/sealed/mecha/gygax,
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aB" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 4;
 	icon_state = "trimline_warn_fill"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aC" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aE" = (
 /mob/living/carbon/human/species/monkey/angry,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aG" = (
 /turf/open/lava,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aH" = (
 /obj/vehicle/sealed/mecha/gygax,
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aI" = (
 /turf/open/floor/carpet/neon/simple/lime,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aJ" = (
 /turf/open/floor/carpet/neon/simple/red,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aK" = (
 /turf/open/floor/carpet/neon/simple/violet,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aL" = (
 /obj/item/chair,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aN" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/energy/laser,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aP" = (
 /turf/open/floor/light/colour_cycle/dancefloor_a,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aQ" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aR" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aS" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aV" = (
 /obj/structure/barricade/security,
 /turf/open/floor/carpet/neon/simple/red,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aW" = (
 /obj/structure/table,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aY" = (
 /obj/structure/closet/crate/trashcart/filled,
 /obj/item/weldingtool,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "aZ" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ba" = (
 /obj/structure/closet/crate/trashcart/filled,
 /obj/machinery/light/directional/west,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bb" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bc" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bd" = (
 /obj/item/gun/energy/laser/hellgun,
 /obj/structure/closet/crate/trashcart/filled,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "be" = (
 /obj/machinery/stasis,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bf" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/carpet/neon/simple/purple,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bh" = (
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bi" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1;
 	icon_state = "trimline_warn_fill"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bj" = (
 /obj/machinery/sleeper{
 	dir = 4;
 	icon_state = "sleeper"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bk" = (
 /obj/vehicle/ridden/atv,
 /obj/item/key/atv,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bl" = (
 /obj/machinery/sleeper{
 	dir = 8;
 	icon_state = "sleeper"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bm" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bn" = (
 /obj/machinery/vending/assist,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bo" = (
 /obj/machinery/vending/sustenance,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bp" = (
 /obj/item/grenade/smokebomb,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bq" = (
 /obj/item/mecha_parts/mecha_equipment/armor/antiproj_armor_booster,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "br" = (
 /obj/item/mecha_parts/mecha_equipment/armor/anticcw_armor_booster,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bs" = (
 /turf/open/floor/carpet/neon/simple/blue,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bt" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /obj/effect/turf_decal/box,
@@ -249,10 +249,10 @@
 	pixel_x = 24
 	},
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bu" = (
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bv" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/head/utility/welding,
@@ -260,17 +260,17 @@
 /obj/item/inducer,
 /obj/item/weldingtool/largetank,
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bw" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bx" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "dm1"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "by" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg{
@@ -280,22 +280,22 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bz" = (
 /obj/machinery/vending/medical,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bB" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bF" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 8;
 	icon_state = "trimline_warn_fill"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bG" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_ammo/lmg,
@@ -309,185 +309,185 @@
 	pixel_y = 24
 	},
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bH" = (
 /obj/structure/table_frame,
 /turf/open/floor/carpet/neon/simple/violet,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bJ" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bL" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bM" = (
 /obj/structure/window/fulltile,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bN" = (
 /obj/structure/showcase/horrific_experiment,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bO" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bP" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bR" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bS" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bT" = (
 /obj/item/shard,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bV" = (
 /turf/open/floor/noslip,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bW" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bY" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "bZ" = (
 /obj/machinery/recharger,
 /obj/structure/table,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ca" = (
 /obj/structure/table,
 /obj/item/storage/briefcase,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cc" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cd" = (
 /obj/item/grenade/smokebomb,
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ce" = (
 /obj/structure/chair{
 	dir = 1;
 	icon_state = "chair"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cg" = (
 /obj/structure/showcase/machinery/cloning_pod,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ch" = (
 /obj/structure/chair/office,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ci" = (
 /obj/structure/cannon{
 	dir = 8;
 	icon_state = "falconet_patina"
 	},
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ck" = (
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cl" = (
 /obj/item/reagent_containers/syringe,
 /turf/open/floor/light/colour_cycle/dancefloor_b,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cm" = (
 /obj/item/gun/ballistic/revolver/c38/detective,
 /obj/structure/table/wood,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cn" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cp" = (
 /obj/structure/window/spawner/directional/south,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cq" = (
 /obj/item/gun/ballistic/rifle/boltaction/pipegun,
 /obj/structure/table/wood,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cr" = (
 /obj/item/gun/ballistic/rifle/boltaction,
 /obj/structure/table/wood,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ct" = (
 /obj/structure/window/spawner/directional/west{
 	icon_state = "window"
 	},
 /obj/item/lighter,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cv" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
 /obj/machinery/light/directional/south,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cw" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cx" = (
 /obj/structure/fermenting_barrel/gunpowder,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cy" = (
 /obj/structure/toilet{
 	dir = 8;
 	icon_state = "toilet00"
 	},
 /turf/open/floor/light,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cz" = (
 /obj/item/stack/cannonball/fourteen,
 /obj/structure/table/wood,
 /turf/open/floor/sepia,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cA" = (
 /obj/item/reagent_containers/cup/glass/drinkingglass/filled/nuka_cola,
 /turf/open/floor/light/colour_cycle/dancefloor_a,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cB" = (
 /obj/item/reagent_containers/pill/stimulant,
 /turf/open/floor/light/colour_cycle/dancefloor_b,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cC" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cD" = (
 /obj/structure/barricade/security,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cE" = (
 /obj/structure/table,
 /turf/open/floor/carpet/neon/simple/violet,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cF" = (
 /obj/structure/barricade/security,
 /turf/open/floor/carpet/neon/simple/violet,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cG" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/head/utility/welding,
@@ -495,74 +495,74 @@
 /obj/item/inducer,
 /obj/item/weldingtool/largetank,
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cH" = (
 /obj/machinery/sheetifier,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cI" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/carpet/neon/simple/lime,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cK" = (
 /obj/structure/table,
 /obj/item/mecha_parts/mecha_equipment/repair_droid,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cL" = (
 /obj/structure/table,
 /obj/item/grenade/smokebomb,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cM" = (
 /obj/item/reagent_containers/pill/happinesspsych,
 /turf/open/floor/light/colour_cycle/dancefloor_b,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cN" = (
 /obj/item/fireaxe,
 /turf/open/floor/light/colour_cycle/dancefloor_a,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cO" = (
 /obj/structure/table_frame,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cP" = (
 /obj/structure/urinal{
 	pixel_y = 24
 	},
 /turf/open/floor/noslip,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cQ" = (
 /obj/item/reagent_containers/pill/lsd,
 /turf/open/floor/light/colour_cycle/dancefloor_a,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cR" = (
 /obj/item/reagent_containers/pill/probital,
 /turf/open/floor/light/colour_cycle/dancefloor_b,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cS" = (
 /obj/structure/reagent_dispensers/cooking_oil,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cT" = (
 /obj/item/inducer,
 /obj/item/weldingtool,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cU" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "dm2"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cV" = (
 /obj/item/mecha_ammo/scattershot,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cW" = (
 /obj/machinery/grill,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cX" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /obj/effect/turf_decal/box,
@@ -571,47 +571,47 @@
 	pixel_x = -24
 	},
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cY" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "dm3"
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "cZ" = (
 /obj/machinery/sheetifier,
 /obj/machinery/light/directional/east,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "da" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "db" = (
 /obj/vehicle/sealed/mecha/gygax,
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "dc" = (
 /obj/machinery/grill,
 /obj/machinery/light/directional/west,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "dd" = (
 /obj/structure/table,
 /obj/item/food/meat/rawcutlet,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "df" = (
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "dg" = (
 /obj/vehicle/sealed/mecha/gygax,
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "dh" = (
 /obj/structure/closet/l3closet/janitor,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "di" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/head/utility/welding,
@@ -619,25 +619,25 @@
 /obj/machinery/light/directional/west,
 /obj/item/inducer,
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "dk" = (
 /obj/structure/table,
 /obj/item/storage/belt/janitor,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "eK" = (
 /obj/structure/table,
 /obj/item/food/meat/slab/bear,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "gg" = (
 /obj/structure/table,
 /obj/item/mop,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "go" = (
 /turf/open/floor/carpet/neon/simple/pink,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "gF" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_ammo/lmg,
@@ -651,7 +651,7 @@
 	pixel_y = 24
 	},
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "nE" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg{
@@ -661,20 +661,20 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ot" = (
 /obj/structure/mop_bucket/janitorialcart{
-	dir = 4	
+	dir = 4
 	},
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "pD" = (
 /obj/machinery/button/door{
 	id = "dm1";
 	pixel_y = -24
 	},
 /turf/open/floor/carpet/neon/simple/yellow,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "sc" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_ammo/lmg,
@@ -688,55 +688,55 @@
 	pixel_y = 24
 	},
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "tY" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "yI" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/light/directional/south,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Br" = (
 /obj/machinery/button/door{
 	id = "dm4";
 	pixel_y = -24
 	},
 /turf/open/floor/carpet/neon/simple/green,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ES" = (
 /obj/item/storage/bag/trash,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Ij" = (
 /obj/structure/table,
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Jo" = (
 /obj/machinery/vending/wardrobe/jani_wardrobe,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "ME" = (
 /obj/structure/table,
 /obj/item/food/meat/slab/pig,
 /turf/open/floor/engine,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "PK" = (
 /obj/item/storage/medkit/regular,
 /turf/open/floor/noslip,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "RN" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "XP" = (
 /obj/machinery/button/door{
 	id = "dm2";
 	pixel_y = 24
 	},
 /turf/open/floor/carpet/neon/simple/orange,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 "Zw" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg{
@@ -746,7 +746,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/neon/simple/teal,
-/area/deathmatch)
+/area/deathmatch/fullbright)
 
 (1,1,1) = {"
 ac
