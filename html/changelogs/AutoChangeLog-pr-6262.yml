@@ -1,4 +1,0 @@
-author: "Absolucy"
-delete-after: True
-changes:
-  - rscadd: "Added a new music player implementation for BYOND 516 (used by jukeboxes and lobby music)"

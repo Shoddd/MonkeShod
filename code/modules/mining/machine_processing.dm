@@ -46,7 +46,7 @@
 /**
 	Base proc for all `/mineral` subtype machines to use. Place your item pickup behavior in this proc when you override it for your specific machine.
 
-	Called when the COMSIG_ATOM_ENTERED and COMSIG_ATOM_INITIALIZED_ON signals are sent.
+	Called when the COMSIG_ATOM_ENTERED and COMSIG_ATOM_AFTER_SUCCESSFUL_INITIALIZED_ON signals are sent.
 
 	Arguments:
 	* source - the turf that is listening for the signals.
@@ -171,8 +171,7 @@
 	if(!materials.has_space(material_amount))
 		unload_mineral(O)
 	else
-		materials.insert_item(O, breakdown_flags=BREAKDOWN_FLAGS_ORE_PROCESSOR)
-		qdel(O)
+		materials.insert_item(O, breakdown_flags = BREAKDOWN_FLAGS_ORE_PROCESSOR)
 		if(mineral_machine)
 			mineral_machine.updateUsrDialog()
 

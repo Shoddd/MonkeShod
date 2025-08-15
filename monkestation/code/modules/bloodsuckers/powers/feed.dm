@@ -60,7 +60,6 @@
 	if(!QDELETED(feed_target))
 		log_combat(user, feed_target, "fed on blood", addition="(and took [blood_taken] blood)")
 		to_chat(user, span_notice("You slowly release [feed_target]."))
-		to_chat(feed_target, span_reallybig(span_hypnophrase("Huh? What just happened? You don't remember the last few moments")))
 		if(feed_target.stat == DEAD && !started_alive)
 			user.add_mood_event("drankkilled", /datum/mood_event/drankkilled)
 			bloodsuckerdatum_power.AddHumanityLost(10)
@@ -114,12 +113,14 @@
 			vision_distance = FEED_NOTICE_RANGE, ignored_mobs = feed_target)
 
 	//check if we were seen
-	for(var/mob/living/viewer in oviewers(FEED_NOTICE_RANGE) - feed_target)
+	for(var/mob/living/viewer in oviewers(FEED_NOTICE_RANGE, owner) - feed_target)
 		if(check_for_masquerade_infraction(viewer))
 			owner.balloon_alert(owner, "feed noticed!")
 			bloodsuckerdatum_power.give_masquerade_infraction()
 			break
 
+	to_chat(feed_target, span_reallybig(span_hypnophrase("Huh? What just happened? You don't remember the last few moments")))
+	feed_target.Immobilize(2 SECONDS)
 	owner.add_traits(list(TRAIT_MUTE, TRAIT_IMMOBILIZED), FEED_TRAIT)
 	return ..()
 
@@ -129,6 +130,8 @@
 	if(viewer.has_unlimited_silicon_privilege)
 		return FALSE
 	if(viewer.stat >= DEAD)
+		return FALSE
+	if(viewer.invisibility)
 		return FALSE
 	if(viewer.is_blind() || viewer.is_nearsighted_currently())
 		return FALSE
@@ -228,7 +231,7 @@
 	for(var/mob/living/near_targets in oview(1, owner))
 		if(!owner.Adjacent(near_targets))
 			continue
-		if(near_targets.stat)
+		if(near_targets.stat < DEAD)
 			close_living_mobs |= near_targets
 		else
 			close_dead_mobs |= near_targets
