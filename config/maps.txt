@@ -88,4 +88,5 @@ endmap
 
 map cerestation
 	votable
+	minplayers 60
 endmap
