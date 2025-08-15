@@ -925,12 +925,12 @@
 /turf/open/floor/plating,
 /area/station/hallway/primary/starboard)
 "aeq" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage\t},/obj/machinery/recycler,/turf/open/floor/plating,/area/station/cargo/sorting)"akA" = (/obj/machinery/conveyor{\tdir = 4;\tid = "garbage
-	},
 /obj/machinery/recycler{
 	dir = 8
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "garbage"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/sorting)
@@ -2171,7 +2171,7 @@
 "akz" = (
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "garbage\t},/obj/machinery/recycler,/turf/open/floor/plating,/area/station/cargo/sorting)"akA" = (/obj/machinery/conveyor{\tdir = 4;\tid = "garbage
+	id = "garbage"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/sorting)
@@ -28578,8 +28578,6 @@
 /obj/structure/bookcase{
 	name = "Forbidden Knowledge"
 	},
-/obj/machinery/camera/autoname/directional/west,
-/obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/iron/chapel{
 	dir = 1
 	},
@@ -28592,7 +28590,6 @@
 	pixel_y = 7;
 	pixel_x = -4
 	},
-/obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "bGt" = (
@@ -28607,8 +28604,6 @@
 /obj/structure/cassette_rack/prefilled{
 	pixel_y = 8
 	},
-/obj/machinery/camera/autoname/directional/north,
-/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron/chapel{
 	dir = 4
 	},
@@ -29347,7 +29342,6 @@
 "bHW" = (
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/cassette/dj_station,
-/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "bHX" = (
@@ -29361,7 +29355,6 @@
 /obj/structure/sign/painting/library_private{
 	pixel_x = 32
 	},
-/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "bHZ" = (
@@ -29896,8 +29889,6 @@
 /obj/machinery/modular_computer/preset/curator{
 	dir = 4
 	},
-/obj/machinery/camera/autoname/directional/west,
-/obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/chapel{
 	dir = 8
 	},
@@ -29908,7 +29899,6 @@
 "bJu" = (
 /obj/structure/destructible/cult/item_dispenser/archives/library,
 /obj/item/book/kindred,
-/obj/machinery/camera/autoname/directional/east,
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/chapel,
 /area/station/service/library)
