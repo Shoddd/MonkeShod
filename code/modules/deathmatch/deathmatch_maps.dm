@@ -39,7 +39,7 @@
 	max_players = 10
 	allowed_loadouts = list(/datum/outfit/deathmatch_loadout/assistant)
 	map_name = "OSHA_violator"
-	key = "OSHA_violator"
+	key = "OSHA_Violator"
 
 /datum/lazy_template/deathmatch/the_brig
 	name = "The Brig"
