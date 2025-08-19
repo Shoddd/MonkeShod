@@ -272,6 +272,16 @@
 	icon_state = "jacket_med"
 	worn_icon_state = "jacket_med"
 
+/obj/item/clothing/suit/jacket/frontier_colonist/unarmored
+		armor_type = /datum/armor/none
+
+
+/obj/item/clothing/suit/jacket/frontier_colonist/short/unarmored
+		armor_type = /datum/armor/none
+
+/obj/item/clothing/suit/jacket/frontier_colonist/medical/unarmored
+		armor_type = /datum/armor/none
+
 // Flak Jacket
 
 /obj/item/clothing/suit/frontier_colonist_flak
