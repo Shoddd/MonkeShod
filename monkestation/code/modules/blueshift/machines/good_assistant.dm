@@ -1,4 +1,4 @@
-#define GBP_PUNCH_REWARD 225
+#define GBP_PUNCH_REWARD 200
 
 /obj/item/card/id
 	COOLDOWN_DECLARE(gbp_redeem_cooldown)
