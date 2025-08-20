@@ -502,6 +502,11 @@
 	starting_organ = /obj/item/organ/internal/cyberimp/brain/nif/debug
 	uses = 1
 
+/// This cell is only meant for use in items temporarily created by a NIF. Do not let players extract this from devices.
+/obj/item/stock_parts/cell/infinite/nif_cell
+	name = "Nanite Cell"
+	desc = "If you see this, please make an issue on GitHub."
+
 /obj/item/storage/box/nif_ghost_box
 	name = "\improper NIF Starter Kit"
 	desc = "Contains a calibration-free NIF along with a variety of NIFSofts."
