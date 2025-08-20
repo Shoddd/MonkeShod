@@ -274,23 +274,21 @@
 
 /obj/item/clothing/suit/jacket/frontier_colonist/unarmored
 	name = "unarmored frontier trenchcoat"
-	desc = "A knee length coat with a water-resistant exterior and relatively comfortable interior. \
-		In between?"
-		armor_type = /datum/armor/none
+	desc = "A knee length coat with a water-resistant exterior and relatively comfortable interior."
+	armor_type = /datum/armor/none
 
 
 /obj/item/clothing/suit/jacket/frontier_colonist/short/unarmored
 	name = "unarmored frontier jacket"
-	desc = "A short coat with a water-resistant exterior and relatively comfortable interior. \
-		In between?"
-		armor_type = /datum/armor/none
+	desc = "A short coat with a water-resistant exterior and relatively comfortable interior."
+	armor_type = /datum/armor/none
 
 /obj/item/clothing/suit/jacket/frontier_colonist/medical/unarmored
 	name = "unarmored frontier medical jacket"
 	desc = "A short coat with a water-resistant exterior and relatively comfortable interior. \
-		In between? This one is colored a bright red and covered in white \
+		This one is colored a bright red and covered in white \
 		stripes to denote that someone wearing it might be able to provide medical assistance."
-		armor_type = /datum/armor/none
+	armor_type = /datum/armor/none
 
 // Flak Jacket
 
