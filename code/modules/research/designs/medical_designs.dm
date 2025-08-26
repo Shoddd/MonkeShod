@@ -362,6 +362,20 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
+/datum/design/nifsoft_hud/medical
+	name = "Medical HUD NIFSoft"
+	desc = "A NIFSoft datadisk containing the Medical HUD NIFsoft."
+	id = "nifsoft_hud_medical"
+	build_path = /obj/item/disk/nifsoft_uploader/med_hud
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/nifsoft_hud/science
+	name = "Science HUD NIFSoft"
+	desc = "A NIFSoft datadisk containing the Science HUD NIFsoft."
+	id = "nifsoft_hud_science"
+	build_path = /obj/item/disk/nifsoft_uploader/sci_hud
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_MEDICAL
+
 /////////////////////////////////////////
 //////////Cybernetic Implants////////////
 /////////////////////////////////////////
@@ -633,6 +647,19 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_UTILITY
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SECURITY // monkestation edit
+
+/datum/design/nif/standard
+	name = "Nanite Implant Framework"
+	desc = "A brain implant that infuses the user with nanites."
+	id = "nif_standard"
+	build_path = /obj/item/organ/internal/cyberimp/brain/nif/standard
+	build_type = PROTOLATHE | MECHFAB
+	construction_time = 8 SECONDS
+	materials = list(/datum/material/iron = 6000, /datum/material/glass = 4000, /datum/material/silver = 2000 , /datum/material/gold = 2000)
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_TOOLS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
 
 /////////////////////////////////////////
 ////////////Regular Implants/////////////

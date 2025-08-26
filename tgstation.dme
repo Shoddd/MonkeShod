@@ -5183,7 +5183,6 @@
 #include "code\modules\modular_implants\nif_actions.dm"
 #include "code\modules\modular_implants\nif_implants.dm"
 #include "code\modules\modular_implants\nif_persistence.dm"
-#include "code\modules\modular_implants\nif_research.dm"
 #include "code\modules\modular_implants\nifs.dm"
 #include "code\modules\modular_implants\nifs_tgui.dm"
 #include "code\modules\modular_implants\nifsoft_catalog.dm"
