@@ -15,7 +15,7 @@
 /obj/item/organ/internal/cyberimp/brain/nif
 	name = "Nanite Implant Framework"
 	desc = "A brain implant that infuses the user with nanites."
-	icon = 'monkestation/code/modules/blueshift/icons/obj/nifs.dmi'
+	icon = 'icons/obj/medical/organs/organs.dmi'
 	icon_state = "base_nif"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot = ORGAN_SLOT_BRAIN_NIF
