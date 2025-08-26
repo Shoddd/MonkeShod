@@ -1,0 +1,8 @@
+author: "Salted-Zen"
+delete-after: True
+changes:
+  - qol: "Scraped the Scarborough arms stamp off the 'Duster' Revolver"
+  - balance: "Reduced PK Railgun recoil"
+  - balance: "Slightly increased the firerate of the 'Hellhound' LMG and increased max ammo to 150"
+  - rscadd: "Added a purchasable case of 3 large speed loaders that hold 50 rounds each, for reloading the 'Hellhound' LMG"
+  - balance: "All mining guns (Except the 'Thor' 950 JDJ) fit in the suit slots of Explorer Armor, Goliath Cloak, Ash Drake Armor, And Godslayer Armor"
