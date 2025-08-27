@@ -200,7 +200,8 @@
 	var/burn = selected_limb.burn_dam
 	selected_limb.drop_limb()
 	qdel(selected_limb)
-	chest.receive_damage(brute, burn, forced = TRUE, wound_bonus = CANT_WOUND)
+	if(!isnull(chest))
+		chest.receive_damage(brute, burn, forced = TRUE, wound_bonus = CANT_WOUND)
 	user.blood_volume += 20
 	playsound(user, 'sound/items/eatfood.ogg', 20, TRUE)
 
