@@ -41,7 +41,7 @@
 	. = ..()
 	for (var/key in players+observers)
 		var/datum/tgui/ui = SStgui.get_open_ui(get_mob_by_ckey(key), src)
-		if (ui) ui.close()
+		ui?.close()
 		remove_ckey_from_play(key)
 	if(playing && !isnull(location))
 		clear_reservation()
