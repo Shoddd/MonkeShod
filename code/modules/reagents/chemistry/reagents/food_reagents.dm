@@ -316,18 +316,23 @@
 		return ..()
 	holder.remove_reagent(/datum/reagent/consumable/capsaicin, 5 * REM * seconds_per_tick)
 
-	var/cooling = 0
+	var/cooling = -10 * TEMPERATURE_DAMAGE_COEFFICIENT
 	switch(current_cycle)
 		if(1 to 15)
-			cooling = -0.1 KELVIN
+			if(isslime(affected_mob))
+				cooling = -rand(5,20)
 		if(15 to 25)
-			cooling = -0.5 KELVIN
+			cooling *= 2
+			if(isslime(affected_mob))
+				cooling = -rand(10,20)
 		if(25 to 35)
-			cooling = -1 KELVIN
+			cooling *= 3
+			if(isslime(affected_mob))
+				cooling = -rand(15,20)
 			if(prob(1))
 				affected_mob.emote("shiver")
 		if(35 to INFINITY)
-			cooling = -2 KELVIN
+			cooling *= 4
 			if(prob(5))
 				affected_mob.emote("shiver")
 
@@ -853,7 +858,7 @@
 /datum/reagent/consumable/tinlux/proc/add_reagent_light(mob/living/living_holder)
 	var/obj/effect/dummy/lighting_obj/moblight/mob_light_obj = living_holder.mob_light(2)
 	LAZYSET(mobs_affected, living_holder, mob_light_obj)
-	RegisterSignal(living_holder, COMSIG_QDELETING, PROC_REF(on_living_holder_deletion))
+	RegisterSignal(living_holder, COMSIG_QDELETING, PROC_REF(on_living_holder_deletion), override = TRUE)
 
 /datum/reagent/consumable/tinlux/proc/remove_reagent_light(mob/living/living_holder)
 	UnregisterSignal(living_holder, COMSIG_QDELETING)
