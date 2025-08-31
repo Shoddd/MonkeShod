@@ -24,7 +24,7 @@ type Lobby = {
 type Data = {
   hosting: BooleanLike;
   admin: BooleanLike;
-  playing: string;
+  playing: string | number;
   lobbies: Lobby[];
 };
 
