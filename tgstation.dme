@@ -5198,6 +5198,7 @@
 #include "code\modules\modular_implants\nifsoft_catalog.dm"
 #include "code\modules\modular_implants\nifsofts.dm"
 #include "code\modules\modular_implants\nifsofts\action_granter.dm"
+#include "code\modules\modular_implants\nifsofts\book_summoner.dm"
 #include "code\modules\modular_implants\nifsofts\hivemind.dm"
 #include "code\modules\modular_implants\nifsofts\huds.dm"
 #include "code\modules\modular_implants\nifsofts\money_sense.dm"
