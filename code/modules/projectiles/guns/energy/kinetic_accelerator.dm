@@ -122,9 +122,9 @@
 	if(istype(arrived, /obj/item/borg/upgrade/modkit))
 		modkits |= arrived
 
-/obj/item/gun/energy/recharge/kinetic_accelerator/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/borg/upgrade/modkit) && !disablemodification) //monkeedit
-		var/obj/item/borg/upgrade/modkit/MK = I
+/obj/item/gun/energy/recharge/kinetic_accelerator/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
+	if(istype(attacking_item, /obj/item/borg/upgrade/modkit) && !disablemodification) //monkeedit
+		var/obj/item/borg/upgrade/modkit/MK = attacking_item
 		MK.install(src, user)
 	else
 		return ..()
@@ -668,7 +668,7 @@
 	icon = 'icons/obj/weapons/guns/energy.dmi'
 	icon_state = "kineticrailgun"
 	base_icon_state = "kineticrailgun"
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/wastes
 	recharge_time = 3 SECONDS
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic/railgun)
