@@ -8,6 +8,7 @@
 	Due to its educational nature and miniscule size, Grimoire Akasha is typically provided for free at most NIFSoft marketplaces."
 	summonable_items = list()
 	purchase_price = 0 // This is a tool intended to help out newer players.
+	activation_cost = 10 // Refer to above
 	max_summoned_items = 2
 	buying_category = NIFSOFT_CATEGORY_INFORMATION
 	ui_icon = "book"
