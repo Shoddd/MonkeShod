@@ -114,7 +114,7 @@ const LobbyDisplay = (props) => {
           lobby.name
         ) : (
           <Dropdown
-            width="10"
+            width="10%"
             noChevron
             selected={lobby.name}
             options={['Close', 'View']}
