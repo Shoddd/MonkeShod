@@ -28,7 +28,7 @@ type Data = {
   lobbies: Lobby[];
 };
 
-export function DeathmatchPanel(props) {
+export const DeathmatchPanel = (props) => {
   const { act, data } = useBackend<Data>();
   const { hosting } = data;
 
@@ -60,9 +60,9 @@ export function DeathmatchPanel(props) {
       </Window.Content>
     </Window>
   );
-}
+};
 
-function LobbyPane(props) {
+const LobbyPane = (props) => {
   const { data } = useBackend<Data>();
   const { lobbies = [] } = data;
 
@@ -98,9 +98,9 @@ function LobbyPane(props) {
       </Table>
     </Section>
   );
-}
+};
 
-function LobbyDisplay(props) {
+const LobbyDisplay = (props) => {
   const { act, data } = useBackend<Data>();
   const { admin, playing, hosting } = data;
   const { lobby } = props;
@@ -114,7 +114,7 @@ function LobbyDisplay(props) {
           lobby.name
         ) : (
           <Dropdown
-            width={10}
+            width="10"
             noChevron
             selected={lobby.name}
             options={['Close', 'View']}
@@ -154,4 +154,4 @@ function LobbyDisplay(props) {
       </Table.Cell>
     </Table.Row>
   );
-}
+};
