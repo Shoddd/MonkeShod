@@ -196,12 +196,12 @@
 	light_outer_range = 3
 	anchored = TRUE
 
-/obj/effect/energy_snare/Initialize()
+/obj/effect/energy_snare/Initialize(mapload)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(deploy)), 2 SECONDS)
 
 /obj/effect/energy_snare/proc/deploy()
-	new/obj/item/restraints/legcuffs/beartrap/energy(get_turf(loc))
+	new /obj/item/restraints/legcuffs/beartrap/energy(get_turf(loc))
 	qdel(src)
 
 /obj/projectile/energy/trap/cyborg
