@@ -179,10 +179,30 @@
 	range = 4
 
 /obj/projectile/energy/trap/on_hit(atom/target, blocked = 0, pierce_hit)
-	if(iscarbon(target))
-		var/obj/item/restraints/legcuffs/beartrap/B = new /obj/item/restraints/legcuffs/beartrap/energy(get_turf(target))
-		B.spring_trap(null, target)
+	var/turf/Tloc = get_turf(target)
+	if(!locate(/obj/effect/nettingportal) in Tloc)
+		new /obj/effect/energy_snare(Tloc)
 	. = ..()
+
+/obj/projectile/energy/trap/on_range()
+	new /obj/effect/energy_snare(loc)
+	..()
+
+/obj/effect/energy_snare
+	name = "deploying energy snare"
+	desc = "A soon to be hard-light snare"
+	icon = 'icons/obj/restraints.dmi'
+	icon_state = "e_snare0"
+	light_outer_range = 3
+	anchored = TRUE
+
+/obj/effect/energy_snare/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(deploy)), 2 SECONDS)
+
+/obj/effect/energy_snare/proc/deploy()
+	new/obj/item/restraints/legcuffs/beartrap/energy(get_turf(loc))
+	qdel(src)
 
 /obj/projectile/energy/trap/cyborg
 	name = "Energy Bola"
@@ -196,7 +216,7 @@
 		qdel(src)
 	if(iscarbon(target))
 		var/obj/item/restraints/legcuffs/beartrap/B = new /obj/item/restraints/legcuffs/beartrap/energy/cyborg(get_turf(target))
-		B.spring_trap(null, target)
+		B.spring_trap(target)
 	QDEL_IN(src, 10)
 	. = ..()
 

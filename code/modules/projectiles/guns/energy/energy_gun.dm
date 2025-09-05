@@ -82,7 +82,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	ammo_type = list(/obj/item/ammo_casing/energy/net, /obj/item/ammo_casing/energy/trap)
 	modifystate = FALSE
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	ammo_x_offset = 1
 	///A dragnet beacon set to be the teleport destination for snare teleport rounds.
 	var/obj/item/dragnet_beacon/linked_beacon
