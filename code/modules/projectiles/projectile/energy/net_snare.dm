@@ -179,9 +179,7 @@
 	range = 4
 
 /obj/projectile/energy/trap/on_hit(atom/target, blocked = 0, pierce_hit)
-	var/turf/Tloc = get_turf(target)
-	if(!locate(/obj/effect/nettingportal) in Tloc)
-		new /obj/effect/energy_snare(Tloc)
+	new /obj/effect/energy_snare(loc)
 	. = ..()
 
 /obj/projectile/energy/trap/on_range()
