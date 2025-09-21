@@ -269,6 +269,7 @@
 /obj/machinery/door/airlock
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/public.dmi'
 	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/overlays.dmi'
+	note_overlay_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/command
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/command.dmi'
@@ -424,6 +425,7 @@
 /obj/machinery/door/airlock/external
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/external.dmi'
 	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/overlays.dmi'
+	note_overlay_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/overlays.dmi'
 
 //CENTCOM
 /obj/machinery/door/airlock/centcom
@@ -443,10 +445,12 @@
 /obj/machinery/door/airlock/hatch
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/centcom.dmi'
 	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/overlays.dmi'
+	note_overlay_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/maintenance_hatch
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/maintenance.dmi'
 	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/overlays.dmi'
+	note_overlay_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/overlays.dmi'
 
 //HIGH SEC
 /obj/machinery/door/airlock/highsecurity
