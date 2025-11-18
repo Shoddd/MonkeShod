@@ -5022,7 +5022,7 @@
 "bAU" = (
 /obj/machinery/camera{
 	c_tag = "Morgue North";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/structure/disposalpipe/segment{
@@ -6621,7 +6621,7 @@
 "bXT" = (
 /obj/machinery/camera{
 	c_tag = "Medbay Storage";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/structure/closet/l3closet,
@@ -10812,7 +10812,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/camera{
 	c_tag = "Security Post - Medbay";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/item/book/manual/wiki/security_space_law{
@@ -11565,7 +11565,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Medbay Chemistry Lab - East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","medbay")
 	},
 /obj/structure/table/reinforced,
@@ -18434,7 +18434,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Service - Botany Ranch South";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/dark,
@@ -19893,7 +19893,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Mining Ore Smeltery";
-	dir = 6
+	dir = 9
 	},
 /obj/structure/sign/poster/official/random/directional/east,
 /turf/open/floor/iron,
@@ -23511,7 +23511,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera{
 	c_tag = "Service - Botany Lower Entrance";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/hydroponics)
@@ -27191,7 +27191,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Medbay Chemistry Lab - North";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/stripes/end,
@@ -27780,7 +27780,7 @@
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/camera{
 	c_tag = "Mining Break Room";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/light_switch/directional/north{
 	pixel_x = 9
@@ -27874,7 +27874,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/camera{
 	c_tag = "Service - Botany Apiary";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/hydroponics)
@@ -28115,7 +28115,7 @@
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/camera{
 	c_tag = "Atmospherics - South West";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -31639,7 +31639,7 @@
 /obj/machinery/duct,
 /obj/machinery/camera{
 	c_tag = "Virology Module North";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/machinery/light/small/directional/north,
@@ -33965,7 +33965,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Medbay East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/white,
@@ -36811,7 +36811,7 @@
 /obj/machinery/newscaster/directional/west,
 /obj/machinery/camera{
 	c_tag = "Research Division Lobby";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","rd")
 	},
 /obj/machinery/light/directional/west,
@@ -37311,7 +37311,7 @@
 /obj/structure/sign/calendar/directional/north,
 /obj/machinery/camera{
 	c_tag = "Service - Botany Equipment";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
@@ -38129,7 +38129,7 @@
 "lHB" = (
 /obj/machinery/camera{
 	c_tag = "Chapel North";
-	dir = 6
+	dir = 9
 	},
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
@@ -39058,7 +39058,7 @@
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/camera{
 	c_tag = "Mining B-2 Hallway";
-	dir = 9
+	dir = 6
 	},
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 1
@@ -39960,7 +39960,7 @@
 /obj/structure/closet/crate/internals,
 /obj/machinery/camera{
 	c_tag = "Cargo Bay B-1";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
@@ -40868,7 +40868,7 @@
 /obj/structure/tank_holder/extinguisher,
 /obj/machinery/camera{
 	c_tag = "Medbay Pharmacy";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -41468,7 +41468,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/machinery/camera{
 	c_tag = "Medbay Chemistry Lab - South";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/white,
@@ -41615,7 +41615,7 @@
 /obj/item/radio/intercom/directional/east,
 /obj/machinery/camera{
 	c_tag = "Chief Medical Office North";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/tile/blue/full,
@@ -42384,7 +42384,7 @@
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/camera{
 	c_tag = "Cargo Bay Drone Bay";
-	dir = 5
+	dir = 10
 	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/drone_bay)
@@ -43251,7 +43251,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/camera{
 	c_tag = "Departure Lounge West";
-	dir = 10
+	dir = 5
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red{
@@ -44231,7 +44231,7 @@
 "nCa" = (
 /obj/machinery/camera{
 	c_tag = "Departure Lounge Emergency EVA";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/cryopod{
@@ -44678,7 +44678,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Medbay South";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/white,
@@ -46287,7 +46287,7 @@
 "ofT" = (
 /obj/machinery/camera{
 	c_tag = "Service Botany - Backroom";
-	dir = 9
+	dir = 6
 	},
 /turf/closed/wall,
 /area/station/maintenance/starboard/fore)
@@ -46503,7 +46503,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Medbay Psychology";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","medbay");
 	pixel_y = -22
 	},
@@ -46590,7 +46590,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Service - Backstage";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
@@ -46598,7 +46598,7 @@
 /obj/structure/bodycontainer/morgue,
 /obj/machinery/camera{
 	c_tag = "Morgue South";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/dark,
@@ -47061,7 +47061,7 @@
 /obj/effect/landmark/blobstart,
 /obj/machinery/camera{
 	c_tag = "Virology Pen";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply,
@@ -49072,7 +49072,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Virology Hallway";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","medbay")
 	},
 /obj/effect/landmark/start/hangover,
@@ -51907,7 +51907,7 @@
 /obj/structure/closet/l3closet/virology,
 /obj/machinery/camera{
 	c_tag = "Virology Airlock";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/white,
@@ -52790,7 +52790,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Departure Lounge Holding Area";
-	dir = 9
+	dir = 6
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -53703,7 +53703,7 @@
 /obj/item/clothing/head/costume/sombrero/green,
 /obj/machinery/camera{
 	c_tag = "Service - Theater";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/status_display/ai/directional/north,
 /obj/effect/turf_decal/siding/wood,
@@ -58161,7 +58161,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /obj/machinery/camera{
 	c_tag = "Atmospherics - South East";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/violet/visible/layer1{
 	dir = 1
@@ -59827,7 +59827,7 @@
 /obj/machinery/light/warm/directional/north,
 /obj/machinery/camera{
 	c_tag = "Service - Botany";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/growing/tray,
 /turf/open/floor/iron/dark,
@@ -64505,7 +64505,7 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/camera{
 	c_tag = "Medbay Mid-South";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -66612,7 +66612,7 @@
 /obj/item/fish_feed,
 /obj/machinery/camera{
 	c_tag = "Service - Botany Ranch";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/carpet/green,
 /area/station/service/hydroponics/chicken)
@@ -68628,7 +68628,7 @@
 "veX" = (
 /obj/machinery/camera{
 	c_tag = "Research Division Server Room";
-	dir = 5;
+	dir = 10;
 	name = "science camera";
 	network = list("ss13","rd")
 	},
@@ -70100,7 +70100,7 @@
 /obj/machinery/light/directional/south,
 /obj/machinery/camera{
 	c_tag = "Medbay Lobby";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
@@ -70392,7 +70392,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera{
 	c_tag = "Mining B-1 Hallway South";
-	dir = 10
+	dir = 5
 	},
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
@@ -75748,7 +75748,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera{
 	c_tag = "Mining Bunks";
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
@@ -76235,7 +76235,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/camera{
 	c_tag = "Medbay Cryogenics";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,

@@ -5719,7 +5719,7 @@
 /area/station/science/ordnance/bomb)
 "bXT" = (
 /obj/machinery/camera/autoname{
-	dir = 5
+	dir = 10
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -12552,7 +12552,7 @@
 "ewC" = (
 /obj/machinery/camera{
 	c_tag = "Warden's Office";
-	dir = 10
+	dir = 5
 	},
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -45467,7 +45467,7 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera{
 	c_tag = "Engineering - Foyer - Starboard";
-	dir = 9
+	dir = 6
 	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -52162,7 +52162,7 @@
 "rTi" = (
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #3";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -61321,7 +61321,7 @@
 "vdL" = (
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #8";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -61759,7 +61759,7 @@
 "vly" = (
 /obj/item/target/alien/anchored,
 /obj/machinery/camera/preset/ordnance{
-	dir = 5
+	dir = 10
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/airless{
@@ -64244,7 +64244,7 @@
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #4";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -69515,7 +69515,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #7";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,

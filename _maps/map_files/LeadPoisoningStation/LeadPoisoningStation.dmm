@@ -493,7 +493,7 @@
 /obj/item/storage/dice,
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Library Desk";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/carpet/green,
 /area/station/service/library)
@@ -4210,7 +4210,7 @@
 "cjH" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Library Office";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/carpet/green,
 /area/station/service/library/printer)
@@ -4604,7 +4604,7 @@
 "ctJ" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Hall 1 Starboard";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/commons/dorms)
@@ -7691,7 +7691,7 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Service - Hydroponics Desk";
 	name = "service camera";
-	dir = 5
+	dir = 10
 	},
 /turf/open/floor/iron,
 /area/station/hallway/floor2/fore)
@@ -9030,7 +9030,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Cafeteria entrance";
-	dir = 9
+	dir = 6
 	},
 /obj/effect/spawner/random/trash/bin,
 /turf/open/floor/iron/diagonal,
@@ -9320,7 +9320,7 @@
 	c_tag = "Engineering - Supermatter Emitters";
 	name = "engineering camera";
 	network = list("ss13","engine");
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room)
@@ -11061,7 +11061,7 @@
 	c_tag = "Engineering - Supermatter South";
 	name = "engineering camera";
 	network = list("ss13","engine");
-	dir = 5
+	dir = 10
 	},
 /turf/open/floor/iron,
 /area/station/engineering/supermatter/room)
@@ -17363,7 +17363,7 @@
 /obj/structure/ghost_critter_spawn,
 /obj/machinery/camera/directional/north{
 	c_tag = "Eastation Upper - Command Hallway";
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/hallway/secondary/command)
@@ -19499,7 +19499,7 @@
 /obj/machinery/vending/autodrobe/all_access,
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Locker Room";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/commons/dorms)
@@ -19521,7 +19521,7 @@
 "jmn" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Dorms Entrance";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/diagonal,
@@ -22026,7 +22026,7 @@
 /obj/structure/closet/firecloset,
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Library Entrance";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/commons/dorms)
@@ -35507,7 +35507,7 @@
 "rbK" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Dorms Entrance";
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/hallway/floor2/aft)
@@ -38705,7 +38705,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Science - Firing Range";
 	network = list("ss13","rd");
-	dir = 5
+	dir = 10
 	},
 /turf/open/floor/engine,
 /area/station/science/auxlab/firing_range)
@@ -40226,7 +40226,7 @@
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /obj/machinery/camera/directional/north{
 	c_tag = "Medbay - Coldroom";
-	dir = 9;
+	dir = 6;
 	name = "medbay camera";
 	network = list("ss13","medbay")
 	},
@@ -42672,7 +42672,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Laundry Room";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/commons/dorms)
@@ -43034,7 +43034,7 @@
 /obj/effect/landmark/start/paramedic,
 /obj/machinery/camera/directional/north{
 	c_tag = "Medbay - Upper Hallway";
-	dir = 9;
+	dir = 6;
 	name = "medbay camera";
 	network = list("ss13","medbay")
 	},
@@ -44457,7 +44457,7 @@
 /obj/machinery/component_printer,
 /obj/machinery/camera/directional/north{
 	c_tag = "Medbay - Pharmacy";
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/medical/pharmacy)
@@ -47939,7 +47939,7 @@
 "wTz" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Hall 1 Port";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/diagonal,
 /area/station/commons/dorms)
@@ -48772,7 +48772,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Cargo - Dock";
-	dir = 10
+	dir = 5
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -49558,7 +49558,7 @@
 /obj/structure/window/spawner/directional/east,
 /obj/machinery/camera/directional/north{
 	c_tag = "Dormitory - Starboard";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/wood,
 /area/station/service/library)

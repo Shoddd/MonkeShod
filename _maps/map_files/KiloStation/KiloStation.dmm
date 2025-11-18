@@ -6977,7 +6977,7 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera/directional/south{
 	c_tag = "Security - Interrogation";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","interrogation")
 	},
 /turf/open/floor/iron/dark/textured_large,

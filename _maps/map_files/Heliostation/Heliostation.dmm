@@ -289,7 +289,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Security - Head of Security's Office";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","security")
 	},
 /obj/structure/table/wood,
@@ -469,7 +469,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/directional/north{
 	c_tag = "Security - Escape Pod Acess";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","security")
 	},
 /turf/open/floor/plating,
@@ -1232,7 +1232,7 @@
 "afU" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Security - Interrogation - Monitoring";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","security")
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -2458,7 +2458,7 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera/directional/north{
 	c_tag = "Security - Evidence Storage";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","security")
 	},
 /turf/open/floor/iron/dark,
@@ -4232,7 +4232,7 @@
 	},
 /obj/machinery/camera/directional/south{
 	c_tag = "Security - Interrogation";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","interrogation")
 	},
 /obj/effect/turf_decal/trimline/neutral/warning,
@@ -12879,7 +12879,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera/directional/east{
 	c_tag = "Security - Prison - Showers";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","security","prison")
 	},
 /obj/machinery/firealarm/directional/east,
@@ -14765,7 +14765,7 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted,
 /obj/machinery/camera/directional/south{
 	c_tag = "Security - Medbay  Post";
-	dir = 5;
+	dir = 10;
 	name = "Security Post Camera";
 	network = list("ss13","medbay")
 	},
@@ -33046,7 +33046,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/camera/directional/east{
 	c_tag = "Science - Experimentation Lab";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","rd")
 	},
 /obj/structure/extinguisher_cabinet/directional/east,
@@ -80501,7 +80501,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Security - Checkpoint";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","security")
 	},
 /turf/open/floor/iron/dark,

@@ -574,7 +574,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Service Bar South";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/cable,
 /obj/machinery/airalarm/directional/north,

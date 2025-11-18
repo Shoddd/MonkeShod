@@ -360,7 +360,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Service Bar South";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/status_display/evac/directional/west,
 /obj/structure/window/reinforced/plasma/spawner/directional/west{
@@ -1510,7 +1510,7 @@
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /obj/machinery/camera{
 	c_tag = "Service Theater";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/window/reinforced/plasma/spawner/directional/north{
 	alpha = 0
@@ -1784,7 +1784,7 @@
 "SA" = (
 /obj/machinery/camera{
 	c_tag = "Service Bar North";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/window/reinforced/plasma/spawner/directional/north{
 	alpha = 0

@@ -5406,7 +5406,7 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/camera/directional/west{
 	c_tag = "Medbay - Port Psych Ward";
-	dir = 10;
+	dir = 5;
 	name = "medbay camera";
 	network = list("ss13","medbay")
 	},
@@ -19112,7 +19112,7 @@
 /obj/machinery/light_switch/directional/east,
 /obj/machinery/camera/directional/east{
 	c_tag = "Theater Stage";
-	dir = 6;
+	dir = 9;
 	name = "service camera"
 	},
 /turf/open/floor/wood,
@@ -21090,7 +21090,7 @@
 /obj/item/kirbyplants/organic/plant22,
 /obj/machinery/camera/directional/south{
 	c_tag = "Art Gallery";
-	dir = 9;
+	dir = 6;
 	name = "library camera"
 	},
 /turf/open/floor/wood,
@@ -63981,7 +63981,7 @@
 "mrc" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Security - Brig Port upper";
-	dir = 10
+	dir = 5
 	},
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
@@ -68758,7 +68758,7 @@
 "nom" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Security - Shuttle Bay West";
-	dir = 10
+	dir = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/prison/upper)
@@ -69432,7 +69432,7 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera/directional/east{
 	c_tag = "Science - Ordnance Internal Airlock";
-	dir = 10;
+	dir = 5;
 	name = "science camera";
 	network = list("ss13","rd")
 	},
@@ -78968,7 +78968,7 @@
 /obj/item/construction/rld,
 /obj/machinery/camera/directional/east{
 	c_tag = "Engineering - Secure Tool Storage";
-	dir = 5;
+	dir = 10;
 	name = "engineering camera"
 	},
 /obj/structure/cable,
@@ -92335,7 +92335,7 @@
 /obj/item/kirbyplants/random,
 /obj/machinery/camera/directional/east{
 	c_tag = "Central Hallway - Starboard Aft";
-	dir = 10;
+	dir = 5;
 	name = "hallway camera"
 	},
 /obj/structure/sign/poster/random/directional/west,
@@ -92618,7 +92618,7 @@
 "rTQ" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Security - Perma Airlock";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/light/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -98578,7 +98578,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Recreation - Gym Lower";
-	dir = 5;
+	dir = 10;
 	name = "hallway camera"
 	},
 /turf/open/floor/iron/dark/side{
@@ -104761,7 +104761,7 @@
 "uiY" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Science - Ordnance Mixing Lab Starboard";
-	dir = 5;
+	dir = 10;
 	name = "science camera";
 	network = list("ss13","rd")
 	},
@@ -110104,7 +110104,7 @@
 /obj/structure/cable,
 /obj/machinery/camera/directional/north{
 	c_tag = " Prison - Perma office";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","prison")
 	},
 /turf/open/floor/iron/dark/side{
@@ -113044,7 +113044,7 @@
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/camera/directional/north{
 	c_tag = "Bar Backroom";
-	dir = 6;
+	dir = 9;
 	name = "service camera"
 	},
 /turf/open/floor/iron/dark,
@@ -114335,7 +114335,7 @@
 "vYJ" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Law Lobby";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/door/window/left/directional/south{
 	name = "Law Office Front Desk"
@@ -116452,7 +116452,7 @@
 	},
 /obj/machinery/camera/directional/west{
 	c_tag = "Security - Flight Control";
-	dir = 5
+	dir = 10
 	},
 /obj/machinery/button/door{
 	id = "securitydock1";
@@ -118896,7 +118896,7 @@
 /area/station/maintenance/department/engineering/lesser)
 "wQf" = (
 /obj/machinery/camera/preset/ordnance{
-	dir = 5
+	dir = 10
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/reinforced{

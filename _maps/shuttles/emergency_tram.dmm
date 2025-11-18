@@ -161,7 +161,7 @@
 "aG" = (
 /obj/item/radio/intercom/directional/north,
 /obj/machinery/camera/autoname{
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -253,7 +253,7 @@
 /obj/machinery/light/directional/east,
 /obj/item/radio/intercom/directional/north,
 /obj/machinery/camera/autoname{
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)

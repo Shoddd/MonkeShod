@@ -8140,7 +8140,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #7";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -14739,7 +14739,7 @@
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #4";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -17375,7 +17375,7 @@
 "gKf" = (
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #8";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -17752,7 +17752,7 @@
 "gSC" = (
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #3";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","rd","xeno")
 	},
 /turf/open/floor/engine,
@@ -47663,7 +47663,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/machinery/camera/autoname/directional/south{
-	dir = 5
+	dir = 10
 	},
 /obj/machinery/light_switch/directional/east{
 	pixel_x = 31;

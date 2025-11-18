@@ -174,7 +174,7 @@
 /obj/machinery/vending/cigarette,
 /obj/machinery/camera{
 	c_tag = "Service Bar South";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /obj/machinery/status_display/evac/directional/west,
@@ -819,7 +819,7 @@
 /obj/structure/table/wood,
 /obj/machinery/camera{
 	c_tag = "Service Theater";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/wood/tile,
 /area/station/service/theater)
@@ -956,7 +956,7 @@
 /obj/structure/table/wood,
 /obj/machinery/camera{
 	c_tag = "Service Bar North";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/wood/parquet,
 /area/station/commons/lounge)

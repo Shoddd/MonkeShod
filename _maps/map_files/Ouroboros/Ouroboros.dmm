@@ -940,7 +940,7 @@
 /obj/structure/cable,
 /obj/machinery/camera/directional/north{
 	c_tag = "Bridge Access - Starboard";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/dark,
 /area/bridge)
@@ -28175,7 +28175,7 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Science - Experimentor Lab";
 	network = list("ss13","rd");
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/iron/white,
 /area/station/science/explab)
@@ -39659,7 +39659,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Engineering - Supermatter Chamber Port";
 	network = list("ss13","engine");
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/engine,
 /area/station/engineering/main)
@@ -43332,7 +43332,7 @@
 /obj/machinery/light/warm/directional/west,
 /obj/machinery/camera/directional/north{
 	c_tag = "Cargo - Desk";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/cargo/office)
@@ -46072,7 +46072,7 @@
 /obj/structure/chair/sofa/left,
 /obj/machinery/camera/directional/north{
 	c_tag = "Science - Breakroom";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","rd")
 	},
 /obj/effect/landmark/start/scientist,
@@ -62897,7 +62897,7 @@
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/camera/directional/south{
 	c_tag = "Courtroom";
-	dir = 5
+	dir = 10
 	},
 /turf/open/floor/wood,
 /area/station/security/courtroom)
@@ -63445,7 +63445,7 @@
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Canteen Lounge - Private";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","bar")
 	},
 /obj/structure/chair/comfy{
@@ -72234,7 +72234,7 @@
 	},
 /obj/machinery/camera/directional/west{
 	c_tag = "Central Primary Hallway - Port";
-	dir = 10
+	dir = 5
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 9
@@ -72906,7 +72906,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Atmospherics - Lobby";
 	network = list("ss13","engine");
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/office)
@@ -80451,7 +80451,7 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Atmospherics - HFR Core South";
 	network = list("ss13","engine");
-	dir = 6
+	dir = 9
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/hfr_room)

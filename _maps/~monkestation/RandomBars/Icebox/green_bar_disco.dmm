@@ -464,7 +464,7 @@
 "tg" = (
 /obj/machinery/camera{
 	c_tag = "Service Bar North";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/light,
@@ -509,7 +509,7 @@
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /obj/machinery/camera{
 	c_tag = "Service Bar South";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/table/wood/poker,
 /obj/structure/window/reinforced/spawner/directional/south,

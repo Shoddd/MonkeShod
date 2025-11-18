@@ -90,7 +90,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Engine Room Airlock";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engine","engineering")
 	},
 /turf/open/floor/engine,
@@ -326,7 +326,7 @@
 "lL" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Emitter Room East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","engine","engineering")
 	},
 /obj/machinery/firealarm/directional/east,
@@ -685,7 +685,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Engine Room North-East";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engine","engineering")
 	},
 /obj/structure/cable,
@@ -1293,7 +1293,7 @@
 "ZI" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Emitter Room West";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engine","engineering")
 	},
 /obj/structure/cable,

@@ -458,7 +458,7 @@
 "ee" = (
 /obj/machinery/camera{
 	c_tag = "Medbay Lobby";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/trimline/red/end{

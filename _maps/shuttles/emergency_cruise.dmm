@@ -541,7 +541,7 @@
 "jO" = (
 /obj/machinery/camera{
 	c_tag = "Medbay Lobby";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /obj/machinery/turretid{
@@ -1505,7 +1505,7 @@
 "CK" = (
 /obj/machinery/camera{
 	c_tag = "Medbay Lobby";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /obj/effect/turf_decal/trimline/red/end{
@@ -2445,7 +2445,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/camera{
 	c_tag = "Medbay Cryogenics";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","medbay")
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
@@ -2635,7 +2635,7 @@
 /obj/effect/turf_decal/tile/yellow/opposingcorners,
 /obj/machinery/camera{
 	c_tag = "Medbay Lobby";
-	dir = 5;
+	dir = 10;
 	network = list("ss13","medbay")
 	},
 /turf/open/floor/iron/dark/textured,

@@ -107,7 +107,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Cell 6";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison","pcell")
 	},
 /turf/open/floor/iron,
@@ -262,7 +262,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Cell 4";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison","pcell")
 	},
 /turf/open/floor/iron,
@@ -407,7 +407,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Cell 2";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison","pcell")
 	},
 /turf/open/floor/iron,
@@ -3198,7 +3198,7 @@
 /obj/item/multitool,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Secure - Telecomms Control Room";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron,
@@ -3475,7 +3475,7 @@
 /obj/structure/sign/poster/official/safety_report/directional/north,
 /obj/machinery/camera{
 	c_tag = "Security - Equipment Room";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security")
 	},
 /turf/open/floor/iron/showroomfloor,
@@ -3512,7 +3512,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Main Office North";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security")
 	},
 /turf/open/floor/iron,
@@ -4119,7 +4119,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Cargo - Main Office";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","cargo")
 	},
 /obj/item/multitool,
@@ -4385,7 +4385,7 @@
 "aCy" = (
 /obj/machinery/camera{
 	c_tag = "Civilian - Radstorm Shelter";
-	dir = 10
+	dir = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/maintenance/radshelter/civil)
@@ -6568,7 +6568,7 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Distribution Loop";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -8674,7 +8674,7 @@
 "bGh" = (
 /obj/machinery/camera/motion{
 	c_tag = "Secure - AI Upper External West";
-	dir = 6;
+	dir = 9;
 	network = list("aicore")
 	},
 /turf/open/space/openspace,
@@ -9318,7 +9318,7 @@
 "bPZ" = (
 /obj/machinery/camera/motion{
 	c_tag = "Secure - AI Upper External South";
-	dir = 9;
+	dir = 6;
 	network = list("aicore")
 	},
 /obj/structure/lattice,
@@ -11387,7 +11387,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Cargo - Quartermaster's Office";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","cargo")
 	},
 /turf/open/floor/iron,
@@ -12638,7 +12638,7 @@
 "cRT" = (
 /obj/machinery/camera{
 	c_tag = "Security - Detective's Office";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security")
 	},
 /obj/structure/cable,
@@ -12978,7 +12978,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Medical - Central North-West";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","medbay")
 	},
 /obj/structure/extinguisher_cabinet/directional/west,
@@ -13854,7 +13854,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Entry Airlock";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /obj/structure/table/glass,
@@ -14606,7 +14606,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Hallway - Engineering Entry West";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -15303,7 +15303,7 @@
 "dKv" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Mixing Chamber";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/vacuum,
@@ -16091,7 +16091,7 @@
 "dWj" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics CO2 Chamber";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/co2,
@@ -18982,7 +18982,7 @@
 /obj/effect/turf_decal/trimline/neutral/filled/corner,
 /obj/machinery/camera{
 	c_tag = "Hallway - Starboard Tram Platform South-East";
-	dir = 6
+	dir = 9
 	},
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/structure/disposalpipe/segment,
@@ -20328,7 +20328,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera{
 	c_tag = "Cargo - Mining Break Room";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","cargo")
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
@@ -20350,7 +20350,7 @@
 /obj/machinery/light/directional/south,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Lobby South";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/plastic,
@@ -21567,7 +21567,7 @@
 "fHz" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Air Chamber";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/air,
@@ -25920,7 +25920,7 @@
 /obj/machinery/status_display/ai/directional/south,
 /obj/machinery/camera{
 	c_tag = "Secure - AI Minisat Entry";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","minisat")
 	},
 /turf/open/floor/iron/dark,
@@ -26022,7 +26022,7 @@
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/camera{
 	c_tag = "Arrivals - Lounge";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -26942,7 +26942,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Arrivals - Central Hall";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/vending/cigarette,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -27202,7 +27202,7 @@
 /obj/structure/cable,
 /obj/machinery/camera{
 	c_tag = "Security - Pre-Trial Holding";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security")
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -29184,7 +29184,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera{
 	c_tag = "Departures - Holding Wing";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","Security")
 	},
 /turf/open/floor/iron,
@@ -30716,7 +30716,7 @@
 /obj/structure/lattice,
 /obj/machinery/camera/motion{
 	c_tag = "Secure - AI Lower External East";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","minisat")
 	},
 /turf/open/space/basic,
@@ -31368,7 +31368,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Arrivals - South Docking Hall";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -32302,7 +32302,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Cargo - Bank Vault";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","cargo")
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -32326,7 +32326,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Block North";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -32640,7 +32640,7 @@
 "jhV" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Lobby North";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line{
@@ -32729,7 +32729,7 @@
 /obj/structure/lattice,
 /obj/machinery/camera/motion{
 	c_tag = "Secure - AI Lower External West";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","minisat")
 	},
 /turf/open/space/basic,
@@ -33962,7 +33962,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics South-West";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line{
@@ -34648,7 +34648,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Warden's Office";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security")
 	},
 /obj/structure/sign/calendar/directional/north,
@@ -36140,7 +36140,7 @@
 /obj/effect/turf_decal/trimline/white/filled/line,
 /obj/machinery/camera{
 	c_tag = "Secure - Tech Secure Storage";
-	dir = 10
+	dir = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
@@ -36503,7 +36503,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Hallway - Port Tram Platform South-West";
-	dir = 10
+	dir = 5
 	},
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/structure/cable,
@@ -37495,7 +37495,7 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Material Storage";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /obj/structure/disposalpipe/trunk{
@@ -38888,7 +38888,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Secure - AI Antechamber East";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","minisat")
 	},
 /turf/open/floor/iron/dark,
@@ -40014,7 +40014,7 @@
 "lrw" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics O2 Chamber";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/o2,
@@ -40282,7 +40282,7 @@
 "lwV" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Plasma Chamber";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/plasma,
@@ -41162,7 +41162,7 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/camera{
 	c_tag = "Secure - AI Upper Ring East";
-	dir = 10;
+	dir = 5;
 	network = list("aicore")
 	},
 /turf/open/floor/glass/reinforced,
@@ -43989,7 +43989,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Secure - AI Antechamber West";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","minisat")
 	},
 /turf/open/floor/iron/dark,
@@ -44472,7 +44472,7 @@
 /obj/machinery/light/directional/east,
 /obj/machinery/camera{
 	c_tag = "Hallway - Upper Left Command";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron,
@@ -45513,7 +45513,7 @@
 "nhf" = (
 /obj/machinery/camera{
 	c_tag = "Security - Rec Room East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /obj/machinery/light/neon_lining{
@@ -46333,7 +46333,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Secure - AI Antechamber South";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","minisat")
 	},
 /obj/structure/cable,
@@ -49180,7 +49180,7 @@
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/machinery/camera{
 	c_tag = "Security - Medical Center";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","Security")
 	},
 /obj/item/reagent_containers/spray/cleaner,
@@ -49744,7 +49744,7 @@
 /obj/item/stack/license_plates/empty/fifty,
 /obj/machinery/camera{
 	c_tag = "Security - Prison Workshop";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /obj/item/stack/license_plates/empty/fifty,
@@ -52459,7 +52459,7 @@
 /obj/structure/cable,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Incinerator";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/iron,
@@ -52943,7 +52943,7 @@
 "pzc" = (
 /obj/machinery/camera{
 	c_tag = "Security - Interrogation Observation";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security")
 	},
 /obj/effect/turf_decal/trimline/red/filled/corner{
@@ -53427,7 +53427,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Main";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /obj/structure/rack,
@@ -53810,7 +53810,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Maintenance - East Tram Tunnel 3";
-	dir = 9
+	dir = 6
 	},
 /obj/effect/turf_decal/siding/thinplating,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -54123,7 +54123,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Gulag Prep";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security")
 	},
 /turf/open/floor/iron,
@@ -55383,7 +55383,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Head of Security's Office";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security")
 	},
 /obj/machinery/computer/records/security,
@@ -55748,7 +55748,7 @@
 /obj/structure/filingcabinet,
 /obj/machinery/camera{
 	c_tag = "Civilian - Vacant Office";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/wood,
 /area/station/commons/vacant_room/office)
@@ -55780,7 +55780,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Main South-East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /turf/open/floor/iron,
@@ -57323,7 +57323,7 @@
 "qND" = (
 /obj/machinery/camera{
 	c_tag = "Arrivals - North Docking Hall";
-	dir = 6
+	dir = 9
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -58766,7 +58766,7 @@
 "rju" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - SMES Misc";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /obj/machinery/suit_storage_unit/engine,
@@ -59781,7 +59781,7 @@
 "rAf" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics N2 Chamber";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/n2,
@@ -59866,7 +59866,7 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/camera{
 	c_tag = "Hallway - Upper Right Command";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron,
@@ -60168,7 +60168,7 @@
 /obj/structure/table,
 /obj/machinery/camera{
 	c_tag = "Secure - AI Minisat Internal Power Access";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","minisat")
 	},
 /turf/open/floor/iron/dark,
@@ -60413,7 +60413,7 @@
 "rMp" = (
 /obj/machinery/camera{
 	c_tag = "Security - Interrogation Main";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","Security","interrogation")
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -60613,7 +60613,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Civilian - aux_base Construction";
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron,
 /area/station/construction/mining/aux_base)
@@ -60756,7 +60756,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Test Room";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/iron,
@@ -61093,7 +61093,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Cargo - Warehouse East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","cargo")
 	},
 /obj/structure/extinguisher_cabinet/directional/east,
@@ -62236,7 +62236,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Hallway - Starboard Tram Platform South-West";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment{
@@ -62303,7 +62303,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Garden";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /obj/machinery/vending/hydroseeds{
@@ -63563,7 +63563,7 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/camera{
 	c_tag = "Secure - AI Upper Ring South";
-	dir = 9;
+	dir = 6;
 	network = list("aicore")
 	},
 /turf/open/floor/glass/reinforced,
@@ -66199,7 +66199,7 @@
 /obj/machinery/light/directional/east,
 /obj/machinery/camera{
 	c_tag = "Secure - AI Upper Ring West";
-	dir = 6;
+	dir = 9;
 	network = list("aicore")
 	},
 /turf/open/floor/glass/reinforced,
@@ -67555,7 +67555,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - SMES";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /obj/structure/cable,
@@ -68894,7 +68894,7 @@
 "utc" = (
 /obj/machinery/camera{
 	c_tag = "Arrivals - North Docking Wing";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -71951,7 +71951,7 @@
 /obj/effect/turf_decal/trimline/neutral/filled/corner,
 /obj/machinery/camera{
 	c_tag = "Hallway - Port Tram Platform South-East";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/stripes/white/line{
@@ -72407,7 +72407,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Rec Room East";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /turf/open/floor/iron,
@@ -73472,7 +73472,7 @@
 "vFR" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics N2O Chamber";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/engine/n2o,
@@ -73491,7 +73491,7 @@
 /obj/structure/lattice,
 /obj/machinery/camera/motion{
 	c_tag = "Secure - AI Lower External South";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","minisat")
 	},
 /turf/open/space/basic,
@@ -75022,7 +75022,7 @@
 /obj/machinery/light/directional/south,
 /obj/machinery/camera{
 	c_tag = "Cargo - Lobby";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","cargo")
 	},
 /obj/machinery/firealarm/directional/east,
@@ -75982,7 +75982,7 @@
 /obj/effect/turf_decal/trimline/neutral/filled/corner,
 /obj/machinery/camera{
 	c_tag = "Hallway - Central Tram Platform South-East";
-	dir = 6
+	dir = 9
 	},
 /obj/machinery/firealarm/directional/east,
 /obj/structure/disposalpipe/segment{
@@ -76734,7 +76734,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Entry Airlock";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/iron/dark/textured,
@@ -77188,7 +77188,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Front Desk";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","engineering")
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -77999,7 +77999,7 @@
 "xdC" = (
 /obj/machinery/camera{
 	c_tag = "Secure - Gravity Generator";
-	dir = 10
+	dir = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -78369,7 +78369,7 @@
 /obj/machinery/light/small/directional/north,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Secure Storage";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /turf/open/floor/plating,
@@ -78800,7 +78800,7 @@
 "xsl" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Chief Engineer's Office";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","engineering")
 	},
 /obj/structure/cable,
@@ -79134,7 +79134,7 @@
 	},
 /obj/machinery/camera{
 	c_tag = "Security - Prison Block South";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","Security","prison")
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -79606,7 +79606,7 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/camera{
 	c_tag = "Arrivals - South Docking Wing";
-	dir = 9
+	dir = 6
 	},
 /obj/effect/landmark/event_spawn,
 /obj/structure/extinguisher_cabinet/directional/north,
@@ -80540,7 +80540,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Test Room";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -81481,7 +81481,7 @@
 	},
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engineering - Atmospherics Incinerator ACcess";
-	dir = 9;
+	dir = 6;
 	network = list("ss13","engineering")
 	},
 /obj/machinery/atmospherics/components/unary/bluespace_sender{
@@ -81570,7 +81570,7 @@
 "ylt" = (
 /obj/machinery/camera/motion{
 	c_tag = "Secure - AI Upper External East";
-	dir = 10;
+	dir = 5;
 	network = list("aicore")
 	},
 /turf/open/space/openspace,

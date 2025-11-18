@@ -157,7 +157,7 @@
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /obj/machinery/camera{
 	c_tag = "Service Theater";
-	dir = 9
+	dir = 6
 	},
 /obj/machinery/computer/arcade/orion_trail,
 /obj/machinery/light/small/directional/north,
@@ -568,7 +568,7 @@
 "De" = (
 /obj/machinery/camera{
 	c_tag = "Service Bar North";
-	dir = 9
+	dir = 6
 	},
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/chem_dispenser/drinks/beer,
@@ -590,7 +590,7 @@
 "Es" = (
 /obj/machinery/camera{
 	c_tag = "Xenobiology Lab - Pen #8";
-	dir = 10;
+	dir = 5;
 	network = list("ss13","rd","xeno")
 	},
 /obj/structure/table/wood/fancy/purple,

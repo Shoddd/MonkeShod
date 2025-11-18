@@ -24001,7 +24001,7 @@
 /area/station/maintenance/department/engine)
 "bXe" = (
 /obj/machinery/camera/preset/ordnance{
-	dir = 5
+	dir = 10
 	},
 /turf/open/misc/asteroid/airless,
 /area/centcom/asteroid/nearstation/bomb_site)

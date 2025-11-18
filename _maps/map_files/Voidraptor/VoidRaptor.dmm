@@ -5516,7 +5516,7 @@
 	},
 /obj/machinery/camera/directional/west{
 	c_tag = "Service - Hydroponics Front";
-	dir = 10;
+	dir = 5;
 	name = "hallway camera"
 	},
 /obj/effect/turf_decal/bot,
@@ -9545,7 +9545,7 @@
 "cQn" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Atmospherics - Project Room Fore";
-	dir = 5;
+	dir = 10;
 	name = "atmospherics camera"
 	},
 /obj/effect/turf_decal/bot,
@@ -10060,7 +10060,7 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera/directional/east{
 	c_tag = "Atmospherics - Ports";
-	dir = 6;
+	dir = 9;
 	name = "atmospherics camera"
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -10640,7 +10640,7 @@
 "dhd" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Atmospherics - Plasma Cell";
-	dir = 9;
+	dir = 6;
 	name = "atmospherics camera"
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line{
@@ -15341,7 +15341,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/camera/directional/north{
 	c_tag = "Prison - Hallway";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","prison")
 	},
 /obj/effect/turf_decal/tile/dark_red/diagonal_centre,
@@ -16831,7 +16831,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Service - Service Hall";
-	dir = 9;
+	dir = 6;
 	name = "service camera"
 	},
 /obj/effect/turf_decal/trimline/brown/filled/line,
@@ -22084,7 +22084,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Prison - Shuttle Fore";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","prison")
 	},
 /obj/machinery/light/cold/directional/east,
@@ -30469,7 +30469,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Library - Curator's Study";
-	dir = 9;
+	dir = 6;
 	name = "library camera"
 	},
 /obj/effect/turf_decal/bot_white,
@@ -30541,7 +30541,7 @@
 /obj/effect/turf_decal/weather/snow,
 /obj/machinery/camera/directional/west{
 	c_tag = "Service - Kitchen Coldroom";
-	dir = 5;
+	dir = 10;
 	name = "service camera"
 	},
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -46999,7 +46999,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/camera/directional/south{
 	c_tag = "Atmospherics - Project Room Fore";
-	dir = 5;
+	dir = 10;
 	name = "atmospherics camera"
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -47391,7 +47391,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Library - Fore";
-	dir = 9;
+	dir = 6;
 	name = "library camera"
 	},
 /obj/item/newspaper,
@@ -53669,7 +53669,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Research Division - Port";
-	dir = 9;
+	dir = 6;
 	name = "science camera";
 	network = list("ss13","rd")
 	},
@@ -55031,7 +55031,7 @@
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/machinery/camera/directional/east{
 	c_tag = "Service - Hydroponics Back";
-	dir = 6;
+	dir = 9;
 	name = "service camera"
 	},
 /obj/effect/turf_decal/bot,
@@ -62482,7 +62482,7 @@
 /obj/effect/turf_decal/tile/dark/fourcorners,
 /obj/machinery/camera/directional/north{
 	c_tag = "Service - Janitorial Closet";
-	dir = 9;
+	dir = 6;
 	name = "service camera"
 	},
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -79563,7 +79563,7 @@
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Prison - Perma office";
-	dir = 6;
+	dir = 9;
 	network = list("ss13","prison")
 	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
