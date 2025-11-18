@@ -801,7 +801,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "cV" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -1738,13 +1738,16 @@
 /obj/machinery/door/firedoor)
 "fL" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/circuit/telecomms/server)
+/obj/machinery/rnd/server,
+/turf/open/floor/circuit/telecomms/server,
+/area/space)
 "fM" = (
 /obj/machinery/light/small{
 	dir = 1;
 	flickering = 1
 	},
-/obj/machinery/rnd/server)
+/turf/open/floor/iron/dark/telecomms,
+/area/space)
 "fN" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -1941,7 +1944,9 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = 25
-	})
+	},
+/turf/open/floor/carpet/grimey,
+/area/station/security/detectives_office)
 "gB" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -1949,7 +1954,8 @@
 /obj/item/storage/secure/safe{
 	pixel_y = 28
 	},
-/turf/open/floor/carpet)
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "gC" = (
 /obj/structure/table/wood,
 /obj/machinery/newscaster{
@@ -1960,16 +1966,17 @@
 	},
 /obj/item/camera/detective,
 /obj/item/taperecorder,
-/turf/open/floor/carpet)
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "gD" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/mineral/ore_redemption,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "gF" = (
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "gG" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
@@ -2076,30 +2083,34 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "hc" = (
-/obj/structure/filingcabinet)
+/obj/structure/filingcabinet,
+/turf/open/floor/carpet/grimey,
+/area/station/security/detectives_office)
 "hd" = (
 /obj/structure/chair/office{
 	dir = 4
 	},
 /obj/effect/landmark/start/detective,
-/turf/open/floor/carpet)
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "he" = (
 /obj/structure/table/wood,
 /obj/item/folder/red,
 /obj/item/hand_labeler,
 /obj/item/clothing/glasses/sunglasses,
-/turf/open/floor/carpet)
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "hf" = (
 /obj/structure/table,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "hg" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "hh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -2244,7 +2255,9 @@
 /area/station/security/brig)
 "hJ" = (
 /obj/structure/closet/secure_closet/detective,
-/obj/machinery/airalarm/directional/west)
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/carpet/grimey,
+/area/station/security/detectives_office)
 "hK" = (
 /turf/open/floor/carpet)
 "hL" = (
@@ -2254,13 +2267,14 @@
 /obj/item/restraints/handcuffs,
 /obj/item/storage/fancy/cigarettes,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
-/turf/open/floor/carpet)
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "hM" = (
 /obj/structure/chair{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "hN" = (
 /obj/structure/table,
 /obj/item/hand_labeler,
@@ -2366,7 +2380,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "io" = (
 /obj/machinery/camera{
 	c_tag = "Starboard Primary Hallway 3";
@@ -2377,7 +2391,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "iq" = (
 /obj/machinery/door/airlock/research{
 	name = "Research Division Access";
@@ -2439,13 +2453,13 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/space/basic,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "iP" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "iQ" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -2454,7 +2468,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "iS" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
@@ -2462,7 +2476,7 @@
 	},
 /turf/open/floor/iron,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "iU" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -2578,6 +2592,10 @@
 "jI" = (
 /obj/effect/landmark/start/assistant,
 /obj/structure/chair/stool)
+"jL" = (
+/turf/open/floor/iron,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "jM" = (
 /obj/structure/sign/directions/science{
 	dir = 1;
@@ -2586,21 +2604,21 @@
 	},
 /turf/open/floor/iron,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "jO" = (
 /obj/machinery/camera{
 	c_tag = "Starboard Primary Hallway";
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "jQ" = (
 /obj/machinery/camera{
 	c_tag = "Starboard Primary Hallway 2";
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "jT" = (
 /obj/structure/sign/departments/science,
 /turf/closed/wall/r_wall)
@@ -2705,7 +2723,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "kO" = (
 /obj/machinery/vending/assist,
 /turf/open/floor/plating)
@@ -3579,7 +3597,7 @@
 	start_active = 1
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "pf" = (
 /obj/structure/rack,
 /turf/open/floor/plating)
@@ -3783,7 +3801,7 @@
 	},
 /turf/open/floor/iron,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "pZ" = (
 /obj/structure/sign/directions/security{
 	dir = 1;
@@ -3802,14 +3820,14 @@
 	},
 /turf/open/floor/iron,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "qa" = (
 /obj/structure/cable,
 /obj/machinery/firealarm{
 	pixel_y = 27
 	},
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "qd" = (
 /obj/structure/rack,
 /obj/item/pickaxe,
@@ -3890,7 +3908,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "qD" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -3926,6 +3944,12 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/iron,
 /area/space)
+"qM" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "qR" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
@@ -4002,7 +4026,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "rv" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Diner"
@@ -4768,6 +4792,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = -25
 	})
+"vG" = (
+/turf/closed/wall/r_wall,
+/area/station/security/detectives_office)
 "vH" = (
 /obj/effect/landmark/start/cook)
 "vI" = (
@@ -5177,6 +5204,9 @@
 	target_layer = 1
 	},
 /turf/closed/wall/r_wall)
+"xR" = (
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "xS" = (
 /obj/machinery/portable_atmospherics/canister/air{
 	anchored = 1
@@ -6280,11 +6310,13 @@
 	req_access_txt = "4";
 	security_level = 6
 	},
-/obj/machinery/door/firedoor)
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron,
+/area/station/security/detectives_office)
 "Ep" = (
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron,
-/area/space)
+/area/station/hallway/primary/central)
 "Er" = (
 /obj/structure/chair/comfy/beige{
 	dir = 1
@@ -6295,6 +6327,83 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	})
+"Gb" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/station/security/detectives_office)
+"Gh" = (
+/obj/structure/cable,
+/turf/open/floor/iron,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"GQ" = (
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"GX" = (
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"JI" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"KG" = (
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"Pt" = (
+/turf/closed/wall,
+/area/station/security/detectives_office)
+"PC" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"PH" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"Qa" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/station/hallway/primary/central)
+"QE" = (
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"RQ" = (
+/obj/machinery/light,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"SD" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"Ta" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/obj/machinery/rnd/server/master,
+/turf/open/floor/circuit/telecomms/server,
+/area/space)
+"Td" = (
+/turf/open/floor/iron/dark/telecomms,
+/area/space)
+"Vz" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"Xl" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 
 (1,1,1) = {"
 aa
@@ -38020,9 +38129,9 @@ kz
 zj
 zj
 cW
-mz
-mz
-cF
+GX
+GX
+QE
 Cq
 mO
 sy
@@ -38277,9 +38386,9 @@ kz
 zj
 Dv
 kz
-cF
-mz
-cF
+QE
+GX
+QE
 Cq
 rL
 sz
@@ -38534,9 +38643,9 @@ nU
 zj
 pb
 kz
-rg
-mz
-cF
+GQ
+GX
+QE
 Cq
 vs
 sA
@@ -38791,9 +38900,9 @@ Dv
 zj
 pc
 kz
-cF
+QE
 qB
-rH
+RQ
 Cq
 Cq
 Cq
@@ -39048,9 +39157,9 @@ zj
 zj
 kO
 kz
-mz
-mz
-mz
+GX
+GX
+GX
 cW
 zj
 zj
@@ -39305,9 +39414,9 @@ Dv
 Dv
 oD
 kz
-mz
-cF
-cF
+GX
+QE
+QE
 kz
 nA
 kz
@@ -39562,9 +39671,9 @@ kz
 kz
 kz
 kz
-mz
-cF
-cF
+GX
+QE
+QE
 kz
 kz
 kz
@@ -39805,23 +39914,23 @@ dr
 dr
 dr
 ii
-cF
-cF
-nP
-cF
-qr
-mz
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+QE
+QE
+jL
+QE
+PC
+GX
+QE
+QE
+QE
+QE
+QE
+QE
+QE
+QE
 pY
-nP
-nP
+jL
+jL
 rq
 cF
 sC
@@ -40062,23 +40171,23 @@ cV
 cV
 cV
 ij
-mz
+GX
 cU
-qI
-mz
-mz
-mz
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-qI
-nP
-nP
+Gh
+GX
+GX
+GX
+QE
+QE
+QE
+QE
+QE
+QE
+QE
+QE
+Gh
+jL
+jL
 rq
 cF
 sD
@@ -40319,23 +40428,23 @@ gt
 dr
 dr
 ii
-cF
-cF
+QE
+QE
 jM
-cF
+QE
 kM
-mz
-ma
-cF
-cF
-cF
-vi
-cF
+GX
+KG
+QE
+QE
+QE
+PH
+QE
 pe
-cF
+QE
 pZ
-nP
-nP
+jL
+jL
 rq
 cF
 cF
@@ -40576,9 +40685,9 @@ ca
 gW
 hB
 gs
-qA
-qA
-qA
+SD
+SD
+SD
 kz
 kz
 cW
@@ -40590,9 +40699,9 @@ kz
 kz
 kz
 kz
-mz
-cF
-cF
+GX
+QE
+QE
 kz
 kz
 ep
@@ -40833,9 +40942,9 @@ ca
 ca
 ca
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 zj
@@ -40847,9 +40956,9 @@ Dv
 Dv
 cr
 kz
-mz
-cF
-cF
+GX
+QE
+QE
 kz
 rR
 uz
@@ -41090,9 +41199,9 @@ gu
 gX
 hC
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 Dv
@@ -41104,9 +41213,9 @@ kz
 ow
 Dv
 kz
-mz
-cF
-cF
+GX
+QE
+QE
 kz
 rS
 sI
@@ -41347,8 +41456,8 @@ fy
 gY
 hD
 ca
-cF
-cF
+QE
+QE
 jO
 kz
 zj
@@ -41362,8 +41471,8 @@ Dv
 pf
 kz
 qa
-cF
-rH
+QE
+RQ
 kz
 rT
 sH
@@ -41604,9 +41713,9 @@ gb
 fy
 hE
 ca
-cF
-cF
-rH
+QE
+QE
+RQ
 kz
 zj
 Cq
@@ -41861,9 +41970,9 @@ gw
 fy
 hF
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 Cq
@@ -42118,9 +42227,9 @@ gx
 fy
 hG
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 Cq
@@ -42375,9 +42484,9 @@ fy
 fy
 hH
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 Cq
@@ -42632,9 +42741,9 @@ gy
 ff
 hI
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 Cq
@@ -42889,9 +42998,9 @@ eJ
 fg
 eJ
 ca
-cL
-cF
-cF
+JI
+QE
+QE
 kz
 zj
 Cq
@@ -43147,8 +43256,8 @@ fy
 fy
 ca
 iO
-nP
-nP
+jL
+jL
 kz
 zj
 Dv
@@ -43403,9 +43512,9 @@ gz
 hb
 fD
 ca
-cF
-cF
-cF
+QE
+QE
+QE
 kz
 zj
 Dv
@@ -43655,13 +43764,13 @@ ec
 cb
 cb
 cb
-Cq
-Cq
-Cq
-Cq
-Cq
+vG
+vG
+vG
+vG
+vG
 Ep
-cF
+QE
 jQ
 kz
 zj
@@ -43912,14 +44021,14 @@ ec
 aa
 aY
 aY
-kz
+Pt
 gA
 hc
 hJ
-gg
+Gb
 iP
-cF
-cF
+QE
+QE
 kz
 kO
 Dv
@@ -44169,14 +44278,14 @@ aa
 aa
 aa
 aa
-kz
+Pt
 gB
 hd
-hK
+xR
 Eo
 iQ
-cF
-cF
+QE
+QE
 kz
 pc
 uv
@@ -44426,14 +44535,14 @@ aa
 aa
 aa
 aa
-kz
+Pt
 gC
 he
 hL
-gg
-mr
-cF
-cF
+Gb
+qM
+QE
+QE
 Cq
 Cq
 Cq
@@ -44683,14 +44792,14 @@ aa
 aa
 aa
 aa
-kz
-kz
-kz
-kz
-kz
-cF
-cF
-cF
+Pt
+Pt
+Pt
+Pt
+Pt
+QE
+QE
+QE
 Cq
 kQ
 lE
@@ -44940,14 +45049,14 @@ aa
 aa
 aa
 aa
-gg
+Qa
 gD
 hf
 hM
 io
-nP
-cF
-cF
+jL
+QE
+QE
 Cq
 kQ
 kQ
@@ -45197,14 +45306,14 @@ aa
 aa
 aa
 aa
-gg
-ou
-cF
-cF
-cF
-nP
-jo
-cF
+Qa
+Xl
+QE
+QE
+QE
+jL
+Vz
+QE
 Cq
 kR
 kQ
@@ -45454,11 +45563,11 @@ aa
 aY
 aY
 aY
-gg
+Qa
 gF
 hg
 im
-vi
+PH
 iS
 hg
 hg
@@ -46225,7 +46334,7 @@ cw
 ci
 bM
 fF
-hr
+aa
 gH
 hj
 hj
@@ -46482,7 +46591,7 @@ wp
 ci
 bM
 fG
-hr
+aa
 gJ
 hk
 hO
@@ -46739,7 +46848,7 @@ ey
 cx
 bM
 fH
-hr
+aa
 gJ
 hr
 oF
@@ -46996,7 +47105,7 @@ dg
 eM
 bM
 kz
-hr
+aa
 gJ
 hm
 hQ
@@ -47253,7 +47362,7 @@ eN
 dC
 rE
 kz
-hr
+aa
 gK
 hn
 hn
@@ -47510,14 +47619,14 @@ ik
 yU
 CB
 fI
-hr
-hr
-hr
-hr
+aa
+aa
+aa
+aa
 iq
-hr
-hr
-hr
+aa
+aa
+aa
 kw
 hr
 hr
@@ -47768,13 +47877,13 @@ dC
 fi
 kz
 gj
-hr
-hr
+aa
+aa
 hT
 kz
-hr
+aa
 jq
-hr
+aa
 kz
 kZ
 hr
@@ -48025,13 +48134,13 @@ dC
 fj
 kz
 gk
-hr
-hr
+aa
+aa
 hU
 kz
 of
-hr
-hr
+aa
+aa
 kz
 of
 lH
@@ -48282,13 +48391,13 @@ eN
 fk
 kz
 gl
-hr
-hr
+aa
+aa
 hV
 kz
-hr
-hr
-hr
+aa
+aa
+aa
 kz
 lb
 lI
@@ -48544,8 +48653,8 @@ hq
 hW
 kz
 jb
-hr
-hr
+aa
+aa
 kz
 lc
 mK
@@ -48801,7 +48910,7 @@ kz
 kz
 kz
 jc
-hr
+aa
 oF
 kz
 ld
@@ -49051,15 +49160,15 @@ bN
 bN
 bN
 bM
-fL
+Ta
 gn
 gg
-hr
-hr
-hr
-hr
-hr
-hr
+aa
+aa
+aa
+aa
+aa
+aa
 kx
 kz
 lL
@@ -49309,14 +49418,14 @@ aY
 aY
 kz
 fM
-hr
+Td
 gP
-hr
-hr
+aa
+aa
 ir
-hr
-hr
-hr
+aa
+aa
+aa
 ky
 kz
 Ay
@@ -49570,10 +49679,10 @@ gn
 gg
 hj
 hX
-hr
-hr
-hr
-hr
+aa
+aa
+aa
+aa
 vs
 kz
 lN
@@ -49828,9 +49937,9 @@ kz
 hs
 kz
 it
-hr
-hr
-hr
+aa
+aa
+aa
 kz
 kz
 mq
@@ -50343,8 +50452,8 @@ aY
 kz
 iu
 jf
-hr
-hr
+aa
+aa
 gg
 lf
 aa
