@@ -1,0 +1,1 @@
+/area/station/command/bridge : /area/bridge{@OLD}

@@ -261,11 +261,11 @@
 /area/station/engineering/atmos)
 "bu" = (
 /turf/closed/wall/r_wall,
-/area/station/command/bridge)
+/area/bridge)
 "bv" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/station/command/bridge)
+/area/bridge)
 "by" = (
 /turf/closed/wall/r_wall,
 /area/station/hallway/secondary/entry)
@@ -317,27 +317,27 @@
 /turf/open/floor/iron{
 	dir = 8
 	},
-/area/station/command/bridge)
+/area/bridge)
 "bI" = (
 /obj/structure/table,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bJ" = (
 /obj/structure/table,
 /obj/item/card/id/advanced/gold/captains_spare,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bK" = (
 /obj/structure/table,
 /obj/item/storage/backpack/holding,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bM" = (
 /obj/structure/closet/secure_closet/hop,
 /turf/open/floor/iron{
 	dir = 4
 	},
-/area/station/command/bridge)
+/area/bridge)
 "bN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/iron,
@@ -404,11 +404,11 @@
 /turf/open/floor/iron{
 	dir = 8
 	},
-/area/station/command/bridge)
+/area/bridge)
 "cf" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cl" = (
 /obj/structure/cable,
 /turf/open/floor/iron{
@@ -429,22 +429,22 @@
 /turf/open/floor/iron{
 	dir = 10
 	},
-/area/station/command/bridge)
+/area/bridge)
 "cr" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron{
 	dir = 6
 	},
-/area/station/command/bridge)
+/area/bridge)
 "cv" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/closed/wall/r_wall,
-/area/station/command/bridge)
+/area/bridge)
 "cw" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cx" = (
 /obj/machinery/door/airlock/glass,
 /obj/structure/cable,
@@ -716,12 +716,12 @@
 /area/station/engineering/main)
 "eb" = (
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "ec" = (
 /turf/open/floor/iron{
 	dir = 4
 	},
-/area/station/command/bridge)
+/area/bridge)
 "ee" = (
 /turf/open/floor/iron{
 	dir = 9

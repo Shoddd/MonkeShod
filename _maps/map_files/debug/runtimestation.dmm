@@ -131,7 +131,7 @@
 /obj/item/construction/rcd/combat,
 /obj/item/construction/plumbing,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "aN" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 4
@@ -306,11 +306,11 @@
 /area/station/science)
 "bu" = (
 /turf/closed/wall/r_wall,
-/area/station/command/bridge)
+/area/bridge)
 "bv" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/station/command/bridge)
+/area/bridge)
 "bw" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -356,7 +356,7 @@
 /obj/item/card/emag,
 /obj/item/flashlight/emp/debug,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bJ" = (
 /obj/structure/table,
 /obj/item/card/id/advanced/centcom/ert{
@@ -369,13 +369,13 @@
 	pixel_y = 6
 	},
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bK" = (
 /obj/structure/table,
 /obj/item/storage/backpack/holding,
 /obj/item/storage/part_replacer/bluespace/tier4,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bL" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/aft)
@@ -388,7 +388,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "bN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/iron,
@@ -460,25 +460,25 @@
 /obj/machinery/door/airlock,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/command/bridge)
+/area/bridge)
 "ce" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cf" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cg" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "ch" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 8
@@ -525,12 +525,12 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cr" = (
 /obj/machinery/light/directional/south,
 /obj/structure/closet/secure_closet/hos{
@@ -538,7 +538,7 @@
 	},
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "ct" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron,
@@ -555,7 +555,7 @@
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "cx" = (
 /obj/machinery/door/airlock/public/glass,
 /turf/open/floor/iron,
@@ -2194,20 +2194,20 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "BD" = (
 /obj/structure/closet/secure_closet/chief_medical{
 	locked = 0
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "BG" = (
 /obj/structure/table,
 /obj/item/ammo_box/c10mm,
 /obj/item/gun/ballistic/automatic/pistol,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "BK" = (
 /obj/machinery/computer/shipbreaker{
 	dir = 8
@@ -2290,7 +2290,7 @@
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "EN" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/gravity_generator/main,
@@ -2350,7 +2350,7 @@
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "II" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -2496,7 +2496,7 @@
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron,
-/area/station/command/bridge)
+/area/bridge)
 "RW" = (
 /turf/open/floor/iron,
 /area/station/bitrunning/den)
