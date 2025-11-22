@@ -4,8 +4,8 @@
 
 /// Holymelon's anti-magic trait. Charges based on potency.
 /datum/plant_gene/trait/anti_magic
-	name = "Anti-Magic Vacuoles"
-	description = "You can hide behind it from a fireball!"
+	name = "Holy Vacuoles"
+	description = "You can hide behind it from dark magic!"
 	icon = "hand-sparkles"
 	/// The amount of anti-magic blocking uses we have.
 	var/shield_uses = 1
