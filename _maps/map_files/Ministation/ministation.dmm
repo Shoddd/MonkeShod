@@ -2250,7 +2250,7 @@
 	dir = 8;
 	dwidth = 4;
 	height = 7;
-	shuttle_id = "supply_home";
+	shuttle_id = "cargo_home";
 	name = "Cargo Bay";
 	width = 10
 	},
@@ -5330,7 +5330,7 @@
 /area/station/medical/cryo)
 "sr" = (
 /obj/machinery/door/airlock/external{
-	name = "Port Docking Bay 1";
+	name = "Port Docking Bay 1"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
@@ -5735,7 +5735,7 @@
 /area/station/medical/storage)
 "tA" = (
 /obj/machinery/door/airlock/external{
-	name = "Port Docking Bay 1";
+	name = "Port Docking Bay 1"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
