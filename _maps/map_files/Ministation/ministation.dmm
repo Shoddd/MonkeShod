@@ -576,7 +576,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "bY" = (
@@ -1330,6 +1329,7 @@
 	dir = 4
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "ec" = (
@@ -2371,7 +2371,7 @@
 /area/station/science/lab)
 "hk" = (
 /obj/machinery/rnd/destructive_analyzer,
-/turf/open/space/basic,
+/turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hm" = (
 /obj/effect/turf_decal/stripes/line{
@@ -4213,7 +4213,6 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "on" = (
@@ -5266,7 +5265,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sk" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -5496,7 +5495,7 @@
 "sR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor/heavy,
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sS" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -5894,7 +5893,7 @@
 /area/station/hallway/primary/starboard)
 "ud" = (
 /obj/machinery/smartfridge/food,
-/turf/open/space/basic,
+/turf/open/floor/wood,
 /area/station/service/bar)
 "ue" = (
 /obj/structure/closet/crate/bin,
@@ -6324,11 +6323,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/storage)
-"vP" = (
-/obj/structure/cable,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/station/maintenance/department/engine)
 "vQ" = (
 /obj/structure/lattice,
 /obj/machinery/meter,
@@ -8395,7 +8389,7 @@
 	pixel_y = 22;
 	req_access = "16"
 	},
-/turf/open/space/basic,
+/turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai)
 "Dm" = (
 /obj/machinery/door/airlock/engineering/glass{
@@ -8497,7 +8491,7 @@
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/server)
 "DJ" = (
-/turf/open/floor/circuit/telecomms/mainframe,
+/turf/open/floor/circuit,
 /area/station/tcommsat/server)
 "DL" = (
 /obj/machinery/telecomms/hub/preset,
@@ -8584,6 +8578,7 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/gravity_generator)
 "Eg" = (
@@ -41664,7 +41659,7 @@ wi
 OL
 wi
 wi
-vP
+wi
 wg
 Zf
 wi
