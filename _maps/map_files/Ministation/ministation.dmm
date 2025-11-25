@@ -2825,7 +2825,6 @@
 /area/station/engineering/main)
 "iO" = (
 /obj/machinery/firealarm/directional/north,
-/turf/open/space/basic,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "iP" = (
@@ -9136,6 +9135,9 @@
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
+"IX" = (
+/turf/open/space/basic,
+/area/station/hallway/primary/central)
 "Ja" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 6
@@ -38542,7 +38544,7 @@ XN
 pV
 aa
 aa
-aa
+IX
 aa
 aa
 aa
