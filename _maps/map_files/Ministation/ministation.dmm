@@ -2369,6 +2369,10 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
+"hk" = (
+/obj/machinery/rnd/destructive_analyzer,
+/turf/open/floor/iron/white/textured,
+/area/station/science/lab)
 "hm" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -2377,6 +2381,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/turf/open/floor/iron/white,
 /area/station/science/lab)
 "hn" = (
 /obj/effect/turf_decal/stripes/line{
@@ -2820,7 +2825,7 @@
 /area/station/engineering/main)
 "iO" = (
 /obj/machinery/firealarm/directional/north,
-/turf/open/space/basic,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "iP" = (
 /obj/effect/turf_decal/tile/red{
@@ -4670,10 +4675,6 @@
 "pV" = (
 /turf/closed/wall,
 /area/station/cargo/storage)
-"pW" = (
-/obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/iron/white/textured,
-/area/station/science/lab)
 "pX" = (
 /turf/open/floor/iron,
 /area/station/service/hydroponics/garden)
@@ -5259,7 +5260,11 @@
 /turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sj" = (
-/turf/open/space/basic,
+/obj/machinery/smartfridge/chemistry,
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sk" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -51132,7 +51137,7 @@ jK
 fG
 Qt
 gJ
-pW
+hk
 hO
 jK
 iW
