@@ -2369,10 +2369,6 @@
 	},
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
-"hk" = (
-/obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/iron/white/textured,
-/area/station/science/lab)
 "hm" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -2825,7 +2821,7 @@
 /area/station/engineering/main)
 "iO" = (
 /obj/machinery/firealarm/directional/north,
-/turf/open/floor/iron,
+/turf/open/space/basic,
 /area/station/hallway/primary/central)
 "iP" = (
 /obj/effect/turf_decal/tile/red{
@@ -5260,12 +5256,9 @@
 /turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sj" = (
-/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/smartfridge/chemistry,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/open/floor/iron/white/textured,
-/area/station/medical/pharmacy)
+/area/station/science/lab)
 "sk" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -6563,6 +6556,7 @@
 /obj/machinery/conveyor{
 	id = "CanisterStore"
 	},
+/obj/machinery/portable_atmospherics/canister/plasma,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "wR" = (
@@ -6839,6 +6833,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/plasma,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "xI" = (
@@ -7878,9 +7873,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
-"Br" = (
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "Bs" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -38544,7 +38536,7 @@ XN
 pV
 aa
 aa
-Br
+aa
 aa
 aa
 aa
@@ -51140,7 +51132,7 @@ jK
 fG
 Qt
 gJ
-hk
+sj
 hO
 jK
 iW
@@ -51932,7 +51924,7 @@ FF
 qG
 FF
 ft
-sj
+ay
 sR
 VY
 tP
