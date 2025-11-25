@@ -2370,11 +2370,13 @@
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hm" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
-/obj/machinery/rnd/production/protolathe/department/science,
-/turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hn" = (
 /obj/effect/turf_decal/stripes/line{
@@ -2553,8 +2555,11 @@
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
-/turf/open/floor/iron/white/textured,
+/turf/open/floor/iron/white,
 /area/station/science/lab)
 "hR" = (
 /obj/structure/cable,
@@ -2815,7 +2820,7 @@
 /area/station/engineering/main)
 "iO" = (
 /obj/machinery/firealarm/directional/north,
-/turf/open/floor/iron,
+/turf/open/space/basic,
 /area/station/hallway/primary/central)
 "iP" = (
 /obj/effect/turf_decal/tile/red{
@@ -4665,6 +4670,10 @@
 "pV" = (
 /turf/closed/wall,
 /area/station/cargo/storage)
+"pW" = (
+/obj/machinery/rnd/destructive_analyzer,
+/turf/open/floor/iron/white/textured,
+/area/station/science/lab)
 "pX" = (
 /turf/open/floor/iron,
 /area/station/service/hydroponics/garden)
@@ -5250,9 +5259,8 @@
 /turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sj" = (
-/obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/iron/white/textured,
-/area/station/science/lab)
+/turf/open/space/basic,
+/area/station/medical/pharmacy)
 "sk" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -6550,7 +6558,6 @@
 /obj/machinery/conveyor{
 	id = "CanisterStore"
 	},
-/obj/machinery/portable_atmospherics/canister/plasma,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "wR" = (
@@ -6827,7 +6834,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/plasma,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "xI" = (
@@ -8991,12 +8997,6 @@
 "HY" = (
 /turf/closed/wall,
 /area/station/engineering/main)
-"HZ" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/iron/white/textured,
-/area/station/science/lab)
 "Ia" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
@@ -9986,12 +9986,6 @@
 "Qy" = (
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
-"QA" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8
-	},
-/turf/open/floor/iron/white/textured,
-/area/station/science/lab)
 "QE" = (
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
@@ -10053,9 +10047,6 @@
 "Rc" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
 	},
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
@@ -51141,7 +51132,7 @@ jK
 fG
 Qt
 gJ
-sj
+pW
 hO
 jK
 iW
@@ -51654,7 +51645,7 @@ eM
 jK
 jK
 Mn
-gJ
+Qt
 hm
 hQ
 jK
@@ -51911,9 +51902,9 @@ jC
 rE
 jK
 Eh
-QA
+Qt
 Rc
-HZ
+Qt
 jK
 iY
 Ib
@@ -51933,7 +51924,7 @@ FF
 qG
 FF
 ft
-ay
+sj
 sR
 VY
 tP
