@@ -5260,10 +5260,10 @@
 /turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sj" = (
-/obj/machinery/smartfridge/chemistry,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/smartfridge/chemistry,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
 "sk" = (
@@ -7878,6 +7878,9 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
+"Br" = (
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "Bs" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -9135,9 +9138,6 @@
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
-"IX" = (
-/turf/open/space/basic,
-/area/station/hallway/primary/central)
 "Ja" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 6
@@ -38544,7 +38544,7 @@ XN
 pV
 aa
 aa
-IX
+Br
 aa
 aa
 aa
