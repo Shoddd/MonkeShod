@@ -2370,14 +2370,11 @@
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hm" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/obj/machinery/rnd/production/protolathe/department/science,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
-/turf/open/floor/iron/white,
+/obj/machinery/rnd/production/protolathe/department/science,
+/turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hn" = (
 /obj/effect/turf_decal/stripes/line{
@@ -2556,11 +2553,8 @@
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hQ" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/white/textured,
 /area/station/science/lab)
 "hR" = (
 /obj/structure/cable,
@@ -2821,7 +2815,7 @@
 /area/station/engineering/main)
 "iO" = (
 /obj/machinery/firealarm/directional/north,
-/turf/open/space/basic,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "iP" = (
 /obj/effect/turf_decal/tile/red{
@@ -8997,6 +8991,12 @@
 "HY" = (
 /turf/closed/wall,
 /area/station/engineering/main)
+"HZ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/white/textured,
+/area/station/science/lab)
 "Ia" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
@@ -9986,6 +9986,12 @@
 "Qy" = (
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
+"QA" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/iron/white/textured,
+/area/station/science/lab)
 "QE" = (
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
@@ -10047,6 +10053,9 @@
 "Rc" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
 /turf/open/floor/iron/white/textured,
 /area/station/science/lab)
@@ -51645,7 +51654,7 @@ eM
 jK
 jK
 Mn
-Qt
+gJ
 hm
 hQ
 jK
@@ -51902,9 +51911,9 @@ jC
 rE
 jK
 Eh
-Qt
+QA
 Rc
-Qt
+HZ
 jK
 iY
 Ib
