@@ -343,7 +343,7 @@
 			attack_mod += 2
 			sacker.stamina.adjust(-20)
 
-	var/r = rand(-3, 3) - defense_mod + attack_mod + skill_mod
+	var/r = rand(-5, 3) - defense_mod + attack_mod + skill_mod
 	return r
 
 
