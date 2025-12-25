@@ -745,9 +745,6 @@
 		usr.client.selectedPlayerCkey = target_mob.ckey
 		return SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/vuap_personal, target_mob)
 
-	else if(href_list["adminopendemo"])
-		usr.client << link("http://viewer.monkestation.com/?roundid=[GLOB.round_id]&password=[CONFIG_GET(string/replay_password)]#[world.time]") //opens current round at current time
-
 	else if(href_list["adminplayerobservefollow"])
 		if(!isobserver(usr) && !check_rights(R_ADMIN))
 			return
@@ -1769,14 +1766,16 @@
 		log_admin("[user_client]'s [token_holder.in_queue] token has been rejected by [owner].")
 		token_holder.reject_antag_token()
 
+
 	else if(href_list["open_music_review"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/id = href_list["open_music_review"]
-		var/datum/cassette_review/cassette_review = fetch_review(id)
-		if(!istype(cassette_review))
-			return
-		cassette_review.ui_interact(usr)
+		var/id = text2num(href_list["open_music_review"])
+		var/datum/cassette_review/cassette_review = GLOB.cassette_reviews[id]
+		if(cassette_review)
+			cassette_review.ui_interact(usr)
+		else
+			to_chat(usr, span_warning("Cassette review not found!"), type = MESSAGE_TYPE_ADMINLOG, confidential = TRUE)
 
 	else if(href_list["approve_token_event"])
 		if(!check_rights(R_ADMIN))
