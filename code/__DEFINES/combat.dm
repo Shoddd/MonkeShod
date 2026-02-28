@@ -107,6 +107,7 @@ DEFINE_BITFIELD(status_flags, list(
 #define CLICK_CD_GRABBING (1 SECONDS)
 #define CLICK_CD_LOOK_UP (0.5 SECONDS)
 #define CLICK_CD_WHIP (1.2 SECONDS)
+#define CLICK_CD_RAZOR_WIRE (1.4 SECONDS)
 
 //Cuff resist speeds
 #define FAST_CUFFBREAK 1

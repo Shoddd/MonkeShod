@@ -33,7 +33,18 @@
 		return
 	user.put_in_inactive_hand(leashed_atom)
 
+/obj/item/melee/razorwire/on_thrown(mob/living/carbon/user, atom/target)
+	if(!target || !user)
+		return
 
+	if(!leashed_atom)
+		return
+	//Only items can be thrown 10 tiles everything else only 1 tile
+	leashed_atom.throw_at(target, 5, 1,user)
+	var/turf/start_turf = get_turf(leashed_atom)
+	var/turf/end_turf = get_turf(target)
+	user.log_message("has thrown [leashed_atom] from [AREACOORD(start_turf)] towards [AREACOORD(end_turf)] using Telekinesis.", LOG_ATTACK)
+	user.changeNext_move(CLICK_CD_RAZOR_WIRE)
 
 /obj/item/melee/razorwire/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!ismovable(interacting_with) || tracked_component || !COOLDOWN_FINISHED(src, ensnare))
@@ -41,6 +52,8 @@
 
 	var/atom/movable/movable = interacting_with
 	if(movable.anchored)
+		return
+	if(isliving(movable))
 		return
 
 	if((get_dist(user, interacting_with) > 4 && get_dist(user, interacting_with) < interacting_with))
@@ -54,12 +67,12 @@
 	tracked_component = movable.AddComponent(/datum/component/leash, src, total_dist, beam_icon_state = "razorwire", beam_icon = 'icons/effects/beam.dmi', force_teleports = FALSE)
 	leashed_atom = movable
 	user.visible_message(span_danger("[user] ensnares [movable] in razorwire tethering them!"))
-	var/tether_time = 10 SECONDS
+	var/tether_time = 60 SECONDS
 	if(isitem(movable))
 		tether_time *= 2
 
 	addtimer(CALLBACK(src, PROC_REF(disconnect)), tether_time)
-	COOLDOWN_START(src, ensnare, 40 SECONDS)
+	COOLDOWN_START(src, ensnare, 10 SECONDS)
 
 /obj/item/melee/razorwire/proc/disconnect()
 	if(!tracked_component)
