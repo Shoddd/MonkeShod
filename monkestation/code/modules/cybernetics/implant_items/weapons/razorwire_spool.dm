@@ -40,6 +40,8 @@
 	if(!leashed_atom)
 		return
 	//Only items can be thrown 10 tiles everything else only 1 tile
+	if(get_dist(user, target) > additional_distance)
+		return
 	leashed_atom.throw_at(target, 5, 1,user)
 	var/turf/start_turf = get_turf(leashed_atom)
 	var/turf/end_turf = get_turf(target)
