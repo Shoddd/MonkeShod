@@ -11,7 +11,7 @@
 	/// ID linked to the holopay
 	var/obj/item/card/id/linked_card
 	/// Max range at which the hologram can be projected before it deletes
-	var/max_holo_range = 4
+	var/max_holo_range = 15
 	/// The holopay shop icon displayed in the UI
 	var/shop_logo = "donate"
 	/// Replaces the "pay whatever" functionality with a set amount when non-zero.
