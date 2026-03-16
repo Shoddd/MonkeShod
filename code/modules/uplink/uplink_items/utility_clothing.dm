@@ -79,7 +79,7 @@
 	// This one costs more than the nuke op counterpart
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	progression_minimum = 90 MINUTES
-	cost = 18
+	cost = 16
 	cant_discount = TRUE
 
 /datum/uplink_item/utility_clothing/modsuit/Wraith

@@ -44,7 +44,7 @@
 			all energy projectiles, but requires two hands to wield. It also struggles to protect you from tackles."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dualsaber
-	cost = 18
+	cost = 16
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/melees/doublesword/get_discount_value(discount_type)
