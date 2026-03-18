@@ -55,7 +55,6 @@
 	// Progression elements are best left to the roundstart antagonists
 	// There will still be a timelock on uplink items
 	name = "\improper Infiltrator"
-	give_secondary_objectives = TRUE // Changed from FALSE to TRUE - MONKEYSTATION EDIT CHANGE
 
 /datum/antagonist/traitor/infiltrator/sleeper_agent
 	name = "\improper Syndicate Sleeper Agent"
@@ -79,7 +78,7 @@
 		else
 			uplink_handler = uplink.uplink_handler
 		uplink_handler.primary_objectives = objectives
-		uplink_handler.has_progression = TRUE
+		uplink_handler.has_progression = uplink_handler.has_progression
 		SStraitor.register_uplink_handler(uplink_handler)
 
 		if(give_secondary_objectives)
