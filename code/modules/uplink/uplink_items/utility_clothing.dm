@@ -160,3 +160,10 @@
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
 	item = /obj/item/storage/belt/military
 	cost = 1
+
+/datum/uplink_item/device_tools/duffelbag
+	name = "Suspicous Duffel Bag"
+	desc = "A large duffel bag for holding extra tactical supplies, it is better balanced on your back than an average duffelbag."
+	item = /obj/item/storage/backpack/duffelbag/syndie
+	cost = 2
+	surplus = 50
