@@ -38,7 +38,7 @@
 	name = "Ancient Jumpsuit"
 	desc = "A tattered old jumpsuit that will provide absolutely no benefit to you."
 	item = /obj/item/clothing/under/color/grey/ancient
-	cost = 20
+	cost = 25
 	restricted_roles = list(JOB_ASSISTANT)
 	surplus = 0
 
@@ -263,7 +263,7 @@
 	// Plus, it costs all your TC, and it's not an instant kill tool.
 	progression_minimum = 5 MINUTES
 	item = /obj/vehicle/sealed/car/clowncar
-	cost = 20
+	cost = 25
 	restricted_roles = list(JOB_CLOWN)
 	surplus = 10
 
@@ -279,7 +279,7 @@
 	lock_other_purchases = TRUE
 	cant_discount = TRUE
 	item = /obj/item/his_grace
-	cost = 20
+	cost = 25
 	surplus = 0
 	restricted_roles = list(JOB_CHAPLAIN)
 
@@ -334,7 +334,7 @@
 			to remove these from your person will be in for an explosive surprise, to boot. \
 			Remember to activate them for the fun to begin. "
 	item = /obj/item/clothing/shoes/magboots/boomboots
-	cost = 20
+	cost = 25
 	restricted_roles = list(JOB_CLOWN)
 
 /datum/uplink_item/role_restricted/monkey_agent
@@ -375,7 +375,7 @@
 	name = "Clone Army Kit"
 	desc = "Everything you need for a clone army, armaments not included."
 	progression_minimum = 5 MINUTES
-	cost = 20
+	cost = 25
 	item = /obj/item/storage/box/clonearmy
 	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER) // Experimental cloners were traditionally bought by cargo.
 
