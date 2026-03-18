@@ -372,7 +372,7 @@ export class Uplink extends Component<any, UplinkState> {
                             Primary Objectives
                           </Tabs.Tab>
                         )}
-                        {!!has_objectives && (
+                        {!!has_objectives && !!is_contractor && (
                           <Tabs.Tab
                             style={{
                               overflow: 'hidden',

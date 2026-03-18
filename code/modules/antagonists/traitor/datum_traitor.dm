@@ -21,7 +21,7 @@
 	antag_count_points = 8 //gains more points the more objectives they complete, should also add this to things like heretics
 	var/give_objectives = TRUE
 	/// Whether to give secondary objectives to the traitor, which aren't necessary but can be completed for a progression and TC boost.
-	var/give_secondary_objectives = FALSE
+	var/give_secondary_objectives = TRUE
 	var/should_give_codewords = TRUE
 	///give this traitor an uplink?
 	var/give_uplink = TRUE
