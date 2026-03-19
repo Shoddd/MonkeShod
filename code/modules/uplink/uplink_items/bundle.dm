@@ -203,10 +203,6 @@
 	if(uplink_handler && our_uplink)
 		our_uplink.become_contractor()
 
-///Override for any unique checks for specific items, by default returns TRUE
-/datum/uplink_item/proc/unique_checks(mob/user, datum/uplink_handler/handler, atom/movable/source)
-	return TRUE
-
 /datum/uplink_item/bundles_tc/surplus/lootbox
 	name = "Syndicate Lootbox Crate"
 	desc = "A dusty crate from the back of the Syndicate warehouse. Rumored to contain a valuable assortment of items, \
