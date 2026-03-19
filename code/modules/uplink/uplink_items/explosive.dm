@@ -51,7 +51,7 @@
 
 /datum/uplink_item/explosives/emp
 	name = "EMP Grenades"
-	desc = "A box that contains five EMP grenades. Useful to disrupt communications, \
+	desc = "A box that contains eight EMP grenades. Useful to disrupt communications, \
 			security's energy weapons and silicon lifeforms when you're in a tight spot."
 	item = /obj/item/storage/box/syndie_kit/emp
 	cost = 2
