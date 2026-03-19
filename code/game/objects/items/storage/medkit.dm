@@ -161,7 +161,7 @@
 /obj/item/storage/medkit/surgery_syndie/PopulateContents()
 	if(empty)
 		return
-	var/list/items_inside = list(s
+	var/list/items_inside = list(
 		/obj/item/scalpel/advanced = 1,
 		/obj/item/retractor/advanced = 1,
 		/obj/item/cautery/advanced = 1,

@@ -153,7 +153,7 @@
 	item = /obj/structure/closet/crate/syndicrate
 	progression_minimum = 30 MINUTES
 	stock_key = UPLINK_SHARED_STOCK_SURPLUS
-	crate_tc_value = 100
+	crate_tc_value = 150 // teamwork makes the dream work?
 	crate_type = /obj/structure/closet/crate/syndicrate
 
 /// edited version of fill crate for super surplus to ensure it can only be unlocked with the syndicrate key
