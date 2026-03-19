@@ -110,6 +110,7 @@
 	cost = 5
 	item = /obj/item/reverse_bear_trap
 	restricted_roles = list(JOB_CLOWN)
+	surplus = 60
 
 /datum/uplink_item/role_restricted/modified_syringe_gun
 	name = "Modified Syringe Gun"
@@ -117,6 +118,7 @@
 	item = /obj/item/gun/syringe/dna
 	cost = 14
 	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
+	surplus = 50
 
 /datum/uplink_item/role_restricted/meathook
 	name = "Butcher's Meat Hook"
@@ -364,12 +366,6 @@
 	cost = 1
 	item = /obj/item/book/bible/mini
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CLOWN)
-
-/datum/uplink_item/role_restricted/reverse_bear_trap
-	surplus = 60
-
-/datum/uplink_item/role_restricted/modified_syringe_gun
-	surplus = 50
 
 /datum/uplink_item/role_restricted/clonekit
 	name = "Clone Army Kit"
