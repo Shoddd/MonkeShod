@@ -589,7 +589,7 @@
 	name = "EMP kit"
 
 /obj/item/storage/box/syndie_kit/emp/PopulateContents()
-	for(var/i in 1 to 5)
+	for(var/i in 1 to 8)
 		new /obj/item/grenade/empgrenade(src)
 
 /obj/item/storage/box/syndie_kit/smoke
