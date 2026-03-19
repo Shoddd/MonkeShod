@@ -165,5 +165,5 @@
 	name = "Suspicous Duffel Bag"
 	desc = "A large duffel bag for holding extra tactical supplies, it is better balanced on your back than an average duffelbag."
 	item = /obj/item/storage/backpack/duffelbag/syndie
-	cost = 2
+	cost = 1
 	surplus = 50
