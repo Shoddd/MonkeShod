@@ -109,7 +109,7 @@
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
 	item = /obj/item/card/id/advanced/chameleon
-	cost = 4
+	cost = 2
 
 /datum/uplink_item/utility_clothing/chameleon
 	name = "Chameleon Kit"
