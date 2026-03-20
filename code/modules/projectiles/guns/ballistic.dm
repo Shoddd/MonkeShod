@@ -698,7 +698,6 @@ GLOBAL_LIST_INIT(gun_saw_types, typecacheof(list(
 		return TRUE
 
 /obj/item/gun/ballistic/wrench_act(mob/living/user, obj/item/I)
-/obj/item/gun/ballistic/wrench_act(mob/living/user, obj/item/I)
 	if(!can_modify_ammo)
 		return
 
