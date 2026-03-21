@@ -139,6 +139,9 @@
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 	return FALSE //you didn't actually evade the attack now did you
 
+/obj/item/clothing/suit/armor/reactive/teleport/research_director // for traitor steal objective
+	name = "research director's teleport armor" // So its not mixed up
+
 //Fire
 
 /obj/item/clothing/suit/armor/reactive/fire
