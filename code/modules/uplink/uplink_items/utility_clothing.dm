@@ -138,7 +138,7 @@
 	item = /obj/item/radio/headset/chameleon/advanced
 	cost = 2
 
-/datum/uplink_item/stealthy_tools/syndigaloshes
+/datum/uplink_item/utility_clothing/syndigaloshes
 	name = "No-Slip Chameleon Shoes"
 	desc = "These shoes will allow the wearer to run on wet floors and slippery objects without falling down. \
 			They do not work on heavily lubricated surfaces."
@@ -146,7 +146,7 @@
 	cost = 2
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
-/datum/uplink_item/stealthy_tools/thermal
+/datum/uplink_item/utility_clothing/thermal
 	name = "Thermal Imaging Glasses"
 	desc = "These goggles can be turned to resemble common eyewear found throughout the station. \
 			They allow you to see organisms through walls by capturing the upper portion of the infrared light spectrum, \
@@ -155,13 +155,13 @@
 	item = /obj/item/clothing/glasses/thermal/syndi
 	cost = 4
 
-/datum/uplink_item/stealthy_tools/military_belt
+/datum/uplink_item/steutility_clothingalthy_tools/military_belt
 	name = "Chest Rig"
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
 	item = /obj/item/storage/belt/military
 	cost = 1
 
-/datum/uplink_item/device_tools/duffelbag
+/datum/uplink_item/utility_clothing/duffelbag
 	name = "Suspicous Duffel Bag"
 	desc = "A large duffel bag for holding extra tactical supplies, it is better balanced on your back than an average duffelbag."
 	item = /obj/item/storage/backpack/duffelbag/syndie
