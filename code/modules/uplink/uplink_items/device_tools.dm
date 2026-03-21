@@ -263,15 +263,6 @@
 	item = /obj/item/compression_kit
 	cost = 6
 
-/datum/uplink_item/device_tools/polyglot_voicebox
-	name = "Syndicate Polyglot Voicebox"
-	desc = "A polyglot voicebox which, after replacing the user's tongue will allow them to emulate \
-			the tongue of any species. \
-			WARNING: The polyglot voicebox does not allow you to speak additional languages"
-	cost = 1
-	item = /obj/item/autosurgeon/syndicate/polyglot_voicebox
-	surplus = 25
-
 /datum/uplink_item/device_tools/guardian
 	name = "Holoparasites"
 	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an \

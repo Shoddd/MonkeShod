@@ -10,7 +10,7 @@
 /datum/uplink_item/cybernetics/sandy
 	name = "Sandevistan Bundle"
 	desc = "A box containing an autosurgeon for a sandevistan, allowing you to outspeed targets."
-	item = /obj/item/autosurgeon/organ/syndicate/sandy
+	item = /obj/item/autosurgeon/syndicate/sandy
 	cost = 10
 	purchasable_from = UPLINK_TRAITORS
 
@@ -22,13 +22,13 @@
 	purchasable_from = UPLINK_TRAITORS
 
 /obj/item/storage/box/syndie_kit/mantis/PopulateContents()
-	new /obj/item/autosurgeon/organ/syndicate/syndie_mantis(src)
-	new /obj/item/autosurgeon/organ/syndicate/syndie_mantis/l(src)
+	new /obj/item/autosurgeon/syndicate/syndie_mantis(src)
+	new /obj/item/autosurgeon/syndicate/syndie_mantis/l(src)
 
 /datum/uplink_item/cybernetics/dualwield
 	name = "C.C.M.S Bundle"
 	desc = "A box containing an autosurgeon a C.C.M.S implant that lets you dual wield melee weapons."
-	item = /obj/item/autosurgeon/organ/syndicate/dualwield
+	item = /obj/item/autosurgeon/syndicate/dualwield
 	cost = 8
 	purchasable_from = UPLINK_TRAITORS
 
@@ -36,7 +36,7 @@
 	name = "Razorwire Implant"
 	desc = "An integrated spool of razorwire, capable of being used as a weapon when whipped at your foes. \
 	Two tile range and can anchor further targets to keep them still."
-	item = /obj/item/autosurgeon/organ/syndicate/razorwire
+	item = /obj/item/autosurgeon/syndicate/razorwire
 	progression_minimum = 15 MINUTES
 	cost = 5
 	surplus = 20
@@ -54,7 +54,7 @@
 	name = "Hive Node Implanter"
 	desc = "A Xenomorph hive node. When implanted, allows connection to any Xenomorphs in nearby psionic networks."
 	cost = 5 //similar price to binary translator
-	item = /obj/item/autosurgeon/syndicate/organ/hivenode
+	item = /obj/item/autosurgeon/syndicate/hivenode
 
 
 /datum/uplink_item/cybernetics/thermals
@@ -68,7 +68,7 @@
 	name = "X-ray Vision Implant"
 	desc = "These cybernetic eyes will give you X-ray vision. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/xray_eyes
-	cost = 10
+	cost = 7
 	surplus = 30
 
 /datum/uplink_item/cybernetics/autosurgeon
@@ -76,3 +76,12 @@
 	desc = "A multi-use autosurgeon for implanting whatever you want into yourself. Rip that station apart and make it part of you."
 	item = /obj/item/autosurgeon/syndicate
 	cost = 5
+
+/datum/uplink_item/cybernetics/polyglot_voicebox
+	name = "Syndicate Polyglot Voicebox"
+	desc = "A polyglot voicebox which, after replacing the user's tongue will allow them to emulate \
+			the tongue of any species. \
+			WARNING: The polyglot voicebox does not allow you to speak additional languages"
+	cost = 1
+	item = /obj/item/autosurgeon/syndicate/polyglot_voicebox
+	surplus = 25
