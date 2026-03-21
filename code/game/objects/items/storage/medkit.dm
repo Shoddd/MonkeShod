@@ -155,7 +155,7 @@
 	name = "suspicous surgical medkit"
 	desc = "An suspicous coloured medkit full of advanced medical equipment."
 	icon_state = "medkit_tactical_lite"
-	inhand_icon_state = "medkit-tactical-lite"
+	inhand_icon_state = "medkit-tactical"
 	damagetype_healed = HEAL_ALL_DAMAGE
 
 /obj/item/storage/medkit/surgery_syndie/PopulateContents()

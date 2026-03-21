@@ -49,6 +49,7 @@
 		Perfect for running someone over in the name of a tram malfunction!"
 	item = /obj/item/tram_remote
 	cost = 1
+	surplus = 40
 
 /datum/uplink_item/device_tools/cutouts
 	name = "Adaptive Cardboard Cutouts"
@@ -152,6 +153,7 @@
 	item = /obj/item/healthanalyzer/rad_laser
 	cost = 3
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	surplus = 40
 
 /datum/uplink_item/device_tools/suspiciousphone
 	name = "Protocol CRAB-17 Phone"
@@ -247,12 +249,6 @@
 	desc = "High-tech rope, a refined hook structure, the peak of climbing technology. Only useful for climbing up holes, provided the operation site has any."
 	item = /obj/item/climbing_hook/syndicate
 	cost = 1
-
-/datum/uplink_item/device_tools/tram_remote
-	surplus = 40
-
-/datum/uplink_item/device_tools/rad_laser
-	surplus = 40
 
 /datum/uplink_item/device_tools/compressionkit
 	name = "Bluespace Compression Kit"
