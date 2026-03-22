@@ -81,7 +81,14 @@
 	name = "\improper Bóbr 12 GA revolver"
 	desc = "An outdated sidearm rarely seen in use by some members of the CIN. A revolver type design with a four shell cylinder. That's right, shell, this one shoots twelve guage."
 	item = /obj/item/storage/box/syndie_kit/shotgun_revolver
-	cost = 5
+	cost = 4
+
+/datum/uplink_item/firearms/wespe
+	name = "Wespe Pistol"
+	desc = "The standard issue service pistol of SolFed's various military branches. Comes with attached light."
+	progression_minimum = 5 MINUTES
+	item = /obj/item/storage/toolbox/guncase/nova/pistol/opfor/wespe
+	cost = 3
 
 /datum/uplink_item/firearms/shit_smg
 	name = "Surplus Smg Bundle"
