@@ -342,16 +342,6 @@
 /obj/item/clothing/suit/hooded/ablative/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/clothing/suit/hooded/ablative)
 
-/datum/objective_item/steal/reactive
-	name = "the research director's reactive teleport armor"
-	targetitem = /obj/item/clothing/suit/armor/reactive/teleport/research_director
-	excludefromjob = list(JOB_RESEARCH_DIRECTOR)
-	item_owner = list(JOB_RESEARCH_DIRECTOR)
-	exists_on_map = TRUE
-
-/obj/item/clothing/suit/armor/reactive/teleport/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/clothing/suit/armor/reactive/teleport/research_director)
-
 /datum/objective_item/steal/nuke_core
 	name = "the heavily radioactive plutonium core from the onboard self-destruct"
 	valid_containers = list(/obj/item/nuke_core_container)
