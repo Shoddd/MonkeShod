@@ -286,6 +286,8 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define MAROON_PROB 50
 /// If a maroon objective is rolled, chance that it is to destroy the AI.
 #define DESTROY_AI_PROB(denominator) (100 / denominator)
+/// If the destroy AI objective doesn't roll, chance that we'll get a kill instead. If this prob fails, they will get a generic assassinate objective instead.
+#define KILL_PROB 20
 
 /// How many telecrystals a normal traitor starts with
 #define TELECRYSTALS_DEFAULT 25

@@ -254,6 +254,12 @@
 			destroy_objective.find_target()
 			return destroy_objective
 
+		if(prob(KILL_PROB))
+			var/datum/objective/assassinate/kill_objective = new()
+			kill_objective.owner = owner
+			kill_objective.find_target()
+			return kill_objective
+
 		var/datum/objective/maroon/maroon_objective = new()
 		maroon_objective.owner = owner
 		maroon_objective.find_target()
