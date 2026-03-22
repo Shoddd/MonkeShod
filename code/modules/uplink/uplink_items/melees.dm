@@ -74,17 +74,17 @@
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/melees/martialarts
-	name = "Martial Arts Scroll"
+	name = "Sleeping Carp Scroll"
 	desc = "This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat \
 			and gain the ability to swat bullets from the air, but you will also refuse to use dishonorable ranged weaponry."
 	item = /obj/item/book/granter/martial/carp
 	progression_minimum = 30 MINUTES
-	cost = 16 // No free northstar gloves
+	cost = 14 // Northstar gloves should cost like all your TC
 	surplus = 30
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/melees/martialarts/advanced
-	name = "Blood-stained Martial Arts Scroll"
+	name = "Scroll of the Awakened Dragon"
 	desc = "A scroll penned by the infamous Awakened Dragon, penned with the blood of their \
 			disciples, it appears to have clues towards true enlightenment in the path of the Sleeping Carp."
 	cost = 25
