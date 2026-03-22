@@ -330,3 +330,6 @@
   Tractor-Maam:
   - qol: Hypospray Vials and Medipens can now fit inside Chemistry Bags and Medical
       Bandoliers.
+2026-03-22:
+  BanementI:
+  - rscadd: The AI can now go to the soup store, and use a couple of other fishy words.
