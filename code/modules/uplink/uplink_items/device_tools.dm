@@ -288,7 +288,7 @@
 			It was put into a cage for easy tranportation"
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	item = /obj/item/neutered_borer_spawner
-	cost = 20
+	cost = 25
 	surplus = 40
 	refundable = TRUE
 
@@ -330,6 +330,7 @@
 	desc = "For use in a trash tank, 5 small machineguns strapped together using syndicate technology. It burns through ammo like no other."
 	item = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/minipea
 	cost = 8
+	surplus = 0 // cant get tank anyways
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/device_tools/devitt
@@ -337,6 +338,7 @@
 	desc = "An ancient tank teleported in for your machinations, comes prepared with a cannon and machinegun. REQUIRES TWO CREWMEMBERS TO OPPERATE EFFECTIVELY."
 	item = /obj/vehicle/sealed/mecha/devitt
 	cost = 40
+	surplus = 0 // Two person item
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/device_tools/dehy_carp
