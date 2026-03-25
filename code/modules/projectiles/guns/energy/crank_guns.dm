@@ -164,7 +164,7 @@
 
 //  Monkestation Edit - explorer laser gun
 /obj/item/gun/energy/laser/explorer
-	name ="explorer laser gun"
+	name ="explorer hardlight laser gun"
 	desc = "A decomissioned military lasergun. Acid damage has left it's internal recharging battery fused inside with pitiful capacity. It can be hand charged for extra speed. \
 	Fires hardlight lasers, dealing more damage at the cost of dissipating faster and being unable to pass through glass."
 	pin = /obj/item/firing_pin/explorer/unremovable
