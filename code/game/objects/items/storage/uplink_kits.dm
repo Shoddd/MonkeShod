@@ -546,18 +546,6 @@
 /obj/item/storage/box/syndie_kit/imp_stealth/PopulateContents()
 	new /obj/item/implanter/stealth(src)
 
-/obj/item/storage/box/syndie_kit/imp_emp
-	name = "emp implant box"
-
-/obj/item/storage/box/syndie_kit/imp_emp/PopulateContents()
-	new /obj/item/implanter/emp(src)
-
-/obj/item/storage/box/syndie_kit/imp_smoke
-	name = "smoke implant box"
-
-/obj/item/storage/box/syndie_kit/imp_smoke/PopulateContents()
-	new /obj/item/implanter/smoke(src)
-
 /obj/item/storage/box/syndie_kit/imp_radio
 	name = "syndicate radio implant box"
 
@@ -591,6 +579,7 @@
 /obj/item/storage/box/syndie_kit/emp/PopulateContents()
 	for(var/i in 1 to 8)
 		new /obj/item/grenade/empgrenade(src)
+	new /obj/item/implanter/emp(src)
 
 /obj/item/storage/box/syndie_kit/smoke
 	name = "smoke kit"
@@ -598,6 +587,7 @@
 /obj/item/storage/box/syndie_kit/smoke/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/grenade/smokebomb(src)
+	new /obj/item/implanter/smoke
 
 /obj/item/storage/box/syndie_kit/chemical
 	name = "chemical kit"

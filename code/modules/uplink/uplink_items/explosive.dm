@@ -51,7 +51,7 @@
 
 /datum/uplink_item/explosives/emp
 	name = "EMP Grenades"
-	desc = "A box that contains eight EMP grenades. Useful to disrupt communications, \
+	desc = "A box that contains five EMP grenades and an EMP implant with three uses. Useful to disrupt communications, \
 			security's energy weapons and silicon lifeforms when you're in a tight spot."
 	item = /obj/item/storage/box/syndie_kit/emp
 	cost = 2
@@ -63,7 +63,7 @@
 
 /datum/uplink_item/explosives/smoke
 	name = "Smoke Grenades"
-	desc = "A box that contains five smoke grenades. Useful for vanishing and ninja fans with katana."
+	desc = "A box that contains five smoke grenades and a smoke implant with three uses. Useful for vanishing and ninja fans with katana."
 	item = /obj/item/storage/box/syndie_kit/smoke
 	cost = 2
 

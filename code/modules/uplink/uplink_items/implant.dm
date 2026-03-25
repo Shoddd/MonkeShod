@@ -25,18 +25,6 @@
 	cost = 2
 	restricted = TRUE
 
-/datum/uplink_item/implants/emp
-	name = "EMP Implant"
-	desc = "An EMP implant with 3 uses. Releases a EMP wave that disrupts silicons, energy weapons, and communications among other technology."
-	item = /obj/item/storage/box/syndie_kit/imp_emp
-	cost = 2
-
-/datum/uplink_item/implants/smoke
-	name = "Smoke Implant"
-	desc = "An Smoke implant with 3 uses. Releases a smoke cloud that causes anyone without internals to cough and drop what they are holding."
-	item = /obj/item/storage/box/syndie_kit/imp_smoke
-	cost = 2
-
 /datum/uplink_item/implants/stealthimplant
 	name = "Stealth Implant"
 	desc = "This one-of-a-kind implant will make you almost invisible if you play your cards right. \
