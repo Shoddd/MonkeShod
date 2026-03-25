@@ -46,7 +46,7 @@
 	desc = "A powerful brain implant, capable of uploading perfect, forbidden surgical knowledge to its users mind, \
 		allowing them to do just about any surgery, anywhere, without making any (unintentional) mistakes. \
 		Comes with a syndicate autosurgeon for immediate self-application."
-	cost = 10
+	cost = 7
 	item = /obj/item/autosurgeon/syndicate/hacked_linked_surgery
 	surplus = 50
 
@@ -75,7 +75,7 @@
 	name = "Syndicate Autosurgeon"
 	desc = "A multi-use autosurgeon for implanting whatever you want into yourself. Rip that station apart and make it part of you."
 	item = /obj/item/autosurgeon/syndicate
-	cost = 5
+	cost = 3
 
 /datum/uplink_item/cybernetics/polyglot_voicebox
 	name = "Syndicate Polyglot Voicebox"

@@ -79,7 +79,7 @@
 			and gain the ability to swat bullets from the air, but you will also refuse to use dishonorable ranged weaponry."
 	item = /obj/item/book/granter/martial/carp
 	progression_minimum = 30 MINUTES
-	cost = 14 // Northstar gloves should cost like all your TC
+	cost = 12
 	surplus = 30
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
