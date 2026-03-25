@@ -21,6 +21,12 @@
 	item = /obj/item/storage/medkit/surgery_syndie
 	cost = 3
 
+/datum/uplink_item/device_tools/combat_medkit
+	name = "Syndicate Combat Medkit"
+	desc = "The Syndicate medkit contains two use autoinjectors for all types of damage, as well as some sutures, meshes, and wraps."
+	item = /obj/item/storage/medkit/combat
+	cost = 3
+
 /datum/uplink_item/device_tools/encryptionkey
 	name = "Syndicate Encryption Key"
 	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
@@ -182,10 +188,10 @@
 	cost = 4
 
 /datum/uplink_item/device_tools/stimpack
-	name = "Stimpack"
+	name = "Stimpack Autoinjector"
 	desc = "Stimpacks, the tool of many great heroes, make you nearly immune to stuns and knockdowns for about \
-			5 minutes after injection."
-	item = /obj/item/reagent_containers/medipen/stimulants
+			5 minutes after injection. Has two injections, careful not to overdose agent."
+	item = /obj/item/reagent_containers/medipen/advanced
 	cost = 5
 	surplus = 90
 
