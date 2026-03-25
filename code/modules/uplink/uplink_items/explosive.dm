@@ -130,7 +130,7 @@
 /datum/uplink_item/explosives/door_charge
 	name = "Door Charge"
 	desc = "A small charge that can be rigged to a door, causing it to explode when the handle is moved. Tiny OS and microphone installed for taunting your victims."
-	cost = 3
+	cost = 4
 	item = /obj/item/traitor_machine_trapper/door_charge
 
 /datum/uplink_item/explosives/china_lake
