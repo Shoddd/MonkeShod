@@ -166,7 +166,7 @@
 /obj/item/gun/energy/laser/explorer
 	name ="explorer hardlight laser gun"
 	desc = "A decomissioned military lasergun. Acid damage has left it's internal recharging battery fused inside with pitiful capacity. It can be hand charged for extra speed. \
-	Fires hardlight lasers, dealing more damage at the cost of dissipating faster and being unable to pass through glass."
+	Fires hardlight lasers, dealing more damage at the cost of dissipating extremely fast and being unable to pass through glass."
 	pin = /obj/item/firing_pin/explorer/unremovable
 	icon = 'monkestation/icons/obj/guns/explorer.dmi'
 	icon_state = "explorer"
