@@ -62,7 +62,7 @@
 /datum/uplink_item/role_restricted/clownsuperpin
 	name = "Super Ultra Hilarious Firing Pin"
 	desc = "Like the ultra hilarious firing pin, except the gun you insert this pin into explodes when someone who isn't clumsy or a clown tries to fire it."
-	cost = 7
+	cost = 4
 	item = /obj/item/firing_pin/clown/ultra/selfdestruct
 	restricted_roles = list(JOB_CLOWN)
 	illegal_tech = FALSE

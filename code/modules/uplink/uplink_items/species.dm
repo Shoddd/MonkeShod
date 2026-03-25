@@ -13,7 +13,7 @@
 	cost = 2
 	item = /obj/item/flashlight/lantern/syndicate
 	restricted_species = list(SPECIES_MOTH, SPECIES_TUNDRA)
-	surplus = 80 //monkestation edit: from 0 to 80
+	surplus = 15
 
 /datum/uplink_item/species_restricted/mothletgrenade
 	name = "Mothlet Grenade"
@@ -29,7 +29,7 @@
 /datum/uplink_item/species_restricted/monkey_barrel
 	name = "Angry Monkey Barrel"
 	desc = "Expert Syndicate Scientists put pissed a couple monkeys off and put them in a barrel. It isn't that complicated, but it's very effective"
-	cost = 7
+	cost = 3
 	item = /obj/item/grenade/monkey_barrel
 	restricted_species = list(SPECIES_MONKEY, SPECIES_SIMIAN)
 
