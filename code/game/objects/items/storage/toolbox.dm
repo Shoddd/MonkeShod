@@ -465,6 +465,12 @@
 	extra_to_spawn = /obj/item/ammo_box/magazine/c35sol_pistol
 	ammo_box_to_spawn = /obj/item/ammo_box/c35sol
 
+/obj/item/storage/toolbox/guncase/traitor/bobr
+	name = "\improper Bóbr 12 GA revolver gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/revolver/shotgun_revolver
+	extra_to_spawn = /obj/item/ammo_box/advanced/s12gauge
+	ammo_box_to_spawn = /obj/item/ammo_box/tacshield/tutel
+
 /obj/item/storage/toolbox/repair
 	name = "robotic repair toolbox"
 	desc = "Capable of robusting and repairing any troublesome robots after the fact."

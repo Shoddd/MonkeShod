@@ -27,7 +27,8 @@
 
 /datum/uplink_item/firearms/whispering_jester_45
 	name = "Whispering-Jester .45 ACP Handgun"
-	desc = "A .45 handgun that is designed by Rayne Corp. The handgun has a built in suppressor. It's magazines contain 18 rounds."
+	desc = "A .45 handgun that is designed by Rayne Corp. The handgun has a built in suppressor. It's magazines contain 18 rounds and it comes in a weapons\
+	case holding two extra magazines and a ammo box."
 	item = /obj/item/storage/toolbox/guncase/traitor/jester
 	cost = 10
 	surplus = 50
@@ -80,12 +81,13 @@
 /datum/uplink_item/firearms/shotgun_revolver
 	name = "\improper Bóbr 12 GA revolver"
 	desc = "An outdated sidearm rarely seen in use by some members of the CIN. A revolver type design with a four shell cylinder. That's right, shell, this one shoots twelve guage."
-	item = /obj/item/storage/box/syndie_kit/shotgun_revolver
-	cost = 4
+	item = /obj/item/storage/toolbox/guncase/traitor/bobr
+	cost = 5
 
 /datum/uplink_item/firearms/wespe
 	name = "Wespe Pistol"
-	desc = "The standard issue service pistol of SolFed's various military branches. Comes with attached light."
+	desc = "The standard issue service pistol of SolFed's various military branches. Comes with attached light. Comes in a weapon magazine with two extras magazines and \
+	an ammo box, we don't recommend this one for much more than assistants however"
 	progression_minimum = 5 MINUTES
 	item = /obj/item/storage/toolbox/guncase/traitor/wespe
 	cost = 3
