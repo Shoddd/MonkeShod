@@ -80,7 +80,8 @@
 
 /datum/uplink_item/firearms/shotgun_revolver
 	name = "\improper Bóbr 12 GA revolver"
-	desc = "An outdated sidearm rarely seen in use by some members of the CIN. A revolver type design with a four shell cylinder. That's right, shell, this one shoots twelve guage."
+	desc = "An outdated sidearm rarely seen in use by some members of the CIN. A revolver type design with a four shell cylinder. That's right, shell, this one shoots twelve guage.\
+	Comes with a 2 boxes of shotgun slugs and a tutel which works as both a shield and holds ammo to load your revolver with."
 	item = /obj/item/storage/toolbox/guncase/traitor/bobr
 	cost = 5
 
