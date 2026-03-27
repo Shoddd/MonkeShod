@@ -453,6 +453,18 @@
 	extra_to_spawn = /obj/item/ammo_box/magazine/toy/pistol/riot
 	ammo_box_to_spawn = /obj/item/ammo_box/foambox/riot
 
+/obj/item/storage/toolbox/guncase/traitor/jester
+	name = "\improper Whispering Jester pistol gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/whispering_jester_45
+	extra_to_spawn = /obj/item/ammo_box/magazine/whispering_jester_45_magazine
+	ammo_box_to_spawn = /obj/item/ammo_box/c45/caseless
+
+/obj/item/storage/toolbox/guncase/traitor/wespe
+	name = "\improper Wespe pistol gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/sol/evil/unrestricted
+	extra_to_spawn = /obj/item/ammo_box/magazine/c35sol_pistol
+	ammo_box_to_spawn = /obj/item/ammo_box/c35sol
+
 /obj/item/storage/toolbox/repair
 	name = "robotic repair toolbox"
 	desc = "Capable of robusting and repairing any troublesome robots after the fact."

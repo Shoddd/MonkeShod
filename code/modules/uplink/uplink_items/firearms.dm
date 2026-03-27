@@ -28,7 +28,7 @@
 /datum/uplink_item/firearms/whispering_jester_45
 	name = "Whispering-Jester .45 ACP Handgun"
 	desc = "A .45 handgun that is designed by Rayne Corp. The handgun has a built in suppressor. It's magazines contain 18 rounds."
-	item = /obj/item/gun/ballistic/automatic/pistol/whispering_jester_45
+	item = /obj/item/storage/toolbox/guncase/traitor/jester
 	cost = 10
 	surplus = 50
 
@@ -87,7 +87,7 @@
 	name = "Wespe Pistol"
 	desc = "The standard issue service pistol of SolFed's various military branches. Comes with attached light."
 	progression_minimum = 5 MINUTES
-	item = /obj/item/storage/toolbox/guncase/nova/pistol/opfor/wespe
+	item = /obj/item/storage/toolbox/guncase/traitor/wespe
 	cost = 3
 
 /datum/uplink_item/firearms/shit_smg
