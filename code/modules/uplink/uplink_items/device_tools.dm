@@ -358,6 +358,7 @@
 	name = "Cybersun 'Scalpel' NIF-Cutter"
 	desc = "A modified version of a NIFSoft remover that allows the user to remove a NIFSoft and have a blank copy of the removed NIFSoft saved to a disk."
 	item = /obj/item/nifsoft_remover/syndie
+	cost = 1
 
 /datum/uplink_item/device_tools/syndicate_hypospray
 	name = "Syndicate Hypospray"
