@@ -40,7 +40,7 @@
 	cost = 8
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) //you can't buy it in nuke, because the elite modsuit costs the same while being better
 
-/datum/uplink_item/utility_clothing/thermal
+/datum/uplink_item/utility_clothing/thermal_mod
 	name = "MODsuit Thermal Visor Module"
 	desc = "A visor for a MODsuit. Lets you see living beings through walls."
 	item = /obj/item/mod/module/visor/thermal
@@ -65,7 +65,7 @@
 	cost = 2
 
 
-/datum/uplink_item/utility_clothing/noslip
+/datum/uplink_item/utility_clothing/noslip_mod
 	name = "MODsuit Anti-Slip Module"
 	desc = "A MODsuit module preventing the user from slipping on water."
 	item = /obj/item/mod/module/noslip
@@ -111,7 +111,7 @@
 	item = /obj/item/card/id/advanced/chameleon
 	cost = 2
 
-/datum/uplink_item/utility_clothing/chameleon
+/datum/uplink_item/utility_clothing/chameleon_kit
 	name = "Chameleon Kit"
 	desc = "A set of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more! \
 			Due to budget cuts, the shoes don't provide protection against slipping and skillchips are sold separately. \
