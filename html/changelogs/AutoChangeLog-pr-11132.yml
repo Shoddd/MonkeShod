@@ -1,4 +1,0 @@
-author: "JohnFulpWillard"
-delete-after: True
-changes:
-  - bugfix: "The boulder retrieval matrix board can be printed by cargo now."
