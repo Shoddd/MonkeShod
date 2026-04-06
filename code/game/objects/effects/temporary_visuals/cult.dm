@@ -17,6 +17,10 @@
 /obj/effect/temp_visual/cult/blood/out
 	icon_state = "bloodout"
 
+/obj/effect/temp_visual/cult/blood/long // For Necro Sect usage
+	name = "necromatic summon"
+	duration = 300
+
 /obj/effect/temp_visual/dir_setting/cult/phase  // The veil shifter teleport
 	icon = 'icons/effects/cult/effects.dmi'
 	name = "phase glow"

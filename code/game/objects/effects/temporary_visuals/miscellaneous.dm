@@ -181,6 +181,9 @@
 	if(fades)
 		animate(src, alpha = 0, time = 32)
 
+/obj/effect/temp_visual/dir_setting/curse/long // Necro Sect Usage
+	duration = 330
+
 /obj/effect/temp_visual/dir_setting/curse/blob
 	icon_state = "curseblob"
 
