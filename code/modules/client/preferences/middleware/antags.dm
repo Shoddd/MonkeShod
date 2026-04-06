@@ -143,6 +143,7 @@
 		ROLE_DRIFTING_CONTRACTOR = /datum/antagonist/traitor/contractor,
 		ROLE_SLASHER = /datum/antagonist/slasher,
 		ROLE_FLORIDA_MAN = /datum/antagonist/florida_man,
+		ROLE_FORGOTTEN_IPC = /datum/antagonist/forgotten_ipc,
 		ROLE_BINGLE = /datum/antagonist/bingle,
 		ROLE_BLOODLING = /datum/antagonist/bloodling,
 		ROLE_TERATOMA = /datum/antagonist/teratoma,
