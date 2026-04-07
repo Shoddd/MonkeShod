@@ -6,12 +6,13 @@
 	alignment = ALIGNMENT_GOOD
 	max_favor = 10000
 	desired_items = list(
-		/obj/item/seeds)
+		/obj/item/food/grown,)
 	rites_list = list(
 		/datum/religion_rites/create_podperson,
 		/datum/religion_rites/create_sandstone,
 		/datum/religion_rites/grass_generator,
-		/datum/religion_rites/summon_animals)
+		/datum/religion_rites/summon_animals,
+		/datum/religion_rites/photogeist,)
 	altar_icon_state = "convertaltar-green"
 
 //plant bibles don't heal or do anything special apart from the standard holy water blessings
@@ -19,7 +20,7 @@
 	return TRUE
 
 /datum/religion_sect/plant_sect/on_sacrifice(obj/item/N, mob/living/L)
-	if(!istype(N, /obj/item/seeds))
+	if(!istype(N, /obj/item/food/grown))
 		return
 	adjust_favor(25, L)
 	to_chat(L, span_notice("You offer [N] to [GLOB.deity], pleasing them and gaining 25 favor in the process."))
@@ -68,7 +69,7 @@
 		"... the stone we need ...",
 		"... so we can toil away ...")
 	invoke_msg = "and spread many seeds."
-	favor_cost = 800
+	favor_cost = 100
 
 /datum/religion_rites/create_sandstone/invoke_effect(mob/living/user, atom/religious_tool)
 	new /obj/item/stack/sheet/mineral/sandstone/thirty(get_turf(religious_tool))
@@ -103,7 +104,7 @@
 		"... We call upon you, in this time of need ...",
 		"... to merge us with all that is natural ...")
 	invoke_msg = "... May the grass be greener on the other side, show us what it means to be one with nature!!"
-	favor_cost = 300
+	favor_cost = 500
 
 /datum/religion_rites/create_podperson/perform_rite(mob/living/user, atom/religious_tool)
 	if(!ismovable(religious_tool))
@@ -141,4 +142,17 @@
 		return FALSE
 	rite_target.set_species(/datum/species/pod)
 	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
+	return TRUE
+
+/datum/religion_rites/photogeist
+	name = "Summon Photogeist"
+	desc = "Summons forth a holy photogeist that can heal fellow creatures. Note, it will be dormant till a ghost inhabits it, and it only understands Sylvan."
+	ritual_length = 15 SECONDS
+	invoke_msg = "please, great kudzu, give us an angel to watch over us."
+	favor_cost = 400
+
+/datum/religion_rites/photogeist/invoke_effect(mob/living/user, atom/movable/religious_tool)
+	..()
+	var/altar_turf = get_turf(religious_tool)
+	new /obj/effect/mob_spawn/ghost_role/photogeist(altar_turf)
 	return TRUE
