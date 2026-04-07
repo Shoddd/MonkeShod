@@ -453,5 +453,262 @@
 
 #undef DARKSPAWN_REFLECT_COOLDOWN
 #undef HEART_SPECIAL_SHADOWIFY
+
+// Shadow sect section
+#define SHADOW_CONVERSION_TRESHOLD 60 // Used for people changing into shadowpeople because of hearts
+
+/datum/species/shadow/blessed // Shadow person subsiecies with interacts with shadow sect
+	id = "shadow_blessed"
+	var/sect_rituals_completed = 0 // only important if shadow sect is at play, this is a way to check what level of rituals it completed. Used by shadow hearts
+
+
+/datum/species/shadow/blessed/spec_life(mob/living/carbon/human/H, delta_time, times_fired)
+	. = ..()
+	var/turf/T = H.loc
+	if(istype(T))
+		var/light_amount = T.get_lumcount()
+
+		if(light_amount > SHADOW_SPECIES_DIM_LIGHT) //if there's enough light, start dying
+			H.take_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYTYPE_ORGANIC)
+			if(H.has_movespeed_modifier(/datum/movespeed_modifier/shadow_sect))
+				H.remove_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
+		else if (light_amount < SHADOW_SPECIES_DIM_LIGHT) //heal in the dark
+			if(sect_rituals_completed >= 1 && H.nutrition <= NUTRITION_LEVEL_WELL_FED)
+				H.nutrition += 2 * delta_time
+			H.heal_overall_damage((0.5 * delta_time), (0.5 * delta_time), 0, BODYTYPE_ORGANIC)
+			if(sect_rituals_completed >= 2)
+				if(sect_rituals_completed == 3)
+					H.add_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
+
+
+/datum/species/shadow/blessed/check_roundstart_eligible()
+	return FALSE
+
+/datum/species/shadow/blessed/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+	RegisterSignal(C, COMSIG_ATOM_PRE_BULLET_ACT, PROC_REF(dodge_bullets))
+	if (istype(GLOB.religious_sect, /datum/religion_sect/shadow_sect))
+		change_hearts_ritual(C)
+
+/datum/species/shadow/blessed/on_species_loss(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+	UnregisterSignal(C, COMSIG_ATOM_PRE_BULLET_ACT)
+
+/datum/species/shadow/blessed/proc/dodge_bullets(mob/living/carbon/human/source, obj/projectile/hitting_projectile, def_zone)
+	SIGNAL_HANDLER
+	var/turf/dodge_turf = source.loc
+	SEND_SIGNAL(source, COMSIG_NIGHTMARE_SNUFF_CHECK, dodge_turf) // monkestation edit
+	if(!istype(dodge_turf) || dodge_turf.get_lumcount() >= SHADOW_SPECIES_DIM_LIGHT)
+		return NONE
+	source.visible_message(
+		span_danger("[source] dances in the shadows, evading [hitting_projectile]!"),
+		span_danger("You evade [hitting_projectile] with the cover of darkness!"),
+	)
+	playsound(source, SFX_BULLET_MISS, 75, TRUE)
+	return COMPONENT_BULLET_PIERCED
+
+/datum/species/shadow/proc/change_hearts_ritual(mob/living/carbon/C) // This is supposed to be called only for shadow sect
+	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
+	if(!isnightmare(C))
+		if(sect.grand_ritual_level == 1)
+			mutantheart = new/obj/item/organ/heart/shadow_ritual/first
+			mutantheart.Insert(C, 0, FALSE)
+		if(sect.grand_ritual_level == 2)
+			mutantheart = new/obj/item/organ/heart/shadow_ritual/second
+			mutantheart.Insert(C, 0, FALSE)
+		if(sect.grand_ritual_level == 3)
+			mutantheart = new/obj/item/organ/heart/shadow_ritual/third
+			mutantheart.Insert(C, 0, FALSE)
+
+/datum/movespeed_modifier/shadow_sect
+	multiplicative_slowdown = -0.15
+
+
+/obj/item/organ/heart/shadow_ritual // This parent should never appear itself
+	visual = TRUE
+	decay_factor = 0
+	var/shadow_conversion = 0 // Determines progress of transforming owner into shadow person
+	var/sect_rituals_completed_granted = 0 // What level of sect_rituals_completed the heart grants
+//	var/datum/action/innate/shadow_comms/comms/C = new // For granting shadow comms
+
+/obj/item/organ/heart/shadow_ritual/first
+	name = "shadowed heart"
+	desc = "An object resembling a heart, completely shrouded by a thick layer of darkness."
+	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon_state = "shadow_heart_1"
+	sect_rituals_completed_granted = 1
+
+/obj/item/organ/heart/shadow_ritual/second
+	name = "faded heart"
+	desc = "A hard to distinguish heart-like organ covered by a shifting darkness."
+	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon_state = "shadow_heart_2"
+	sect_rituals_completed_granted = 2
+
+/obj/item/organ/heart/shadow_ritual/third
+	name = "pulsing darkness"
+	desc = "An indistinguishable object cloaked in an undispellable darkness. The only thing that can be made out is the darkness pulsing."
+	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon_state = "shadow_heart_3"
+	var/respawn_progress = 0
+	sect_rituals_completed_granted = 3
+
+
+/obj/item/organ/heart/shadow_ritual/update_icon()
+	. = ..()
+	return
+
+/obj/item/organ/heart/shadow_ritual/on_insert(mob/living/carbon/heart_owner)
+	. = ..()
+	if(isblessedshadow(heart_owner))
+		var/mob/living/carbon/human/O = heart_owner
+		var/datum/species/shadow/blessed/S = O.dna.species
+		S.sect_rituals_completed = sect_rituals_completed_granted
+//		C.Grant(heart_owner)
+	else
+		shadow_conversion = 0
+		to_chat(heart_owner, span_userdanger("You feel a chill spreading throughout your body..."))
+
+
+/obj/item/organ/heart/shadow_ritual/on_remove(mob/living/carbon/heart_owner)
+	. = ..()
+	if(isblessedshadow(heart_owner))
+		var/mob/living/carbon/human/O = heart_owner
+		var/datum/species/shadow/blessed/S = O.dna.species
+		S.sect_rituals_completed = 0
+		heart_owner.alpha = 255
+	//	C.Remove(heart_owner)
+		if(heart_owner.has_movespeed_modifier(/datum/movespeed_modifier/shadow_sect))
+			heart_owner.remove_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
+	if(shadow_conversion != 0)
+		to_chat(heart_owner, span_boldbig("You feel warmth returning to you once more."))
+		shadow_conversion = 0
+
+/obj/item/organ/heart/shadow_ritual/third/on_remove(mob/living/carbon/heart_owner)
+	. = ..()
+	respawn_progress = 0
+
+/obj/item/organ/heart/shadow_ritual/on_life(delta_time, times_fired)
+	. = ..()
+	if(!isshadowperson(owner))
+		shadow_conversion += 1
+		if(shadow_conversion > SHADOW_CONVERSION_TRESHOLD)
+			shadow_conversion = 0
+			to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest!"))
+			var/mob/living/carbon/old_owner = owner
+			old_owner.set_species(/datum/species/shadow/blessed)
+		else
+			var/random_mesage = rand(0,90)
+			if(random_mesage == 0)
+				to_chat(owner, span_warning("Dark spots appear all over your skin."))
+			if(random_mesage == 1)
+				to_chat(owner, span_warning("Bright lights seem really unpleasant."))
+			if(random_mesage == 2)
+				to_chat(owner, span_warning("The chill isn't going away."))
+			if(random_mesage == 4)
+				to_chat(owner, span_warning("You feel like you should rest in a dark place."))
+	else if(!isblessedshadow(owner) && !isnightmare(owner))
+		to_chat(owner, span_userdanger("You feel closer to shadows surrounding you."))
+		var/mob/living/carbon/old_owner = owner
+		old_owner.set_species(/datum/species/shadow/blessed)
+
+
+/obj/item/organ/heart/shadow_ritual/third/on_death(delta_time)
+	if(!owner)
+		return
+	var/turf/T = get_turf(owner)
+	if(istype(T))
+		var/light_amount = T.get_lumcount()
+		if(light_amount < SHADOW_SPECIES_DIM_LIGHT)
+			respawn_progress += 0.75 * delta_time SECONDS
+			playsound(owner,'sound/effects/singlebeat.ogg',40,1)
+	if(respawn_progress >= HEART_RESPAWN_THRESHHOLD)
+		owner.revive(HEAL_ALL)
+		if(!isshadowperson(owner))
+			var/mob/living/carbon/old_owner = owner
+			old_owner.set_species(/datum/species/shadow/blessed)
+			to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest! You're alive!"))
+			SEND_SOUND(owner, sound('sound/effects/ghost.ogg'))
+		owner.visible_message(span_warning("[owner] staggers to [owner.p_their()] feet!"))
+		playsound(owner, 'sound/hallucinations/far_noise.ogg', 50, 1)
+		respawn_progress = 0
+
+
 #undef HEART_RESPAWN_THRESHHOLD
 
+
+// Shadow comms, copied from cult
+
+/datum/action/innate/shadow_comms
+	background_icon_state = "bg_default"
+	check_flags = AB_CHECK_HANDS_BLOCKED|AB_CHECK_INCAPACITATED|AB_CHECK_CONSCIOUS
+
+/datum/action/innate/shadow_comms/IsAvailable(feedback = FALSE)
+	if(!isblessedshadow(owner))
+		return FALSE
+	var/mob/living/carbon/human/O = owner
+	var/datum/species/shadow/blessed/S = O.dna.species
+	if(S.sect_rituals_completed == 0)
+		return FALSE
+	return ..()
+/*
+/datum/action/innate/shadow_comms/comms
+	name = "Whisper"
+	desc = "Talk to other shadowpeople using shadows."
+	button_icon_state = "commune"
+	check_flags = AB_CHECK_CONSCIOUS
+
+/datum/action/innate/shadow_comms/comms/Activate()
+	var/input = tgui_input_text(usr, "Please choose a message to tell to the shadows.", "Voice of Shadows", "")
+	if(!input || !IsAvailable())
+		return
+	if(CHAT_FILTER_CHECK(input))
+		to_chat(usr, span_warning("You cannot send a message that contains a word prohibited in IC chat!"))
+		return
+	shadow_commune(usr, input)
+
+/datum/action/innate/shadow_comms/comms/proc/shadow_commune(mob/living/user, message)
+	var/my_message
+	if(!message)
+		return
+	var/title = "Shadow"
+	var/span = "average"
+	if(user.mind && user.mind.holy_role > 1)
+		span = "big bold"
+		title = "Darkest shadow"
+	if(CHAT_FILTER_CHECK(message))
+		to_chat(usr, span_warning("Your message contains forbidden words."))
+		return
+	message = user.treat_message_min(message)
+	my_message = "<span class='[span]'><b>[title] [findtextEx(user.name, user.real_name) ? user.name : "[user.real_name] (as [user.name])"]:</b> [message]</span>"
+	for(var/i in GLOB.player_list)
+		var/mob/M = i
+		if(isblessedshadow(M))
+			var/mob/living/carbon/human/O = M
+			var/datum/species/shadow/blessed/S = O.dna.species
+			if(S.sect_rituals_completed != 0)
+				to_chat(M, my_message, type = MESSAGE_TYPE_RADIO, avoid_highlighting = M == user)
+		else if(M in GLOB.dead_mob_list)
+			var/link = FOLLOW_LINK(M, user)
+			to_chat(M, "[link] [my_message]", type = MESSAGE_TYPE_RADIO)
+
+	user.log_talk(message, LOG_SAY, tag="shadow sect")
+
+	var/input = tgui_input_text(usr, "Message to tell to the other shadows", "Shadow Commune")
+	if(!input || !IsAvailable(feedback = TRUE))
+		return
+
+	var/list/filter_result = CAN_BYPASS_FILTER(usr) ? null : is_ic_filtered(input)
+	if(filter_result)
+		REPORT_CHAT_FILTER_TO_USER(usr, filter_result)
+		return
+
+	var/list/soft_filter_result = CAN_BYPASS_FILTER(usr) ? null : is_soft_ic_filtered(input)
+	if(soft_filter_result)
+		if(tgui_alert(usr,"Your message contains \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\". \"[soft_filter_result[CHAT_FILTER_INDEX_REASON]]\", Are you sure you want to say it?", "Soft Blocked Word", list("Yes", "No")) != "Yes")
+			return
+		message_admins("[ADMIN_LOOKUPFLW(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[html_encode(input)]\"")
+		log_admin_private("[key_name(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[input]\"")
+	cultist_commune(usr, input)
+*/
+#undef SHADOW_CONVERSION_TRESHOLD

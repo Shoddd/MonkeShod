@@ -35,6 +35,13 @@
 /datum/religion_rites/proc/perform_rite(mob/living/user, atom/religious_tool)
 	if(!can_afford(user))
 		return FALSE
+	var/turf/T = get_turf(religious_tool)
+	if(istype(T, /area/station/service/chapel))
+		to_chat(user, span_warning("The altar can only function in a holy area!"))
+		return FALSE
+	if(!GLOB.religious_sect.altar_anchored)
+		to_chat(user, span_warning("The altar must be secured to the floor if you wish to perform the rite!"))
+		return FALSE
 	to_chat(user, span_notice("You begin to perform the rite of [name]..."))
 	if(!ritual_invocations)
 		if(do_after(user, ritual_length))
