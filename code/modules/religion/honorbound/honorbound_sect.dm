@@ -1,5 +1,5 @@
 /datum/religion_sect/honorbound
-	name = "Honorbound God"
+	name = "Honorbound"
 	quote = "A good, honorable crusade against evil is required."
 	desc = "Your deity requires fair fights from you. You may not attack the unready, the just, or the innocent. \
 	You earn favor by getting others to join the crusade, and you may spend favor to announce a battle, bypassing some conditions to attack."

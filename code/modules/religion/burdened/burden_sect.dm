@@ -1,5 +1,5 @@
 /datum/religion_sect/burden
-	name = "Punished God"
+	name = "Punished"
 	quote = "To feel the freedom, you must first understand captivity."
 	desc = "Incapacitate yourself in any way possible. Bad mutations, lost limbs, traumas, \
 	even addictions. You will learn the secrets of the universe from your defeated shell."

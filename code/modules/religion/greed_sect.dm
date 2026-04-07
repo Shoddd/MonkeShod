@@ -4,7 +4,7 @@
 /*********Greedy God**********/
 
 /datum/religion_sect/greed
-	name = "Greedy God"
+	name = "Greed"
 	quote = "Greed is good."
 	desc = "In the eyes of your mercantile deity, your wealth is your favor. Earn enough wealth to purchase some more business opportunities."
 	tgui_icon = "dollar-sign"

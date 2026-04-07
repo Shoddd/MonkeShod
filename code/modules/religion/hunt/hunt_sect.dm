@@ -1,5 +1,5 @@
 /datum/religion_sect/hunt
-	name = "God of the Hunt"
+	name = "The Hunt"
 	desc = "Hunt for the sake of the Hunt. The cycle of predator and prey will always continue"
 	quote = "Go my Hunters! There is prey to be felled"
 	tgui_icon = "leaf"

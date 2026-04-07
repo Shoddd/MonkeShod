@@ -10,8 +10,7 @@
 	rites_list = list(
 		/datum/religion_rites/raise_dead,
 		/datum/religion_rites/living_sacrifice,
-		/datum/religion_rites/raise_undead,
-		/datum/religion_rites/create_lesser_lich)
+		/datum/religion_rites/raise_undead,) // /datum/religion_rites/create_lesser_lich
 	altar_icon_state = "convertaltar-green"
 
 //Necro bibles don't heal or do anything special apart from the standard holy water blessings
@@ -28,7 +27,7 @@
 
 
 /// Necro Rites
-
+/*
 /datum/religion_rites/create_lesser_lich
 	name = "Create Lesser Lich"
 	desc = "Gives the bound creature a spell granting them the ability to create a lesser phylactery, causing them to become a skeleton and revive on death twice if the phylactery still exists on-station. Be warned, becoming a lesser lich will prevent revivial by any other means."
@@ -99,7 +98,7 @@
 	lich_to_be.visible_message(span_notice("[lich_to_be] has been empowered by the soul pool!"))
 	lich_to_be = null
 	return ..()
-
+*/
 /datum/religion_rites/raise_undead
 	name = "Raise Undead"
 	desc = "Creates an weak but subservant undead creature if a soul is willing to take it."

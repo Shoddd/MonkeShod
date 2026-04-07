@@ -1,5 +1,5 @@
 /datum/religion_sect/spar
-	name = "Sparring God"
+	name = "Sparring"
 	quote = "Your next swing must be faster, neophyte. Steel your heart."
 	desc = "Spar other crewmembers to gain favor or other rewards. Exchange favor to steel yourself against real battles."
 	tgui_icon = "fist-raised"

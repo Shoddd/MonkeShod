@@ -1,7 +1,7 @@
 #define MINIMUM_YUCK_REQUIRED 5
 
 /datum/religion_sect/maintenance
-	name = "Maintenance God"
+	name = "Maintenance"
 	quote = "Your kingdom in the darkness."
 	desc = "Sacrifice the organic slurry created from rats dipped in welding fuel to gain favor. Exchange favor to adapt to the maintenance shafts."
 	tgui_icon = "eye"

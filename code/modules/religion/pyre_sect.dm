@@ -1,7 +1,7 @@
 /**** Pyre God ****/
 
 /datum/religion_sect/pyre
-	name = "Pyre God"
+	name = "Pyre"
 	desc = "Sacrificing burning corpses with a lot of burn damage and candles grants you favor."
 	quote = "It must burn! The primal energy must be respected."
 	tgui_icon = "fire-alt"

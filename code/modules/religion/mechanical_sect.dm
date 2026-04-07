@@ -1,7 +1,7 @@
 /**** Mechanical God ****/
 
 /datum/religion_sect/mechanical
-	name = "Mechanical God"
+	name = "Mechanical"
 	quote = "May you find peace in a metal shell."
 	desc = "Bibles now recharge cyborgs and heal robotic limbs if targeted, but they \
 	do not heal organic limbs. You can now sacrifice cells, with favor depending on their charge."

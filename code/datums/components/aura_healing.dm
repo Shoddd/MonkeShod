@@ -41,6 +41,12 @@
 	/// Trait to limit healing to, if set
 	var/limit_to_trait = null
 
+	/// Trait to not heal
+	var/blacklisted_trait = null
+
+	/// If having another source of aura healing blocks this aura healing
+	var/stackable = TRUE
+
 	/// The color to give the healing visual
 	var/healing_color = COLOR_GREEN
 
@@ -62,6 +68,8 @@
 	organ_healing = null,
 	simple_heal = 0,
 	limit_to_trait = null,
+	blacklisted_trait = null,
+	stackable = TRUE,
 	healing_color = COLOR_GREEN,
 )
 	if (!isatom(parent))
@@ -104,6 +112,8 @@
 
 	for (var/mob/living/candidate in (requires_visibility ? view(range, parent) : range(range, parent)))
 		if (!isnull(limit_to_trait) && !HAS_TRAIT(candidate, limit_to_trait))
+			continue
+		if (!isnull(blacklisted_trait) && HAS_TRAIT(candidate, blacklisted_trait))
 			continue
 
 		remove_alerts_from -= candidate
