@@ -5817,6 +5817,7 @@
 #include "code\modules\recycling\disposal\pipe_sorting.dm"
 #include "code\modules\relays\relays.dm"
 #include "code\modules\religion\greed_sect.dm"
+#include "code\modules\religion\honk_sect.dm"
 #include "code\modules\religion\maintenance_sect.dm"
 #include "code\modules\religion\mechanical_sect.dm"
 #include "code\modules\religion\music_sect.dm"
