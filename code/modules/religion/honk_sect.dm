@@ -5,7 +5,7 @@
 	alignment = ALIGNMENT_NEUT
 	max_favor = 10000
 	desired_items = list(/obj/item/food/grown/banana)
-	rites_list = list(/datum/religion_rites/holypie, /datum/religion_rites/honkabot, /datum/religion_rites/bananablessing)
+	rites_list = list(/datum/religion_rites/holypie, /datum/religion_rites/honkabot, /datum/religion_rites/bananablessing, /datum/religion_rites/honk_mech)
 	altar_icon_state = "convertaltar-red"
 
 //honkmother bible is supposed to only cure clowns, honk, and be slippery. I don't know how I'll do that
