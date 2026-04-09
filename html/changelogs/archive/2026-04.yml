@@ -76,3 +76,99 @@
   cam_dev:
   - rscdel: removed moaning from some reagents that caused it
   - rscadd: added sway and twitch_s in many reagents to replace moaning
+2026-04-07:
+  Absolucy:
+  - bugfix: Xenos can no longer clog up the roundend report by repeatedly entering
+      and exiting xenobio containment.
+  DaworseplayerEver:
+  - rscadd: Added brute, burn, oxy, toxin, and robotic patch medkit inside while also
+      replacing the expedition medkit with the combat medical medkit.
+  - rscadd: two legacy, two normal, a toxin, and oxygen medkit into another crate
+      for "Surplus"
+  - rscadd: Box of beakers, bodybag, sterile mask, and a emergency roller bed into
+      the medbay medical locker.
+  - rscadd: syndicate bodybag, security belt, box of cuffs, and a flash to the guard
+      locker room.
+  - rscadd: One syndicate inducer in engineering.
+  - rscadd: A syndicate bunny box in QM locker. Style!
+  - rscadd: One extra box of deluxe parts.
+  - map: Modified syndicate depot dorm rooms to be a tile longer!
+  - map: add 3 syndicate modsuit storage units in depots EVA and quartermaster room.
+  - map: Modified the brig bed into a shitter version. Sorry prisoners.
+  JohnFulpWillard:
+  - rscadd: Simians can now have a Big Stick that indicates them as being Leader of
+      the Simians. Beat your leader over the head and take it for yourself if you
+      don't like them.
+  - rscadd: You can now get a Chimp translation encryption key from Cargo.
+  - bugfix: Monkeys can now have prosthetic limbs.
+  - bugfix: Simians can no longer take the Outsider quirk.
+  Shoddd:
+  - bugfix: updates description of surplus crates to new tc values
+  Tractor-Maam:
+  - bugfix: silicons piloting Sheet Metal Drills no longer cause it to become invisible.
+  - bugfix: silicons piloting Portapotty Ambulances no longer cause it to become invisible.
+  - bugfix: silicons piloting Locker Mechs no longer cause it to become invisible.
+  notghosti:
+  - bugfix: Ashwalkers eggs created is now properly tracked.
+  - map: Pubby cargo now doesn't have a exposed floor in mining
+  - map: Pubby cargo now no longer has a exposed cargo console to the public.
+  - rscdel: Removed Instability from seed extractors
+2026-04-08:
+  Absolucy:
+  - bugfix: The TGUI error popup now properly links to the Monkestation repo when
+      asking to make an issue report.
+  - image: Added a new sprite for chasm filler capsules (sprited by Ice Type)
+  - image: Added a new sprite for luxury oozeling medipens (sprited by Bieyes)
+  - qol: Attempting to cult convert someone who's banned from blood cult will always
+      sacrifice them instead.
+  - qol: Added a visible balloon alert for whenever an oozeling toggles Slime Washing
+      or Hydrophobia.
+  - qol: Added a visible balloon alert for when an oozeling is melted by water exposure,
+  - balance: You can no longer insert brains (or items containing brains) into a deconstructive
+      analyzer.
+  - balance: Microwaving brains no longer destroys them, albeit it will give it massive
+      brain damage.
+  Absolucy, Melbert:
+  - bugfix: Radio jammers no longer brick headsets forever.
+  Absolucy, yooriss:
+  - rscadd: Talking now automatically capitalizes any lowercase 'i' in the middle
+      of sentences, and ends sentences in a period if no other punctuation is present.
+  - rscadd: Added an autopunctuation setting, which can be used to disable the above
+      if you don't want it.
+  EnterTheJake:
+  - bugfix: Dark matter singularity no longer gets stuck on other z levels when summoned.
+  Inari-Whitebear:
+  - bugfix: Mulebot home destinations can now be set
+  - bugfix: Mulebots move again
+  - bugfix: MechComp Paper Sensor is now able to read paper.
+  - bugfix: Machinery draws power from correct powernet after cable layer has been
+      changed with the multitool, even if the machine was already secured.
+  JohnFulpWillard:
+  - bugfix: Extrapolators no longer work on hologram mobs (monkeys).
+  TheColorCyan:
+  - rscadd: Slimes can now wear hats!
+  - rscdel: Slime accessories are no longer in the game, there was only one and completely
+      inaccessible anyway
+  notghosti:
+  - balance: Zombies cant trigger at roundend
+  - code_imp: slightly improved dissection borer ability code.
+  - balance: Dissection borer ability moved to t2 from t3
+  - bugfix: hivelord borers laying eggs will properly update health visuals
+  - bugfix: Dissection borer ability now properly uses chemicals
+  - sound: Dissection now plays a splat sound effect
+  throwawayuseless:
+  - rscadd: Scrunchium
+  throwawayuseless, JohnFulpWillard:
+  - rscadd: Added the Immunocompromised quirk for -6 points. Don't catch a cold!
+  - bugfix: Fixes rot and such not spreading disease unless you're wearing bio-protection.
+2026-04-09:
+  Tractor-Maam:
+  - rscadd: Mecha Orbital Pads and their consoles can now be printed after Advanced
+      Robotics research.
+  - balance: Mecha Orbital Pads now cost 5 plasteel to build.
+  - rscadd: Added a examine hint to Mecha Orbital Pad Consoles to notify of being
+      able to launch it from inside a mech. Did you know you could always do this
+      (assuming the recieving pad had its lifeform restriction cut)?
+  ilikesaying:
+  - qol: doubled the quantity of reagents, and biomass cost of reagent rations the
+      Frontier Ration Printer
