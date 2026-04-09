@@ -1,7 +1,7 @@
 /datum/religion_sect/honk
 	name = "The Clowns"
 	desc = "A sect dedicated to the Honkmother"
-	convert_opener = "The Honkmother welcomes you to the party, prankster.<br>Sacrifice bananas to power our pranks and grant you favor."
+	desc = "The Honkmother welcomes you to the party, prankster.<br>Sacrifice bananas to power our pranks and grant you favor."
 	alignment = ALIGNMENT_NEUT
 	max_favor = 10000
 	desired_items = list(/obj/item/food/grown/banana)
@@ -36,11 +36,8 @@
 		da_bible.desc += " It has an usually slippery texture."
 */
 /datum/religion_sect/honk/on_sacrifice(/obj/item/food/grown/banana/offering, mob/living/user)
-	if(!istype(offering))
-		return
 	adjust_favor(25, user)
 	to_chat(user, span_notice("HONK"))
-	qdel(offering)
 	return
 
 /datum/religion_rites/holypie

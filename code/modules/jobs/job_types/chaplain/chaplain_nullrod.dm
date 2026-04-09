@@ -43,6 +43,7 @@
 			rods[nullrod_type] = initial(nullrod_type.menu_description)
 		//special non-nullrod subtyped shit
 		rods[/obj/item/gun/ballistic/bow/divine/with_quiver] = "A divine bow and 10 quivered holy arrows."
+		rods[/obj/item/melee/skateboard/holyboard] = "A skateboard that grants you flight and anti-magic abilities while ridden. Fits in your bag."
 		AddComponent(/datum/component/subtype_picker, rods, CALLBACK(src, PROC_REF(on_holy_weapon_picked)))
 
 /obj/item/nullrod/proc/on_holy_weapon_picked(obj/item/nullrod/holy_weapon_type)
