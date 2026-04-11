@@ -704,6 +704,8 @@
 	if(held_up)
 		unwield(user)
 		return
+	if(!do_after(user, 0.5 SECONDS, target = src))
+		return
 	user.visible_message(span_notice("[user] raises \the [src]."), span_notice("You raise \the [src]."))
 	held_up = TRUE
 	w_class = WEIGHT_CLASS_GIGANTIC // Heavy, huh?
@@ -711,8 +713,8 @@
 	holy_glow_fx = mutable_appearance('icons/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER)
 	user.add_overlay(holy_glow_fx)
 	holy_glow_light = user.mob_light(color = LIGHT_COLOR_HOLY_MAGIC, range = 2)
-	RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/unwield)
-	RegisterSignal(src, COMSIG_ITEM_DROPPED, .proc/unwield)
+	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(unwield))
+	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(unwield))
 	START_PROCESSING(SSfastprocess, src)
 
 /obj/item/nullrod/cross/proc/unwield(mob/user)
