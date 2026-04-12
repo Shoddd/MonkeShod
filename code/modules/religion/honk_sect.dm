@@ -1,7 +1,7 @@
 /datum/religion_sect/honk
 	name = "The Clowns"
 	quote = "A sect dedicated to the Honkmother"
-	desc = "The Honkmother welcomes you to the party, prankster.<br>Sacrifice bananas to power our pranks and grant you favor."
+	desc = "The Honkmother welcomes you to the party, prankster. Sacrifice bananas to power our pranks and grant you favor."
 	tgui_icon = "bullhorn"
 	alignment = ALIGNMENT_NEUT
 	max_favor = 10000
@@ -9,7 +9,13 @@
 	rites_list = list(/datum/religion_rites/holypie, /datum/religion_rites/honkabot, /datum/religion_rites/clownify, /datum/religion_rites/bananablessing, /datum/religion_rites/honk_mech)
 	altar_icon_state = "convertaltar-red"
 
-//honkmother bible is supposed to only cure clowns, honk, and be slippery. I don't know how I'll do that
+/datum/religion_sect/honk/on_conversion(mob/living/chap)
+	. = ..()
+	for(var/obj/item/to_strip in chap)
+		chap.dropItemToGround(to_strip)
+	chap.dress_up_as_job(SSjob.GetJobType(/datum/job/clown))
+
+// only works on clumsy people and clowns
 /datum/religion_sect/honk/sect_bless(mob/living/blessed, mob/living/user)
 	if(!ishuman(blessed))
 		return

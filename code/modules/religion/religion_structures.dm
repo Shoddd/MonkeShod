@@ -51,6 +51,9 @@
 		if(user.mind?.holy_role == NONE)
 			to_chat(user, span_warning("Only the faithful may control the disposition of [src]!"))
 			return
+		if(!GLOB.religious_sect)
+			to_chat(user, span_warning("must select a sect first!"))
+			return
 		if(!GLOB.religious_sect.altar_anchorable)
 			to_chat(user, span_warning("[src] cannot be unanchored!"))
 			return
