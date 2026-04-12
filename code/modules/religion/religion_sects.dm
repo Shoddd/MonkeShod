@@ -42,6 +42,8 @@
 	var/candle_overlay = TRUE
 	/// Whether the altar of the gods is anchored
 	var/altar_anchored = TRUE
+	/// Can this altar be anchored and unanchored.
+	var/altar_anchorable = TRUE
 
 /datum/religion_sect/New()
 	. = ..()

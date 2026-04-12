@@ -1,6 +1,6 @@
 /datum/religion_sect/honk
 	name = "The Clowns"
-	desc = "A sect dedicated to the Honkmother"
+	quote = "A sect dedicated to the Honkmother"
 	desc = "The Honkmother welcomes you to the party, prankster.<br>Sacrifice bananas to power our pranks and grant you favor."
 	alignment = ALIGNMENT_NEUT
 	max_favor = 10000

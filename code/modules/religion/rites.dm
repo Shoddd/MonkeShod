@@ -36,7 +36,7 @@
 	if(!can_afford(user))
 		return FALSE
 	var/turf/T = get_turf(religious_tool)
-	if(istype(T, /area/station/service/chapel))
+	if(!T.is_holy())
 		to_chat(user, span_warning("The altar can only function in a holy area!"))
 		return FALSE
 	if(!GLOB.religious_sect.altar_anchored)

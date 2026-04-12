@@ -51,6 +51,9 @@
 		if(user.mind?.holy_role == NONE)
 			to_chat(user, span_warning("Only the faithful may control the disposition of [src]!"))
 			return
+		if(!GLOB.religious_sect.altar_anchorable)
+			to_chat(user, span_warning("[src] cannot be unanchored!"))
+			return
 		anchored = !anchored
 		if(GLOB.religious_sect)
 			GLOB.religious_sect.altar_anchored = anchored //Having more than one altar of the gods is only possible through adminbus so this should screw with normal gameplay
