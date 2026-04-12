@@ -10,7 +10,8 @@
 	rites_list = list(
 		/datum/religion_rites/raise_dead,
 		/datum/religion_rites/living_sacrifice,
-		/datum/religion_rites/raise_undead,) // /datum/religion_rites/create_lesser_lich
+		/datum/religion_rites/raise_undead,
+		/datum/religion_rites/create_lesser_lich,)
 	altar_icon_state = "convertaltar-green"
 
 //Necro bibles don't heal or do anything special apart from the standard holy water blessings
@@ -27,10 +28,11 @@
 
 
 /// Necro Rites
-/*
-/datum/religion_rites/create_lesser_lich
-	name = "Create Lesser Lich"
-	desc = "Gives the bound creature a spell granting them the ability to create a lesser phylactery, causing them to become a skeleton and revive on death twice if the phylactery still exists on-station. Be warned, becoming a lesser lich will prevent revivial by any other means."
+
+/datum/religion_rites/lesser_lichdom
+	name = "Lesser Lichdom"
+	desc = "Binds the soul of the caster to their altar creating a lesser phylactery, causing them to become a undying skeleton. \
+	Be warned, if the phylactery is destroyed you will turn to dust."
 	ritual_length = 60 SECONDS //This one's pretty powerful so it'll still be long
 	ritual_invocations = list("From the depths of the soul pool ...",
 	"... come forth into this being ...",
@@ -43,62 +45,37 @@
 /// the the typepath of the spell to gran
 	var/datum/action/spell/lichspell = /datum/action/spell/lesserlichdom
 
-/datum/religion_rites/create_lesser_lich/perform_rite(mob/living/user, atom/religious_tool)
+/datum/religion_rites/lesser_lichdom/perform_rite(mob/living/user, atom/religious_tool)
+// add check that only allows this to be done in chapel and then makes it unanchorable in invoke_effect
 	if(!ismovable(religious_tool))
-		to_chat(user,span_warning("This rite requires a religious device that individuals can be buckled to."))
+		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
 	var/atom/movable/movable_reltool = religious_tool
-	if(length(movable_reltool.buckled_mobs))
-		for(var/creature in movable_reltool.buckled_mobs)
-			lich_to_be = creature
-		if(HAS_TRAIT(lich_to_be, TRAIT_NO_SOUL))
-			to_chat(user,span_warning("[lich_to_be] has no soul, as such this rite would not help them. To empower another, they must be buckled to [movable_reltool]."))
-			lich_to_be = null
-			return FALSE
-		for(var/datum/action/spell/knownspell in lich_to_be.actions)
-			if(knownspell.type == lichspell)
-				to_chat(user,span_warning("You've already empowered [lich_to_be], get them to use the spell granted to them! To empower another, they must be buckled to [movable_reltool]."))
-				lich_to_be = null
-				return FALSE
-		to_chat(user,span_warning("You're going to empower the [lich_to_be] who is buckled on [movable_reltool]."))
-		return ..()
-	else
+	if(!movable_reltool)
+		return FALSE
 		if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
-			to_chat(user,span_warning("This rite requires a religious device that individuals can be buckled to."))
+			to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 			return FALSE
-		lich_to_be = user
-		if(HAS_TRAIT(lich_to_be, TRAIT_NO_SOUL))
-			to_chat(user,span_warning("You have no soul, as such this rite would not help you. To empower another, they must be buckled to [movable_reltool]."))
-			lich_to_be = null
+		if(HAS_TRAIT(user, TRAIT_NO_SOUL))
+			to_chat(user, span_warning("You lack a soul."))
 			return FALSE
-		for(var/datum/action/spell/knownspell in lich_to_be.actions)
-			if(knownspell.type == lichspell)
-				to_chat(user,span_warning("You've already empowered yourself, use the spell granted to you! To empower another, they must be buckled to [movable_reltool]."))
-				lich_to_be = null
-				return FALSE
-		to_chat(user,span_warning("You're empowering yourself!"))
-		return ..()
+		to_chat(user, span_warning("You're going to convert yourself with this ritual."))
+	return ..()
 
-
-/datum/religion_rites/create_lesser_lich/invoke_effect(mob/living/user, atom/movable/religious_tool)
+/datum/religion_rites/lesser_lichdom/invoke_effect(mob/living/user, atom/religious_tool)
 	..()
 	if(!ismovable(religious_tool))
 		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
 	var/atom/movable/movable_reltool = religious_tool
-	if(!length(movable_reltool.buckled_mobs))
-		lich_to_be = user
-	else
-		for(var/mob/living/carbon/human/buckled in movable_reltool.buckled_mobs)
-			lich_to_be = buckled
-			break
-	if(!lich_to_be)
+	var/mob/living/carbon/human/rite_target
+	rite_target = user
+	if(!rite_target)
 		return FALSE
-	lichspell = new /datum/action/spell/lesserlichdom
-	lichspell.Grant(lich_to_be)
-	lich_to_be.visible_message(span_notice("[lich_to_be] has been empowered by the soul pool!"))
-	lich_to_be = null
-	return ..()
-*/
+	rite_target.set_species(/datum/species/skeleton)
+	// add all the effects of lichdom/phylactery here
+	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
+	return TRUE
+
 /datum/religion_rites/raise_undead
 	name = "Raise Undead"
 	desc = "Creates an weak but subservant undead creature if a soul is willing to take it."

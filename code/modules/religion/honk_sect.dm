@@ -92,9 +92,6 @@
 		if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
 			to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 			return FALSE
-		if(isandroid(user))
-			to_chat(user, span_warning("You've already converted yourself. To convert others, they must be buckled to [movable_reltool]."))
-			return FALSE
 		to_chat(user, span_warning("You're going to convert yourself with this ritual."))
 	return ..()
 
