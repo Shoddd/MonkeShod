@@ -8,10 +8,10 @@
 	desired_items = list(
 		/obj/item/organ/)
 	rites_list = list(
-		/datum/religion_rites/raise_dead,
 		/datum/religion_rites/living_sacrifice,
+		/datum/religion_rites/raise_dead,
 		/datum/religion_rites/raise_undead,
-		/datum/religion_rites/create_lesser_lich,)
+		/datum/religion_rites/lesser_lichdom,)
 	altar_icon_state = "convertaltar-green"
 
 //Necro bibles don't heal or do anything special apart from the standard holy water blessings
@@ -32,7 +32,7 @@
 /datum/religion_rites/lesser_lichdom
 	name = "Lesser Lichdom"
 	desc = "Binds the soul of the caster to their altar creating a lesser phylactery, causing them to become a undying skeleton. \
-	Be warned, if the phylactery is destroyed you will turn to dust."
+	Be warned, if the phylactery is destroyed you will turn to dust. The altar will no longer be moveable once this ritual is performed, and can only be performed in the chapel."
 	ritual_length = 60 SECONDS //This one's pretty powerful so it'll still be long
 	ritual_invocations = list("From the depths of the soul pool ...",
 	"... come forth into this being ...",
@@ -42,36 +42,34 @@
 	favor_cost = 2250
 /// the creature chosen for the rite
 	var/mob/living/lich_to_be
-/// the the typepath of the spell to gran
-	var/datum/action/spell/lichspell = /datum/action/spell/lesserlichdom
 
 /datum/religion_rites/lesser_lichdom/perform_rite(mob/living/user, atom/religious_tool)
 // add check that only allows this to be done in chapel and then makes it unanchorable in invoke_effect
+	var/turf/T = get_turf(religious_tool)
+	//if(!istype(T, /area/station/service/chapel))
+	//	to_chat(user, span_warning("The altar must be in the chapel to perform this ritual!"))
+	//	return
 	if(!ismovable(religious_tool))
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
-	var/atom/movable/movable_reltool = religious_tool
-	if(!movable_reltool)
+	if(HAS_TRAIT(user, TRAIT_NO_SOUL))
+		to_chat(user, span_warning("You lack a soul."))
 		return FALSE
-		if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
-			to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
-			return FALSE
-		if(HAS_TRAIT(user, TRAIT_NO_SOUL))
-			to_chat(user, span_warning("You lack a soul."))
-			return FALSE
-		to_chat(user, span_warning("You're going to convert yourself with this ritual."))
+	to_chat(user, span_warning("You're going to convert yourself with this ritual."))
 	return ..()
 
 /datum/religion_rites/lesser_lichdom/invoke_effect(mob/living/user, atom/religious_tool)
 	..()
 	if(!ismovable(religious_tool))
 		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
-	var/atom/movable/movable_reltool = religious_tool
 	var/mob/living/carbon/human/rite_target
+	var/datum/religion_sect/necro_sect/sect = GLOB.religious_sect
 	rite_target = user
 	if(!rite_target)
 		return FALSE
+	sect.altar_anchorable = FALSE
 	rite_target.set_species(/datum/species/skeleton)
+	religious_tool.AddComponent(/datum/component/lesser_phylactery, user.mind)
 	// add all the effects of lichdom/phylactery here
 	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
 	return TRUE
@@ -243,7 +241,7 @@
 		to_chat(user, span_warning("The sacrifice is no longer alive, it needs to be alive until the end of the rite!"))
 		chosen_sacrifice = null
 		return FALSE
-	var/favor_gained = 200 + round(chosen_sacrifice.health)
+	var/favor_gained = 200
 	GLOB.religious_sect?.adjust_favor(favor_gained, user)
 	new /obj/effect/temp_visual/cult/blood/out(altar_turf)
 	to_chat(user, span_notice("[GLOB.deity] absorbs [chosen_sacrifice], leaving blood and gore in its place. [GLOB.deity] rewards you with [favor_gained] favor."))

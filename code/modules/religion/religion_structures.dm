@@ -179,14 +179,12 @@
 
 	AddComponent( \
 		/datum/component/aura_healing, \
-		range = 5, \
-		brute_heal = 0.3, \
-		burn_heal = 0.3, \
-		blood_heal = 0.3, \
+		range = 6, \
+		brute_heal = 0.2, \
+		burn_heal = 0.2, \
+		blood_heal = 0.1, \
 		simple_heal = 0.8, \
 		requires_visibility = TRUE, \
-		blacklisted_trait = TRAIT_HEALS_FROM_CULT_PYLONS, \
-		stackable = FALSE, \
 		healing_color = LIGHT_COLOR_GREEN, \
 	)
 
