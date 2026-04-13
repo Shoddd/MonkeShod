@@ -40,13 +40,12 @@
 	obj_parent.name = initial(obj_parent.name)
 	obj_parent.remove_atom_colour(ADMIN_COLOUR_PRIORITY, phylactery_color)
 
-	var/mob/living/current_mob = lich_mind.current
+	var/mob/living/carbon/human/current_mob = lich_mind.current
 	current_mob.dust(TRUE, TRUE)
 
 	REMOVE_TRAITS_IN(current_mob, "lichdom") // incase you somehow survive
 
 	UnregisterSignal(obj_parent, COMSIG_ATOM_EXAMINE)
-	qdel(src)
 	return ..()
 
 /**
