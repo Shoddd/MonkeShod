@@ -121,7 +121,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/obj/structure/destructible/religion/shadow_obelisk/destroy()
+/obj/structure/destructible/religion/shadow_obelisk/Destroy()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	sect.obelisk_number = sect.obelisk_number - 1
 	sect.obelisks -= src
@@ -158,40 +158,6 @@
 		set_light(round(sect.light_reach / rand(1, 3)), sect.light_power, DARKNESS_INVERSE_COLOR)
 	else
 		set_light(round(sect.light_reach), sect.light_power, DARKNESS_INVERSE_COLOR)
-
-/obj/structure/destructible/religion/shadow_obelisk/proc/on_mob_enter(mob/living/affected_mob)
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(sect.night_vision_active)
-		if(!HAS_TRAIT_FROM(affected_mob,TRAIT_NIGHT_VISION,FROM_SHADOW_SECT))
-			ADD_TRAIT(affected_mob,TRAIT_NIGHT_VISION, FROM_SHADOW_SECT)
-
-
-/obj/structure/destructible/religion/shadow_obelisk/proc/on_mob_effect(mob/living/affected_mob)
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(sect.night_vision_active)
-		if(!HAS_TRAIT_FROM(affected_mob,TRAIT_NIGHT_VISION,FROM_SHADOW_SECT))
-			ADD_TRAIT(affected_mob,TRAIT_NIGHT_VISION, FROM_SHADOW_SECT)
-	else
-		if(HAS_TRAIT_FROM(affected_mob,TRAIT_NIGHT_VISION,FROM_SHADOW_SECT))
-			REMOVE_TRAIT(affected_mob,TRAIT_NIGHT_VISION, FROM_SHADOW_SECT)
-
-
-/obj/structure/destructible/religion/shadow_obelisk/proc/on_mob_leave(mob/living/affected_mob)
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	var/is_in_range_obelisk = FALSE
-	if(!sect.night_vision_active)
-		if(HAS_TRAIT_FROM(affected_mob,TRAIT_NIGHT_VISION,FROM_SHADOW_SECT))
-			REMOVE_TRAIT(affected_mob,TRAIT_NIGHT_VISION, FROM_SHADOW_SECT)
-			return
-	for(var/obj/structure/destructible/religion/shadow_obelisk/D in sect.obelisks)
-		if (D.anchored)
-			if(get_dist(D, affected_mob) <= sect.light_reach)
-				is_in_range_obelisk = TRUE
-				break
-	if(!is_in_range_obelisk)
-		if(HAS_TRAIT_FROM(affected_mob,TRAIT_NIGHT_VISION,FROM_SHADOW_SECT))
-			REMOVE_TRAIT(affected_mob,TRAIT_NIGHT_VISION, FROM_SHADOW_SECT)
-
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/unanchored_NV()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
@@ -274,7 +240,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/datum/component/dark_favor/destroy()
+/datum/component/dark_favor/Destroy()
 	. = ..()
 	STOP_PROCESSING(SSobj, src)
 
@@ -433,7 +399,7 @@
 		"... Seep into them ...",
 		"... Infuse their sight ...")
 	invoke_msg = "Shadows, reach your tendrils from my altar, and grant thy sight to people."
-	favor_cost = 1000
+	favor_cost = 200
 
 /datum/religion_rites/night_vision_aura/invoke_effect(mob/living/user, atom/religious_tool)
 	. = ..()

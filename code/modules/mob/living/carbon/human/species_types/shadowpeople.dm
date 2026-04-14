@@ -564,7 +564,6 @@
 		var/mob/living/carbon/human/O = heart_owner
 		var/datum/species/shadow/blessed/S = O.dna.species
 		S.sect_rituals_completed = sect_rituals_completed_granted
-//		C.Grant(heart_owner)
 	else
 		shadow_conversion = 0
 		to_chat(heart_owner, span_userdanger("You feel a chill spreading throughout your body..."))
@@ -577,7 +576,6 @@
 		var/datum/species/shadow/blessed/S = O.dna.species
 		S.sect_rituals_completed = 0
 		heart_owner.alpha = 255
-	//	C.Remove(heart_owner)
 		if(heart_owner.has_movespeed_modifier(/datum/movespeed_modifier/shadow_sect))
 			heart_owner.remove_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
 	if(shadow_conversion != 0)
@@ -635,80 +633,4 @@
 
 
 #undef HEART_RESPAWN_THRESHHOLD
-
-
-// Shadow comms, copied from cult
-
-/datum/action/innate/shadow_comms
-	background_icon_state = "bg_default"
-	check_flags = AB_CHECK_HANDS_BLOCKED|AB_CHECK_INCAPACITATED|AB_CHECK_CONSCIOUS
-
-/datum/action/innate/shadow_comms/IsAvailable(feedback = FALSE)
-	if(!isblessedshadow(owner))
-		return FALSE
-	var/mob/living/carbon/human/O = owner
-	var/datum/species/shadow/blessed/S = O.dna.species
-	if(S.sect_rituals_completed == 0)
-		return FALSE
-	return ..()
-/*
-/datum/action/innate/shadow_comms/comms
-	name = "Whisper"
-	desc = "Talk to other shadowpeople using shadows."
-	button_icon_state = "commune"
-	check_flags = AB_CHECK_CONSCIOUS
-
-/datum/action/innate/shadow_comms/comms/Activate()
-	var/input = tgui_input_text(usr, "Please choose a message to tell to the shadows.", "Voice of Shadows", "")
-	if(!input || !IsAvailable())
-		return
-	if(CHAT_FILTER_CHECK(input))
-		to_chat(usr, span_warning("You cannot send a message that contains a word prohibited in IC chat!"))
-		return
-	shadow_commune(usr, input)
-
-/datum/action/innate/shadow_comms/comms/proc/shadow_commune(mob/living/user, message)
-	var/my_message
-	if(!message)
-		return
-	var/title = "Shadow"
-	var/span = "average"
-	if(user.mind && user.mind.holy_role > 1)
-		span = "big bold"
-		title = "Darkest shadow"
-	if(CHAT_FILTER_CHECK(message))
-		to_chat(usr, span_warning("Your message contains forbidden words."))
-		return
-	message = user.treat_message_min(message)
-	my_message = "<span class='[span]'><b>[title] [findtextEx(user.name, user.real_name) ? user.name : "[user.real_name] (as [user.name])"]:</b> [message]</span>"
-	for(var/i in GLOB.player_list)
-		var/mob/M = i
-		if(isblessedshadow(M))
-			var/mob/living/carbon/human/O = M
-			var/datum/species/shadow/blessed/S = O.dna.species
-			if(S.sect_rituals_completed != 0)
-				to_chat(M, my_message, type = MESSAGE_TYPE_RADIO, avoid_highlighting = M == user)
-		else if(M in GLOB.dead_mob_list)
-			var/link = FOLLOW_LINK(M, user)
-			to_chat(M, "[link] [my_message]", type = MESSAGE_TYPE_RADIO)
-
-	user.log_talk(message, LOG_SAY, tag="shadow sect")
-
-	var/input = tgui_input_text(usr, "Message to tell to the other shadows", "Shadow Commune")
-	if(!input || !IsAvailable(feedback = TRUE))
-		return
-
-	var/list/filter_result = CAN_BYPASS_FILTER(usr) ? null : is_ic_filtered(input)
-	if(filter_result)
-		REPORT_CHAT_FILTER_TO_USER(usr, filter_result)
-		return
-
-	var/list/soft_filter_result = CAN_BYPASS_FILTER(usr) ? null : is_soft_ic_filtered(input)
-	if(soft_filter_result)
-		if(tgui_alert(usr,"Your message contains \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\". \"[soft_filter_result[CHAT_FILTER_INDEX_REASON]]\", Are you sure you want to say it?", "Soft Blocked Word", list("Yes", "No")) != "Yes")
-			return
-		message_admins("[ADMIN_LOOKUPFLW(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[html_encode(input)]\"")
-		log_admin_private("[key_name(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[input]\"")
-	cultist_commune(usr, input)
-*/
 #undef SHADOW_CONVERSION_TRESHOLD
