@@ -140,9 +140,9 @@
 
 	if(flickering > 0)
 		flickering -= delta_time
-		set_light(round(sect.light_reach / rand(1, 3)), sect.light_power, DARKNESS_INVERSE_COLOR)
+		set_light(l_outer_range = round(sect.light_reach / rand(1, 3)), l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 	else
-		set_light(round(sect.light_reach), sect.light_power, DARKNESS_INVERSE_COLOR)
+		set_light(l_outer_range = round(sect.light_reach), l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
 	return
@@ -171,7 +171,7 @@
 			anchored = !anchored
 			sect.active_obelisks += src
 			sect.active_obelisks_number += 1
-			set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 			user.visible_message(span_notice("[user] [anchored ? "" : "un"]anchors [src] [anchored ? "to" : "from"] the floor with [I]."), span_notice("You [anchored ? "" : "un"]anchor [src] [anchored ? "to" : "from"] the floor with [I]."))
 			playsound(loc, 'sound/items/deconstruct.ogg', 50, 1)
 			user.do_attack_animation(src)
@@ -191,7 +191,7 @@
 			anchored = !anchored
 			sect.active_obelisks += src
 			sect.active_obelisks_number += 1
-			set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 			user.visible_message(span_notice("[user] [anchored ? "" : "un"]anchors [src] [anchored ? "to" : "from"] the floor with [I]."), span_notice("You [anchored ? "" : "un"]anchor [src] [anchored ? "to" : "from"] the floor with [I]."))
 			playsound(loc, 'sound/items/deconstruct.ogg', 50, 1)
 			user.do_attack_animation(src)
@@ -360,10 +360,10 @@
 		return
 
 	sect.light_reach += 1
-	religious_tool.set_light(ceil(sect.light_reach/3), sect.light_power, DARKNESS_INVERSE_COLOR)
+	religious_tool.set_light(l_outer_range = ceil(sect.light_reach/3), l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 	for(var/obj/structure/destructible/religion/shadow_obelisk/D in sect.obelisks)
 		if (D.anchored)
-			D.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			D.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 
 	sect.adjust_favor(favor_cost)
 	favor_cost = sect.light_reach * 300
@@ -526,7 +526,7 @@
 		if(anchored)
 			sect.active_obelisks += obelisk
 			sect.active_obelisks_number += 1
-			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 		qdel(src)
 	if(sect.grand_ritual_level == 2)
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/obelisk = new(our_turf)
@@ -537,7 +537,7 @@
 		if(anchored)
 			sect.active_obelisks += obelisk
 			sect.active_obelisks_number += 1
-			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 		qdel(src)
 	if(sect.grand_ritual_level == 3)
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3/obelisk = new(our_turf)
@@ -548,7 +548,7 @@
 		if(anchored)
 			sect.active_obelisks += obelisk
 			sect.active_obelisks_number += 1
-			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 		obelisk.toggling_buckling_after_ritual_3()
 		qdel(src)
 
@@ -637,11 +637,11 @@
 	sect.grand_ritual_in_progress = TRUE
 	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
 		if(obelisk.anchored)
-			obelisk.set_light(4, -15, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = 4, l_power = -15, l_color = DARKNESS_INVERSE_COLOR)
 	sleep(600)
 	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
 		if(obelisk.anchored)
-			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 	sect.grand_ritual_in_progress = FALSE
 
 /datum/religion_rites/grand_ritual_three
@@ -697,7 +697,7 @@
 	sect.grand_ritual_in_progress = TRUE
 	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
 		if(obelisk.anchored)
-			obelisk.set_light(4, -30, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = 4, l_power = -30, l_color = DARKNESS_INVERSE_COLOR)
 	for(var/turf/T in GLOB.station_turfs)
 		if(T.light_outer_range == 0)
 			T.light_power = 1
@@ -707,7 +707,7 @@
 	sleep(900)
 	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
 		if(obelisk.anchored)
-			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
+			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 	if(sect.grand_ritual_level == 3)
 		for(var/mob/living/M in GLOB.mob_list)
 			if(isshadowperson(M))
