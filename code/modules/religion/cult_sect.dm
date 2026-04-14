@@ -20,9 +20,9 @@
  * If yes, the deaconize rite can now recruit them instead of just offering invites
  */
 /datum/religion_sect/cult/proc/invite_acolyte(mob/living/carbon/human/invited, mob/living/inviter)
-	inviter.balloon_alert(inviter, "Offer has been made")
+	inviter.balloon_alert(inviter, "offer has been made")
 	currently_asking += invited
-	var/ask = tgui_alert(invited, "Serve [GLOB.deity]?", "Invitation", list("Yes", "No"), 60 SECONDS)
+	var/ask = tgui_alert(invited, "serve [GLOB.deity]?", "Invitation", list("Yes", "No"), 60 SECONDS)
 	currently_asking -= invited
 	if(ask == "Yes")
 		possible_acolytes += invited
