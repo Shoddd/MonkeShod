@@ -5832,6 +5832,7 @@
 #include "code\modules\religion\religion_structures.dm"
 #include "code\modules\religion\rites.dm"
 #include "code\modules\religion\shadow_sect.dm"
+#include "code\modules\religion\burdened\burden_sect.dm"
 #include "code\modules\religion\burdened\burdened_trauma.dm"
 #include "code\modules\religion\burdened\psyker.dm"
 #include "code\modules\religion\honorbound\honorbound_rites.dm"
