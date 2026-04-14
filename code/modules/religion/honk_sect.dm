@@ -43,9 +43,9 @@
 /datum/religion_rites/holypie
 	name = "Holy Pie"
 	desc = "Creates a cream pie to throw at others"
-	ritual_length = 5 SECONDS
+	ritual_length = 10 SECONDS
 	invoke_msg = "Oh, Honkmother, grant us the pie to cream the faces of the people."
-	favor_cost = 50
+	favor_cost = 100
 
 /datum/religion_rites/holypie/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	. = ..()
@@ -57,9 +57,9 @@
 /datum/religion_rites/honkabot
 	name = "Honk a Bot"
 	desc = "Summons a Honkbot to bring honking to the station"
-	ritual_length = 5 SECONDS
+	ritual_length = 15 SECONDS
 	invoke_msg = "Great Honkmother, hear my pray: HONK!"
-	favor_cost = 150
+	favor_cost = 200
 
 /datum/religion_rites/honkabot/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	. = ..()
