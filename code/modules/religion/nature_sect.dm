@@ -8,11 +8,11 @@
 	desired_items = list(
 		/obj/item/food/grown,)
 	rites_list = list(
-		/datum/religion_rites/create_podperson,
 		/datum/religion_rites/create_sandstone,
-		/datum/religion_rites/grass_generator,
 		/datum/religion_rites/summon_animals,
-		/datum/religion_rites/photogeist,)
+		/datum/religion_rites/photogeist,
+		/datum/religion_rites/create_podperson,
+		/datum/religion_rites/grass_generator,)
 	altar_icon_state = "convertaltar-green"
 
 //plant bibles don't heal or do anything special apart from the standard holy water blessings
@@ -39,7 +39,7 @@
 		"... to join with our nature ...",
 		"... and live amongst us ...")
 	invoke_msg = "... We summon thee, Animals from the Byond!" //might adjust to beyond due to ooc/ic/meta
-	favor_cost = 500
+	favor_cost = 250
 
 /datum/religion_rites/summon_animals/perform_rite(mob/living/user, atom/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)

@@ -117,8 +117,8 @@
 	name = "photogeist"
 	icon_state = "photogeist"
 	icon_living = "photogeist"
-	faction = list("plants")
-	initial_language_holder = /datum/language_holder/venus //they only understand sylvan (plant language)
+	faction = list(FACTION_PLANTS, FACTION_VINES)
+	initial_language_holder = /datum/language_holder/photogeist //only speak plant language, understand it and common
 	maxHealth = 10 //tough enough to resist a punch or something small, since they cost a fair bit of favor.
 	health = 10
 	light_outer_range = 6

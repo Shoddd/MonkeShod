@@ -40,15 +40,13 @@
 	"... grant them temporary immortality ...")
 	invoke_msg = "... Grant them the power to become one with necromancy!!"
 	favor_cost = 2250
-/// the creature chosen for the rite
-	var/mob/living/lich_to_be
 
 /datum/religion_rites/lesser_lichdom/perform_rite(mob/living/user, atom/religious_tool)
 // add check that only allows this to be done in chapel and then makes it unanchorable in invoke_effect
 	var/turf/T = get_turf(religious_tool)
-	//if(!istype(T, /area/station/service/chapel))
-	//	to_chat(user, span_warning("The altar must be in the chapel to perform this ritual!"))
-	//	return
+	if(!istype(T, /area/station/service/chapel))
+		to_chat(user, span_warning("The altar must be in the chapel to perform this ritual!"))
+		return
 	if(!ismovable(religious_tool))
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
@@ -241,7 +239,7 @@
 		to_chat(user, span_warning("The sacrifice is no longer alive, it needs to be alive until the end of the rite!"))
 		chosen_sacrifice = null
 		return FALSE
-	var/favor_gained = 200
+	var/favor_gained = 100
 	GLOB.religious_sect?.adjust_favor(favor_gained, user)
 	new /obj/effect/temp_visual/cult/blood/out(altar_turf)
 	to_chat(user, span_notice("[GLOB.deity] absorbs [chosen_sacrifice], leaving blood and gore in its place. [GLOB.deity] rewards you with [favor_gained] favor."))
