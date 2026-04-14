@@ -1,0 +1,5 @@
+author: "Cerulyss-Aureon"
+delete-after: True
+changes:
+  - refactor: "Conducted HFR code refactoring: removed duplicates and updated logic to align with the current TG version."
+  - balance: "Temporarily adjusted the antinoblium production formula to maintain HFR gameplay progression. Without antinoblium replication."

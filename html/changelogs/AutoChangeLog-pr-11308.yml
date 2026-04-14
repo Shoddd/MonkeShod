@@ -1,0 +1,5 @@
+author: "Cujo"
+delete-after: True
+changes:
+  - rscadd: "Adds silver ID box to the HoP's locker"
+  - rscdel: "Removed silver ID boxes from spawning outside of HoP or Captain locker"

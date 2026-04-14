@@ -1,0 +1,6 @@
+author: "BigManMason (sprites), JohnFulpWillard"
+delete-after: True
+changes:
+  - rscadd: "Re-added gun flipping, if you have a holster equipped."
+  - rscadd: "Added Velvet-Fu to the Janitor's uplink."
+  - rscadd: "Added the Bolt Action Pistol to the hacked SecTech."

@@ -1,0 +1,4 @@
+author: "Mantlecrawler"
+delete-after: True
+changes:
+  - qol: "Exosuit fabs no longer require their panel to be open to change drop direction, and have their drop direction set by click drag, in the same manner as proto/autolathes - You can also altclick to set them to drop on their own tile"

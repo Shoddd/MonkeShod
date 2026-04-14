@@ -1,0 +1,6 @@
+author: "Mantlecrawler"
+delete-after: True
+changes:
+  - bugfix: "Conveyor sorters can now actually sort items"
+  - rscadd: "Contextual screentips for sorters"
+  - bugfix: "Hyposprays now properly show their inhand screentips when they are actually inhand"
