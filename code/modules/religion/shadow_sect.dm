@@ -121,7 +121,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/obj/structure/destructible/religion/shadow_obelisk/Destroy()
+/obj/structure/destructible/religion/shadow_obelisk/destroy()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	sect.obelisk_number = sect.obelisk_number - 1
 	sect.obelisks -= src
@@ -274,7 +274,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/datum/component/dark_favor/Destroy()
+/datum/component/dark_favor/destroy()
 	. = ..()
 	STOP_PROCESSING(SSobj, src)
 
