@@ -497,7 +497,7 @@
 /datum/species/shadow/blessed/proc/dodge_bullets(mob/living/carbon/human/source, obj/projectile/hitting_projectile, def_zone)
 	SIGNAL_HANDLER
 	var/turf/dodge_turf = source.loc
-	SEND_SIGNAL(source, COMSIG_NIGHTMARE_SNUFF_CHECK, dodge_turf) // monkestation edit
+	SEND_SIGNAL(source, COMSIG_NIGHTMARE_SNUFF_CHECK, dodge_turf)
 	if(!istype(dodge_turf) || dodge_turf.get_lumcount() >= SHADOW_SPECIES_DIM_LIGHT)
 		return NONE
 	source.visible_message(
@@ -587,7 +587,6 @@
 	respawn_progress = 0
 
 /obj/item/organ/heart/shadow_ritual/on_life(delta_time, times_fired)
-	. = ..()
 	if(!isshadowperson(owner))
 		shadow_conversion += 1
 		if(shadow_conversion > SHADOW_CONVERSION_TRESHOLD)
