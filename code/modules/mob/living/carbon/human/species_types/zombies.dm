@@ -80,6 +80,7 @@
 
 /datum/species/zombie/fragile
 	name = "Shambler"
+	id = SPECIES_ZOMBIE_SHAMBLER
 	inherent_traits = list(
 		// SHARED WITH ALL ZOMBIES
 		TRAIT_NO_ZOMBIFY,

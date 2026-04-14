@@ -61,6 +61,7 @@
 
 /datum/species/skeleton/fragile
 	name = "Cracked Skeleton"
+	id = SPECIES_SKELETON_FRAGILE
 	inherent_traits = list(
 		TRAIT_NO_HUSK,
 		TRAIT_NO_TRANSFORMATION_STING,

@@ -122,10 +122,12 @@
 #define SPECIES_SHADOW "shadow"
 #define SPECIES_DARKSPAWN "darkspawn"
 #define SPECIES_SKELETON "skeleton"
+#define SPECIES_SKELETON_FRAGILE "fragile_skeleton"
 #define SPECIES_SNAIL "snail"
 #define SPECIES_TALLBOY "tallboy"
 #define SPECIES_VAMPIRE "vampire"
 #define SPECIES_ZOMBIE "zombie"
+#define SPECIES_ZOMBIE_SHAMBLER "shambler"
 #define SPECIES_ZOMBIE_INFECTIOUS "memezombie"
 #define SPECIES_ZOMBIE_INFECTIOUS_RUNNER "runnerzombie" //Monkestation Addition
 #define SPECIES_ZOMBIE_INFECTIOUS_TANK "tankzombie" //monkestation edit
