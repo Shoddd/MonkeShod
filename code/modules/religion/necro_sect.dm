@@ -1,6 +1,6 @@
 /datum/religion_sect/necro_sect
 	name = "Necromancy"
-	desc = "A sect dedicated to the revival and summoning of the dead. Sacrificing living animals grants you favor."
+	desc = "A sect dedicated to the revival and summoning of the dead. Sacrificing dead mobs and organs grants you favor."
 	quote = "An undead army is a must have!"
 	tgui_icon = "skull"
 	alignment = ALIGNMENT_EVIL
@@ -82,7 +82,7 @@
 	"... rise ...",
 	"... RISE! ...")
 	invoke_msg = "... RISE!!!"
-	favor_cost = 1250
+	favor_cost = 1500
 
 /datum/religion_rites/raise_undead/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
@@ -143,7 +143,7 @@
 	"... by the power granted by the gods ...",
 	"... you shall rise again ...")
 	invoke_msg = "Welcome back to the mortal plain."
-	favor_cost = 1500
+	favor_cost = 1250
 
 ///the target
 	var/mob/living/carbon/human/raise_target
@@ -166,6 +166,8 @@
 		if(!r_target.mind)
 			to_chat(user, span_warning("This creature has no connected soul..."))
 			return FALSE
+		if(tgui_alert(r_target, "Accept revival? You will become a high functioning zombie", "You feel a holy power drawing you back to your body", list("Yes", "No")) != "Yes")
+			return FALSE
 		raise_target = r_target
 		raise_target.notify_ghost_cloning("Your soul is being summoned back to your body by mystical power!", source = src)
 		return ..()
@@ -186,6 +188,7 @@
 		return FALSE
 	raise_target.grab_ghost() // Shove them back in their body.
 	raise_target.revive(HEAL_ALL)
+	raise_target.set_species(/datum/species/zombie)
 	playsound(altar_turf, 'sound/magic/staff_healing.ogg', 50, TRUE)
 	raise_target = null
 	return ..()
