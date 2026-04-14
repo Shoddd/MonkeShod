@@ -527,7 +527,7 @@
 			sect.active_obelisks += obelisk
 			sect.active_obelisks_number += 1
 			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
-		Destroy()
+		qdel()
 	if(sect.grand_ritual_level == 2)
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/obelisk = new(our_turf)
 		sect.obelisks += obelisk
@@ -538,7 +538,7 @@
 			sect.active_obelisks += obelisk
 			sect.active_obelisks_number += 1
 			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
-		Destroy()
+		qdel()
 	if(sect.grand_ritual_level == 3)
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3/obelisk = new(our_turf)
 		sect.obelisks += obelisk
@@ -550,7 +550,7 @@
 			sect.active_obelisks_number += 1
 			obelisk.set_light(sect.light_reach, sect.light_power, DARKNESS_INVERSE_COLOR)
 		obelisk.toggling_buckling_after_ritual_3()
-		Destroy()
+		qdel()
 
 // Grand rituals themselves
 
