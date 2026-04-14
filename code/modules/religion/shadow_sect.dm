@@ -27,7 +27,6 @@
 	var/obelisk_number = 0  // number of obelisks
 	var/list/active_obelisks = list() // list of obelisks anchored to the floor aka "active"
 	var/active_obelisks_number = 0 //number of anchored obelisks
-	var/night_vision_active = FALSE // if night vision aura of obelisks is active
 	var/grand_ritual_in_progress = FALSE // whether a grand ritual is being performed
 	var/grand_ritual_level = 0 // what is the level of the last performed ritual (max is 3)
 
@@ -129,8 +128,6 @@
 	if(anchored)
 		sect.active_obelisks -= src
 		sect.active_obelisks_number -= 1
-	for(var/X in affected_mobs)
-		on_mob_leave(X)
 	return ..()
 
 
@@ -140,30 +137,12 @@
 		if (length(affected_mobs) != 0)
 			affected_mobs -= affected_mobs
 		return
-	var/list/current_mobs = view(sect.light_reach, src)
-	for(var/mob/living/mob_in_range in current_mobs)
-		if(!(mob_in_range in affected_mobs))
-			on_mob_enter(mob_in_range)
-			affected_mobs[mob_in_range] = 0
-
-		affected_mobs[mob_in_range]++
-		on_mob_effect(mob_in_range)
-
-	for(var/M in affected_mobs - current_mobs)
-		on_mob_leave(M)
-		affected_mobs -= M
 
 	if(flickering > 0)
 		flickering -= delta_time
 		set_light(round(sect.light_reach / rand(1, 3)), sect.light_power, DARKNESS_INVERSE_COLOR)
 	else
 		set_light(round(sect.light_reach), sect.light_power, DARKNESS_INVERSE_COLOR)
-
-/obj/structure/destructible/religion/shadow_obelisk/proc/unanchored_NV()
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	for(var/mob/each_mob in range(src,sect.light_reach))
-		on_mob_leave(each_mob)
-	src.set_light(0, 0, DARKNESS_INVERSE_COLOR)
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
 	return
@@ -175,7 +154,6 @@
 			to_chat(user,span_warning("You can't move an obelisk during a active ritual!"))
 			return
 		if(anchored)
-			unanchored_NV()
 			anchored = !anchored
 			sect.active_obelisks_number -= 1
 			sect.active_obelisks -= src
@@ -404,7 +382,7 @@
 /datum/religion_rites/night_vision_aura/invoke_effect(mob/living/user, atom/religious_tool)
 	. = ..()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	sect.night_vision_active = !sect.night_vision_active
+
 	sect.adjust_favor(favor_cost)
 
 
