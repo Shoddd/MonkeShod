@@ -213,10 +213,6 @@
 		return FALSE
 	for(var/mob/living/creature in movable_reltool.buckled_mobs)
 		chosen_sacrifice = creature
-		if(chosen_sacrifice.stat == DEAD)
-			to_chat(user, span_warning("You can only sacrifice living creatures, this one is dead!"))
-			chosen_sacrifice = null
-			return FALSE
 		if(chosen_sacrifice.mind)
 			to_chat(user, span_warning("This sacrifice is sentient! [GLOB.deity] will not accept this offering."))
 			chosen_sacrifice = null
@@ -235,11 +231,7 @@
 		to_chat(user, span_warning("The right sacrifice is no longer on the altar!"))
 		chosen_sacrifice = null
 		return FALSE
-	if(chosen_sacrifice.stat == DEAD)
-		to_chat(user, span_warning("The sacrifice is no longer alive, it needs to be alive until the end of the rite!"))
-		chosen_sacrifice = null
-		return FALSE
-	var/favor_gained = 100
+	var/favor_gained = chosen_sacrifice.maxHealth
 	GLOB.religious_sect?.adjust_favor(favor_gained, user)
 	new /obj/effect/temp_visual/cult/blood/out(altar_turf)
 	to_chat(user, span_notice("[GLOB.deity] absorbs [chosen_sacrifice], leaving blood and gore in its place. [GLOB.deity] rewards you with [favor_gained] favor."))
