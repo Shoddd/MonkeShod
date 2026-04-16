@@ -2,7 +2,7 @@
 	name = "Cult"
 	quote = "We must devote ourselves."
 	desc = "Your deity requires absolute devotion from you and the acolytes you convert. \
-	You earn favor from converting people to your religion, you may spend this favor to perhaps, invoke the one true god."
+	You earn favor from converting people to your religion, you may spend this favor to invoke great rituals as long you have enough acolytes."
 	tgui_icon = "cross"
 	altar_icon_state = "cult_sect"
 	alignment = ALIGNMENT_EVIL
@@ -11,8 +11,6 @@
 	var/list/possible_acolytes = list()
 	///people who have been offered an invitation, they haven't finished the alert though.
 	var/list/currently_asking = list()
-	///people who have accepted invitation and been converted
-	var/list/acolytes = list()
 	desired_items = list("Devoted Followers")
 
 /datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people
@@ -37,9 +35,9 @@
 
 ///Makes the person holy, but they now also have to follow the honorbound code (CBT). Actually earns favor, convincing others to uphold the code (tm) is not easy
 /datum/religion_rites/conversion
-	name = "Join Crusade"
+	name = "Conversion"
 	desc = "Converts someone to your sect. They must be willing, so the first invocation will instead prompt them to join. \
-	They will become honorbound like you, and you will gain a massive favor boost!"
+	Once they accept and are converted, they will become a acolyte, counting as a member for rituals, and you will gain favor."
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
 		"A good, honorable crusade against evil is required.",
@@ -50,10 +48,10 @@
 	)
 	invoke_msg = "... And the code must be upheld!"
 	///the invited crusader
-	var/mob/living/carbon/human/new_crusader
+	var/mob/living/carbon/human/new_acolytes
 
 /datum/religion_rites/conversion/perform_rite(mob/living/user, atom/religious_tool)
-	var/datum/religion_sect/honorbound/sect = GLOB.religious_sect
+	var/datum/religion_sect/cult/sect = GLOB.religious_sect
 	if(!ismovable(religious_tool))
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
@@ -63,27 +61,27 @@
 	if(!LAZYLEN(movable_reltool.buckled_mobs))
 		to_chat(user, span_warning("Nothing is buckled to the altar!"))
 		return FALSE
-	for(var/mob/living/carbon/human/possible_crusader in movable_reltool.buckled_mobs)
-		if(possible_crusader.stat != CONSCIOUS)
-			to_chat(user, span_warning("[possible_crusader] needs to be alive and conscious to join the crusade!"))
+	for(var/mob/living/carbon/human/possible_acolytes in movable_reltool.buckled_mobs)
+		if(possible_acolytes.stat != CONSCIOUS)
+			to_chat(user, span_warning("[possible_acolytes] needs to be alive and conscious to join the crusade!"))
 			return FALSE
-		if(TRAIT_GENELESS in possible_crusader.dna.species.inherent_traits)
+		if(TRAIT_GENELESS in possible_acolytes.dna.species.inherent_traits)
 			to_chat(user, span_warning("This species disgusts [GLOB.deity]! They would never be allowed to join the crusade!"))
 			return FALSE
-		if(possible_crusader in sect.currently_asking)
+		if(possible_acolytes in sect.currently_asking)
 			to_chat(user, span_warning("Wait for them to decide on whether to join or not!"))
 			return FALSE
-		if(!(possible_crusader in sect.possible_crusaders))
-			INVOKE_ASYNC(sect, TYPE_PROC_REF(/datum/religion_sect/honorbound, invite_crusader), possible_crusader, user)
+		if(!(possible_acolytes in sect.possible_acolytes))
+			INVOKE_ASYNC(sect, TYPE_PROC_REF(/datum/religion_sect/cult, invite_acolyte), possible_acolytes, user)
 			to_chat(user, span_notice("They have been given the option to consider joining the crusade against evil. Wait for them to decide and try again."))
 			return FALSE
-		new_crusader = possible_crusader
+		new_acolytes = possible_acolytes
 		return ..()
 
 /datum/religion_rites/conversion/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
 	..()
-	var/mob/living/carbon/human/joining_now = new_crusader
-	new_crusader = null
+	var/mob/living/carbon/human/joining_now = new_acolytes
+	new_acolytes = null
 	if(!(joining_now in religious_tool.buckled_mobs)) //checks one last time if the right corpse is still buckled
 		to_chat(user, span_warning("The new member is no longer on the altar!"))
 		return FALSE
@@ -93,13 +91,13 @@
 	if(!joining_now.mind)
 		to_chat(user, span_warning("The new member has no mind!"))
 		return FALSE
-	if(joining_now.mind.has_antag_datum(/datum/antagonist/cult))//what the fuck?!
+	if(joining_now.mind.has_antag_datum(/datum/antagonist/cult))//one cult at a time buddy
 		to_chat(user, span_warning("[GLOB.deity] has seen a true, dark evil in [joining_now]'s heart, and they have been smitten!"))
 		playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
 		joining_now.gib(TRUE)
 		return FALSE
 	GLOB.religious_sect.adjust_favor(DEACONIZE_FAVOR_GAIN, user)
-	to_chat(user, span_notice("[GLOB.deity] has bound [joining_now] to the code! They are now a holy role! (albeit the lowest level of such)"))
+	to_chat(user, span_notice("[joining_now] has submitted to [GLOB.deity]! They are now a holy role! (albeit the lowest level of such)"))
 	joining_now.mind.holy_role = HOLY_ROLE_DEACON
 	GLOB.religious_sect.on_conversion(joining_now)
 	playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
