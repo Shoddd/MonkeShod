@@ -11,13 +11,15 @@
 	var/list/possible_acolytes = list()
 	///people who have been offered an invitation, they haven't finished the alert though.
 	var/list/currently_asking = list()
+	///people who have accepted invitation and been converted
+	var/list/acolytes = list()
 	desired_items = list("Devoted Followers")
 
 /datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people
 
 /**
- * Called by deaconize rite, this async'd proc waits for a response on joining the sect.
- * If yes, the deaconize rite can now recruit them instead of just offering invites
+ * Called by conversion rite, this async'd proc waits for a response on joining the sect.
+ * If yes, the conversion rite can now recruit them instead of just offering invites
  */
 /datum/religion_sect/cult/proc/invite_acolyte(mob/living/carbon/human/invited, mob/living/inviter)
 	inviter.balloon_alert(inviter, "offer has been made")
@@ -29,12 +31,12 @@
 		inviter.balloon_alert(inviter, "accepts serving [GLOB.deity]!")
 	else
 		inviter.balloon_alert(inviter, "refuses to serve [GLOB.deity]!")
-/*
+
 /// how much favor is gained when someone joins the crusade and is deaconized
 #define DEACONIZE_FAVOR_GAIN 300
 
 ///Makes the person holy, but they now also have to follow the honorbound code (CBT). Actually earns favor, convincing others to uphold the code (tm) is not easy
-/datum/religion_rites/deaconize
+/datum/religion_rites/conversion
 	name = "Join Crusade"
 	desc = "Converts someone to your sect. They must be willing, so the first invocation will instead prompt them to join. \
 	They will become honorbound like you, and you will gain a massive favor boost!"
@@ -50,7 +52,7 @@
 	///the invited crusader
 	var/mob/living/carbon/human/new_crusader
 
-/datum/religion_rites/deaconize/perform_rite(mob/living/user, atom/religious_tool)
+/datum/religion_rites/conversion/perform_rite(mob/living/user, atom/religious_tool)
 	var/datum/religion_sect/honorbound/sect = GLOB.religious_sect
 	if(!ismovable(religious_tool))
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
@@ -78,7 +80,7 @@
 		new_crusader = possible_crusader
 		return ..()
 
-/datum/religion_rites/deaconize/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
+/datum/religion_rites/conversion/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
 	..()
 	var/mob/living/carbon/human/joining_now = new_crusader
 	new_crusader = null
@@ -102,4 +104,5 @@
 	GLOB.religious_sect.on_conversion(joining_now)
 	playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
 	return TRUE
-*/
+
+#undef DEACONIZE_FAVOR_GAIN
