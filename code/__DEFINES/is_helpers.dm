@@ -325,6 +325,9 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 	/obj/item/spellbook,
 	/obj/item/infuser_book)))
 
+/// Checks if the given mob has a holy role
+#define IS_HOLY(mob) (mob?.mind?.holy_role)
+
 // Jobs
 #define is_job(job_type)  (istype(job_type, /datum/job))
 #define is_assistant_job(job_type) (istype(job_type, /datum/job/assistant))

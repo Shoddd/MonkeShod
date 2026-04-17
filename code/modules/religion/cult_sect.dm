@@ -13,8 +13,6 @@
 	var/list/currently_asking = list()
 	desired_items = list("Devoted Followers")
 
-/datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people
-
 /**
  * Called by conversion rite, this async'd proc waits for a response on joining the sect.
  * If yes, the conversion rite can now recruit them instead of just offering invites
@@ -102,5 +100,33 @@
 	GLOB.religious_sect.on_conversion(joining_now)
 	playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
 	return TRUE
+
+
+/datum/religion_rites/cult/proc/can_invoke(mob/living/user)
+	//This proc determines if the ritual has enough acolytes nearby to invoke, counts anyone with a holy role, including the invoker/chaplain
+	var/list/invokers = list() //people eligible to invoke the rune
+	if(user)
+		invokers += user
+	if(required_acolytes > 1 || istype(src, /obj/effect/rune/convert))
+		for(var/mob/living/acolytes in range(1, src))
+			if(!IS_HOLY(acolytes))
+				continue
+			if(acolytes == user)
+				continue
+			if(acolytes.stat != CONSCIOUS)
+				continue
+			invokers += acolytes
+
+	return invokers
+
+
+/datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people
+	name = "Create robes"
+	desc = "Converts someone to your sect. They must be willing, so the first invocation will instead prompt them to join. \
+	Once they accept and are converted, they will become a acolyte, counting as a member for rituals, and you will gain favor."
+	ritual_length = 5 SECONDS
+	invoke_msg = "Don the robes!"
+	var/required_acolytes = 1
+
 
 #undef DEACONIZE_FAVOR_GAIN
