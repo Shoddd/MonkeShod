@@ -280,3 +280,36 @@
 	icon_state = "technotao"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
+
+/obj/item/clothing/suit/hooded/chaplain_hoodie/cult
+	name = "follower hoodie"
+	desc = "Hoodie made for acolytes of the chaplain."
+	icon_state = "chaplain_hoodie"
+	icon = 'icons/obj/clothing/suits/chaplain.dmi'
+	worn_icon = 'icons/mob/clothing/suits/chaplain.dmi'
+	inhand_icon_state = null
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	allowed = list(/obj/item/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/cup/glass/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/flashlight/flare/candle, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
+	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/cult
+
+/obj/item/clothing/head/hooded/chaplain_hood/cult
+	name = "dark follower hood"
+	desc = "Hood made for acolytes of the chaplain."
+	icon = 'icons/obj/clothing/head/chaplain.dmi'
+	worn_icon = 'icons/mob/clothing/head/chaplain.dmi'
+	icon_state = "chaplain_hood"
+	body_parts_covered = HEAD
+	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
+	clothing_traits = list(TRAIT_ANONYMOUS)
+
+/obj/item/clothing/suit/hooded/chaplain_hoodie/leader/cult_leader
+	name = "leader hoodie"
+	desc = "Now you're ready for some 50 dollar bling water."
+	icon_state = "chaplain_hoodie_leader"
+	inhand_icon_state = null
+	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/cult/leader
+
+/obj/item/clothing/head/hooded/chaplain_hood/cult/leader
+	name = "dark leader hood"
+	desc = "I mean, you don't /have/ to seek bling water. I just think you should."
+	icon_state = "chaplain_hood_leader"
