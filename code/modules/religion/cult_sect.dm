@@ -32,11 +32,11 @@
 	else
 		inviter.balloon_alert(inviter, "refuses to serve [GLOB.deity]!")
 
-///Makes the person holy, but they now also have to follow the honorbound code (CBT). Actually earns favor, convincing others to uphold the code (tm) is not easy
+
 /datum/religion_rites/conversion
 	name = "Initiation"
 	desc = "Converts someone to your sect. They must be willing, so the first invocation will instead prompt them to join. \
-	Once they accept and are converted, they will become a acolyte, counting as a member for rituals, and you will gain favor."
+	Once they accept and are converted, they will become a acolyte, counting as a member for rituals."
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
 		"yip",
@@ -45,7 +45,7 @@
 		"yap",
 	)
 	invoke_msg = "idk bro"
-	///the invited crusader
+	///the invited acolyte
 	var/mob/living/carbon/human/new_acolytes
 
 /datum/religion_rites/conversion/perform_rite(mob/living/user, atom/religious_tool)
@@ -61,17 +61,17 @@
 		return FALSE
 	for(var/mob/living/carbon/human/possible_acolytes in movable_reltool.buckled_mobs)
 		if(possible_acolytes.stat != CONSCIOUS)
-			to_chat(user, span_warning("[possible_acolytes] needs to be alive and conscious to join the crusade!"))
+			to_chat(user, span_warning("[possible_acolytes] needs to be alive and conscious to join the cult!"))
 			return FALSE
 		if(TRAIT_GENELESS in possible_acolytes.dna.species.inherent_traits)
-			to_chat(user, span_warning("This species disgusts [GLOB.deity]! They would never be allowed to join the crusade!"))
+			to_chat(user, span_warning("This species disgusts [GLOB.deity]! They would never be allowed to join the cult!"))
 			return FALSE
 		if(possible_acolytes in sect.currently_asking)
 			to_chat(user, span_warning("Wait for them to decide on whether to join or not!"))
 			return FALSE
 		if(!(possible_acolytes in sect.possible_acolytes))
 			INVOKE_ASYNC(sect, TYPE_PROC_REF(/datum/religion_sect/cult, invite_acolyte), possible_acolytes, user)
-			to_chat(user, span_notice("They have been given the option to consider joining the crusade against evil. Wait for them to decide and try again."))
+			to_chat(user, span_notice("They have been given the option to serving your God. Wait for them to decide and try again."))
 			return FALSE
 		new_acolytes = possible_acolytes
 		return ..()
@@ -142,7 +142,7 @@
 
 /datum/religion_rites/cult/summon_spirit // cult rites parent used to make all cult rites require a certain number of people
 	name = "Summon Spirit"
-	desc = "Summon a spirit from beyond the veil."
+	desc = "Summon a spirit from beyond the veil. This ritual requires 3 acolytes."
 	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(
 		"yip",
@@ -158,7 +158,7 @@
 /datum/religion_rites/cult/summon_god // cult rites parent used to make all cult rites require a certain number of people
 	name = "Summon Deity"
 	desc = "Summon [GLOB.deity] using a provided animal vessel, if no vessel if provided [GLOB.deity] will take a random form. \
-	This ritual can only be performed once."
+	This ritual can only be performed once. This ritual requires 7 acolytes."
 	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(
 		"yip",
@@ -179,9 +179,8 @@
 	return TRUE
 
 /datum/religion_rites/cult/convert_nullrod
-	name = "Summon Deity"
-	desc = "Summon [GLOB.deity] using a provided animal vessel, if no vessel if provided [GLOB.deity] will take a random form. \
-	This ritual can only be performed once."
+	name = "Convert Nullrod"
+	desc = "Perform a ritual to convert your nullrod, This ritual requires 5 acolytes."
 	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(
 		"yip",
