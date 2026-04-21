@@ -90,7 +90,7 @@
 	new /obj/effect/temp_visual/dir_setting/curse/long(altar_turf)
 	var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
 		"Do you wish to be resurrected as a Holy Summoned Undead?",
-		//check_jobban = ROLE_HOLY_SUMMONED,
+		check_jobban = ROLE_HOLY_SUMMONED,
 		poll_time = 10 SECONDS,
 		ignore_category = POLL_IGNORE_HOLYUNDEAD,
 		jump_target = religious_tool,

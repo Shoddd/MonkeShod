@@ -1,7 +1,7 @@
 /datum/religion_sect/cult
 	name = "Cult"
 	quote = "We must devote ourselves."
-	desc = "fix requires absolute devotion from you and the acolytes you convert. \
+	desc = "Your God requires absolute devotion from you and the acolytes you convert. \
 	Rather than favor, offer your loyalty to perform rituals."
 	tgui_icon = "cross"
 	altar_icon_state = "cult_sect"
@@ -39,12 +39,11 @@
 	Once they accept and are converted, they will become a acolyte, counting as a member for rituals."
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
-		"yip",
-		"yap",
-		"yip",
-		"yap",
+	"dv'n lrd `bve",
+	"l`t th's vssl b` wrthy",
+	"l`t it srv y in `yr nm",
 	)
-	invoke_msg = "idk bro"
+	invoke_msg = "nd sr`v y fr ' rst f its pth'tc lf`"
 	///the invited acolyte
 	var/mob/living/carbon/human/new_acolytes
 
@@ -123,8 +122,9 @@
 	name = "Create Robes"
 	desc = "Create a pair of robes for the initiated, these robes will hide their name and voice when worn, however it won't hide their ID."
 	ritual_length = 5 SECONDS
-	invoke_msg = "Don the robes!"
+	invoke_msg = "g`v us rbs, s w my bt`tr drss i`n yr' img`"
 	favor_cost = 0 // we use people not favor, 0 by default but just incase
+	cooldown_duration = 20 SECONDS //since cult rites don't require favor just people, cooldown so they aren't to spammable
 	var/required_acolytes = 1
 
 /datum/religion_rites/cult/perform_rite(mob/living/user, atom/religious_tool)
@@ -145,15 +145,41 @@
 	desc = "Summon a spirit from beyond the veil. This ritual requires 3 acolytes."
 	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(
-		"yip",
-		"yap",
-		"yip",
-		"yap",
+		"wc`llp'",
+		"spr'tsf th's rlm",
 	)
-	invoke_msg = "Don the robes!"
+	invoke_msg = "gv th'm frm nd mk th'm whl`"
 	favor_cost = 0 // we use people not favor, 0 by default but just incase
 	required_acolytes = 1 // 1 for testing, 3 planned
 
+/datum/religion_rites/cult/summon_spirit/invoke_effect(mob/living/user, atom/movable/religious_tool)
+	var/turf/altar_turf = get_turf(religious_tool)
+	var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
+		"Do you wish to become a Holy Shade?",
+		check_jobban = ROLE_HOLY_SUMMONED,
+		poll_time = 10 SECONDS,
+		ignore_category = POLL_IGNORE_SHADE,
+		alert_pic = /mob/living/basic/shade/holu,
+		jump_target = religious_tool,
+		role_name_text = "a shade",
+		chat_text_border_icon = /mob/living/basic/shade/holy,
+	)
+	var/mob/dead/observer/candidate = pick(candidates)
+	if(!candidate)
+		to_chat(user, span_warning("The soul pool is empty..."))
+		user.visible_message(span_warning("The soul pool was not strong enough to bring forth the shade."))
+		return NOT_ENOUGH_PLAYERS
+	var/datum/mind/Mind = new /datum/mind(candidate.key)
+	var/mob/living/carbon/human/species/shade = new /mob/living/basic/shade/holy(altar_turf)
+	shade.real_name = "Holy Shade ([rand(1,999)])"
+	Mind.active = 1
+	Mind.transfer_to(shade)
+	if(is_special_character(user))
+		to_chat(shade, span_userdanger("You are grateful to have been summoned into this word by [user]. Serve [user.real_name], and assist [user.p_them()] in completing [user.p_their()] goals at any cost."))
+	else
+		to_chat(shade, span_boldnotice("You are grateful to have been summoned into this world. You are now a member of this station's crew, Try not to cause any trouble."))
+	playsound(altar_turf, pick('sound/hallucinations/growl1.ogg','sound/hallucinations/growl2.ogg','sound/hallucinations/growl3.ogg',), 50, TRUE)
+	return ..()
 
 /datum/religion_rites/cult/summon_god // cult rites parent used to make all cult rites require a certain number of people
 	name = "Summon Deity"
@@ -161,12 +187,10 @@
 	This ritual can only be performed once. This ritual requires 7 acolytes."
 	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(
-		"yip",
-		"yap",
-		"yip",
-		"yap",
+		"w s'k `fr yr bdy",
+		"nd yr evr`lst'ng pr'snc",
 	)
-	invoke_msg = "Omega luls!"
+	invoke_msg = "y shll b whl g'n"
 	favor_cost = 0 // we use people not favor, 0 by default but just incase
 	required_acolytes = 1 // 1 for testing, 7 planned
 
@@ -181,13 +205,12 @@
 /datum/religion_rites/cult/convert_nullrod
 	name = "Convert Nullrod"
 	desc = "Perform a ritual to convert your nullrod, This ritual requires 5 acolytes."
-	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
+	ritual_length = 15 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(
-		"yip",
-		"yap",
-		"yip",
-		"yap",
+	"wcllp y",
+	"tmk r`qst f yr dv'n pwr",
+	"shw' u`s wht y' cn` d'",
 	)
-	invoke_msg = "Omega luls!"
+	invoke_msg = "grnt' u' pw'r!"
 	favor_cost = 0 // we use people not favor, 0 by default but just incase
 	required_acolytes = 1 // 1 for testing, 5 planned
