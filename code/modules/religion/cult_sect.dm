@@ -1,14 +1,14 @@
 /datum/religion_sect/cult
 	name = "Cult"
 	quote = "We must devote ourselves."
-	desc = "[GLOB.deity] requires absolute devotion from you and the acolytes you convert. \
+	desc = "fix requires absolute devotion from you and the acolytes you convert. \
 	Rather than favor, offer your loyalty to perform rituals."
 	tgui_icon = "cross"
 	altar_icon_state = "cult_sect"
 	alignment = ALIGNMENT_EVIL
 	rites_list = list(/datum/religion_rites/conversion,
 	/datum/religion_rites/cult,
-	/datum/religion_rites/cult/convert_nullrod
+	/datum/religion_rites/cult/convert_nullrod,
 	/datum/religion_rites/cult/summon_spirit,
 	/datum/religion_rites/cult/summon_god,)
 	///people who have agreed to serve, and can be deaconized
@@ -157,7 +157,7 @@
 
 /datum/religion_rites/cult/summon_god // cult rites parent used to make all cult rites require a certain number of people
 	name = "Summon Deity"
-	desc = "Summon [GLOB.deity] using a provided animal vessel, if no vessel if provided [GLOB.deity] will take a random form. \
+	desc = "Summon fix using a provided animal vessel, if no vessel if provided fix will take a random form. \
 	This ritual can only be performed once. This ritual requires 7 acolytes."
 	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
 	ritual_invocations = list(

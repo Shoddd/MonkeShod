@@ -25,15 +25,6 @@
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/divine_archer
 	hood_up_affix = ""
 
-/datum/armor/chaplainsuit_archer_garb
-	melee = 40
-	bullet = 5
-	laser = 5
-	energy = 5
-	fire = 20 // cloth
-	acid = 30
-	wound = 10
-
 /// hood
 /obj/item/clothing/head/hooded/chaplain_hood/divine_archer
 	name = "divine archer hood"

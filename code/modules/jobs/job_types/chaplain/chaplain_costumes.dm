@@ -160,7 +160,7 @@
 	desc = "Defend the treasure..."
 	icon_state = "knight_ancient"
 	inhand_icon_state = null
-	slowdown = 0.2
+	slowdown = 0.2 // stone armor is heavy
 	clothing_flags = BLOCKS_SHOVE_KNOCKDOWN
 
 /obj/item/clothing/head/helmet/chaplain/witchunter_hat
