@@ -7,7 +7,7 @@
 	altar_icon_state = "cult_sect"
 	alignment = ALIGNMENT_EVIL
 	rites_list = list(/datum/religion_rites/conversion,
-	/datum/religion_rites/cult,
+	/datum/religion_rites/cult/robes,
 	/datum/religion_rites/cult/convert_nullrod,
 	/datum/religion_rites/cult/summon_spirit,
 	/datum/religion_rites/cult/summon_god,)
@@ -134,7 +134,16 @@
 		return FALSE
 	return ..()
 
-/datum/religion_rites/cult/invoke_effect(mob/living/user, atom/movable/religious_tool)
+/datum/religion_rites/cult/robes
+	name = "Create Robes"
+	desc = "Create a pair of robes for the initiated, these robes will hide their name and voice when worn, however it won't hide their ID."
+	ritual_length = 5 SECONDS
+	invoke_msg = "g`v us rbs, s w my bt`tr drss i`n yr' img`"
+	favor_cost = 0
+	cooldown_duration = 20 SECONDS
+	required_acolytes = 1
+
+/datum/religion_rites/cult/robes/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	..()
 	var/altar_turf = get_turf(religious_tool)
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie/cult(altar_turf)
@@ -159,7 +168,7 @@
 		check_jobban = ROLE_HOLY_SUMMONED,
 		poll_time = 10 SECONDS,
 		ignore_category = POLL_IGNORE_SHADE,
-		alert_pic = /mob/living/basic/shade/holu,
+		alert_pic = /mob/living/basic/shade/holy,
 		jump_target = religious_tool,
 		role_name_text = "a shade",
 		chat_text_border_icon = /mob/living/basic/shade/holy,
@@ -195,12 +204,53 @@
 	required_acolytes = 1 // 1 for testing, 7 planned
 
 /datum/religion_rites/cult/summon_god/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
-	var/datum/religion_sect/cult/sect = GLOB.religious_sect
-	var/altar_turf = get_turf(religious_tool)
-	new /obj/item/clothing/suit/hooded/chaplain_hoodie/cult(altar_turf)
-	sect.rites_list -= /datum/religion_rites/cult/summon_god // Can only be done once
-	return TRUE
+	var/turf/altar_turf = get_turf(religious_tool)
+	var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
+		"Do you wish to become a [GLOB.deity]?",
+		check_jobban = ROLE_HOLY_SUMMONED,
+		poll_time = 10 SECONDS,
+		ignore_category = POLL_IGNORE_SHADE,
+		alert_pic = /mob/living/basic/shade/holy,
+		jump_target = religious_tool,
+		role_name_text = "[GLOB.deity]",
+		chat_text_border_icon = /mob/living/basic/shade/holy,
+	)
+	var/mob/dead/observer/candidate = pick(candidates)
+	if(!candidate)
+		to_chat(user, span_warning("The soul pool is empty..."))
+		user.visible_message(span_warning("The soul pool was not strong enough to bring forth the shade."))
+		return NOT_ENOUGH_PLAYERS
+	var/datum/mind/Mind = new /datum/mind(candidate.key)
+	var/atom/movable/movable_reltool = religious_tool
+	if(!movable_reltool)
+		return FALSE
+	if(LAZYLEN(movable_reltool.buckled_mobs)) //If a mob is buckled to the altar, we will check if it meets conditions to be used as a vessel
+		for(var/mob/living/vessel in movable_reltool.buckled_mobs)
+			if(vessel.ckey) //only works on animals that aren't player controlled
+				to_chat(user, span_boldnotice("this vessel is already filled!"))
+				return FALSE
+			if(vessel.stat)
+				to_chat(user, span_boldnotice("it's dead!"))
+				return FALSE
+			if(!vessel.compare_sentience_type(SENTIENCE_ORGANIC)) // Will also return false if not a basic or simple mob, which are the only two we want anyway
+				to_chat(user, span_boldnotice("invalid vessel!"))
+				return FALSE
+			vessel.real_name = "[GLOB.deity]"
+			vessel.name = "[GLOB.deity]"
+			vessel.maxHealth = 125 // shouldn't be to hard or easy to kill, yes purposely nerfs higher HP mobs
+			vessel.health = 125
+			Mind.active = 1
+			Mind.transfer_to(vessel)
+			to_chat(vessel, span_userdanger("You are [GLOB.deity], a great deity, and have been summoned into this word by your head acolyte [user] and their underlings, show them grace and listen to what they have to say."))
+			return ..()
+	var/mob/living/carbon/human/species/shade = new /mob/living/basic/shade/holy(altar_turf)
+	shade.real_name = "Holy Shade ([rand(1,999)])"
+	Mind.active = 1
+	Mind.transfer_to(shade)
+	to_chat(shade, span_boldnotice("You are grateful to have been summoned into this world. You are now a member of this station's crew, Try not to cause any trouble."))
+	playsound(altar_turf, pick('sound/hallucinations/growl1.ogg','sound/hallucinations/growl2.ogg','sound/hallucinations/growl3.ogg',), 50, TRUE)
+	return ..()
+
 
 /datum/religion_rites/cult/convert_nullrod
 	name = "Convert Nullrod"
