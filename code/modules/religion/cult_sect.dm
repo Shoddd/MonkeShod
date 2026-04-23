@@ -8,7 +8,6 @@
 	alignment = ALIGNMENT_EVIL
 	rites_list = list(/datum/religion_rites/conversion,
 	/datum/religion_rites/cult/robes,
-	/datum/religion_rites/cult/convert_nullrod,
 	/datum/religion_rites/cult/summon_spirit,
 	/datum/religion_rites/cult/summon_god,)
 	///people who have agreed to serve, and can be deaconized

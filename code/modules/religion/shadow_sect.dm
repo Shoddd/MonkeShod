@@ -12,7 +12,6 @@
 	rites_list = list(
 		/datum/religion_rites/shadow_obelisk,
 		/datum/religion_rites/expand_shadows,
-		/datum/religion_rites/night_vision_aura,
 		/datum/religion_rites/shadow_conversion,
 		/datum/religion_rites/grand_ritual_one
 		///datum/religion_rites/grand_ritual_two   // Grand rituals are added to this list by previous rituals
@@ -51,11 +50,6 @@
 	to_chat(L, span_notice("You offer [N] to [GLOB.deity], pleasing them and gaining 20 favor in the process."))
 	qdel(N)
 	return TRUE
-
-///Used to make obelisks flicker for the duration of a ritual. Flickering will persist for the duration even if the ritual is interrupted
-/datum/religion_sect/shadow_sect/proc/flicker_obelisks(duration)
-	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in active_obelisks)
-		obelisk.flickering = duration
 
 ///Check the conditions shared by the three grand rituals, condensed into a single proc to cut down on duplicate code
 /datum/religion_sect/shadow_sect/proc/grand_ritual_checks(mob/living/user, atom/religious_tool, pre_ritual_check = FALSE)
@@ -112,37 +106,15 @@
 	max_integrity = 100
 	damage_deflection = 10
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	var/list/affected_mobs = list()
-	var/flickering = 0
-
-/obj/structure/destructible/religion/shadow_obelisk/Initialize(mapload)
-	. = ..()
-	START_PROCESSING(SSobj, src)
-
 
 /obj/structure/destructible/religion/shadow_obelisk/Destroy()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	sect.obelisk_number = sect.obelisk_number - 1
 	sect.obelisks -= src
-	STOP_PROCESSING(SSobj, src)
 	if(anchored)
 		sect.active_obelisks -= src
 		sect.active_obelisks_number -= 1
 	return ..()
-
-
-/obj/structure/destructible/religion/shadow_obelisk/process(delta_time)
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(!src.anchored)
-		if (length(affected_mobs) != 0)
-			affected_mobs -= affected_mobs
-		return
-
-	if(flickering > 0)
-		flickering -= delta_time
-		set_light(l_outer_range = round(sect.light_reach / rand(1, 3)), l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
-	else
-		set_light(l_outer_range = round(sect.light_reach), l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
 	return
@@ -350,7 +322,6 @@
 	if(favor_cost > sect.favor)
 		to_chat(user, span_warning("You need at least [favor_cost] to perform this ritual now."))
 		return FALSE
-	sect.flicker_obelisks(ritual_length)
 	return ..()
 
 /datum/religion_rites/expand_shadows/invoke_effect(mob/living/user, atom/religious_tool)
@@ -367,24 +338,6 @@
 
 	sect.adjust_favor(favor_cost)
 	favor_cost = sect.light_reach * 300
-
-/datum/religion_rites/night_vision_aura
-	name = "Provide night vision"
-	desc = "Grants obelisks an aura of night vision which lets people see in darkness. Any additional casting will turn it on or off."
-	ritual_length = 30 SECONDS
-	ritual_invocations = list(
-		"Spread out...",
-		"... Seep into them ...",
-		"... Infuse their sight ...")
-	invoke_msg = "Shadows, reach your tendrils from my altar, and grant thy sight to people."
-	favor_cost = 200
-
-/datum/religion_rites/night_vision_aura/invoke_effect(mob/living/user, atom/religious_tool)
-	. = ..()
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-
-	sect.adjust_favor(favor_cost)
-
 
 // Grand ritual section
 
@@ -573,7 +526,6 @@
 	if(!sect.grand_ritual_checks(user, religious_tool, TRUE))
 		return FALSE
 	spawn()
-	sect.flicker_obelisks(ritual_length)
 
 	return ..()
 
@@ -610,7 +562,6 @@
 	if(!sect.grand_ritual_checks(user, religious_tool, TRUE))
 		return FALSE
 	spawn()
-	sect.flicker_obelisks(ritual_length)
 	return ..()
 
 /datum/religion_rites/grand_ritual_two/invoke_effect(mob/living/user, atom/religious_tool)
@@ -669,7 +620,6 @@
 	if(!sect.grand_ritual_checks(user, religious_tool, TRUE))
 		return FALSE
 	spawn()
-	sect.flicker_obelisks(ritual_length)
 	return ..()
 
 /datum/religion_rites/grand_ritual_three/invoke_effect(mob/living/user, atom/religious_tool)
