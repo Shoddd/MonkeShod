@@ -223,6 +223,7 @@
 	var/datum/mind/Mind = new /datum/mind(candidate.key)
 	var/datum/action/cooldown/spell/voice_of_god/voice_of_god = new
 	var/atom/movable/movable_reltool = religious_tool
+	var/datum/religion_sect/cult/sect = GLOB.religious_sect
 	if(!movable_reltool)
 		return FALSE
 	if(LAZYLEN(movable_reltool.buckled_mobs)) //If a mob is buckled to the altar, we will check if it meets conditions to be used as a vessel
@@ -244,6 +245,7 @@
 			Mind.transfer_to(vessel)
 			voice_of_god.Grant(vessel)
 			to_chat(vessel, span_userdanger("You are [GLOB.deity], a great deity, and have been summoned into this word by your head acolyte [user] and their underlings, show them grace and listen to what they have to say."))
+			sect.rites_list -= /datum/religion_rites/cult/summon_god
 			return ..()
 	var/mob/living/spawned_mob = create_random_mob(altar_turf, FRIENDLY_SPAWN)
 	spawned_mob.faction |= FACTION_NEUTRAL
@@ -255,18 +257,5 @@
 	spawned_mob.health = 125
 	voice_of_god.Grant(spawned_mob)
 	to_chat(spawned_mob, span_userdanger("You are [GLOB.deity], a great deity, and have been summoned into this word by your head acolyte [user] and their underlings, show them grace and listen to what they have to say."))
+	sect.rites_list -= /datum/religion_rites/cult/summon_god
 	return ..()
-
-
-/datum/religion_rites/cult/convert_nullrod
-	name = "Convert Nullrod"
-	desc = "Perform a ritual to convert your nullrod, This ritual requires 5 acolytes."
-	ritual_length = 15 SECONDS // 5 seconds for testing, planned 30-60
-	ritual_invocations = list(
-	"wcllp y",
-	"tmk r`qst f yr dv'n pwr",
-	"shw' u`s wht y' cn` d'",
-	)
-	invoke_msg = "grnt' u' pw'r!"
-	favor_cost = 0 // we use people not favor, 0 by default but just incase
-	required_acolytes = 1 // 1 for testing, 5 planned
