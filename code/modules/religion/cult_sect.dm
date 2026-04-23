@@ -206,7 +206,7 @@
 /datum/religion_rites/cult/summon_god/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
 	var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
-		"Do you wish to become a [GLOB.deity]?",
+		"Do you wish to become [GLOB.deity]?",
 		check_jobban = ROLE_HOLY_SUMMONED,
 		poll_time = 10 SECONDS,
 		ignore_category = POLL_IGNORE_SHADE,
@@ -221,6 +221,7 @@
 		user.visible_message(span_warning("The soul pool was not strong enough to bring forth the shade."))
 		return NOT_ENOUGH_PLAYERS
 	var/datum/mind/Mind = new /datum/mind(candidate.key)
+	var/datum/action/cooldown/spell/voice_of_god/voice_of_god = new
 	var/atom/movable/movable_reltool = religious_tool
 	if(!movable_reltool)
 		return FALSE
@@ -241,14 +242,19 @@
 			vessel.health = 125
 			Mind.active = 1
 			Mind.transfer_to(vessel)
+			voice_of_god.Grant(vessel)
 			to_chat(vessel, span_userdanger("You are [GLOB.deity], a great deity, and have been summoned into this word by your head acolyte [user] and their underlings, show them grace and listen to what they have to say."))
 			return ..()
-	var/mob/living/carbon/human/species/shade = new /mob/living/basic/shade/holy(altar_turf)
-	shade.real_name = "Holy Shade ([rand(1,999)])"
+	var/mob/living/spawned_mob = create_random_mob(altar_turf, FRIENDLY_SPAWN)
+	spawned_mob.faction |= FACTION_NEUTRAL
 	Mind.active = 1
-	Mind.transfer_to(shade)
-	to_chat(shade, span_boldnotice("You are grateful to have been summoned into this world. You are now a member of this station's crew, Try not to cause any trouble."))
-	playsound(altar_turf, pick('sound/hallucinations/growl1.ogg','sound/hallucinations/growl2.ogg','sound/hallucinations/growl3.ogg',), 50, TRUE)
+	Mind.transfer_to(spawned_mob)
+	spawned_mob.real_name = "[GLOB.deity]"
+	spawned_mob.name = "[GLOB.deity]"
+	spawned_mob.maxHealth = 125 // shouldn't be to hard or easy to kill, yes purposely nerfs higher HP mobs
+	spawned_mob.health = 125
+	voice_of_god.Grant(spawned_mob)
+	to_chat(spawned_mob, span_userdanger("You are [GLOB.deity], a great deity, and have been summoned into this word by your head acolyte [user] and their underlings, show them grace and listen to what they have to say."))
 	return ..()
 
 
