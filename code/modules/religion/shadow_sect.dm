@@ -104,7 +104,6 @@
 	anchored = FALSE
 	break_message = span_warning("The Obelisk crumbles before you!")
 	max_integrity = 300
-	damage_deflection = 10
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/structure/destructible/religion/shadow_obelisk/Destroy()
