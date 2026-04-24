@@ -22,7 +22,7 @@
 /datum/armor/chaplainsuit_adept
 	melee = 25
 	bullet = 10
-	laser = 10
+	laser = 30
 	energy = 10
 	fire = 100
 	acid = 60
@@ -35,7 +35,7 @@
 	laser = 10
 	energy = 10
 	fire = 50 // metal harder to burn
-	acid = 90 // copper is pretty acid resistant
+	acid = 90 // bronze is pretty acid resistant
 	wound = 20
 
 // forgotten armor, 0.2 slowdown and shove immune
