@@ -103,7 +103,7 @@
 	icon_state = "shadow_obelisk_1"
 	anchored = FALSE
 	break_message = span_warning("The Obelisk crumbles before you!")
-	max_integrity = 100
+	max_integrity = 300
 	damage_deflection = 10
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
@@ -278,7 +278,7 @@
 /datum/religion_rites/shadow_obelisk/perform_rite(mob/living/user, atom/religious_tool)
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	//In case an obelisk is destroyed, set this again so we don't charge too much favor
-	favor_cost = (100 * sect.obelisk_number) + 100
+	favor_cost = (100 * sect.obelisk_number)
 	if(favor_cost > sect.favor)
 		to_chat(user, span_warning("You need at least [favor_cost] to perform this ritual now."))
 		return FALSE

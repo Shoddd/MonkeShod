@@ -200,7 +200,7 @@
 	)
 	invoke_msg = "y shll b whl g'n"
 	favor_cost = 0 // we use people not favor, 0 by default but just incase
-	required_acolytes = 1 // 1 for testing, 7 planned
+	required_acolytes = 1 // 1 for testing, 6 planned
 
 /datum/religion_rites/cult/summon_god/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
