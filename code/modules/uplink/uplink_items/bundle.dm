@@ -71,7 +71,7 @@
 	cost = 25
 	stock_key = UPLINK_SHARED_STOCK_KITS
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
+/*
 /datum/uplink_item/bundles_tc/surplus
 	name = "Syndicate Surplus Crate"
 	desc = "A dusty crate from the back of the Syndicate warehouse delivered directly to you via Supply Pod. \
@@ -261,7 +261,7 @@
 
 	// return the source, this is so the round-end uplink section shows how many TC the traitor spent on us (20TC) and a radio icon. Instead of 0 TC and a blank one
 	return source
-
+*/
 //pain
 ///Check if we should ignore handler locked_entries or not
 /datum/uplink_item/bundles_tc/random/proc/check_ignore_locked(datum/uplink_handler/handler)
