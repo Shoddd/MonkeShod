@@ -47,13 +47,13 @@
 	//if(!istype(T, /area/station/service/chapel))
 	//	to_chat(user, span_warning("The altar must be in the chapel to perform this ritual!"))
 	//	return
+	//commented out for testing
 	if(!ismovable(religious_tool))
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
 	if(HAS_TRAIT(user, TRAIT_NO_SOUL))
 		to_chat(user, span_warning("You lack a soul."))
 		return FALSE
-	to_chat(user, span_warning("You're going to convert yourself with this ritual."))
 	return ..()
 
 /datum/religion_rites/lesser_lichdom/invoke_effect(mob/living/user, atom/religious_tool)

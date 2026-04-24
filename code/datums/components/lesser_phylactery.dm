@@ -11,10 +11,7 @@
 	/// The color of the phylactery itself. Applied on creation.
 	var/phylactery_color = COLOR_VERY_DARK_LIME_GREEN
 
-/datum/component/lesser_phylactery/Initialize(
-	datum/mind/lich_mind,
-	phylactery_color = COLOR_VERY_DARK_LIME_GREEN,
-)
+/datum/component/lesser_phylactery/Initialize(datum/mind/lich_mind, phylactery_color = COLOR_VERY_DARK_LIME_GREEN)
 	if(!isobj(parent))
 		return COMPONENT_INCOMPATIBLE
 
@@ -55,7 +52,7 @@
  */
 /datum/component/lesser_phylactery/proc/on_examine(datum/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
-	examine_list += span_green("A terrible aura surrounds this item. Its very existence is offensive to life itself...")
+	examine_list += span_green("A holy aura surrounds this item. You can feel its link to someones life...")
 
 /**
  * Signal proc for [COMSIG_QDELETING] registered on the lich's mind.
