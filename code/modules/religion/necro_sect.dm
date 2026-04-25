@@ -42,12 +42,10 @@
 	favor_cost = 2250
 
 /datum/religion_rites/lesser_lichdom/perform_rite(mob/living/user, atom/religious_tool)
-// add check that only allows this to be done in chapel and then makes it unanchorable in invoke_effect
-	//var/turf/T = get_turf(religious_tool)
-	//if(!istype(T, /area/station/service/chapel))
-	//	to_chat(user, span_warning("The altar must be in the chapel to perform this ritual!"))
-	//	return
-	//commented out for testing
+	var/turf/T = get_turf(religious_tool)
+	if(!istype(T, /area/station/service/chapel))
+		to_chat(user, span_warning("The altar must be in the chapel to perform this ritual!")) // So its harder to hide the altar where it'll never be found
+		return
 	if(!ismovable(religious_tool))
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
