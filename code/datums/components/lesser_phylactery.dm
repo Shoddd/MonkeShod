@@ -19,6 +19,8 @@
 		stack_trace("A [type] was created with no target lich mind!")
 		return COMPONENT_INCOMPATIBLE
 
+	src.lich_mind = lich_mind
+
 	var/mob/living/carbon/human/current_mob = lich_mind.current
 	ADD_TRAIT(current_mob, TRAIT_NO_SOUL, "lichdom")
 	ADD_TRAIT(current_mob, TRAIT_NODEATH, "lichdom")

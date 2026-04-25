@@ -68,7 +68,6 @@
 	sect.altar_anchorable = FALSE
 	rite_target.set_species(/datum/species/skeleton)
 	religious_tool.AddComponent(/datum/component/lesser_phylactery, user.mind)
-	// add all the effects of lichdom/phylactery here
 	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
 	return TRUE
 
