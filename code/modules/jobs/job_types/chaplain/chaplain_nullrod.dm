@@ -724,11 +724,8 @@
 	held_up = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
-	if(holy_glow_fx)
-		user.cut_overlay(holy_glow_fx)
-		holy_glow_fx = null
-	if(holy_glow_light)
-		QDEL_NULL(holy_glow_light)
+	user.cut_overlay(holy_glow_fx)
+	qdel(holy_glow_light)
 	UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
 	STOP_PROCESSING(SSfastprocess, src)

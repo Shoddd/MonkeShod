@@ -117,21 +117,30 @@
 	return invokers
 
 
-/datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people
+/datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people and have cooldowns
 	name = "Create Robes"
 	desc = "Create a pair of robes for the initiated, these robes will hide their name and voice when worn, however it won't hide their ID."
 	ritual_length = 5 SECONDS
 	invoke_msg = "g`v us rbs, s w my bt`tr drss i`n yr' img`"
 	favor_cost = 0 // we use people not favor, 0 by default but just incase
-	cooldown_duration = 20 SECONDS //since cult rites don't require favor just people, cooldown so they aren't to spammable
 	var/required_acolytes = 1
+	var/cooldown_duration = 20 SECONDS //since cult rites don't require favor just people, cooldown so they aren't to spammable
+	COOLDOWN_DECLARE(rite_cooldown)
 
 /datum/religion_rites/cult/perform_rite(mob/living/user, atom/religious_tool)
 	var/list/invokers = can_invoke(user)
 	if(length(invokers) < required_acolytes)
 		to_chat(user, span_warning("You need at least [required_acolytes] acolytes around to perform this ritual!"))
 		return FALSE
+	if(!COOLDOWN_FINISHED(src, rite_cooldown))
+		to_chat(user, span_warning("It is too soon to perform this ritual again, you can perform it in [DisplayTimeText(cooldown_duration)]!"))
+		return FALSE
 	return ..()
+
+/datum/religion_rites/cult/invoke_effect(mob/living/user, atom/movable/religious_tool)
+	..()
+	COOLDOWN_START(src, rite_cooldown, cooldown_duration)
+	return TRUE
 
 /datum/religion_rites/cult/robes
 	name = "Create Robes"

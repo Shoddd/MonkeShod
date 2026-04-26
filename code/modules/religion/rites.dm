@@ -5,8 +5,6 @@
 	var/desc = "immm gonna rooon"
 	/// length it takes to complete the ritual
 	var/ritual_length = (10 SECONDS) //total length it'll take
-	var/cooldown_duration = 0 SECONDS // cooldown before ritual can be began again
-	COOLDOWN_DECLARE(rite_cooldown)
 	/// list of invocations said (strings) throughout the rite
 	var/list/ritual_invocations //strings that are by default said evenly throughout the rite
 	/// message when you invoke
@@ -44,9 +42,6 @@
 	if(!GLOB.religious_sect.altar_anchored)
 		to_chat(user, span_warning("The altar must be secured to the floor if you wish to perform the rite!"))
 		return FALSE
-	if(!COOLDOWN_FINISHED(src, rite_cooldown))
-		to_chat(user, span_warning("It is too soon to perform this ritual again, you can perform it in [DisplayTimeText(cooldown_duration)]!"))
-		return FALSE
 	to_chat(user, span_notice("You begin to perform the rite of [name]..."))
 	if(!ritual_invocations)
 		if(do_after(user, ritual_length))
@@ -73,6 +68,5 @@
 ///Does the thing if the rite was successfully performed. return value denotes that the effect successfully (IE a harm rite does harm)
 /datum/religion_rites/proc/invoke_effect(mob/living/user, atom/religious_tool)
 	SHOULD_CALL_PARENT(TRUE)
-	COOLDOWN_START(src, rite_cooldown, cooldown_duration)
 	GLOB.religious_sect.on_riteuse(user,religious_tool)
 	return TRUE
