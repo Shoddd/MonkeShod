@@ -16,6 +16,11 @@
 	var/list/currently_asking = list()
 	desired_items = list("Devoted Followers")
 
+
+/datum/religion_sect/cult/on_conversion(mob/living/chap)
+	. = ..()
+	new /obj/item/clothing/suit/hooded/chaplain_hoodie/leader/cult_leader(get_turf(chap))
+
 /**
  * Called by conversion rite, this async'd proc waits for a response on joining the sect.
  * If yes, the conversion rite can now recruit them instead of just offering invites
@@ -94,7 +99,7 @@
 		return FALSE
 	to_chat(user, span_notice("[joining_now] has submitted to [GLOB.deity]! They are now a holy role! (albeit the lowest level of such)"))
 	joining_now.mind.holy_role = HOLY_ROLE_DEACON
-	GLOB.religious_sect.on_conversion(joining_now)
+	GLOB.religious_sect.adjust_favor(100, user)
 	playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
 	return TRUE
 
@@ -105,7 +110,7 @@
 	if(user)
 		invokers += user
 	if(required_acolytes > 1)
-		for(var/mob/living/acolytes in range(2, religious_tool))
+		for(var/mob/living/acolytes in range(3, religious_tool))
 			if(!IS_HOLY(acolytes))
 				continue
 			if(acolytes == user)
@@ -122,33 +127,22 @@
 	desc = "Create a pair of robes for the initiated, these robes will hide their name and voice when worn, however it won't hide their ID."
 	ritual_length = 5 SECONDS
 	invoke_msg = "g`v us rbs, s w my bt`tr drss i`n yr' img`"
-	favor_cost = 0 // we use people not favor, 0 by default but just incase
+	favor_cost = 0
 	var/required_acolytes = 1
-	var/cooldown_duration = 20 SECONDS //since cult rites don't require favor just people, cooldown so they aren't to spammable
-	COOLDOWN_DECLARE(rite_cooldown)
 
 /datum/religion_rites/cult/perform_rite(mob/living/user, atom/religious_tool)
 	var/list/invokers = can_invoke(user)
 	if(length(invokers) < required_acolytes)
 		to_chat(user, span_warning("You need at least [required_acolytes] acolytes around to perform this ritual!"))
 		return FALSE
-	if(!COOLDOWN_FINISHED(src, rite_cooldown))
-		to_chat(user, span_warning("It is too soon to perform this ritual again, you can perform it in [DisplayTimeText(cooldown_duration)]!"))
-		return FALSE
 	return ..()
-
-/datum/religion_rites/cult/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
-	COOLDOWN_START(src, rite_cooldown, cooldown_duration)
-	return TRUE
 
 /datum/religion_rites/cult/robes
 	name = "Create Robes"
 	desc = "Create a pair of robes for the initiated, these robes will hide their name and voice when worn, however it won't hide their ID."
-	ritual_length = 5 SECONDS
+	ritual_length = 25 SECONDS
 	invoke_msg = "g`v us rbs, s w my bt`tr drss i`n yr' img`"
-	favor_cost = 0
-	cooldown_duration = 20 SECONDS
+	favor_cost = 15
 	required_acolytes = 1
 
 /datum/religion_rites/cult/robes/invoke_effect(mob/living/user, atom/movable/religious_tool)
@@ -160,14 +154,14 @@
 /datum/religion_rites/cult/summon_spirit // cult rites parent used to make all cult rites require a certain number of people
 	name = "Summon Spirit"
 	desc = "Summon a spirit from beyond the veil. This ritual requires 3 acolytes."
-	ritual_length = 5 SECONDS // 5 seconds for testing, planned 30-60
+	ritual_length = 30 SECONDS
+	favor_cost = 100 // 1 member = 1 spirit, these guys are pretty weak anyways
 	ritual_invocations = list(
 		"wc`llp'",
 		"spr'tsf th's rlm",
 	)
 	invoke_msg = "gv th'm frm nd mk th'm whl`"
-	favor_cost = 0 // we use people not favor, 0 by default but just incase
-	required_acolytes = 1 // 1 for testing, 3 planned
+	required_acolytes = 3
 
 /datum/religion_rites/cult/summon_spirit/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
@@ -208,8 +202,8 @@
 		"nd yr evr`lst'ng pr'snc",
 	)
 	invoke_msg = "y shll b whl g'n"
-	favor_cost = 0 // we use people not favor, 0 by default but just incase
-	required_acolytes = 1 // 1 for testing, 6 planned
+	favor_cost = 700
+	required_acolytes = 7
 
 /datum/religion_rites/cult/summon_god/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
