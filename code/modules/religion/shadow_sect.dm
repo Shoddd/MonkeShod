@@ -24,8 +24,6 @@
 	var/light_power = -1 // power of light for obelisks
 	var/list/obelisks = list() // list of all obelisks
 	var/obelisk_number = 0  // number of obelisks
-	var/list/active_obelisks = list() // list of obelisks anchored to the floor aka "active"
-	var/active_obelisks_number = 0 //number of anchored obelisks
 	var/grand_ritual_in_progress = FALSE // whether a grand ritual is being performed
 	var/grand_ritual_level = 0 // what is the level of the last performed ritual (max is 3)
 
@@ -67,7 +65,7 @@
 			to_chat(user, span_warning("The altar must be secured to the floor if you wish to perform the rite!"))
 			return FALSE
 
-	if(active_obelisks_number < 5 + (grand_ritual_level * 10))
+	if(obelisk_number < 5 + (grand_ritual_level * 10))
 		if(pre_ritual_check)
 			to_chat(user, span_warning("You need to anchor the shadows to this reality. You need [5 * (grand_ritual_level + 1)] active obelisks."))
 		else
@@ -110,9 +108,6 @@
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	sect.obelisk_number = sect.obelisk_number - 1
 	sect.obelisks -= src
-	if(src?.anchored)
-		sect.active_obelisks -= src
-		sect.active_obelisks_number -= 1
 	return ..()
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
@@ -126,8 +121,6 @@
 			return
 		if(anchored)
 			anchored = !anchored
-			sect.active_obelisks_number -= 1
-			sect.active_obelisks -= src
 			user.visible_message(span_notice("[user] [anchored ? "" : "un"]anchors [src] [anchored ? "to" : "from"] the floor with [I]."), span_notice("You [anchored ? "" : "un"]anchor [src] [anchored ? "to" : "from"] the floor with [I]."))
 			playsound(loc, 'sound/items/deconstruct.ogg', 50, 1)
 			user.do_attack_animation(src)
@@ -140,8 +133,6 @@
 					to_chat(user,span_warning("You can't place obelisks so close to each other!"))
 					return
 			anchored = !anchored
-			sect.active_obelisks += src
-			sect.active_obelisks_number += 1
 			set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 			user.visible_message(span_notice("[user] [anchored ? "" : "un"]anchors [src] [anchored ? "to" : "from"] the floor with [I]."), span_notice("You [anchored ? "" : "un"]anchor [src] [anchored ? "to" : "from"] the floor with [I]."))
 			playsound(loc, 'sound/items/deconstruct.ogg', 50, 1)
@@ -160,8 +151,6 @@
 					to_chat(user,span_warning("You can't place obelisks so close to each other!"))
 					return
 			anchored = !anchored
-			sect.active_obelisks += src
-			sect.active_obelisks_number += 1
 			set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 			user.visible_message(span_notice("[user] [anchored ? "" : "un"]anchors [src] [anchored ? "to" : "from"] the floor with [I]."), span_notice("You [anchored ? "" : "un"]anchor [src] [anchored ? "to" : "from"] the floor with [I]."))
 			playsound(loc, 'sound/items/deconstruct.ogg', 50, 1)
@@ -425,7 +414,7 @@
 	if(in_use)
 		return
 
-	var/list/local_obelisk_list = sect.active_obelisks.Copy()
+	var/list/local_obelisk_list = sect.obelisks.Copy()
 	local_obelisk_list -= src
 	if(!LAZYLEN(local_obelisk_list))
 		return ..()
@@ -476,8 +465,6 @@
 		obelisk.AddComponent(/datum/component/dark_favor, user)
 		obelisk.anchored = anchored
 		if(anchored)
-			sect.active_obelisks += obelisk
-			sect.active_obelisks_number += 1
 			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 		qdel(src)
 	if(sect.grand_ritual_level == 2)
@@ -487,8 +474,6 @@
 		obelisk.AddComponent(/datum/component/dark_favor, user)
 		obelisk.anchored = anchored
 		if(anchored)
-			sect.active_obelisks += obelisk
-			sect.active_obelisks_number += 1
 			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 		qdel(src)
 	if(sect.grand_ritual_level == 3)
@@ -498,8 +483,6 @@
 		obelisk.AddComponent(/datum/component/dark_favor, user)
 		obelisk.anchored = anchored
 		if(anchored)
-			sect.active_obelisks += obelisk
-			sect.active_obelisks_number += 1
 			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 		obelisk.toggling_buckling_after_ritual_3()
 		qdel(src)
