@@ -110,10 +110,10 @@
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	sect.obelisk_number = sect.obelisk_number - 1
 	sect.obelisks -= src
-	if(anchored)
+	if(src?.anchored)
 		sect.active_obelisks -= src
 		sect.active_obelisks_number -= 1
-	. = ..()
+	return ..()
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
 	return
