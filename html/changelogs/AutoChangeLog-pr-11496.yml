@@ -1,0 +1,4 @@
+author: "Runian"
+delete-after: True
+changes:
+  - bugfix: "The cyborg surgical omni-tool upgrade now uses the medical module sprite just like other medical module upgrades."

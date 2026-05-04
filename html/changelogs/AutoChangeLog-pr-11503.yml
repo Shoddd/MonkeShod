@@ -1,0 +1,4 @@
+author: "Runian"
+delete-after: True
+changes:
+  - rscadd: "The color of a cyborg's eye lights now uses their lamp color instead of being the usual white-yellow."
