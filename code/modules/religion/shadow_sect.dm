@@ -105,10 +105,10 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/structure/destructible/religion/shadow_obelisk/Destroy()
-	. = ..()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	sect.obelisk_number = sect.obelisk_number - 1
 	sect.obelisks -= src
+	. = ..()
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
 	return
