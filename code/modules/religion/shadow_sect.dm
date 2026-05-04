@@ -100,8 +100,9 @@
 	icon = 'icons/obj/hand_of_god_structures.dmi'
 	icon_state = "shadow_obelisk_1"
 	anchored = FALSE
+	density = TRUE
 	break_message = span_warning("The Obelisk crumbles before you!")
-	max_integrity = 300
+	max_integrity = 150
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/structure/destructible/religion/shadow_obelisk/Destroy()
