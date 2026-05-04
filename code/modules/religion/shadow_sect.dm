@@ -105,7 +105,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/structure/destructible/religion/shadow_obelisk/Destroy()
- 	. = ..()
+	. = ..()
 		var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 		sect.obelisk_number = sect.obelisk_number - 1
 		sect.obelisks -= src
