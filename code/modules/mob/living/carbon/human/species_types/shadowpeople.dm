@@ -486,26 +486,8 @@
 
 /datum/species/shadow/blessed/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
-	RegisterSignal(C, COMSIG_ATOM_PRE_BULLET_ACT, PROC_REF(dodge_bullets))
 	if (istype(GLOB.religious_sect, /datum/religion_sect/shadow_sect))
 		change_hearts_ritual(C)
-
-/datum/species/shadow/blessed/on_species_loss(mob/living/carbon/C, datum/species/old_species)
-	. = ..()
-	UnregisterSignal(C, COMSIG_ATOM_PRE_BULLET_ACT)
-
-/datum/species/shadow/blessed/proc/dodge_bullets(mob/living/carbon/human/source, obj/projectile/hitting_projectile, def_zone)
-	SIGNAL_HANDLER
-	var/turf/dodge_turf = source.loc
-	SEND_SIGNAL(source, COMSIG_NIGHTMARE_SNUFF_CHECK, dodge_turf)
-	if(!istype(dodge_turf) || dodge_turf.get_lumcount() >= SHADOW_SPECIES_DIM_LIGHT)
-		return NONE
-	source.visible_message(
-		span_danger("[source] dances in the shadows, evading [hitting_projectile]!"),
-		span_danger("You evade [hitting_projectile] with the cover of darkness!"),
-	)
-	playsound(source, SFX_BULLET_MISS, 75, TRUE)
-	return COMPONENT_BULLET_PIERCED
 
 /datum/species/shadow/proc/change_hearts_ritual(mob/living/carbon/C) // This is supposed to be called only for shadow sect
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
