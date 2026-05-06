@@ -486,7 +486,7 @@
 
 /datum/species/shadow/blessed/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
-	if (istype(GLOB.religious_sect, /datum/religion_sect/shadow_sect))
+	if(istype(GLOB.religious_sect, /datum/religion_sect/shadow_sect))
 		change_hearts_ritual(C)
 
 /datum/species/shadow/proc/change_hearts_ritual(mob/living/carbon/C) // This is supposed to be called only for shadow sect
