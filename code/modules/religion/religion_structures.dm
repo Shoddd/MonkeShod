@@ -158,7 +158,6 @@
 	anchored = FALSE
 	icon = 'icons/obj/religion.dmi'
 	light_power = 2
-	var/cooldowntime = 0
 	break_sound = 'sound/effects/glassbr2.ogg'
 
 /obj/structure/destructible/religion/nature_pylon
