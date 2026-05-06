@@ -10,8 +10,8 @@
 	rites_list = list(/datum/religion_rites/nullrod_transformation)
 
 /datum/religion_sect/burden/on_conversion(mob/living/carbon/human/new_convert)
-	..()
-	if(!ishuman(new_convert))
+	. = ..()
+	if(!istype(new_convert))
 		to_chat(new_convert, span_warning("[GLOB.deity] needs higher level creatures to fully comprehend the suffering. You are not burdened."))
 		return
 	new_convert.gain_trauma(/datum/brain_trauma/special/burdened, TRAUMA_RESILIENCE_MAGIC)

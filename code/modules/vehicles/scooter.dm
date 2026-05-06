@@ -201,6 +201,7 @@
 	board_item_type = /obj/item/melee/skateboard/holyboard
 	instability = 3
 	icon_state = "hoverboard_holy"
+
 /obj/vehicle/ridden/scooter/skateboard/hoverboard/holyboarded/post_buckle_mob(mob/living/M)
 	M.AddComponent(/datum/component/anti_magic, MAGIC_RESISTANCE|MAGIC_RESISTANCE_HOLY)
 	return ..()

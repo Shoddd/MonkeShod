@@ -29,7 +29,6 @@
 	var/grand_ritual_in_progress = FALSE // whether a grand ritual is being performed
 	var/grand_ritual_level = 0 // what is the level of the last performed ritual (max is 3)
 
-
 #define DARKNESS_INVERSE_COLOR "#AAD84B" //The color of light has to be inverse, since we're using negative light power
 
 //Shadow sect doesn't heal non shadowpeople
@@ -42,7 +41,6 @@
 		to_chat(user, span_notice("You bless [blessed] with the power of [GLOB.deity], healing them and spreading blessings."))
 	return TRUE
 
-
 /datum/religion_sect/shadow_sect/on_sacrifice(obj/item/N, mob/living/L)
 	if(!istype(N, /obj/item/flashlight))
 		return
@@ -53,7 +51,6 @@
 
 ///Check the conditions shared by the three grand rituals, condensed into a single proc to cut down on duplicate code
 /datum/religion_sect/shadow_sect/proc/grand_ritual_checks(mob/living/user, atom/religious_tool, pre_ritual_check = FALSE)
-
 	if(pre_ritual_check)
 		if(!isblessedshadow(user))
 			to_chat(user, span_warning("How dare someone not of blessed shadow kind try to communicate with shadows!"))
@@ -78,7 +75,6 @@
 
 ///Upgrades all obelisks and the sect's level after successful ritual
 /datum/religion_sect/shadow_sect/proc/sect_level_up()
-
 	///level up!
 	grand_ritual_level++
 	light_power--
@@ -172,8 +168,6 @@
 		return
 	return ..()
 
-
-
 // Favor generator component. Used on the altar and obelisks
 /datum/component/dark_favor
 	var/mob/living/creator
@@ -219,10 +213,10 @@
 	ritual_invocations = list(
 		"Let the darkness seep into you...",
 		"... And cover you, envelope you ...",
-		"... And make you one with it ...")
+		"... And make you one with it ...",
+	)
 	invoke_msg = "... And let you be born again!"
 	favor_cost = 1000
-
 
 /datum/religion_rites/shadow_conversion/perform_rite(mob/living/user, atom/religious_tool)
 	if(!ismovable(religious_tool))
@@ -241,9 +235,8 @@
 		to_chat(user,span_warning("You're going to convert yourself with this ritual."))
 	return ..()
 
-
 /datum/religion_rites/shadow_conversion/invoke_effect(mob/living/user, atom/religious_tool)
-	..()
+	. = ..()
 	if(!ismovable(religious_tool))
 		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
 	var/atom/movable/movable_reltool = religious_tool
@@ -260,7 +253,6 @@
 	rite_target.set_species(/datum/species/shadow/blessed)
 	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
 	return TRUE
-
 
 /datum/religion_rites/shadow_obelisk
 	name = "Obelisk Manifestation"
@@ -294,7 +286,6 @@
 	sect.adjust_favor(favor_cost)
 	return ..()
 
-
 /datum/religion_rites/expand_shadows
 	name = "Shadow Expansion"
 	desc = "Grow the reach of shadows extending from the altar, and any obelisks. The cost of this ritual increases with each use."
@@ -302,10 +293,10 @@
 	ritual_invocations = list(
 		"Spread out...",
 		"... Kill the light ...",
-		"... Encompass it all in darkness ...")
+		"... Encompass it all in darkness ...",
+	)
 	invoke_msg = "Shadows, reach your tendrils from my altar, and extend thy domain."
 	favor_cost = 300
-
 
 /datum/religion_rites/expand_shadows/perform_rite(mob/living/user, atom/religious_tool)
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect

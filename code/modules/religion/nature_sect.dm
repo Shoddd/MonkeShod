@@ -26,7 +26,6 @@
 	to_chat(L, span_notice("You offer [N] to [GLOB.deity], pleasing them and gaining 25 favor in the process."))
 	qdel(N)
 	return TRUE
-
 /**** Plant rites ****/
 /datum/religion_rites/summon_animals
 	name = "Create Life"

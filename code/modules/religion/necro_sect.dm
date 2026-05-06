@@ -25,7 +25,6 @@
 	to_chat(L, span_notice("You offer [N] to [GLOB.deity], pleasing them and gaining 10 favor in the process."))
 	qdel(N)
 	return TRUE
-
 /// Necro Rites
 
 /datum/religion_rites/lesser_lichdom
@@ -74,11 +73,13 @@
 	name = "Raise Undead"
 	desc = "Creates an weak but subservant undead creature if a soul is willing to take it."
 	ritual_length = 50 SECONDS
-	ritual_invocations = list("Come forth from the pool of souls ...",
-	"... enter our realm ...",
-	"... become one with our world ...",
-	"... rise ...",
-	"... RISE! ...")
+	ritual_invocations = list(
+		"Come forth from the pool of souls ...",
+		"... enter our realm ...",
+		"... become one with our world ...",
+		"... rise ...",
+		"... RISE! ...",
+	)
 	invoke_msg = "... RISE!!!"
 	favor_cost = 1500
 
@@ -134,12 +135,14 @@
 	name = "Raise Dead"
 	desc = "Revives a buckled dead creature or person."
 	ritual_length = 40 SECONDS
-	ritual_invocations = list("Rejoin our world ...",
-	"... come forth from the beyond ...",
-	"... fresh life awaits you ...",
-	"... return to us ...",
-	"... by the power granted by the gods ...",
-	"... you shall rise again ...")
+	ritual_invocations = list(
+		"Rejoin our world...",
+		"... come forth from the beyond...",
+		"... fresh life awaits you...",
+		"... return to us...",
+		"... by the power granted by the gods...",
+		"... you shall rise again...",
+	)
 	invoke_msg = "Welcome back to the mortal plain."
 	favor_cost = 1250
 
@@ -195,11 +198,13 @@
 	name = "Living Sacrifice"
 	desc = "Sacrifice a non-sentient living buckled creature for favor."
 	ritual_length = 25 SECONDS
-	ritual_invocations = list("To offer this being unto the gods ...",
-	"... to feed them with its soul ...",
-	"... so that they may consume all within their path ...",
-	"... release their binding on this mortal plane ...",
-	"... I offer you this living being ...")
+	ritual_invocations = list(
+		"To offer this being unto the gods ...",
+		"... to feed them with its soul ...",
+		"... so that they may consume all within their path ...",
+		"... release their binding on this mortal plane ...",
+		"... I offer you this living being ...",
+	)
 	invoke_msg = "... may it join the horde of undead, and become one with the souls of the damned. "
 
 //the living creature chosen for the sacrifice of the rite
