@@ -36,16 +36,15 @@
 	else
 		inviter.balloon_alert(inviter, "refuses to serve [GLOB.deity]!")
 
-
 /datum/religion_rites/conversion
 	name = "Initiation"
 	desc = "Converts someone to your sect. They must be willing, so the first invocation will instead prompt them to join. \
 	Once they accept and are converted, they will become a acolyte, counting as a member for rituals."
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
-	"dv'n lrd `bve",
-	"l`t th's vssl b` wrthy",
-	"l`t it srv y in `yr nm",
+		"dv'n lrd `bve",
+		"l`t th's vssl b` wrthy",
+		"l`t it srv y in `yr nm",
 	)
 	invoke_msg = "nd sr`v y fr ' rst f its pth'tc lf`"
 	///the invited acolyte
@@ -80,7 +79,7 @@
 		return ..()
 
 /datum/religion_rites/conversion/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/mob/living/carbon/human/joining_now = new_acolytes
 	new_acolytes = null
 	if(!(joining_now in religious_tool.buckled_mobs)) //checks one last time if the right corpse is still buckled
@@ -146,7 +145,7 @@
 	required_acolytes = 1
 
 /datum/religion_rites/cult/robes/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/altar_turf = get_turf(religious_tool)
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie/cult(altar_turf)
 	return TRUE

@@ -27,7 +27,6 @@
 	qdel(N)
 	return TRUE
 
-
 /**** Plant rites ****/
 /datum/religion_rites/summon_animals
 	name = "Create Life"
@@ -48,7 +47,6 @@
 	return ..()
 
 /datum/religion_rites/summon_animals/invoke_effect(mob/living/user, atom/religious_tool)
-	..()
 	var/turf/altar_turf = get_turf(religious_tool)
 	for(var/i in 1 to 8)
 		var/mob/living/spawned_mob = create_random_mob(altar_turf, FRIENDLY_SPAWN)
@@ -67,7 +65,8 @@
 	ritual_invocations = list(
 		"Bring to us ...",
 		"... the stone we need ...",
-		"... so we can toil away ...")
+		"... so we can toil away ...",
+	)
 	invoke_msg = "and spread many seeds."
 	favor_cost = 100
 
@@ -102,7 +101,8 @@
 	ritual_invocations = list(
 		"By the power of nature ...",
 		"... We call upon you, in this time of need ...",
-		"... to merge us with all that is natural ...")
+		"... to merge us with all that is natural ...",
+	)
 	invoke_msg = "... May the grass be greener on the other side, show us what it means to be one with nature!!"
 	favor_cost = 500
 
@@ -126,7 +126,7 @@
 	return ..()
 
 /datum/religion_rites/create_podperson/invoke_effect(mob/living/user, atom/religious_tool)
-	..()
+	. = ..()
 	if(!ismovable(religious_tool))
 		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
 	var/atom/movable/movable_reltool = religious_tool
@@ -152,7 +152,7 @@
 	favor_cost = 400
 
 /datum/religion_rites/photogeist/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/altar_turf = get_turf(religious_tool)
 	new /obj/effect/mob_spawn/ghost_role/photogeist(altar_turf)
 	return TRUE

@@ -36,17 +36,23 @@
 		return FALSE
 	var/mob/living/carbon/human/human_user = user
 	var/datum/brain_trauma/special/burdened/burden = human_user.has_trauma_type(/datum/brain_trauma/special/burdened)
-	if(!burden || burden.burden_level < 9)
+	if(!burden?.burden_level < 9)
 		to_chat(human_user, span_warning("You aren't burdened enough."))
 		return FALSE
 	for(var/obj/item/nullrod/null_rod in get_turf(religious_tool))
 		transformation_target = null_rod
 		return ..()
 	to_chat(human_user, span_warning("You need to place a null rod on [religious_tool] to do this!"))
-	return FALSE
+	var/obj/item/nullrod/null_rod = locate() in get_turf(religious_tool)
+	if(!null_rod)
+		to_chat(human_user, span_warning("You need to place a null rod on [religious_tool] to do this!"))
+		return
+	transformation_target = null_rod
+	return ..()
+	
 
 /datum/religion_rites/nullrod_transformation/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/obj/item/nullrod/null_rod = transformation_target
 	transformation_target = null
 	if(QDELETED(null_rod) || null_rod.loc != get_turf(religious_tool))

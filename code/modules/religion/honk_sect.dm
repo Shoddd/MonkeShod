@@ -38,7 +38,6 @@
 /datum/religion_sect/honk/on_sacrifice(/obj/item/food/grown/banana/offering, mob/living/user)
 	adjust_favor(25, user)
 	to_chat(user, span_notice("HONK"))
-	return
 
 /datum/religion_rites/holypie
 	name = "Holy Pie"
@@ -72,9 +71,9 @@
 	desc = "Turn yourself or a buckle person into a clown"
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
-	"I pray to the Honkmother to hear my pleas...",
-	"...Bring us the power to entertain our allies...",
-	"...And merciless prank our enemies...",
+		"I pray to the Honkmother to hear my pleas...",
+		"...Bring us the power to entertain our allies...",
+		"...And merciless prank our enemies...",
 	)
 	invoke_msg = "Show the true power of clownkind!"
 	favor_cost = 500
@@ -88,20 +87,19 @@
 		return FALSE
 	if(LAZYLEN(movable_reltool.buckled_mobs))
 		to_chat(user, span_warning("You're going to convert the one buckled on [movable_reltool]."))
-	else
-		if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
-			to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
-			return FALSE
-		to_chat(user, span_warning("You're going to convert yourself with this ritual."))
+	else if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
+		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
+		return FALSE
+	to_chat(user, span_warning("You're going to convert yourself with this ritual."))
 	return ..()
 
 /datum/religion_rites/clownify/invoke_effect(mob/living/user, atom/religious_tool)
-	..()
+	. = ..()
 	if(!ismovable(religious_tool))
 		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
 	var/atom/movable/movable_reltool = religious_tool
 	var/mob/living/carbon/human/rite_target
-	if(!movable_reltool?.buckled_mobs?.len)
+	if(!length(movable_reltool?.buckled_mobs))
 		rite_target = user
 	else
 		for(var/buckled in movable_reltool.buckled_mobs)
@@ -121,9 +119,9 @@
 	desc = "Creates a piece of bananium to further the clown researches"
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
-	"I pray to the Honkmother to hear my pleas...",
-	"...Bring us the power to entertain our allies...",
-	"...And merciless prank our enemies...",
+		"I pray to the Honkmother to hear my pleas...",
+		"...Bring us the power to entertain our allies...",
+		"...And merciless prank our enemies...",
 	)
 	invoke_msg = "Show the true power of clownkind!"
 	favor_cost = 1000

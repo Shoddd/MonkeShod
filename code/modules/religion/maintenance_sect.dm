@@ -44,9 +44,11 @@
 	name = "Maintenance Adaptation"
 	desc = "Begin your metamorphasis into a being more fit for Maintenance."
 	ritual_length = 10 SECONDS
-	ritual_invocations = list("I abandon the world ...",
-	"... to become one with the deep.",
-	"My form will become twisted ...")
+	ritual_invocations = list(
+		"I abandon the world ...",
+		"... to become one with the deep.",
+		"My form will become twisted ...",
+	)
 	invoke_msg = "... but my smile I will keep!"
 	favor_cost = 150 //150u of organic slurry
 
@@ -60,7 +62,7 @@
 	return ..()
 
 /datum/religion_rites/maint_adaptation/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	to_chat(user, span_warning("You feel your genes rattled and reshaped. <b>You're becoming something new.</b>"))
 	user.emote("laugh")
 	ADD_TRAIT(user, TRAIT_HOPELESSLY_ADDICTED, "maint_adaptation")
@@ -94,7 +96,7 @@
 	return ..()
 
 /datum/religion_rites/adapted_eyes/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/obj/item/organ/internal/eyes/oldeyes = user.get_organ_slot(ORGAN_SLOT_EYES)
 	to_chat(user, span_warning("You feel your eyes adapt to the darkness!"))
 	if(oldeyes)
@@ -122,7 +124,7 @@
 	return FALSE
 
 /datum/religion_rites/adapted_food/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/obj/item/food/moldify = mold_target
 	mold_target = null
 	if(QDELETED(moldify) || !(get_turf(religious_tool) == moldify.loc)) //check if the same food is still there
@@ -150,7 +152,7 @@
 	return FALSE
 
 /datum/religion_rites/ritual_totem/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/altar_turf = get_turf(religious_tool)
 	var/obj/item/stack/sheet/mineral/wood/padala = converted
 	converted = null

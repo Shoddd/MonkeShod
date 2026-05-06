@@ -28,7 +28,7 @@
 		inviter.balloon_alert(inviter, "refuses to be bound to the code!")
 
 /datum/religion_sect/honorbound/on_conversion(mob/living/carbon/new_convert)
-	..()
+	. = ..()
 	if(!ishuman(new_convert))
 		to_chat(new_convert, span_warning("[GLOB.deity] has no respect for lower creatures, and refuses to make you honorbound."))
 		return FALSE

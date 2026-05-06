@@ -465,21 +465,24 @@
 /datum/species/shadow/blessed/spec_life(mob/living/carbon/human/H, delta_time, times_fired)
 	. = ..()
 	var/turf/T = H.loc
-	if(istype(T))
-		var/light_amount = T.get_lumcount()
+	if(!istype(T))
+		return
 
-		if(light_amount > SHADOW_SPECIES_DIM_LIGHT) //if there's enough light, start dying
-			H.take_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYTYPE_ORGANIC)
-			if(H.has_movespeed_modifier(/datum/movespeed_modifier/shadow_sect))
-				H.remove_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
-		else if (light_amount < SHADOW_SPECIES_DIM_LIGHT) //heal in the dark
-			if(sect_rituals_completed >= 1 && H.nutrition <= NUTRITION_LEVEL_WELL_FED)
-				H.nutrition += 2 * delta_time
-			H.heal_overall_damage((0.5 * delta_time), (0.5 * delta_time), 0, BODYTYPE_ORGANIC)
-			if(sect_rituals_completed >= 2)
-				if(sect_rituals_completed == 3)
-					H.add_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
+	var/light_amount = T.get_lumcount()
 
+	if(light_amount >= SHADOW_SPECIES_DIM_LIGHT) //if there's enough light, start dying
+		H.take_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYTYPE_ORGANIC)
+		if(H.has_movespeed_modifier(/datum/movespeed_modifier/shadow_sect))
+			H.remove_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
+		return
+
+	if(sect_rituals_completed >= 1 && H.nutrition <= NUTRITION_LEVEL_WELL_FED)
+		H.nutrition += 2 * delta_time
+
+	H.heal_overall_damage((0.5 * delta_time), (0.5 * delta_time), 0, BODYTYPE_ORGANIC)
+
+	if(sect_rituals_completed >= 3)
+		H.add_movespeed_modifier(/datum/movespeed_modifier/shadow_sect)
 
 /datum/species/shadow/blessed/check_roundstart_eligible()
 	return FALSE
@@ -504,7 +507,6 @@
 
 /datum/movespeed_modifier/shadow_sect
 	multiplicative_slowdown = -0.15
-
 
 /obj/item/organ/heart/shadow_ritual // This parent should never appear itself
 	visual = TRUE
@@ -532,20 +534,14 @@
 	desc = "An indistinguishable object cloaked in an undispellable darkness. The only thing that can be made out is the darkness pulsing."
 	icon = 'icons/obj/medical/organs/organs.dmi'
 	icon_state = "shadow_heart_3"
-	var/respawn_progress = 0
 	sect_rituals_completed_granted = 3
-
-
-/obj/item/organ/heart/shadow_ritual/update_icon()
-	. = ..()
-	return
+	var/respawn_progress = 0
 
 /obj/item/organ/heart/shadow_ritual/on_insert(mob/living/carbon/heart_owner)
 	. = ..()
 	if(isblessedshadow(heart_owner))
-		var/mob/living/carbon/human/O = heart_owner
-		var/datum/species/shadow/blessed/S = O.dna.species
-		S.sect_rituals_completed = sect_rituals_completed_granted
+		var/datum/species/shadow/blessed/S = heart_owner?.dna?.species
+		S?.sect_rituals_completed = sect_rituals_completed_granted
 	else
 		shadow_conversion = 0
 		to_chat(heart_owner, span_userdanger("You feel a chill spreading throughout your body..."))
@@ -574,8 +570,7 @@
 		if(shadow_conversion > SHADOW_CONVERSION_TRESHOLD)
 			shadow_conversion = 0
 			to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest!"))
-			var/mob/living/carbon/old_owner = owner
-			old_owner.set_species(/datum/species/shadow/blessed)
+			owner.set_species(/datum/species/shadow/blessed)
 		else
 			var/random_mesage = rand(0,90)
 			if(random_mesage == 0)

@@ -67,7 +67,7 @@
 		to_chat(user, span_warning("This rite requires more money!"))
 		return FALSE
 	account.adjust_money(-money_cost, "Church Donation: Rite")
-	. = ..()
+	return ..()
 
 /datum/religion_rites/greed/vendatray
 	name = "Purchase Vend-a-tray"
@@ -76,7 +76,7 @@
 	money_cost = 300
 
 /datum/religion_rites/greed/vendatray/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/altar_turf = get_turf(religious_tool)
 	new /obj/structure/displaycase/forsale(altar_turf)
 	playsound(get_turf(religious_tool), 'sound/effects/cashregister.ogg', 60, TRUE)
@@ -89,7 +89,7 @@
 	money_cost = 1000 //quite a step up from vendatray
 
 /datum/religion_rites/greed/custom_vending/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/altar_turf = get_turf(religious_tool)
 	new /obj/machinery/vending/custom/greed(altar_turf)
 	playsound(get_turf(religious_tool), 'sound/effects/cashregister.ogg', 60, TRUE)

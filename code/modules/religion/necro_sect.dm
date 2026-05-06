@@ -5,13 +5,13 @@
 	tgui_icon = "skull"
 	alignment = ALIGNMENT_EVIL
 	max_favor = 10000
-	desired_items = list(
-		/obj/item/organ/)
+	desired_items = list(/obj/item/organ/)
 	rites_list = list(
 		/datum/religion_rites/living_sacrifice,
 		/datum/religion_rites/raise_dead,
 		/datum/religion_rites/raise_undead,
-		/datum/religion_rites/lesser_lichdom,)
+		/datum/religion_rites/lesser_lichdom,
+	)
 	altar_icon_state = "convertaltar-green"
 
 //Necro bibles don't heal or do anything special apart from the standard holy water blessings
@@ -26,7 +26,6 @@
 	qdel(N)
 	return TRUE
 
-
 /// Necro Rites
 
 /datum/religion_rites/lesser_lichdom
@@ -34,10 +33,12 @@
 	desc = "Binds the soul of the caster to their altar creating a lesser phylactery, causing them to become a undying skeleton. \
 	Be warned, if the phylactery is destroyed you will turn to dust. The altar will no longer be moveable once this ritual is performed, and can only be performed in the chapel."
 	ritual_length = 60 SECONDS //This one's pretty powerful so it'll still be long
-	ritual_invocations = list("From the depths of the soul pool ...",
-	"... come forth into this being ...",
-	"... grant this servant power ...",
-	"... grant them temporary immortality ...")
+	ritual_invocations = list(
+		"From the depths of the soul pool...",
+		"... come forth into this being...",
+		"... grant this servant power...",
+		"... grant them temporary immortality...",
+	)
 	invoke_msg = "... Grant them the power to become one with necromancy!!"
 	favor_cost = 2250
 
@@ -55,7 +56,7 @@
 	return ..()
 
 /datum/religion_rites/lesser_lichdom/invoke_effect(mob/living/user, atom/religious_tool)
-	..()
+	. = ..()
 	if(!ismovable(religious_tool))
 		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
 	var/mob/living/carbon/human/rite_target

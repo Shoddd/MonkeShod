@@ -46,7 +46,7 @@
 	return FALSE
 
 /datum/religion_rites/sparring_contract/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/obj/item/paper/blank_paper = contract_target
 	var/turf/tool_turf = get_turf(religious_tool)
 	contract_target = null
@@ -82,7 +82,7 @@
 	area_instance = tgui_input_list(user, "Choose an area to mark as an arena!", "Arena Declaration", filtered)
 	if(isnull(area_instance))
 		return FALSE
-	. = ..()
+	return ..()
 
 /datum/religion_rites/declare_arena/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	. = ..()
@@ -111,7 +111,7 @@
 	return FALSE
 
 /datum/religion_rites/ceremonial_weapon/invoke_effect(mob/living/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	var/altar_turf = get_turf(religious_tool)
 	var/obj/item/stack/sheet/used_for_blade = converted
 	converted = null
@@ -142,7 +142,7 @@
 	return ..()
 
 /datum/religion_rites/unbreakable/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	to_chat(user, span_nicegreen("You feel [GLOB.deity]'s will to keep fighting pouring into you!"))
 	user.AddComponent(/datum/component/unbreakable)
 
@@ -162,6 +162,6 @@
 	return ..()
 
 /datum/religion_rites/tenacious/invoke_effect(mob/living/carbon/human/user, atom/movable/religious_tool)
-	..()
+	. = ..()
 	to_chat(user, span_nicegreen("You feel [GLOB.deity]'s tenacity pouring into you!"))
 	user.AddElement(/datum/element/tenacious)
