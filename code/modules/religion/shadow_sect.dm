@@ -84,7 +84,7 @@
 		obelisk.upgrade_obelisk()
 
 	//Blessings of the ritual for people of shadow
-	for(var/mob/living/carbon/human/M in GLOB.mob_list)
+	for(var/mob/living/carbon/human/M in GLOB.player_list)
 		if(isshadowperson(M))
 			M.heal_overall_damage(25 * grand_ritual_level, 25 * grand_ritual_level, 200)
 			if(isblessedshadow(M))
@@ -559,12 +559,12 @@
 
 /datum/religion_rites/grand_ritual_two/proc/handle_obelisks()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	for(var/mob/living/M in GLOB.mob_list)
+	for(var/mob/living/M in GLOB.player_list)
 		if(isshadowperson(M))
 			to_chat(M, span_userdanger("You feel pull towards the obelisks, you feel like it would be safer near them."))
 		to_chat(M, span_notice("Shadows seem to flicker in corner of your eye."))
 	sleep(50)
-	for(var/mob/living/M in GLOB.mob_list)
+	for(var/mob/living/M in GLOB.player_list)
 		to_chat(M, span_warning("You are sure now that shadows are moving"))
 	sleep(50)
 	sect.grand_ritual_in_progress = TRUE
@@ -614,15 +614,15 @@
 
 /datum/religion_rites/grand_ritual_three/proc/handle_obelisks()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	for(var/mob/living/M in GLOB.mob_list)
+	for(var/mob/living/M in GLOB.player_list)
 		if(isshadowperson(M))
 			to_chat(M, span_userdanger("You feel pull towards the obelisks, you feel like it would be safer near them."))
 		to_chat(M, span_notice("Shadows seem to flicker in corner of your eye."))
 	sleep(50)
-	for(var/mob/living/M in GLOB.mob_list)
+	for(var/mob/living/M in GLOB.player_list)
 		to_chat(M, span_warning("You are sure now that shadows are moving"))
 	sleep(50)
-	for(var/mob/living/M in GLOB.mob_list)
+	for(var/mob/living/M in GLOB.player_list)
 		to_chat(M, span_boldwarning("Shadows are all flowing towards some point, leaving only light behind!"))
 	sleep(50)
 	sect.grand_ritual_in_progress = TRUE
@@ -640,13 +640,13 @@
 		if(obelisk.anchored)
 			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
 	if(sect.grand_ritual_level == 3)
-		for(var/mob/living/M in GLOB.mob_list)
+		for(var/mob/living/M in GLOB.player_list)
 			if(isshadowperson(M))
 				to_chat(M, span_boldnotice("Ritual was finished. Rejoice for shadows walk among us."))
 			else
 				to_chat(M, span_boldnotice("Shadows seem to go back to normal, but their darkness is so much deeper then before."))
 	else
-		for(var/mob/living/M in GLOB.mob_list)
+		for(var/mob/living/M in GLOB.player_list)
 			if(isshadowperson(M))
 				to_chat(M, span_bolddanger("Ritual failed, shadows are barred from entering this realm still."))
 			else
