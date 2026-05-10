@@ -103,21 +103,21 @@
 	return TRUE
 
 
-/datum/religion_rites/cult/proc/can_invoke(mob/living/user, atom/religious_tool)
-	//This proc determines if the ritual has enough acolytes nearby to invoke, counts anyone with a holy role, including the invoker/chaplain
+/datum/religion_rites/cult/proc/get_invokers(mob/living/user, atom/religious_tool)
+	if(!required_acolytes)
+		return TRUE
 	var/list/invokers = list() //people eligible to invoke the rune
 	if(user)
 		invokers += user
-	if(required_acolytes > 1)
-		for(var/mob/living/acolytes in range(3, religious_tool))
-			if(!IS_HOLY(acolytes))
-				continue
-			if(acolytes == user)
-				continue
-			if(acolytes.stat != CONSCIOUS)
-				continue
-			invokers += acolytes
 
+	for(var/mob/living/acolytes in view(3, religious_tool))
+		if(!IS_HOLY(acolytes))
+			continue
+		if(acolytes == user)
+			continue
+		if(acolytes.stat != CONSCIOUS)
+			continue
+		invokers += acolytes
 	return invokers
 
 
@@ -130,7 +130,7 @@
 	var/required_acolytes = 1
 
 /datum/religion_rites/cult/perform_rite(mob/living/user, atom/religious_tool)
-	var/list/invokers = can_invoke(user)
+	var/list/invokers = get_invokers(user)
 	if(length(invokers) < required_acolytes)
 		to_chat(user, span_warning("You need at least [required_acolytes] acolytes around to perform this ritual!"))
 		return FALSE

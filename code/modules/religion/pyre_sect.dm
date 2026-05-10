@@ -34,7 +34,6 @@
 	qdel(offering)
 	return TRUE
 
-
 ///apply a bunch of fire immunity effect to clothing
 /datum/religion_rites/fireproof/proc/apply_fireproof(obj/item/clothing/fireproofed)
 	fireproofed.name = "unmelting [fireproofed.name]"
