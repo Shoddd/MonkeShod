@@ -4,7 +4,7 @@
 	weight = 5
 	min_players = 35
 	max_occurrences = 1
-	track = EVENT_TRACK_MODERATE
+	track = EVENT_TRACK_MAJOR
 	description = "Spawns a pesky little blue fella."
 	tags = list(TAG_COMBAT, TAG_EXTERNAL, TAG_OUTSIDER_ANTAG, TAG_TEAM_ANTAG, TAG_ALIEN)
 	checks_antag_cap = TRUE
