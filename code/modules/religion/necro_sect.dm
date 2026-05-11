@@ -65,7 +65,8 @@
 		return FALSE
 	sect.altar_anchorable = FALSE
 	rite_target.set_species(/datum/species/skeleton)
-	religious_tool.AddComponent(/datum/component/lesser_phylactery, user.mind)
+	rite_target.AddComponent(/datum/component/regenerator, outline_colour = COLOR_VERY_DARK_LIME_GREEN) // slow regeneration but you will eventually get back up
+	religious_tool.AddComponent(/datum/component/lesser_phylactery, user.mind) // Nodeath and Nosoul trait while it exist, dust if destroyed
 	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
 	return TRUE
 
