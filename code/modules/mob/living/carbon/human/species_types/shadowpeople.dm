@@ -493,15 +493,17 @@
 		change_hearts_ritual(C)
 
 /datum/species/shadow/proc/change_hearts_ritual(mob/living/carbon/C) // This is supposed to be called only for shadow sect
+	if(isnightmare(C))
+		return
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(!isnightmare(C))
-		if(sect.grand_ritual_level == 1)
+	switch(sect.grand_ritual_level)
+		if(1)
 			mutantheart = new/obj/item/organ/heart/shadow_ritual/first
 			mutantheart.Insert(C, 0, FALSE)
-		if(sect.grand_ritual_level == 2)
+		if(2)
 			mutantheart = new/obj/item/organ/heart/shadow_ritual/second
 			mutantheart.Insert(C, 0, FALSE)
-		if(sect.grand_ritual_level == 3)
+		if(3)
 			mutantheart = new/obj/item/organ/heart/shadow_ritual/third
 			mutantheart.Insert(C, 0, FALSE)
 
