@@ -222,7 +222,7 @@
 		user.visible_message(span_warning("The soul pool was not strong enough to bring forth the shade."))
 		return NOT_ENOUGH_PLAYERS
 	var/datum/mind/Mind = new /datum/mind(candidate.key)
-	var/datum/action/cooldown/spell/voice_of_god/voice_of_god = new
+	var/datum/action/cooldown/spell/voice_of_god/voice_of_god = new(src)
 	var/atom/movable/movable_reltool = religious_tool
 	var/datum/religion_sect/cult/sect = GLOB.religious_sect
 	if(!movable_reltool)
