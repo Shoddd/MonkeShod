@@ -13,7 +13,7 @@
 	///people who have agreed to serve, and can be deaconized
 	var/list/possible_acolytes = list()
 	///people who have been offered an invitation, they haven't finished the alert though.
-	var/list/currently_asking = list()
+	var/list/datum/weakref/currently_asking = list()
 	desired_items = list("Devoted Followers")
 
 
