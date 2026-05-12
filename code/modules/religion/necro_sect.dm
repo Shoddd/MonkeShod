@@ -105,12 +105,12 @@
 		user.visible_message(span_warning("The soul pool was not strong enough to bring forth the undead."))
 		GLOB.religious_sect?.adjust_favor(favor_cost, user) //refund if nobody takes the role
 		return NOT_ENOUGH_PLAYERS
-	var/datum/mind/Mind = new /datum/mind(candidate.key)
+	var/datum/mind/mind = new(candidate.key)
 	var/undead_species = pick(/mob/living/carbon/human/species/zombie/fragile, /mob/living/carbon/human/species/skeleton/fragile)
 	var/mob/living/carbon/human/species/undead = new undead_species(altar_turf)
 	undead.real_name = "Holy Undead ([rand(1,999)])"
-	Mind.active = 1
-	Mind.transfer_to(undead)
+	mind.active = TRUE
+	mind.transfer_to(undead)
 	undead.equip_to_slot_or_del(new /obj/item/storage/backpack/cultpack(undead), ITEM_SLOT_BACK)
 	undead.equip_to_slot_or_del(new /obj/item/clothing/under/costume/skeleton(undead), ITEM_SLOT_ICLOTHING)
 	undead.equip_to_slot_or_del(new /obj/item/clothing/suit/hooded/chaplain_hoodie(undead), ITEM_SLOT_OCLOTHING)

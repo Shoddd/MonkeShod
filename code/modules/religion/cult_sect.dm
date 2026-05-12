@@ -179,11 +179,11 @@
 		to_chat(user, span_warning("The soul pool is empty..."))
 		user.visible_message(span_warning("The soul pool was not strong enough to bring forth the shade."))
 		return NOT_ENOUGH_PLAYERS
-	var/datum/mind/Mind = new /datum/mind(candidate.key)
+	var/datum/mind/mind = new(candidate.key)
 	var/mob/living/carbon/human/species/shade = new /mob/living/basic/shade/holy(altar_turf)
 	shade.real_name = "Holy Shade ([rand(1,999)])"
-	Mind.active = 1
-	Mind.transfer_to(shade)
+	mind.active = TRUE
+	mind.transfer_to(shade)
 	if(is_special_character(user))
 		to_chat(shade, span_userdanger("You are grateful to have been summoned into this word by [user]. Serve [user.real_name], and assist [user.p_them()] in completing [user.p_their()] goals at any cost."))
 	else
