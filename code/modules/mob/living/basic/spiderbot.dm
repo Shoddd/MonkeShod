@@ -142,13 +142,13 @@
 /mob/living/basic/spiderbot/emag_act(mob/living/user)
 	if(emagged)
 		to_chat(user, span_warning("[src] doesn't seem to respond."))
-		return 0
+		return FALSE
 	else
 		emagged = TRUE
 		to_chat(user, span_notice("You short out the security protocols and rewrite [src]'s internal memory."))
 		to_chat(src, span_userdanger("You have been emagged; you are now completely loyal to [user] and [user.p_their()] every order!"))
 		emagged_master = user
-		log_silicon(user, src, "Emagged")
+		log_silicon("EMAG: [key_name(user)] emagged cyborg [key_name(src)].")
 		maxHealth = 60
 		health = 60
 		melee_damage_lower = 15
