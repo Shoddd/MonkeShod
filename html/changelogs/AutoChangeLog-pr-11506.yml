@@ -1,5 +1,0 @@
-author: "Absolucy"
-delete-after: True
-changes:
-  - bugfix: "Stabilized Pyrite extracts no longer curse you with being a walking disco ball forever."
-  - qol: "Coloration from stable pyrite, regen rainbow, and regen adamantine extracts now looks better."
