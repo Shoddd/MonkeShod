@@ -30,7 +30,7 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT*0.5)
 	build_path = /obj/item/bodypart/head/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -42,7 +42,7 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2.5)
 	build_path = /obj/item/bodypart/chest/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -54,7 +54,7 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/bodypart/arm/left/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -66,7 +66,7 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/bodypart/arm/right/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -78,7 +78,7 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/bodypart/leg/left/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -90,7 +90,7 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/bodypart/leg/right/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -102,7 +102,7 @@
 	materials = list(/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT*0.5)
 	build_path = /obj/item/organ/external/antennae/ipc
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
@@ -115,7 +115,20 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*1.25, /datum/material/glass = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/item/organ/internal/cyberimp/arm/item_set/power_cord
 	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_MISC
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/ipc_core
+	name = "IPC Core"
+	desc = "An incomplete IPC chassis; add organs, limbs, and a compact positronic brain to build your own robotic friend. Will need to be rebooted by via the Positronic Reboot procedure once all organs and limbs are added."
+	id = "ipc_core"
+	build_type = MECHFAB
+	build_path = /obj/item/ipc_core
+	materials = list(/datum/material/iron = 10000, /datum/material/titanium = 10000, /datum/material/glass = 10000)
+	construction_time = 30 SECONDS
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_CATEGORY_CYBERNETICS_IPC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
