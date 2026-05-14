@@ -105,7 +105,8 @@
 
 /datum/religion_rites/cult/proc/get_invokers(mob/living/user, atom/religious_tool)
 	if(!required_acolytes)
-		return TRUE
+		return user ? list(user) : list()
+
 	var/list/invokers = list() //people eligible to invoke the rune
 	if(user)
 		invokers += user
