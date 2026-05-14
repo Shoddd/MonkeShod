@@ -164,7 +164,7 @@
 		"spr'tsf th's rlm",
 	)
 	invoke_msg = "gv th'm frm nd mk th'm whl`"
-	required_acolytes = 2 //reminder to set back to 3 after testing
+	required_acolytes = 3
 
 /datum/religion_rites/cult/summon_spirit/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
