@@ -103,7 +103,7 @@
 	return TRUE
 
 
-/datum/religion_rites/cult/proc/get_invokers(mob/living/user, atom/religious_tool)
+/datum/religion_rites/cult/proc/can_invoke(mob/living/user, atom/religious_tool)
 	if(!required_acolytes)
 		return user ? list(user) : list()
 
@@ -119,7 +119,11 @@
 		if(acolytes.stat != CONSCIOUS)
 			continue
 		invokers += acolytes
-	return invokers
+
+	if(length(invokers) < required_acolytes)
+		return FALSE
+
+	return TRUE
 
 
 /datum/religion_rites/cult // cult rites parent used to make all cult rites require a certain number of people and have cooldowns
@@ -131,8 +135,7 @@
 	var/required_acolytes = 1
 
 /datum/religion_rites/cult/perform_rite(mob/living/user, atom/religious_tool)
-	var/list/invokers = get_invokers(user)
-	if(length(invokers) < required_acolytes)
+	if(!can_invoke())
 		to_chat(user, span_warning("You need at least [required_acolytes] acolytes around to perform this ritual!"))
 		return FALSE
 	return ..()
@@ -140,7 +143,7 @@
 /datum/religion_rites/cult/robes
 	name = "Create Robes"
 	desc = "Create a pair of robes for the initiated, these robes will hide their name and voice when worn, however it won't hide their ID."
-	ritual_length = 25 SECONDS
+	ritual_length = 10 SECONDS
 	invoke_msg = "g`v us rbs, s w my bt`tr drss i`n yr' img`"
 	favor_cost = 15
 	required_acolytes = 1
@@ -161,7 +164,7 @@
 		"spr'tsf th's rlm",
 	)
 	invoke_msg = "gv th'm frm nd mk th'm whl`"
-	required_acolytes = 3
+	required_acolytes = 2 //reminder to set back to 3 after testing
 
 /datum/religion_rites/cult/summon_spirit/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	var/turf/altar_turf = get_turf(religious_tool)
