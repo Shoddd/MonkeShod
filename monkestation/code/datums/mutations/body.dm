@@ -263,7 +263,7 @@
 
 /datum/mutation/thickskin
 	name = "Thick skin"
-	desc = "The user's skin acquires a leathery texture, and becomes more resilient to embeds."88
+	desc = "The user's skin acquires a leathery texture, and becomes more resilient to embeds."
 	quality = POSITIVE
 	text_gain_indication = span_notice("Your skin feels dry and heavy.")
 	text_lose_indication = span_notice("Your skin feels soft again...")
