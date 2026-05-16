@@ -459,6 +459,7 @@
 
 /datum/species/shadow/blessed // Shadow person subsiecies with interacts with shadow sect
 	id = "shadow_blessed"
+	mutantheart = /obj/item/organ/heart/shadow_ritual
 	var/sect_rituals_completed = 0 // only important if shadow sect is at play, this is a way to check what level of rituals it completed. Used by shadow hearts
 
 
@@ -489,23 +490,24 @@
 
 /datum/species/shadow/blessed/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
-	if(istype(GLOB.religious_sect, /datum/religion_sect/shadow_sect))
-		change_hearts_ritual(C)
+	RegisterSignal(C, COMSIG_ATOM_PRE_BULLET_ACT, PROC_REF(dodge_bullets))
 
-/datum/species/shadow/proc/change_hearts_ritual(mob/living/carbon/C) // This is supposed to be called only for shadow sect
-	if(isnightmare(C))
-		return
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	switch(sect.grand_ritual_level)
-		if(1)
-			mutantheart = new/obj/item/organ/heart/shadow_ritual/first
-			mutantheart.Insert(C, 0, FALSE)
-		if(2)
-			mutantheart = new/obj/item/organ/heart/shadow_ritual/second
-			mutantheart.Insert(C, 0, FALSE)
-		if(3)
-			mutantheart = new/obj/item/organ/heart/shadow_ritual/third
-			mutantheart.Insert(C, 0, FALSE)
+/datum/species/shadow/blessed/on_species_loss(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+	UnregisterSignal(C, COMSIG_ATOM_PRE_BULLET_ACT)
+
+/datum/species/shadow/blessed/proc/dodge_bullets(mob/living/carbon/human/source, obj/projectile/hitting_projectile, def_zone)
+	SIGNAL_HANDLER
+	var/turf/dodge_turf = source.loc
+	SEND_SIGNAL(source, COMSIG_NIGHTMARE_SNUFF_CHECK, dodge_turf)
+	if(!istype(dodge_turf) || dodge_turf.get_lumcount() >= SHADOW_SPECIES_DIM_LIGHT)
+		return NONE
+	source.visible_message(
+		span_danger("[source] dances in the shadows, evading [hitting_projectile]!"),
+		span_danger("You evade [hitting_projectile] with the cover of darkness!"),
+	)
+	playsound(source, SFX_BULLET_MISS, 75, TRUE)
+	return COMPONENT_BULLET_PIERCED
 
 /datum/movespeed_modifier/shadow_sect
 	multiplicative_slowdown = -0.15
@@ -515,28 +517,6 @@
 	decay_factor = 0
 	var/shadow_conversion = 0 // Determines progress of transforming owner into shadow person
 	var/sect_rituals_completed_granted = 0 // What level of sect_rituals_completed the heart grants
-//	var/datum/action/innate/shadow_comms/comms/C = new // For granting shadow comms
-
-/obj/item/organ/heart/shadow_ritual/first
-	name = "shadowed heart"
-	desc = "An object resembling a heart, completely shrouded by a thick layer of darkness."
-	icon = 'icons/obj/medical/organs/organs.dmi'
-	icon_state = "shadow_heart_1"
-	sect_rituals_completed_granted = 1
-
-/obj/item/organ/heart/shadow_ritual/second
-	name = "faded heart"
-	desc = "A hard to distinguish heart-like organ covered by a shifting darkness."
-	icon = 'icons/obj/medical/organs/organs.dmi'
-	icon_state = "shadow_heart_2"
-	sect_rituals_completed_granted = 2
-
-/obj/item/organ/heart/shadow_ritual/third
-	name = "pulsing darkness"
-	desc = "An indistinguishable object cloaked in an undispellable darkness. The only thing that can be made out is the darkness pulsing."
-	icon = 'icons/obj/medical/organs/organs.dmi'
-	icon_state = "shadow_heart_3"
-	sect_rituals_completed_granted = 3
 	var/respawn_progress = 0
 
 /obj/item/organ/heart/shadow_ritual/on_insert(mob/living/carbon/heart_owner)
@@ -562,7 +542,7 @@
 		to_chat(heart_owner, span_boldbig("You feel warmth returning to you once more."))
 		shadow_conversion = 0
 
-/obj/item/organ/heart/shadow_ritual/third/on_remove(mob/living/carbon/heart_owner)
+/obj/item/organ/heart/shadow_ritual/on_remove(mob/living/carbon/heart_owner)
 	. = ..()
 	respawn_progress = 0
 
@@ -589,8 +569,11 @@
 		old_owner.set_species(/datum/species/shadow/blessed)
 
 
-/obj/item/organ/heart/shadow_ritual/third/on_death(delta_time)
+/obj/item/organ/heart/shadow_ritual/on_death(delta_time)
 	if(!owner)
+		return
+	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
+	if(!sect.grand_ritual_level >= 3)
 		return
 	var/turf/T = get_turf(owner)
 	if(istype(T))

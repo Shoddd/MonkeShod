@@ -1,5 +1,5 @@
 /datum/religion_sect/shadow_sect
-	starter = FALSE
+	starter = TRUE
 	name = "Shadow"
 	desc = "A sect dedicated to plunging everything into darkness. The rest of the station may not take kindly to putting all of the lights out."
 	quote = "Turn out the lights, and let the darkness cover the world!"
@@ -34,9 +34,6 @@
 //Shadow sect doesn't heal non shadowpeople
 /datum/religion_sect/shadow_sect/sect_bless(mob/living/blessed, mob/living/user)
 	if(isblessedshadow(blessed))
-		var/mob/living/carbon/human/O = blessed
-		var/datum/species/shadow/S = O.dna.species
-		S.change_hearts_ritual(blessed)
 		blessed.heal_overall_damage(5, 5, 20, BODYTYPE_ORGANIC)
 		to_chat(user, span_notice("You bless [blessed] with the power of [GLOB.deity], healing them and spreading blessings."))
 	return TRUE
@@ -87,9 +84,6 @@
 	for(var/mob/living/carbon/human/M in GLOB.player_list)
 		if(isshadowperson(M))
 			M.heal_overall_damage(25 * grand_ritual_level, 25 * grand_ritual_level, 200)
-			if(isblessedshadow(M))
-				var/datum/species/shadow/S = M.dna.species
-				S.change_hearts_ritual(M)
 
 // Shadow sect construction
 /obj/structure/destructible/religion/shadow_obelisk
@@ -102,6 +96,11 @@
 	break_message = span_warning("The Obelisk crumbles before you!")
 	max_integrity = 150
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	var/favor_gained = 10
+
+/obj/structure/destructible/religion/shadow_obelisk/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSobj, src)
 
 /obj/structure/destructible/religion/shadow_obelisk/Destroy()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
@@ -112,6 +111,12 @@
 		sect.active_obelisks -= src
 		sect.active_obelisks_number -= 1
 	return ..()
+
+/obj/structure/destructible/religion/shadow_obelisk/process(delta_time)
+	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
+	if(!src.anchored)
+		return
+	GLOB.religious_sect.adjust_favor(favor_gained)
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/toggling_buckling_after_ritual_3() // this is useless until it is inherited by obelisk after 3 grand rituals
 	return
@@ -167,43 +172,6 @@
 			to_chat(user,span_warning("You feel like only a nullrod could move this obelisk."))
 		return
 	return ..()
-
-// Favor generator component. Used on the altar and obelisks
-/datum/component/dark_favor
-	var/mob/living/creator
-	var/obj/structure/par
-
-
-/datum/component/dark_favor/Initialize(mob/living/L)
-	. = ..()
-	if(!L)
-		return
-	creator = L
-	par = parent
-	START_PROCESSING(SSobj, src)
-
-
-/datum/component/dark_favor/Destroy()
-	. = ..()
-	STOP_PROCESSING(SSobj, src)
-
-
-/datum/component/dark_favor/process(delta_time)
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(!par.anchored)
-		return
-	if(!istype(parent, /atom) || !istype(creator) || !istype(sect))
-		return
-	var/atom/P = parent
-	var/turf/T = P.loc
-	if(!istype(T))
-		return
-	var/favor_gained = max(0.5, sect.grand_ritual_level) * delta_time
-	sect.adjust_favor(favor_gained)
-
-/datum/component/dark_favor/proc/return_creator()
-	return creator
-
 
 /**** Shadow rites ****/
 /datum/religion_rites/shadow_conversion
@@ -279,11 +247,8 @@
 	var/obj/structure/destructible/religion/shadow_obelisk/obelisk = new(altar_turf)
 	sect.obelisks += obelisk
 	sect.obelisk_number = sect.obelisk_number + 1
-	obelisk.AddComponent(/datum/component/dark_favor, user)
 	obelisk.upgrade_obelisk()
 	playsound(altar_turf, 'sound/magic/fireball.ogg', 50, TRUE)
-
-	sect.adjust_favor(favor_cost)
 	return ..()
 
 /datum/religion_rites/expand_shadows
@@ -305,9 +270,6 @@
 		if(sect.grand_ritual_level != 3)
 			to_chat(user, span_warning("Performing a grand ritual would let more shadows move into this world."))
 		return FALSE
-	if(favor_cost > sect.favor)
-		to_chat(user, span_warning("You need at least [favor_cost] to perform this ritual now."))
-		return FALSE
 	return ..()
 
 /datum/religion_rites/expand_shadows/invoke_effect(mob/living/user, atom/religious_tool)
@@ -321,8 +283,6 @@
 	for(var/obj/structure/destructible/religion/shadow_obelisk/D in sect.obelisks)
 		if (D.anchored)
 			D.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
-
-	sect.adjust_favor(favor_cost)
 
 // Grand ritual section
 
@@ -451,15 +411,12 @@
 
 /obj/structure/destructible/religion/shadow_obelisk/proc/upgrade_obelisk()
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	var/datum/component/dark_favor/component_previous = GetComponent(/datum/component/dark_favor)
-	var/user = component_previous.return_creator()
 	var/our_turf = get_turf(src)
 
 	if(sect.grand_ritual_level == 1)
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/obelisk = new(our_turf)
 		sect.obelisks += obelisk
 		sect.obelisk_number = sect.obelisk_number + 1
-		obelisk.AddComponent(/datum/component/dark_favor, user)
 		obelisk.anchored = anchored
 		if(anchored)
 			sect.active_obelisks += obelisk
@@ -470,7 +427,6 @@
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/obelisk = new(our_turf)
 		sect.obelisks += obelisk
 		sect.obelisk_number = sect.obelisk_number + 1
-		obelisk.AddComponent(/datum/component/dark_favor, user)
 		obelisk.anchored = anchored
 		if(anchored)
 			sect.active_obelisks += obelisk
@@ -481,7 +437,6 @@
 		var/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3/obelisk = new(our_turf)
 		sect.obelisks += obelisk
 		sect.obelisk_number = sect.obelisk_number + 1
-		obelisk.AddComponent(/datum/component/dark_favor, user)
 		obelisk.anchored = anchored
 		if(anchored)
 			sect.active_obelisks += obelisk

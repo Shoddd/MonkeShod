@@ -93,7 +93,7 @@
 	if(LAZYLEN(movable_reltool.buckled_mobs))
 		to_chat(user, span_warning("You're going to convert the one buckled on [movable_reltool]."))
 		return ..()
-		
+
 	if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
 		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
 		return FALSE
@@ -121,6 +121,7 @@
 	rite_target.set_species(/datum/species/android)
 	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
 	return TRUE
+
 /datum/religion_rites/machine_blessing
 	name = "Receive Blessing"
 	desc = "Receive a blessing from the machine god to further your ascension."
