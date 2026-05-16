@@ -698,6 +698,11 @@
 	var/obj/effect/dummy/lighting_obj/moblight/holy_glow_light
 	COOLDOWN_DECLARE(holy_notification)
 
+/obj/item/nullrod/cross/Destroy()
+	qdel(holy_glow_light)
+	holy_glow_fx = null
+	return ..()
+
 /obj/item/nullrod/cross/attack_self(mob/living/user)
 	. = ..()
 	if(!istype(user))
