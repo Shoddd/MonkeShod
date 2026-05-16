@@ -512,12 +512,37 @@
 /datum/movespeed_modifier/shadow_sect
 	multiplicative_slowdown = -0.15
 
-/obj/item/organ/heart/shadow_ritual // This parent should never appear itself
+/obj/item/organ/heart/shadow_ritual
+	name = "shadow heart"
+	desc = "A heart imbued with the power of shadow. It reaches out towards your chest, you feel like you could plunge it into yourself or someone else to gain its power."
+	icon_state = "shadow_heart_3"
 	visual = TRUE
 	decay_factor = 0
 	var/shadow_conversion = 0 // Determines progress of transforming owner into shadow person
 	var/sect_rituals_completed_granted = 0 // What level of sect_rituals_completed the heart grants
 	var/respawn_progress = 0
+
+/obj/item/organ/heart/shadow_ritual/attack(mob/target_mob, mob/living/carbon/user, obj/target)
+	if(.)
+		return TRUE
+	if(!iscarbon(target_mob))
+		to_chat(user, span_warning("\The [src] cannot be implanted into [target_mob]!"))
+		return
+	if(!do_after(user, 8 SECONDS))
+		return
+	playsound(user, 'sound/magic/demon_consume.ogg', 50, TRUE)
+	user.temporarilyRemoveItemFromInventory(src, TRUE)
+	if(target_mob == user)
+		Insert(user)
+	else
+		Insert(target_mob)
+
+/obj/item/organ/heart/shadow_ritual/attack_self(mob/user, modifiers)
+	if(!do_after(user, 8 SECONDS))
+		return
+	playsound(user, 'sound/magic/demon_consume.ogg', 50, TRUE)
+	user.temporarilyRemoveItemFromInventory(src, TRUE)
+	Insert(user)
 
 /obj/item/organ/heart/shadow_ritual/on_insert(mob/living/carbon/heart_owner)
 	. = ..()

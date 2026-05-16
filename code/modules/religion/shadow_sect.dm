@@ -12,7 +12,7 @@
 	rites_list = list(
 		/datum/religion_rites/shadow_obelisk,
 		/datum/religion_rites/expand_shadows,
-		/datum/religion_rites/shadow_conversion,
+		/datum/religion_rites/shadow_heart,
 		/datum/religion_rites/grand_ritual_one
 		///datum/religion_rites/grand_ritual_two   // Grand rituals are added to this list by previous rituals
 		///datum/religion_rites/grand_ritual_three // So they are here in effect, just hidden for now
@@ -113,7 +113,6 @@
 	return ..()
 
 /obj/structure/destructible/religion/shadow_obelisk/process(delta_time)
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	if(!src.anchored)
 		return
 	GLOB.religious_sect.adjust_favor(favor_gained)
@@ -174,9 +173,9 @@
 	return ..()
 
 /**** Shadow rites ****/
-/datum/religion_rites/shadow_conversion
-	name = "Shadowperson Conversion"
-	desc = "Converts a humanoid into a shadowperson, a race blessed by darkness."
+/datum/religion_rites/shadow_heart
+	name = "Shadow Heart"
+	desc = "Creates a shadow heart, which can be placed into yourself or someone else to begin converting them into a shadow person."
 	ritual_length = 30 SECONDS
 	ritual_invocations = list(
 		"Let the darkness seep into you...",
@@ -186,40 +185,10 @@
 	invoke_msg = "... And let you be born again!"
 	favor_cost = 1000
 
-/datum/religion_rites/shadow_conversion/perform_rite(mob/living/user, atom/religious_tool)
-	if(!ismovable(religious_tool))
-		to_chat(user, span_warning("This rite requires a religious device that individuals can be buckled to."))
-		return FALSE
-	var/atom/movable/movable_reltool = religious_tool
-	if(LAZYLEN(movable_reltool.buckled_mobs))
-		to_chat(user,span_warning("You are about to convert the one buckled to [movable_reltool]."))
-	else
-		if(!movable_reltool.can_buckle) //yes, if you have somehow managed to have someone buckled to something that now cannot buckle, we will still let you perform the rite!
-			to_chat(user,span_warning("This rite requires a religious device that individuals can be buckled to."))
-			return FALSE
-		if(isblessedshadow(user))
-			to_chat(user,span_warning("You've already converted yourself. To convert others, they must be buckled to [movable_reltool]."))
-			return FALSE
-		to_chat(user,span_warning("You're going to convert yourself with this ritual."))
-	return ..()
-
-/datum/religion_rites/shadow_conversion/invoke_effect(mob/living/user, atom/religious_tool)
+/datum/religion_rites/shadow_heart/invoke_effect(mob/living/user, atom/religious_tool)
 	. = ..()
-	if(!ismovable(religious_tool))
-		CRASH("[name]'s perform_rite had a movable atom that has somehow turned into a non-movable!")
-	var/atom/movable/movable_reltool = religious_tool
-	var/mob/living/carbon/human/rite_target
-	if(!movable_reltool?.buckled_mobs?.len)
-		rite_target = user
-	else
-		for(var/buckled in movable_reltool.buckled_mobs)
-			if(ishuman(buckled))
-				rite_target = buckled
-				break
-	if(!rite_target)
-		return FALSE
-	rite_target.set_species(/datum/species/shadow/blessed)
-	rite_target.visible_message(span_notice("[rite_target] has been converted by the rite of [name]!"))
+	var/altar_turf = get_turf(religious_tool)
+	new /obj/item/organ/heart/shadow_ritual(altar_turf)
 	return TRUE
 
 /datum/religion_rites/shadow_obelisk
@@ -315,50 +284,6 @@
 
 /obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3
 	icon_state = "shadow_obelisk_4"
-	can_buckle = FALSE // it will be posible once anchored
-	var/converting = 0
-
-
-/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3/toggling_buckling_after_ritual_3()
-	. = ..()
-	if(anchored)
-		can_buckle = TRUE
-	else
-		unbuckle_all_mobs(TRUE)
-		can_buckle = FALSE
-
-/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3/post_buckle_mob(mob/living/M)
-	. = ..()
-	if(isblessedshadow(M) || isnightmare(M))
-		unbuckle_mob(M, TRUE)
-		visible_message(span_warning("[M.name] seems to fall through the obelisk."))
-		return
-
-	if(isshadowperson(M))
-		M.set_species(/datum/species/shadow/blessed)
-		unbuckle_mob(M, TRUE)
-		visible_message(span_warning("[M.name] seems to fall through the obelisk, taking in some of its power."))
-		return
-
-	if(!ishuman(M))
-		unbuckle_mob(M, TRUE)
-		visible_message(span_warning("Obelisk can't hold [M.name] in place."))
-		return
-
-	to_chat(M,span_userdanger("You feel the obelisk channel shadows through you. You feel yourself changing!"))
-
-/obj/structure/destructible/religion/shadow_obelisk/after_rit_1/after_rit_2/after_rit_3/process(delta_time)
-	if(LAZYLEN(buckled_mobs) != 0)
-		converting += 1
-		if (converting >= 30)
-			converting = 0
-			for(var/mob/living/carbon/human/buckled in buckled_mobs)
-				buckled.visible_message(span_notice("[buckled.name] merged with shadows and drops from the obelisk."), span_userdanger("Shadows infuse your body changing you into one of them."))
-				buckled.set_species(/datum/species/shadow/blessed)
-				unbuckle_mob(buckled, TRUE)
-	else
-		converting = 0
-	. = ..()
 
 /obj/structure/destructible/religion/shadow_obelisk/after_rit_1/attack_hand(mob/user)
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
