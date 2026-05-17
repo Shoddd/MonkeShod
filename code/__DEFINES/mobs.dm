@@ -120,6 +120,7 @@
 #define SPECIES_PLASMAMAN "plasmaman"
 #define SPECIES_PODPERSON "pod"
 #define SPECIES_SHADOW "shadow"
+#define SPECIES_SHADOW_BLESSED "shadow_blessed"
 #define SPECIES_DARKSPAWN "darkspawn"
 #define SPECIES_SKELETON "skeleton"
 #define SPECIES_SKELETON_FRAGILE "fragile_skeleton"

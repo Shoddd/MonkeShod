@@ -458,10 +458,9 @@
 #define SHADOW_CONVERSION_TRESHOLD 60 // Used for people changing into shadowpeople because of hearts
 
 /datum/species/shadow/blessed // Shadow person subsiecies with interacts with shadow sect
-	id = "shadow_blessed"
+	id = SPECIES_SHADOW_BLESSED
 	mutantheart = /obj/item/organ/internal/heart/shadow_ritual
 	var/sect_rituals_completed = 0 // only important if shadow sect is at play, this is a way to check what level of rituals it completed. Used by shadow hearts
-
 
 /datum/species/shadow/blessed/spec_life(mob/living/carbon/human/H, delta_time, times_fired)
 	. = ..()
@@ -572,8 +571,9 @@
 	respawn_progress = 0
 
 /obj/item/organ/internal/heart/shadow_ritual/on_life(seconds_per_tick, times_fired)
+	..()
 	if(!isshadowperson(owner))
-		shadow_conversion += 1
+		shadow_conversion += seconds_per_tick
 		if(shadow_conversion > SHADOW_CONVERSION_TRESHOLD)
 			shadow_conversion = 0
 			to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest!"))
@@ -587,11 +587,10 @@
 				to_chat(owner, span_warning("The chill isn't going away."))
 			if(SPT_PROB(1, seconds_per_tick))
 				to_chat(owner, span_warning("You feel like you should rest in a dark place."))
-	else if(!isblessedshadow(owner) && !isnightmare(owner))
+	if(!owner.dna.species.id == SPECIES_SHADOW_BLESSED || !owner.dna.species.id == SPECIES_NIGHTMARE)
 		to_chat(owner, span_userdanger("You feel closer to shadows surrounding you."))
 		var/mob/living/carbon/old_owner = owner
 		old_owner.set_species(/datum/species/shadow/blessed)
-
 
 /obj/item/organ/internal/heart/shadow_ritual/on_death(seconds_per_tick, times_fired)
 	if(!owner)
@@ -604,7 +603,8 @@
 			playsound(owner, 'sound/effects/singlebeat.ogg', 40, TRUE)
 	if(respawn_progress < HEART_RESPAWN_THRESHHOLD)
 		return
-	if(sect_rituals_completed_granted >= 3)
+	if(!sect_rituals_completed_granted >= 3)
+		return
 	owner.revive(HEAL_ALL & ~HEAL_REFRESH_ORGANS, revival_policy = POLICY_ANTAGONISTIC_REVIVAL)
 	if(!isshadowperson(owner))
 		var/mob/living/carbon/old_owner = owner

@@ -61,7 +61,7 @@
 			to_chat(user, span_warning("The altar must be secured to the floor if you wish to perform the rite!"))
 			return FALSE
 
-	if(active_obelisks_number < 5 + (grand_ritual_level * 10))
+	if(active_obelisks_number < 5 * (grand_ritual_level + 1))
 		if(pre_ritual_check)
 			to_chat(user, span_warning("You need to anchor the shadows to this reality. You need [5 * (grand_ritual_level + 1)] active obelisks."))
 		else
@@ -375,7 +375,7 @@
 /datum/religion_rites/grand_ritual_one
 	name = "Grand ritual: Beckoning shadows"
 	desc = "Convince shadows to take interest in your sect. Travel freely between obelisks with assistance of the shadows."
-	ritual_length = 35 SECONDS
+	ritual_length = 30 SECONDS
 	ritual_invocations = list(
 		"Shadows hear me...",
 		"... Come to your kin ...",
@@ -406,7 +406,7 @@
 /datum/religion_rites/grand_ritual_two
 	name = "Grand ritual: Infusing shadows"
 	desc = "Start giving shadows a form in physical world. This will let them better heal the wounds of their kin and protect them from sight or harm."
-	ritual_length = 70 SECONDS
+	ritual_length = 60 SECONDS
 	ritual_invocations = list(
 		"Shadows hear me...",
 		"... Come to your kin ...",
