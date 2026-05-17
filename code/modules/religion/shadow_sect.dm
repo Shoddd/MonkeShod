@@ -188,7 +188,7 @@
 /datum/religion_rites/shadow_heart/invoke_effect(mob/living/user, atom/religious_tool)
 	. = ..()
 	var/altar_turf = get_turf(religious_tool)
-	new /obj/item/organ/heart/shadow_ritual(altar_turf)
+	new /obj/item/organ/internal/heart/shadow_ritual(altar_turf)
 	return TRUE
 
 /datum/religion_rites/shadow_obelisk

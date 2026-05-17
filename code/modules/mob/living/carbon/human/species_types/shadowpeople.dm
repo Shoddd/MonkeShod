@@ -459,7 +459,7 @@
 
 /datum/species/shadow/blessed // Shadow person subsiecies with interacts with shadow sect
 	id = "shadow_blessed"
-	mutantheart = /obj/item/organ/heart/shadow_ritual
+	mutantheart = /obj/item/organ/internal/heart/shadow_ritual
 	var/sect_rituals_completed = 0 // only important if shadow sect is at play, this is a way to check what level of rituals it completed. Used by shadow hearts
 
 
@@ -512,7 +512,7 @@
 /datum/movespeed_modifier/shadow_sect
 	multiplicative_slowdown = -0.15
 
-/obj/item/organ/heart/shadow_ritual
+/obj/item/organ/internal/heart/shadow_ritual
 	name = "shadow heart"
 	desc = "A heart imbued with the power of shadow. It reaches out towards your chest, you feel like you could plunge it into yourself or someone else to gain its power."
 	icon_state = "shadow_heart_3"
@@ -522,7 +522,7 @@
 	var/sect_rituals_completed_granted = 0 // What level of sect_rituals_completed the heart grants
 	var/respawn_progress = 0
 
-/obj/item/organ/heart/shadow_ritual/attack(mob/target_mob, mob/living/carbon/user, obj/target)
+/obj/item/organ/internal/heart/shadow_ritual/attack(mob/target_mob, mob/living/carbon/user, obj/target)
 	if(.)
 		return TRUE
 	if(!iscarbon(target_mob))
@@ -537,14 +537,14 @@
 	else
 		Insert(target_mob)
 
-/obj/item/organ/heart/shadow_ritual/attack_self(mob/user, modifiers)
+/obj/item/organ/internal/heart/shadow_ritual/attack_self(mob/user, modifiers)
 	if(!do_after(user, 8 SECONDS))
 		return
 	playsound(user, 'sound/magic/demon_consume.ogg', 50, TRUE)
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
 	Insert(user)
 
-/obj/item/organ/heart/shadow_ritual/on_insert(mob/living/carbon/heart_owner)
+/obj/item/organ/internal/heart/shadow_ritual/on_insert(mob/living/carbon/heart_owner)
 	. = ..()
 	if(isblessedshadow(heart_owner))
 		var/datum/species/shadow/blessed/S = heart_owner?.dna?.species
@@ -554,7 +554,7 @@
 		to_chat(heart_owner, span_userdanger("You feel a chill spreading throughout your body..."))
 
 
-/obj/item/organ/heart/shadow_ritual/on_remove(mob/living/carbon/heart_owner)
+/obj/item/organ/internal/heart/shadow_ritual/on_remove(mob/living/carbon/heart_owner)
 	. = ..()
 	if(isblessedshadow(heart_owner))
 		var/mob/living/carbon/human/O = heart_owner
@@ -567,11 +567,11 @@
 		to_chat(heart_owner, span_boldbig("You feel warmth returning to you once more."))
 		shadow_conversion = 0
 
-/obj/item/organ/heart/shadow_ritual/on_remove(mob/living/carbon/heart_owner)
+/obj/item/organ/internal/heart/shadow_ritual/on_remove(mob/living/carbon/heart_owner)
 	. = ..()
 	respawn_progress = 0
 
-/obj/item/organ/heart/shadow_ritual/on_life(delta_time, times_fired)
+/obj/item/organ/internal/heart/shadow_ritual/on_life(seconds_per_tick, times_fired)
 	if(!isshadowperson(owner))
 		shadow_conversion += 1
 		if(shadow_conversion > SHADOW_CONVERSION_TRESHOLD)
@@ -579,14 +579,13 @@
 			to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest!"))
 			owner.set_species(/datum/species/shadow/blessed)
 		else
-			var/random_mesage = rand(0,90)
-			if(random_mesage == 0)
+			if(SPT_PROB(1, seconds_per_tick))
 				to_chat(owner, span_warning("Dark spots appear all over your skin."))
-			if(random_mesage == 1)
+			if(SPT_PROB(1, seconds_per_tick))
 				to_chat(owner, span_warning("Bright lights seem really unpleasant."))
-			if(random_mesage == 2)
+			if(SPT_PROB(1, seconds_per_tick))
 				to_chat(owner, span_warning("The chill isn't going away."))
-			if(random_mesage == 4)
+			if(SPT_PROB(1, seconds_per_tick))
 				to_chat(owner, span_warning("You feel like you should rest in a dark place."))
 	else if(!isblessedshadow(owner) && !isnightmare(owner))
 		to_chat(owner, span_userdanger("You feel closer to shadows surrounding you."))
@@ -594,28 +593,27 @@
 		old_owner.set_species(/datum/species/shadow/blessed)
 
 
-/obj/item/organ/heart/shadow_ritual/on_death(delta_time)
+/obj/item/organ/internal/heart/shadow_ritual/on_death(seconds_per_tick, times_fired)
 	if(!owner)
-		return
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(!sect.grand_ritual_level >= 3)
 		return
 	var/turf/T = get_turf(owner)
 	if(istype(T))
-		var/light_amount = T.get_lumcount()
+		var/light_amount = GET_SIMPLE_LUMCOUNT(T)
 		if(light_amount < SHADOW_SPECIES_DIM_LIGHT)
-			respawn_progress += 0.75 * delta_time SECONDS
-			playsound(owner,'sound/effects/singlebeat.ogg',40,1)
-	if(respawn_progress >= HEART_RESPAWN_THRESHHOLD)
-		owner.revive(HEAL_ALL)
-		if(!isshadowperson(owner))
-			var/mob/living/carbon/old_owner = owner
-			old_owner.set_species(/datum/species/shadow/blessed)
-			to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest! You're alive!"))
-			SEND_SOUND(owner, sound('sound/effects/ghost.ogg'))
-		owner.visible_message(span_warning("[owner] staggers to [owner.p_their()] feet!"))
-		playsound(owner, 'sound/hallucinations/far_noise.ogg', 50, 1)
-		respawn_progress = 0
+			respawn_progress += seconds_per_tick SECONDS
+			playsound(owner, 'sound/effects/singlebeat.ogg', 40, TRUE)
+	if(respawn_progress < HEART_RESPAWN_THRESHHOLD)
+		return
+	if(sect_rituals_completed_granted >= 3)
+	owner.revive(HEAL_ALL & ~HEAL_REFRESH_ORGANS, revival_policy = POLICY_ANTAGONISTIC_REVIVAL)
+	if(!isshadowperson(owner))
+		var/mob/living/carbon/old_owner = owner
+		old_owner.set_species(/datum/species/shadow/blessed)
+		to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping from the center of your chest! You're alive!"))
+	SEND_SOUND(owner, sound('sound/effects/ghost.ogg'))
+	owner.visible_message(span_warning("[owner] staggers to [owner.p_their()] feet!"))
+	playsound(owner, 'sound/hallucinations/far_noise.ogg', 50, 1)
+	respawn_progress = 0
 
 
 #undef HEART_RESPAWN_THRESHHOLD
