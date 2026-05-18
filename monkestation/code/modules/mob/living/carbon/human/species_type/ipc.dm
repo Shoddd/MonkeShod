@@ -77,9 +77,6 @@
 	/// This is the screen that is given to the user after they get revived. On death, their screen is temporarily set to BSOD before it turns off, hence the need for this var.
 	var/saved_screen = "Blank"
 
-	var/will_it_blend_timer
-	COOLDOWN_DECLARE(blend_cd)
-	var/blending
 	/// When emagged, IPC's will spew ion laws and this value increases. Every law costs 1 point, if this is 0 laws stop being spoken.
 	var/forced_speech = 0
 
@@ -105,7 +102,6 @@
 
 	RegisterSignal(C, COMSIG_ATOM_EMAG_ACT, PROC_REF(on_emag_act))
 	RegisterSignal(C, COMSIG_LIVING_DEATH, PROC_REF(bsod_death)) // screen displays bsod on death, if they have one
-	RegisterSignal(C.reagents, COMSIG_REAGENTS_ADD_REAGENT, PROC_REF(will_it_blend))
 	RegisterSignal(C, COMSIG_HUMAN_ON_HANDLE_BLOOD, PROC_REF(blood_handled))
 
 /datum/species/ipc/proc/blood_handled(mob/living/carbon/human/slime, seconds_per_tick, times_fired)
@@ -118,27 +114,6 @@
 		return NONE
 
 	slime.adjustOxyLoss(-3)
-
-/datum/species/ipc/proc/will_it_blend(datum/reagents/holder, ...)
-	var/mob/living/carbon/carbon = holder.my_atom
-	if(!carbon.reagents.get_reagent_amount(/datum/reagent/consumable/nutriment))
-		return
-	if(blending || !COOLDOWN_FINISHED(src, blend_cd))
-		return
-	will_it_blend_timer = addtimer(CALLBACK(src, PROC_REF(start_blending), carbon), 4 SECONDS)
-
-/datum/species/ipc/proc/start_blending(mob/living/carbon/carbon)
-	blending = TRUE
-	carbon.Shake(2, 2, 10 SECONDS)
-	playsound(carbon, 'monkestation/code/modules/smithing/sounds/blend.ogg', 50, TRUE, mixer_channel = CHANNEL_MOB_SOUNDS)
-	addtimer(CALLBACK(src, PROC_REF(finish_blending), carbon), 10 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
-
-/datum/species/ipc/proc/finish_blending(mob/living/carbon/human/carbon)
-	var/nutri_amount = carbon.reagents.get_reagent_amount(/datum/reagent/consumable/nutriment)
-	carbon.reagents.del_reagent(/datum/reagent/consumable/nutriment)
-	carbon.nutrition = min(NUTRITION_LEVEL_FULL, carbon.nutrition + (nutri_amount * 5))
-	blending = FALSE
-	COOLDOWN_START(src, blend_cd, 60 SECONDS)
 
 /**
 	* Makes the IPC screen switch to BSOD followed by a blank screen

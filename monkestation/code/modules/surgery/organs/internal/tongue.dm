@@ -98,22 +98,6 @@
 /obj/item/organ/internal/tongue/synth/handle_speech(datum/source, list/speech_args)
 	speech_args[SPEECH_SPANS] |= SPAN_ROBOT
 
-/datum/design/synth_tongue
-	name = "Synthetic Tongue"
-	desc = "A fully-functional synthetic tongue, encased in soft silicone. Features include high-resolution vocals and taste receptors."
-	id = "synth_tongue"
-	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
-	construction_time = 4 SECONDS
-	materials = list(
-		/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT,
-		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT,
-	)
-	build_path = /obj/item/organ/internal/tongue/synth
-	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_SYNTHETIC_ORGANS
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
-
 /obj/item/organ/internal/tongue/polyglot_voicebox
 	name = "polyglot voicebox"
 	desc = "A voice synthesizer that allows you to emulate the tongues of other species."
