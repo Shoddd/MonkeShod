@@ -26,7 +26,6 @@
 	var/obelisk_number = 0  // number of obelisks
 	var/list/active_obelisks = list() // list of obelisks anchored to the floor aka "active"
 	var/active_obelisks_number = 0 //number of anchored obelisks
-	var/grand_ritual_in_progress = FALSE // whether a grand ritual is being performed
 	var/grand_ritual_level = 0 // what is the level of the last performed ritual (max is 3)
 
 #define DARKNESS_INVERSE_COLOR "#AAD84B" //The color of light has to be inverse, since we're using negative light power
@@ -123,9 +122,6 @@
 /obj/structure/destructible/religion/shadow_obelisk/attackby(obj/item/I, mob/living/user, params)
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	if(istype(I, /obj/item/nullrod))
-		if(sect.grand_ritual_in_progress)
-			to_chat(user,span_warning("You can't move an obelisk during a active ritual!"))
-			return
 		if(anchored)
 			anchored = !anchored
 			sect.active_obelisks_number -= 1
@@ -176,7 +172,7 @@
 /datum/religion_rites/shadow_heart
 	name = "Shadow Heart"
 	desc = "Creates a shadow heart, which can be placed into yourself or someone else to begin converting them into a shadow person."
-	ritual_length = 30 SECONDS
+	ritual_length = 1 SECONDS
 	ritual_invocations = list(
 		"Let the darkness seep into you...",
 		"... And cover you, envelope you ...",
@@ -194,7 +190,7 @@
 /datum/religion_rites/shadow_obelisk
 	name = "Obelisk Manifestation"
 	desc = "Creates an obelisk that generates shadows and additional favor."
-	ritual_length = 15 SECONDS
+	ritual_length = 1 SECONDS
 	ritual_invocations = list(
 		"Let the shadows combine...",
 		"... Solidify and grow ...",
@@ -223,7 +219,7 @@
 /datum/religion_rites/expand_shadows
 	name = "Shadow Expansion"
 	desc = "Grow the reach of shadows extending from the altar, and any obelisks. The cost of this ritual increases with each use."
-	ritual_length = 20 SECONDS
+	ritual_length = 1 SECONDS
 	ritual_invocations = list(
 		"Spread out...",
 		"... Kill the light ...",
@@ -267,8 +263,6 @@
 	if(!anchored)
 		return
 	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	if(sect.grand_ritual_in_progress)
-		return
 	for(var/mob/living/L in view(6, src))
 		if(L.health == L.maxHealth)
 			continue
@@ -375,7 +369,7 @@
 /datum/religion_rites/grand_ritual_one
 	name = "Grand ritual: Beckoning shadows"
 	desc = "Convince shadows to take interest in your sect. Travel freely between obelisks with assistance of the shadows."
-	ritual_length = 30 SECONDS
+	ritual_length = 1 SECONDS
 	ritual_invocations = list(
 		"Shadows hear me...",
 		"... Come to your kin ...",
@@ -438,24 +432,13 @@
 	return ..()
 
 /datum/religion_rites/grand_ritual_two/proc/handle_obelisks()
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	for(var/mob/living/M in GLOB.player_list)
 		if(isshadowperson(M))
 			to_chat(M, span_userdanger("You feel pull towards the obelisks, you feel like it would be safer near them."))
 		to_chat(M, span_notice("Shadows seem to flicker in corner of your eye."))
-	sleep(50)
-	for(var/mob/living/M in GLOB.player_list)
-		to_chat(M, span_warning("You are sure now that shadows are moving"))
-	sleep(50)
-	sect.grand_ritual_in_progress = TRUE
-	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
-		if(obelisk.anchored)
-			obelisk.set_light(l_outer_range = 4, l_power = -15, l_color = DARKNESS_INVERSE_COLOR)
-	sleep(600)
-	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
-		if(obelisk.anchored)
-			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
-	sect.grand_ritual_in_progress = FALSE
+	addtimer(CALLBACK(src, PROC_REF(alert_players)), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(set_grand_ritual)), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(finish_grand_ritual)), 60 SECONDS)
 
 /datum/religion_rites/grand_ritual_three
 	name = "Grand ritual: Welcoming shadows"
@@ -491,52 +474,5 @@
 	sect.sect_level_up()
 	sect.rites_list -= /datum/religion_rites/grand_ritual_three
 	return ..()
-
-/datum/religion_rites/grand_ritual_three/proc/handle_obelisks()
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
-	for(var/mob/living/M in GLOB.player_list)
-		if(isshadowperson(M))
-			to_chat(M, span_userdanger("You feel pull towards the obelisks, you feel like it would be safer near them."))
-		to_chat(M, span_notice("Shadows seem to flicker in corner of your eye."))
-	sleep(50)
-	for(var/mob/living/M in GLOB.player_list)
-		to_chat(M, span_warning("You are sure now that shadows are moving"))
-	sleep(50)
-	for(var/mob/living/M in GLOB.player_list)
-		to_chat(M, span_boldwarning("Shadows are all flowing towards some point, leaving only light behind!"))
-	sleep(50)
-	sect.grand_ritual_in_progress = TRUE
-	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
-		if(obelisk.anchored)
-			obelisk.set_light(l_outer_range = 4, l_power = -30, l_color = DARKNESS_INVERSE_COLOR)
-	for(var/turf/T in GLOB.station_turfs)
-		if(T.light_outer_range == 0)
-			T.light_power = 1
-			T.light_outer_range = 3
-			T.set_light_color("#f4f942")
-			T.update_light()
-	sleep(900)
-	for(var/obj/structure/destructible/religion/shadow_obelisk/obelisk in sect.obelisks)
-		if(obelisk.anchored)
-			obelisk.set_light(l_outer_range = sect.light_reach, l_power = sect.light_power, l_color = DARKNESS_INVERSE_COLOR)
-	if(sect.grand_ritual_level == 3)
-		for(var/mob/living/M in GLOB.player_list)
-			if(isshadowperson(M))
-				to_chat(M, span_boldnotice("Ritual was finished. Rejoice for shadows walk among us."))
-			else
-				to_chat(M, span_boldnotice("Shadows seem to go back to normal, but their darkness is so much deeper then before."))
-	else
-		for(var/mob/living/M in GLOB.player_list)
-			if(isshadowperson(M))
-				to_chat(M, span_bolddanger("Ritual failed, shadows are barred from entering this realm still."))
-			else
-				to_chat(M, span_boldnotice("Shadows returned looking a litle defeated."))
-	sect.grand_ritual_in_progress = FALSE
-	for(var/turf/T in GLOB.station_turfs)
-		if(T.light_outer_range == 3 && T.light_power == 1 && T.light_color == "#f4f942")
-			T.light_power = 1
-			T.light_outer_range = 0
-			T.set_light_color(null)
-			T.update_light()
 
 #undef DARKNESS_INVERSE_COLOR
