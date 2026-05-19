@@ -8,7 +8,7 @@
 	cant_discount = FALSE
 
 /datum/uplink_item/cybernetics/sandy
-	name = "Sandevistan Bundle"
+	name = "Sandevistan Implant"
 	desc = "A box containing an autosurgeon for a sandevistan, allowing you to outspeed targets."
 	item = /obj/item/autosurgeon/syndicate/sandy
 	cost = 13
@@ -26,7 +26,7 @@
 	new /obj/item/autosurgeon/syndicate/syndie_mantis/l(src)
 
 /datum/uplink_item/cybernetics/dualwield
-	name = "C.C.M.S Bundle"
+	name = "C.C.M.S Implant"
 	desc = "A box containing an autosurgeon a C.C.M.S implant that lets you dual wield melee weapons."
 	item = /obj/item/autosurgeon/syndicate/dualwield
 	cost = 8
