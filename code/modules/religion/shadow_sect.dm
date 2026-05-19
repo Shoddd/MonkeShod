@@ -148,10 +148,7 @@
 			return
 
 	if(I.tool_behaviour == TOOL_WRENCH && isshadowperson(user))
-		if(sect.grand_ritual_in_progress)
-			to_chat(user,span_warning("You can't move the obelisk during a active ritual!"))
-			return
-		if (!anchored)
+		if(!anchored)
 			var/list/current_objects = range(5, src)
 			for(var/obj/structure/destructible/religion/shadow_obelisk/D in current_objects)
 				if(D.anchored)
@@ -262,7 +259,6 @@
 	. = ..()
 	if(!anchored)
 		return
-	var/datum/religion_sect/shadow_sect/sect = GLOB.religious_sect
 	for(var/mob/living/L in view(6, src))
 		if(L.health == L.maxHealth)
 			continue
@@ -436,9 +432,6 @@
 		if(isshadowperson(M))
 			to_chat(M, span_userdanger("You feel pull towards the obelisks, you feel like it would be safer near them."))
 		to_chat(M, span_notice("Shadows seem to flicker in corner of your eye."))
-	addtimer(CALLBACK(src, PROC_REF(alert_players)), 5 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(set_grand_ritual)), 5 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(finish_grand_ritual)), 60 SECONDS)
 
 /datum/religion_rites/grand_ritual_three
 	name = "Grand ritual: Welcoming shadows"
