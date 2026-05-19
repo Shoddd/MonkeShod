@@ -46,7 +46,7 @@
 /obj/item/organ/internal/tongue/jelly/get_possible_languages()
 	return ..() + /datum/language/slime
 
-/obj/item/organ/internal/tongue/synth
+/obj/item/organ/internal/tongue/robot/synth
 	name = "synthetic voicebox"
 	desc = "A fully-functional synthetic tongue, encased in soft silicone. Features include high-resolution vocals and taste receptors."
 	icon = 'monkestation/code/modules/smithing/icons/ipc_organ.dmi'

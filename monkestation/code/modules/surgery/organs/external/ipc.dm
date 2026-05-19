@@ -29,8 +29,7 @@
 /obj/item/organ/external/ipc_screen
 	name = "IPC screen"
 	desc = "An IPC's screen."
-	icon =
-	icon_state = "screen"
+	icon_state = "antennae" // place holder
 
 	zone = BODY_ZONE_HEAD
 	slot = ORGAN_SLOT_EXTERNAL_SCREEN
@@ -51,3 +50,38 @@
 
 /datum/bodypart_overlay/mutant/ipc_screen/get_base_icon_state()
 	return sprite_datum.icon_state
+/*
+/datum/action/innate/change_screen
+	name = "Change Display"
+	check_flags = AB_CHECK_CONSCIOUS
+	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon_state = "drone_vision"
+
+/datum/action/innate/change_screen/Activate()
+	var/screen_choice = tgui_input_list(usr, "Which screen do you want to use?", "Screen Change", GLOB.ipc_screens_list)
+	var/color_choice = tgui_color_picker(usr, "Which color do you want your screen to be", "Color Change")
+	if(!screen_choice)
+		return
+	if(!color_choice)
+		return
+	if(!ishuman(owner))
+		return
+	var/mob/living/carbon/human/screen_owner = owner
+	screen_owner.dna.features["ipc_screen"] = screen_choice
+	screen_owner.eye_color_left = sanitize_hexcolor(color_choice)
+	screen_owner.update_body()
+
+/**
+	* Simple proc to switch the screen of a monitor-enabled synth, while updating their appearance.
+	*
+	* Arguments:
+	* * transformer - The human that will be affected by the screen change (read: IPC).
+	* * screen_name - The name of the screen to switch the ipc_screen mutant bodypart to.
+	*/
+/datum/species/ipc/proc/switch_to_screen(mob/living/carbon/human/transformer, screen_name)
+	if(!change_screen)
+		return
+
+	transformer.dna.features["ipc_screen"] = screen_name
+	transformer.update_body()
+*/
