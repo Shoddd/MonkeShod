@@ -42,7 +42,7 @@
 /obj/item/clothing/suit/chaplainsuit/bishoprobe/black
 	name = "black bishop's robes"
 	icon_state = "blackbishoprobe"
-	inhand_icon_state = "blackbishoprobe"
+	inhand_icon_state = "ro_suit"
 
 /obj/item/clothing/suit/chaplainsuit/armor/studentuni
 	name = "student robe"
