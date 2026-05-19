@@ -11,7 +11,7 @@
 	name = "Sandevistan Bundle"
 	desc = "A box containing an autosurgeon for a sandevistan, allowing you to outspeed targets."
 	item = /obj/item/autosurgeon/syndicate/sandy
-	cost = 10
+	cost = 13
 	purchasable_from = UPLINK_TRAITORS
 
 /datum/uplink_item/cybernetics/mantis
