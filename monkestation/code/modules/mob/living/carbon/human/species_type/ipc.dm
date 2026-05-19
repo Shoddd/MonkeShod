@@ -32,6 +32,7 @@
 	)
 	external_organs = list(
 		/obj/item/organ/external/antennae/ipc = "None"
+		/datum/bodypart_overlay/mutant/ipc_screen = "Blank"
 	)
 
 	mutant_bodyparts = list("ipc_screen", "ipc_chassis")
@@ -75,7 +76,7 @@
 	/// The innate action that synths get, if they've got a screen selected on species being set.
 	var/datum/action/innate/change_screen/change_screen
 	/// This is the screen that is given to the user after they get revived. On death, their screen is temporarily set to BSOD before it turns off, hence the need for this var.
-	var/saved_screen = "Blank"
+	var/saved_screen = "Blue"
 
 	/// When emagged, IPC's will spew ion laws and this value increases. Every law costs 1 point, if this is 0 laws stop being spoken.
 	var/forced_speech = 0

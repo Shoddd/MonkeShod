@@ -25,3 +25,29 @@
 
 /datum/bodypart_overlay/mutant/antennae/ipc/get_base_icon_state()
 	return sprite_datum.icon_state
+
+/obj/item/organ/external/ipc_screen
+	name = "IPC screen"
+	desc = "An IPC's screen."
+	icon =
+	icon_state = "screen"
+
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_EXTERNAL_SCREEN
+
+	preference = "feature_ipc_screen"
+
+	bodypart_overlay = /datum/bodypart_overlay/mutant/ipc_screen
+
+/datum/bodypart_overlay/mutant/ipc_screen
+	layers = EXTERNAL_FRONT | EXTERNAL_BEHIND
+	feature_key = "ipc_screen"
+	palette = /datum/color_palette/generic_colors
+	palette_key = MUTANT_COLOR_SECONDARY
+	color_source = ORGAN_COLOR_MUTSECONDARY
+
+/datum/bodypart_overlay/mutant/ipc_screen/get_global_feature_list()
+	return GLOB.ipc_screens_list
+
+/datum/bodypart_overlay/mutant/ipc_screen/get_base_icon_state()
+	return sprite_datum.icon_state
