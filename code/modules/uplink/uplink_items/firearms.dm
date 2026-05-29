@@ -32,6 +32,7 @@
 	item = /obj/item/storage/toolbox/guncase/traitor/jester
 	cost = 10
 	surplus = 50
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/firearms/crossbow
 	name = "Miniature Energy Crossbow"
@@ -60,6 +61,7 @@
 	desc = "A much more proffessional version of the engineer's bootleg rebar crossbow. 3 shot mag, quicker loading, and better ammo. Owners manual included."
 	item = /obj/item/storage/box/syndie_kit/rebarxbowsyndie
 	cost = 10
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/firearms/laser_musket
 	name = "Syndicate Laser Musket"
@@ -77,6 +79,7 @@
 	desc = "A twelve gauge shotgun with an eight shell capacity underneath. Comes with two boxes of buckshot."
 	item = /obj/item/storage/toolbox/guncase/nova/opfor/renoster
 	cost = 10
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/firearms/shotgun_revolver
 	name = "\improper Bóbr 12 GA revolver"
@@ -84,6 +87,7 @@
 	Comes with a 2 boxes of shotgun slugs and a tutel which works as both a shield and holds ammo to load your revolver with."
 	item = /obj/item/storage/toolbox/guncase/traitor/bobr
 	cost = 5
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/firearms/wespe
 	name = "Wespe Pistol"
@@ -91,19 +95,13 @@
 	an ammo box, we don't recommend this one for much more than assistants however"
 	progression_minimum = 5 MINUTES
 	item = /obj/item/storage/toolbox/guncase/traitor/wespe
-	cost = 3
+	cost = 3 // This gun is so pathetic, clown ops can have this one.
 
 /datum/uplink_item/firearms/shit_smg
 	name = "Surplus Smg Bundle"
 	desc = "A single surplus Plastikov SMG and two extra magazines. A terrible weapon, perfect for henchmen."
 	item = /obj/item/storage/box/syndie_kit/shit_smg_bundle
 	cost = 4
-
-/datum/uplink_item/firearms/renoster
-	name = "Renoster Shotgun Case"
-	desc = "A twelve gauge shotgun with an eight shell capacity underneath. Comes with two boxes of buckshot."
-	item = /obj/item/storage/toolbox/guncase/nova/opfor/renoster
-	cost = 10
 
 /datum/uplink_item/firearms/slipstick
 	name = "Syndie Lipstick"

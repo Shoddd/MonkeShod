@@ -10,6 +10,7 @@
 	desc = "A modernised version of the infamous fire axe, courtesy of the Gorlex Marauders. Capable of breaching almost anything, and cleaving through almost any armour, it is to be handled with care."
 	item = /obj/item/fireaxe/energy
 	cost = 12
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/melees/sword
 	name = "Energy Sword"
@@ -62,6 +63,7 @@
 	Can hold up to forty units of reagents but comes empty."
 	item = /obj/item/knife/venom
 	cost = 6 // all in all it's not super stealthy and you have to get some chemicals yourself
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/melees/contrabaton
 	name = "Contractor Baton"
