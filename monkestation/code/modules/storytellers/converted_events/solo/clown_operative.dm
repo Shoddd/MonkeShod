@@ -13,14 +13,3 @@
 	job_type = /datum/job/clown_operative
 	antag_type = /datum/antagonist/nukeop/clownop
 	leader_antag_type = /datum/antagonist/nukeop/leader/clownop
-
-
-/datum/round_event/antagonist/nuclear_operative/clown/setup()
-	. = ..()
-	if(!.)
-		return
-
-	var/list/nukes = locate() in SSmachines.get_machines_by_type(/obj/machinery/nuclearbomb/syndicate)
-	for(var/obj/machinery/nuclearbomb/syndicate/nuke as anything in nukes)
-		new /obj/machinery/nuclearbomb/syndicate/bananium(nuke.loc)
-		qdel(nuke)
