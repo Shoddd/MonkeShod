@@ -55,7 +55,6 @@
 /datum/outfit/abductor/scientist
 	name = "Abductor Scientist"
 
-	belt = /obj/item/defibrillator/compact/combat/loaded // monke edit: give abductors defibs
 	backpack_contents = list(/obj/item/abductor/gizmo = 1)
 
 /datum/outfit/abductor/scientist/post_equip(mob/living/carbon/human/user, visualsOnly = FALSE)
@@ -75,5 +74,4 @@
 		/obj/item/abductor/gizmo = 1,
 		/obj/item/gun/energy/alien = 1,
 		/obj/item/abductor/silencer = 1,
-		/obj/item/defibrillator/compact/combat/loaded = 1 // monke edit: give abductors defibs
 	)
