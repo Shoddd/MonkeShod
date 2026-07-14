@@ -121,7 +121,7 @@
 		/obj/item/pinpointer/nuke = 1,
 		/obj/item/implanter/freedom = 1,
 		/obj/item/implanter/storage = 1,
-		/obj/item/reagent_containers/syringe/mulligan = 1,
+		/obj/item/storage/box/syndie_kit/mulligan = 1,
 	),src)
 
 /datum/voucher_set/syndicate/kit/scout
